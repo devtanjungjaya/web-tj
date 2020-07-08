@@ -38,9 +38,9 @@
 
 <h1>Great success!</h1>
 
-<figure>
+<figure class="flex flex-col items-center">
 	<img alt='Success Kid' src='successkid.jpg'>
-	<figcaption>Have fun with Sapper!</figcaption>
+	<figcaption class="text-red-500">Have fun with Sapper!</figcaption>
 </figure>
 
 <p><strong>Try editing this file (src/routes/index.svelte) to test live reloading.</strong></p>
