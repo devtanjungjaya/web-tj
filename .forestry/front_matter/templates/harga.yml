@@ -8,10 +8,10 @@ fields:
     required: true
   label: Deskripsi
   description: deskripsi harga
-- name: price
+- name: value
   type: number
-  label: Harga
-  description: ''
+  label: Nominal
+  description: nominal harga
   default: 0
   required: true
   config:
