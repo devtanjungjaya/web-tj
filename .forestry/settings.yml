@@ -11,6 +11,10 @@ sections:
   label: Produk lokal
   create: all
   match: "**/*.md"
+- type: document
+  path: data/category_product.yml
+  label: Kategori produk lokal
+  match: "**/*"
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ''
