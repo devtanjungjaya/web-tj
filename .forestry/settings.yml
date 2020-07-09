@@ -12,7 +12,7 @@ sections:
   create: all
   match: "**/*.md"
 - type: document
-  path: data/category_product.yml
+  path: data/category-product.yml
   label: Kategori produk lokal
 upload_dir: uploads
 public_path: "/uploads"
