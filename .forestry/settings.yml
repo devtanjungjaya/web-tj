@@ -14,10 +14,10 @@ sections:
 - type: document
   path: data/category-product.yml
   label: Kategori produk lokal
-upload_dir: uploads
-public_path: "/uploads"
+upload_dir: static/images
+public_path: "/images"
 front_matter_path: ''
-use_front_matter_path: false
+use_front_matter_path: 
 file_template: ":filename:"
 build:
   install_dependencies_command: npm install
