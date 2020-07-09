@@ -4,4 +4,5 @@ hide_body: true
 fields:
 - type: list
   name: categories
-  label: categories
+  label: Kategori
+  description: List kategori produk lokal
