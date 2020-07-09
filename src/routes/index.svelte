@@ -18,7 +18,7 @@
 <svelte:window bind:innerWidth={screenWidth} />
 
 <svg 
-    class="triangle absolute top-0 right-0" 
+    class="triangle absolute top-0 right-0 mt-16" 
     viewBox="0 0 600 600" 
     style={
         `max-width: calc(${width+(screenWidth > 768 ? 64 : (screenWidth > 640 ? 32 : 24))}px); 
@@ -27,8 +27,8 @@
 >
     <defs>
         <linearGradient id="MyGradient" gradientTransform="rotate(90)">
-            <stop offset="0%" stop-color="#0BA79F" />
-            <stop offset="35%" stop-color="#087872" />
+            <stop offset="0%" stop-color="#0ED7CD" />
+            <stop offset="35%" stop-color="#0BA79F" />
             <stop offset="100%" stop-color="#054844" />
         </linearGradient>
     </defs>
@@ -36,8 +36,8 @@
 </svg>
 
 <script>
-    let width;
-    let height;
+    let width = 0;
+    let height = 0;
     let screenWidth = 0;
 </script>
 
