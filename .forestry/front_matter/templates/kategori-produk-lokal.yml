@@ -1,0 +1,7 @@
+---
+label: Kategori produk lokal
+hide_body: true
+fields:
+- type: list
+  name: categories
+  label: categories
