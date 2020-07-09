@@ -29,7 +29,7 @@ fields:
   description: Deskripsi produk secara lengkap yang menarik
 - name: category
   type: select
-  default: ''
+  default: Makanan
   config:
     required: true
     options: []
