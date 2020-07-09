@@ -54,3 +54,15 @@ fields:
     labelField: description
   label: List harga
   description: List semua harga (varian dari produk)
+- name: phoneNumber
+  type: text
+  config:
+    required: true
+  label: No. HP
+  description: No. telepon / HP / WA
+- name: ecommerce
+  type: text
+  config:
+    required: false
+  label: Tautan toko daring
+  description: 'Tautan toko daring dari produk tersebut <br>(contoh: Tokopedia)'
