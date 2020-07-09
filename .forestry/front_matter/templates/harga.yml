@@ -1,4 +1,21 @@
 ---
 label: Harga
 hide_body: true
-fields: []
+fields:
+- name: description
+  type: text
+  config:
+    required: true
+  label: Deskripsi
+  description: deskripsi harga
+- name: price
+  type: number
+  label: Harga
+  description: ''
+  default: 0
+  required: true
+  config:
+    min: 
+    max: 
+    step: 
+    required: true
