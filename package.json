@@ -5,8 +5,8 @@
   "scripts": {
     "dev": "run-p start:dev watch:css",
     "build": "npm run build:css && sapper build --legacy",
-    "watch:css": "postcss src/global.css -o static/index.css -w",
-    "build:css": "NODE_ENV=production postcss src/global.css -o static/index.css",
+    "watch:css": "postcss src/tailwind.pcss -o static/index.css -w",
+    "build:css": "NODE_ENV=production postcss src/tailwind.pcss -o static/index.css",
     "export": "npm run build:css && sapper export --legacy",
     "start": "node __sapper__/build",
     "start:dev": "sapper dev",
