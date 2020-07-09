@@ -6,3 +6,5 @@ fields:
   name: categories
   label: Kategori
   description: List kategori produk lokal
+pages:
+- data/category_product.yml
