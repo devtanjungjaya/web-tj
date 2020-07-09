@@ -51,6 +51,6 @@ fields:
   config:
     min: 
     max: 
-    labelField: 
+    labelField: description
   label: List harga
   description: List semua harga (varian dari produk)
