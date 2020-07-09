@@ -40,3 +40,29 @@ fields:
       path: categories
   label: Kategori
   description: Kategori produk
+- name: prices
+  type: field_group_list
+  fields:
+  - name: description
+    type: text
+    config:
+      required: true
+    label: Deskripsi
+    description: Deskripsi harga
+  - name: price
+    type: number
+    label: Harga
+    description: ''
+    default: 0
+    required: true
+    config:
+      min: 
+      max: 
+      step: 
+      required: true
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: List harga
+  description: List semua harga (varian dari produk)
