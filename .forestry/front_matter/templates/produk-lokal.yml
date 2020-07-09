@@ -1,0 +1,42 @@
+---
+label: Produk lokal
+hide_body: false
+fields:
+- name: name
+  type: text
+  config:
+    required: true
+  label: Nama
+  description: Nama produk
+- name: seller
+  type: text
+  config:
+    required: true
+  label: Nama penjual
+- name: photos
+  type: image_gallery
+  config: {}
+  label: Foto produk
+- name: description
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Deskripsi
+  description: Deskripsi produk secara lengkap yang menarik
+- name: category
+  type: select
+  default: ''
+  config:
+    required: true
+    options: []
+    source:
+      type: simple
+      section: produk-lokal
+      file: 
+      path: 
+  label: Kategori
+  description: Kategori produk
