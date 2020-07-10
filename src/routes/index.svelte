@@ -7,7 +7,7 @@
     <div class="items-center w-full landing-1 flex-grow mb-8 sm:ml-10 md:ml-16 sm:mb-0" bind:clientWidth={width} bind:clientHeight={height}>
         <div class="w-full h-0 relative" style="padding-bottom: 83.33%">
             <img 
-                class="absolute w-full h-full object-cover rounded-lg shadow-xl" 
+                class="absolute w-full h-full object-cover rounded-2xl shadow-xl" 
                 alt="tanjung-jaya" 
                 src="images/landing-1.jpg"
             />
@@ -19,7 +19,7 @@
     <div class="flex flex-col sm:flex-row justify-center space-x-0 space-y-12 sm:space-x-12 sm:space-y-0">
         <div class="promo-img flex-shrink-0">
             <div class="relative h-0 w-full" style="padding-bottom: 80%">
-                <img class="absolute w-full h-full object-cover rounded-lg" src="images/alam.jpg" alt="alam"/>
+                <img class="absolute w-full h-full object-cover rounded-2xl" src="images/alam.jpg" alt="alam"/>
             </div>
         </div>
         <div class="flex flex-col space-y-2 lg:space-y-8 self-center">
@@ -33,7 +33,7 @@
     <div class="flex flex-col sm:flex-row-reverse justify-center space-x-0 space-y-12 sm:space-x-12 sm:space-y-0 sm:space-x-reverse">
         <div class="promo-img flex-shrink-0">
             <div class="relative h-0 w-full" style="padding-bottom: 80%">
-                <img class="absolute w-full h-full object-cover rounded-lg" src="images/kerajinan.jpg" alt="kerajinan"/>
+                <img class="absolute w-full h-full object-cover rounded-2xl" src="images/kerajinan.jpg" alt="kerajinan"/>
             </div>
         </div>
         <div class="flex flex-col space-y-2 lg:space-y-8 self-center">
@@ -47,7 +47,7 @@
     <div class="flex flex-col sm:flex-row justify-center space-x-0 space-y-12 sm:space-x-12 sm:space-y-0">
         <div class="promo-img flex-shrink-0">
             <div class="relative h-0 w-full" style="padding-bottom: 80%">
-                <img class="absolute w-full h-full object-cover rounded-lg" src="images/budaya.jpg" alt="budaya"/>
+                <img class="absolute w-full h-full object-cover rounded-2xl" src="images/budaya.jpg" alt="budaya"/>
             </div>
         </div>
         <div class="flex flex-col space-y-2 lg:space-y-8 self-center">
