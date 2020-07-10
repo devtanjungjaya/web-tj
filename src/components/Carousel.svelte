@@ -3,23 +3,28 @@
 		<slot></slot>
 	</div>
 	{#if controls}
-		<img 
-			src="ic_left.svg"
-			alt="left-carousel"
-			class="rounded-full bg-white shadow-md cursor-pointer control left p-4" 
-			on:click={left} 
-		/>
-		<img 
-			src="ic_right.svg" 
-			alt="right-carousel"
-			class="rounded-full bg-white shadow-md cursor-pointer control right p-4" 
-			on:click={right} 
-		/>
+		{#if currentIndex > 0}
+			<img 
+				src="ic_left.svg"
+				alt="left-carousel"
+				class="rounded-full bg-white shadow-md cursor-pointer control left p-4" 
+				on:click={left} 
+			/>
+		{/if}
+		{#if typeof currentPerPage === 'object' || 
+		(controller && currentIndex + controller.perPage < controller.innerElements.length)}
+			<img 
+				src="ic_right.svg" 
+				alt="right-carousel"
+				class="rounded-full bg-white shadow-md cursor-pointer control right p-4" 
+				on:click={right} 
+			/>
+		{/if}
 	{/if}
     {#if dots}
 	<ul>
 		{#each {length: totalDots} as _, i}
-		<li on:click={() => go(i*currentPerPage)} class={isDotActive(currentIndex, i) ? "active" : ""}></li>
+			<li on:click={() => go(i*currentPerPage)} class={isDotActive(currentIndex, i) ? "active" : ""}></li>
 		{/each}
 	</ul>
     {/if}
@@ -146,7 +151,7 @@
 		}
 	}
 	function handleChange (event) {
-		currentIndex = controller.currentSlide
+		currentIndex = controller.currentSlide;
 		dispatch('change', {
 			currentSlide: controller.currentSlide,
 			slideCount: controller.innerElements.length
