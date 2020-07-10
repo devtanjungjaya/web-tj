@@ -27,7 +27,7 @@
    <span class="font-bold font-overpass text-neutral-3 text-lg sm:text-xl md:text-2xl mb-5 sm:mb-10">{data.category}</span>
 
    <Carousel perPage={{ 1100: 3, 800: 2 }} dots={false}>
-      {#each ['images/budaya.jpg', 'images/landing-1.jpg', 'images/alam.jpg', 'images/kerajinan.jpg'] as photo, i}
+      {#each data.photos as photo, i}
          <div 
             class="px-1 sm:px-4"
             style="height: 360px"
