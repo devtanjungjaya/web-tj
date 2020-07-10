@@ -3,10 +3,7 @@
       const res = await this.fetch(`products/${slug}.json`);
       const data = await res.json();
       if (res.status === 200) {
-         const price = new Intl.NumberFormat('id-ID', { 
-            style: 'currency', 
-            currency: 'IDR' 
-         }).format(data.prices[0].value);
+         const price = formatRupiah(data.prices[0].value);
          return { data: { ...data, price } };
       } else {
          this.error(res.status, data.message);
@@ -17,6 +14,7 @@
 <script>
    import Decorator from "../../components/Decorator.svelte";
    import Carousel from '../../components/Carousel.svelte';
+   import formatRupiah from "../../utilities/currency";
 
     export let data;
 </script>
