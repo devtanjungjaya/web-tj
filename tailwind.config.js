@@ -31,6 +31,9 @@ module.exports = {
       placeholderColor: customColor,
       fontSize: {
         '6xl': '5rem'
+      },
+      borderRadius: {
+        '2xl': '1.25rem'
       }
     },
     fontFamily: {
