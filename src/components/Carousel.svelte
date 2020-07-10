@@ -76,7 +76,6 @@
 	import { onMount, createEventDispatcher, tick } from 'svelte'
 	
 	export let perPage = 3
-	export let loop = true
 	export let autoplay = 0
 	export let duration = 200
 	export let easing = 'ease-out'
