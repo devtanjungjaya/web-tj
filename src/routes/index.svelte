@@ -15,8 +15,8 @@
     </div>
 </div>
 
-<div class="flex flex-col px-16 lg:px-20 xl:px-40 my-32 space-y-32 lg:space-y-24">
-    <div class="flex flex-col md:flex-row justify-center space-x-0 space-y-12 md:space-x-12 md:space-y-0">
+<div class="flex flex-col px-8 lg:px-20 xl:px-40 my-32 space-y-32 lg:space-y-24">
+    <div class="flex flex-col sm:flex-row justify-center space-x-0 space-y-12 sm:space-x-12 sm:space-y-0">
         <div class="promo-img flex-shrink-0">
             <div class="relative h-0 w-full" style="padding-bottom: 80%">
                 <img class="absolute w-full h-full object-cover rounded-lg" src="images/alam.jpg" alt="alam"/>
@@ -30,10 +30,10 @@
             </p>
         </div>
     </div>
-    <div class="flex flex-col lg:flex-row-reverse justify-center space-x-0 space-y-12 lg:space-x-12 lg:space-y-0 lg:space-x-reverse">
+    <div class="flex flex-col sm:flex-row-reverse justify-center space-x-0 space-y-12 sm:space-x-12 sm:space-y-0 sm:space-x-reverse">
         <div class="promo-img flex-shrink-0">
             <div class="relative h-0 w-full" style="padding-bottom: 80%">
-                <img class="absolute w-full h-full object-cover rounded-lg" src="images/alam.jpg" alt="alam"/>
+                <img class="absolute w-full h-full object-cover rounded-lg" src="images/kerajinan.jpg" alt="kerajinan"/>
             </div>
         </div>
         <div class="flex flex-col space-y-2 lg:space-y-8 self-center">
@@ -44,10 +44,10 @@
             </p>
         </div>
     </div>
-    <div class="flex flex-col lg:flex-row justify-center space-x-0 space-y-12 lg:space-x-12 lg:space-y-0">
+    <div class="flex flex-col sm:flex-row justify-center space-x-0 space-y-12 sm:space-x-12 sm:space-y-0">
         <div class="promo-img flex-shrink-0">
             <div class="relative h-0 w-full" style="padding-bottom: 80%">
-                <img class="absolute w-full h-full object-cover rounded-lg" src="images/alam.jpg" alt="alam"/>
+                <img class="absolute w-full h-full object-cover rounded-lg" src="images/budaya.jpg" alt="budaya"/>
             </div>
         </div>
         <div class="flex flex-col space-y-2 lg:space-y-8 self-center">
@@ -105,18 +105,6 @@
 
 .landing-1 {
     max-width: 532px;
-}
-
-.promo-img {
-    width: 300px;
-    height: fit-content;
-    align-self: center;
-}
-
-@screen md {
-    .promo-img {
-        width: 362px;
-    }
 }
 
 .kemenparekraf {

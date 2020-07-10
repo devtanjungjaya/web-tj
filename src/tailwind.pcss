@@ -1,3 +1,29 @@
 @tailwind base;
+
+.promo-img {
+    width: 300px;
+    max-width: 100%;
+    height: fit-content;
+    align-self: center;
+}
+
+@screen sm {
+    .promo-img {
+        width: 200px;
+    }
+}
+
+@screen md {
+    .promo-img {
+        width: 300px;
+    }
+}
+
+@screen lg {
+    .promo-img {
+        width: 362px;
+    }
+}
+
 @tailwind components;
 @tailwind utilities;
