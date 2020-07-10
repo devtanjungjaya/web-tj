@@ -3,12 +3,18 @@
 		<slot></slot>
 	</div>
 	{#if controls}
-	<button class="left" on:click={left} aria-label="left">
-		<slot name="left-control"></slot>
-	</button>
-	<button class="right" on:click={right} aria-label="right">
-		<slot name="right-control"></slot>
-	</button>
+		<img 
+			src="ic_left.svg"
+			alt="left-carousel"
+			class="rounded-full bg-white shadow-md cursor-pointer control left p-4" 
+			on:click={left} 
+		/>
+		<img 
+			src="ic_right.svg" 
+			alt="right-carousel"
+			class="rounded-full bg-white shadow-md cursor-pointer control right p-4" 
+			on:click={right} 
+		/>
 	{/if}
     {#if dots}
 	<ul>
@@ -27,27 +33,23 @@
 		align-items: center;
 	}
 	
-	button {
-		position: absolute;
-		width: 40px;
-		height: 40px;
+	.control {
+        position: absolute;
 		top: 50%;
-		z-index: 50;
-		margin-top: -20px;
-		border: none;
-		background-color: transparent;
+		z-index: 5;
+        transform: translateY(-50%);
+        width: 48px;
+        height: 48px;
 	}
-    button:focus {
+    .control:focus {
         outline: none;
     }
-	
-	.left {
-		left: 2vw;
-	}
-	
-	.right {
-		right: 2vw;
-	}
+    .left {
+        left: -5px;
+    }
+    .right {
+        right: -5px;
+    }
 	ul {
 		list-style-type: none;
 		position: absolute;
