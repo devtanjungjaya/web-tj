@@ -72,6 +72,13 @@
     </span>
 </div>
 
+<div class="flex flex-col px-8 lg:px-20 xl:px-40 py-24">
+    <div>
+        <span>Produk Lokal</span>
+        <a rel="prefetch" href="products">LIHAT LAINNYA</a>
+    </div>
+</div>
+
 <svelte:window bind:innerWidth={screenWidth} />
 
 <svg 
