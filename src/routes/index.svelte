@@ -15,6 +15,63 @@
     </div>
 </div>
 
+<div class="flex flex-col px-16 lg:px-20 xl:px-40 my-32 space-y-32 lg:space-y-24">
+    <div class="flex flex-col md:flex-row justify-center space-x-0 space-y-12 md:space-x-12 md:space-y-0">
+        <div class="promo-img flex-shrink-0">
+            <div class="relative h-0 w-full" style="padding-bottom: 80%">
+                <img class="absolute w-full h-full object-cover rounded-lg" src="images/alam.jpg" alt="alam"/>
+            </div>
+        </div>
+        <div class="flex flex-col space-y-2 lg:space-y-8 self-center">
+            <span class="text-primary-7 font-overpass font-bold text-3xl lg:text-4xl">KEINDAHAN ALAM TERSEMBUNYI</span>
+            <p class="text-xl lg:text-2xl font-open-sans text-neutral-5 max-w-3xl">
+                Tanjungjaya memiliki potensi keindahan alam yang menarik untuk dikunjungi. Terdapat berbagai pantai, 
+                air terjun, perkebunan, dan wisata alam lainnya yang siap memanjakan mata. 
+            </p>
+        </div>
+    </div>
+    <div class="flex flex-col lg:flex-row-reverse justify-center space-x-0 space-y-12 lg:space-x-12 lg:space-y-0 lg:space-x-reverse">
+        <div class="promo-img flex-shrink-0">
+            <div class="relative h-0 w-full" style="padding-bottom: 80%">
+                <img class="absolute w-full h-full object-cover rounded-lg" src="images/alam.jpg" alt="alam"/>
+            </div>
+        </div>
+        <div class="flex flex-col space-y-2 lg:space-y-8 self-center">
+            <span class="text-primary-7 font-overpass font-bold text-3xl lg:text-4xl">PESONA KERAJINAN LOKAL</span>
+            <p class="text-xl lg:text-2xl font-open-sans text-neutral-5 max-w-3xl">
+                Produk lokal yang dihasilkan kelompok Industri Kecil Menengah (IKM) turut menjadi potensi yang 
+                dimiliki desa Tanjungjaya. Pastikan kamu membawa pulang oleh-oleh produk lokal ketika berkunjung ya!
+            </p>
+        </div>
+    </div>
+    <div class="flex flex-col lg:flex-row justify-center space-x-0 space-y-12 lg:space-x-12 lg:space-y-0">
+        <div class="promo-img flex-shrink-0">
+            <div class="relative h-0 w-full" style="padding-bottom: 80%">
+                <img class="absolute w-full h-full object-cover rounded-lg" src="images/alam.jpg" alt="alam"/>
+            </div>
+        </div>
+        <div class="flex flex-col space-y-2 lg:space-y-8 self-center">
+            <span class="text-primary-7 font-overpass font-bold text-3xl lg:text-4xl">KEUNIKAN BUDAYA</span>
+            <p class="text-xl lg:text-2xl font-open-sans text-neutral-5 max-w-3xl">
+                Telusuri berbagai budaya warga asli yang unik dan menarik. Jalani keseruan beraktivitas bersama 
+                warga desa Tanjungjaya dengan beragam kebudayaan yang disuguhkan.
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="flex items-center justify-center relative bg-primary-7 py-32 w-full">
+    <img src="images/kemenparekraf.png" class="kemenparekraf absolute w-48 h-48 opacity-25 z-0" alt="kemenparekraf"/>
+    <span 
+        class="font-playfair-display font-bold text-primary-2 text-4xl lg:text-5xl 
+        text-center max-w-2xl lg:max-w-3xl z-10"
+    >
+        “ <span class="font-overpass text-white text-4xl lg:text-5xl">
+            10 Destinasi Pariwisata Prioritas Kementrian Pariwisata RI
+        </span> ”
+    </span>
+</div>
+
 <svelte:window bind:innerWidth={screenWidth} />
 
 <svg 
@@ -48,5 +105,23 @@
 
 .landing-1 {
     max-width: 532px;
+}
+
+.promo-img {
+    width: 300px;
+    height: fit-content;
+    align-self: center;
+}
+
+@screen md {
+    .promo-img {
+        width: 362px;
+    }
+}
+
+.kemenparekraf {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 </style>
