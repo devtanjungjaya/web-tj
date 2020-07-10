@@ -21,10 +21,10 @@
     export let data;
 </script>
 
-<div class="px-4 sm:px-8 md:px-16 py-12 flex flex-col">
-   <span class="font-bold font-overpass text-neutral-2 text-lg sm:text-xl">PRODUK LOKAL</span>
-   <span class="font-bold font-overpass text-primary-7 text-4xl sm:text-5xl mt-1">{data.name}</span>
-   <span class="font-bold font-overpass text-neutral-3 text-3xl sm:text-2xl mb-5 sm:mb-10">{data.category}</span>
+<div class="px-4 sm:px-8 md:px-16 py-6 sm:py-12 flex flex-col">
+   <span class="font-bold font-overpass text-neutral-2 text-base sm:text-lg md:text-xl">PRODUK LOKAL</span>
+   <span class="font-bold font-overpass text-primary-7 text-3xl sm:text-4xl md:text-5xl mt-1">{data.name}</span>
+   <span class="font-bold font-overpass text-neutral-3 text-lg sm:text-xl md:text-2xl mb-5 sm:mb-10">{data.category}</span>
 
    <Carousel perPage={{ 1100: 3, 800: 2 }} dots={false}>
       {#each ['images/budaya.jpg', 'images/landing-1.jpg', 'images/alam.jpg', 'images/kerajinan.jpg'] as photo, i}
