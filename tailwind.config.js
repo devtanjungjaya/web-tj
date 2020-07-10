@@ -28,7 +28,10 @@ module.exports = {
   theme: {
     extend: {
       colors: customColor,
-      placeholderColor: customColor
+      placeholderColor: customColor,
+      fontSize: {
+        '6xl': '5rem'
+      }
     },
     fontFamily: {
       'overpass': 'Overpass, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',

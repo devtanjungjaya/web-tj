@@ -1,8 +1,8 @@
 <div class="flex flex-col-reverse items-center sm:flex-row px-6 sm:px-8 md:px-16 py-6 sm:py-10 md:py-20">
     <div class="flex flex-col flex-shrink mr-auto justify-center items-start font-overpass">
-        <h3 class="text-lg md:text-xl lg:text-2xl text-primary-6 font-bold">DESA</h3>
-        <h1 class="text-4xl md:text-5xl lg:text-6xl text-primary-7 font-bold">Tanjungjaya</h1>
-        <span class="sm:max-w-xs lg:max-w-full text-2xl md:text-3xl lg:text-4xl text-neutral-3">Hidden Treasure of Banten</span>
+        <h3 class="text-lg md:text-xl lg:text-2xl xl:text-3xl text-primary-6 font-bold">DESA</h3>
+        <h1 class="text-4xl md:text-5xl xl:text-6xl text-primary-7 font-bold">Tanjungjaya</h1>
+        <span class="sm:max-w-xs lg:max-w-full text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-neutral-3">Hidden Treasure of Banten</span>
     </div>
     <div class="items-center w-full landing-1 flex-grow mb-8 sm:ml-10 md:ml-16 sm:mb-0" bind:clientWidth={width} bind:clientHeight={height}>
         <div class="w-full h-0 relative" style="padding-bottom: 83.33%">
@@ -47,7 +47,6 @@
 }
 
 .landing-1 {
-    max-width: 600px;
-    min-width: 200px;
+    max-width: 532px;
 }
 </style>
