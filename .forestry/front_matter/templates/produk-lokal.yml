@@ -66,3 +66,5 @@ fields:
     required: false
   label: Tautan toko daring
   description: 'Tautan toko daring dari produk tersebut <br>(contoh: Tokopedia)'
+pages:
+- content/products/action-figure-kelapa.md
