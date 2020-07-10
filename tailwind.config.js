@@ -28,8 +28,16 @@ module.exports = {
   theme: {
     extend: {
       colors: customColor,
-      placeholderColor: customColor
+      placeholderColor: customColor,
+      fontSize: {
+        '6xl': '5rem'
+      }
     },
+    fontFamily: {
+      'overpass': 'Overpass, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+      'open-sans': '"Open Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
+      'playfair-display': '"Playfair Display", Georgia, Cambria, "Times New Roman", Times, serif'
+    }
   },
   variants: ['responsive', 'hover', 'focus', 'group-hover', 'even', 'last', 'disabled'],
   plugins: [],
