@@ -9,7 +9,7 @@
             <img 
                 class="absolute w-full h-full object-cover rounded-2xl shadow-xl" 
                 alt="tanjung-jaya" 
-                src="images/landing-1.jpg"
+                src="images/landing-1.webp"
             />
         </div>
     </div>
@@ -33,7 +33,7 @@
     <div class="flex flex-col sm:flex-row-reverse justify-center space-x-0 space-y-12 sm:space-x-12 sm:space-y-0 sm:space-x-reverse">
         <div class="promo-img flex-shrink-0">
             <div class="relative h-0 w-full" style="padding-bottom: 80%">
-                <img class="absolute w-full h-full object-cover rounded-2xl" src="images/kerajinan.jpg" alt="kerajinan"/>
+                <img class="absolute w-full h-full object-cover rounded-2xl" src="images/kerajinan.webp" alt="kerajinan"/>
             </div>
         </div>
         <div class="flex flex-col space-y-2 lg:space-y-8 self-center">
@@ -47,7 +47,7 @@
     <div class="flex flex-col sm:flex-row justify-center space-x-0 space-y-12 sm:space-x-12 sm:space-y-0">
         <div class="promo-img flex-shrink-0">
             <div class="relative h-0 w-full" style="padding-bottom: 80%">
-                <img class="absolute w-full h-full object-cover rounded-2xl" src="images/budaya.jpg" alt="budaya"/>
+                <img class="absolute w-full h-full object-cover rounded-2xl" src="images/budaya.webp" alt="budaya"/>
             </div>
         </div>
         <div class="flex flex-col space-y-2 lg:space-y-8 self-center">
@@ -61,7 +61,7 @@
 </div>
 
 <div class="flex items-center justify-center relative bg-primary-7 py-32 w-full">
-    <img src="images/kemenparekraf.png" class="kemenparekraf absolute w-48 h-48 opacity-25 z-0" alt="kemenparekraf"/>
+    <img src="images/kemenparekraf.webp" class="kemenparekraf absolute w-48 h-48 opacity-25 z-0" alt="kemenparekraf"/>
     <span 
         class="font-playfair-display font-bold text-primary-2 text-4xl lg:text-5xl 
         text-center max-w-2xl lg:max-w-3xl z-10"
@@ -100,9 +100,9 @@
 </svg>
 
 <script>
-    let width = 0;
-    let height = 0;
-    let screenWidth = 0;
+    let width = 300;
+    let height = 300;
+    let screenWidth = 1440;
 </script>
 
 <style type="text/postcss">
