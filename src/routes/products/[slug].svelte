@@ -4,7 +4,7 @@
       const data = await res.json();
       if (res.status === 200) {
          const price = formatRupiah(data.prices[0].value);
-         return { data: { ...data, price } };
+         return { data: { ...data, price, ecommerce: "https://google.com" } };
       } else {
          this.error(res.status, data.message);
       }
@@ -40,11 +40,22 @@
          <p class="font-open-sans text-neutral-5 text-lg sm:text-xl">{data.description}</p>
          <Decorator />
       </div>
-      <div class="flex flex-col info-panel flex-shrink-0 self-start max-w-full">
-         <div class="flex flex-col border-2 border-neutral-1 rounded-2xl px-6 py-3">
+      <div class="flex flex-col info-panel flex-shrink-0 self-start max-w-full space-y-6">
+         <div class="flex flex-col border-1 border-neutral-1 rounded-2xl px-6 py-3">
             <span class="font-overpass font-bold text-neutral-3 text-base sm:text-lg">Harga</span>
             <span class="font-overpass font-bold text-primary-7 text-xl sm:text-2xl">{data.price}</span>
          </div>
+         {#if data.ecommerce}
+            <a 
+               href={data.ecommerce}
+               target="_blank" 
+               rel="noopener noreferrer"
+               class="flex border-1 border-neutral-1 rounded-2xl px-5 sm:px-6 py-3 sm:py-4 cursor-pointer hover:bg-gray-100"
+            >
+               <img class="w-6 h-6 sm:w-7 sm:h-7" src="ic_ecommerce.svg" alt="ecommerce"/>
+               <span class="ml-3 font-overpass font-bold text-primary-8 text-lg sm:text-xl">Tautan toko daring</span>
+            </a>
+         {/if}
       </div>
    </div>
 </div>
