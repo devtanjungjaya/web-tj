@@ -3,9 +3,9 @@
         <div class="flex flex-col rounded-2xl border-2 border-neutral-1 overflow-hidden absolute w-full h-full">
             <img class="product-img h-0 object-cover" src={photos[0]} alt={name}/>
             <div class="p-3 flex-grow flex flex-col">
-                <span class="font-bold font-overpass text-primary-7 leading-none sm:leading-tight text-base sm:text-lg md:text-xl">{name}</span>
-                <span class="font-overpass font-normal text-neutral-3 flex-grow text-xs sm:text-sm md:text-base">{shopName}</span>
-                <span class="self-end font-overpass font-bold text-neutral-9 text-xs sm:text-sm md:text-base">{price}</span>
+                <span class="font-bold font-overpass text-primary-7 leading-none sm:leading-tight text-base sm:text-lg lg:text-xl">{name}</span>
+                <span class="font-overpass font-normal text-neutral-3 flex-grow text-xs sm:text-sm lg:text-base">{shopName}</span>
+                <span class="self-end font-overpass font-bold text-neutral-9 text-xs sm:text-sm lg:text-base">{price}</span>
             </div>
         </div>
     </div>
