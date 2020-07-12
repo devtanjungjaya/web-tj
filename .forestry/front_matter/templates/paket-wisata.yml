@@ -1,0 +1,78 @@
+---
+label: Paket wisata
+hide_body: true
+fields:
+- name: name
+  type: text
+  config:
+    required: true
+  label: Nama
+  description: Nama paket wisata
+- name: photos
+  type: image_gallery
+  config: {}
+  label: Foto
+  description: Foto lokasi wisata/kegiatan wisata (harus mewakili paketnya)
+- name: description
+  type: textarea
+  default: ''
+  config:
+    required: true
+    wysiwyg: true
+    schema:
+      format: markdown
+  label: Deskripsi
+  description: Penjelasan detail paket wisata, misal atraksi apa aja, lokasi wisata
+    mana aja, dsb
+- name: categories
+  type: list
+  config:
+    use_select: true
+    min: 
+    max: 
+    source:
+      type: documents
+      section: kategori-paket-wisata-e94c67ac-e96b-4f30-996b-8cd35ffc5590
+      file: data/category-tour.yml
+      path: categories
+  label: Kategori
+- name: prices
+  type: field_group_list
+  fields:
+  - name: price
+    type: include
+    config: {}
+    template: harga
+    label: Harga
+  config:
+    min: 
+    max: 
+    labelField: description
+  label: List harga
+  description: List semua harga
+- name: facilities
+  type: list
+  config:
+    use_select: true
+    min: 
+    max: 
+    source:
+      type: documents
+      section: fasilitas-paket-wisata-c60b6901-bea0-4db9-b5b1-107d48ba6299
+      file: data/facility-tour.yml
+      path: facilities
+  label: Fasilitas ditawarkan
+  description: Fasilitas yang ditawarkan
+- name: contact
+  type: field_group
+  config: {}
+  fields:
+  - name: contact
+    type: include
+    config: {}
+    template: kontak
+    label: Kontak
+  label: Kontak
+  description: Kontak yang bisa dihubungi
+pages:
+- content/tours/paket-jelajah-pantai-tanjungjaya.md
