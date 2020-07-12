@@ -1,8 +1,16 @@
-const path = require('path');
 import getMarkdownInDirectory from '../../utilities/markdown.js';
+import formatRupiah from "../../utilities/currency";
+const path = require('path');
 const cwd = process.cwd()
 
-const products = getMarkdownInDirectory(path.join(cwd, 'content/products/'));
+let products = getMarkdownInDirectory(path.join(cwd, 'content/products/'));
+products = products.map(product => {
+    product.prices = product.prices.map(price => { 
+        price.value = formatRupiah(price.value);
+        return price;
+    })
+    return product;
+})
 export const map = new Map(products.map(product => [product.slug, product]));
 
 export function getRandom() {
