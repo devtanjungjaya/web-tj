@@ -18,5 +18,6 @@ contact:
   email: kelapaku@gmail.com
 categories:
 - Makanan
+- Kerajinan
 
 ---

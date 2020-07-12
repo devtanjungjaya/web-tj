@@ -12,12 +12,12 @@
      {title}
 </span>
  <span class="font-bold font-overpass text-neutral-3 text-lg sm:text-xl md:text-2xl mb-5 sm:mb-10">
-     {category}
+     {categories.join(", ")}
 </span>
 
 <script>
     export let typeURL;
     export let type;
     export let title;
-    export let category;
+    export let categories;
 </script>

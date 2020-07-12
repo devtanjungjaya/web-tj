@@ -24,7 +24,7 @@
       typeURL="products"
       type="PRODUK LOKAL"
       title={data.name}
-      category={data.category}
+      categories={data.categories}
    />
  
    <Carousel perPage={{ 1100: 3, 800: 2 }} dots={false}>
