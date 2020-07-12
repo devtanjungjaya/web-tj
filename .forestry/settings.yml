@@ -15,9 +15,8 @@ sections:
   path: data/category-product.yml
   label: Kategori produk lokal
 - type: document
-  path: data/category-tour
+  path: data/category-tour.yml
   label: Kategori paket wisata
-  match: "**/*"
 upload_dir: static/images
 public_path: https://web-tj.netlify.app/images
 front_matter_path: ''

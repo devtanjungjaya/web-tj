@@ -24,3 +24,29 @@ fields:
   label: Deskripsi
   description: Penjelasan detail paket wisata, misal atraksi apa aja, lokasi wisata
     mana aja, dsb
+- name: category
+  type: select
+  default: Alam
+  config:
+    required: true
+    options: []
+    source:
+      type: documents
+      section: kategori-paket-wisata-e94c67ac-e96b-4f30-996b-8cd35ffc5590
+      file: data/category-tour.yml
+      path: categories
+  label: Kategori
+- name: prices
+  type: field_group_list
+  fields:
+  - name: price
+    type: include
+    config: {}
+    template: harga
+    label: Harga
+  config:
+    min: 
+    max: 
+    labelField: description
+  label: List harga
+  description: List semua harga
