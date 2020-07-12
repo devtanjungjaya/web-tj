@@ -10,10 +10,11 @@ description: Ayo menjelahi keindahan pantai-pantai di desa Tanjungjaya. Bersama 
 prices:
 - description: Harga untuk minimal 20 pax
   value: 80000
+  unit: pax
 facilities:
-- facility: ''
-- facility: ''
-- facility: ''
+- facility: Pemandu wisata
+- facility: Transportasi
+- facility: Fotografer
 - facility: Makan siang
 contact:
   name: TJ
