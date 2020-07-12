@@ -1,6 +1,6 @@
-import products, { getRandom } from './_products.js';
+import products from './_products.js';
 
-const contents = JSON.stringify([...products.values(), ...getRandom()]);
+const contents = JSON.stringify([...products.values()]);
 
 export function get(req, res) {
 	res.writeHead(200, {
