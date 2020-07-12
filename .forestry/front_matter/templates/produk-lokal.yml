@@ -1,6 +1,7 @@
 ---
 label: Produk lokal
-hide_body: false
+hide_body: true
+display_field: name
 fields:
 - name: name
   type: text
