@@ -12,6 +12,10 @@ sections:
   create: all
   match: "**/*.md"
 - type: document
+  path: data/facility-tour.yml
+  label: Fasilitas paket wisata
+  match: "**/*"
+- type: document
   path: data/category-product.yml
   label: Kategori produk lokal
 - type: document
