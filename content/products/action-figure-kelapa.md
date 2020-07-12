@@ -1,7 +1,5 @@
 ---
-category: Makanan
 name: Action Figure Kelapa
-seller: Budi
 photos:
 - https://web-tj.netlify.app/images/coconut.jpg
 description: Action figure berbentuk robot ini memiliki tinggi 24 cm. Dibuat dengan
@@ -11,12 +9,14 @@ description: Action figure berbentuk robot ini memiliki tinggi 24 cm. Dibuat den
 prices:
 - description: Action Figure Kelapa
   value: 80000
-phoneNumber: '08453534533'
+  unit: ''
 ecommerce: https://google.com
 contact:
   name: Toko Kelapa
   phoneNumbers:
   - '08129949492939'
   email: kelapaku@gmail.com
+categories:
+- Makanan
 
 ---
