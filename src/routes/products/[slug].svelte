@@ -16,6 +16,7 @@
    import Header from "../../components/Item/Header.svelte";
    import Photos from "../../components/Item/Photos.svelte";
    import Prices from "../../components/Item/Prices.svelte";
+   import Link from "../../components/Item/Link.svelte";
 
    export let data;
 </script>
@@ -39,16 +40,7 @@
       <div class="flex flex-col info-panel flex-shrink-0 self-start max-w-full space-y-6">
          <Prices prices={data.prices} />
          {#if data.ecommerce}
-            <a 
-               href={data.ecommerce}
-               target="_blank" 
-               rel="noopener noreferrer"
-               class="flex border-1 border-neutral-1 rounded-2xl px-5 sm:px-6 py-3 sm:py-4 cursor-pointer 
-               items-center hover:bg-gray-100"
-            >
-               <img class="w-6 h-6 sm:w-7 sm:h-7" src="ic_ecommerce.svg" alt="ecommerce"/>
-               <span class="ml-3 font-overpass font-bold text-primary-8 text-lg sm:text-xl">Tautan toko daring</span>
-            </a>
+            <Link url={data.ecommerce} icon="ic_ecommerce.svg" label="Tautan toko daring" />
          {/if}
       </div>
    </div>
