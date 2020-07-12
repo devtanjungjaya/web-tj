@@ -36,7 +36,7 @@ fields:
     source:
       type: documents
       section: kategori-produk-lokal-e7dd7756-bc74-4bf6-b156-20dd7bdd3303
-      file: data/category_product.yml
+      file: data/category-product.yml
       path: categories
   label: Kategori
   description: Kategori produk
@@ -66,3 +66,5 @@ fields:
     required: false
   label: Tautan toko daring
   description: 'Tautan toko daring dari produk tersebut <br>(contoh: Tokopedia)'
+pages:
+- content/products/action-figure-kelapa.md
