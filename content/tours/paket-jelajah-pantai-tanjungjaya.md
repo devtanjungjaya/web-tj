@@ -21,5 +21,7 @@ contact:
   phoneNumbers:
   - '083457342343'
   email: ''
+categories:
+- Alam
 
 ---
