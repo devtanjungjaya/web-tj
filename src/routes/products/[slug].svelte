@@ -26,7 +26,7 @@
       typeURL="products"
       type="PRODUK LOKAL"
       title={data.name}
-      category={data.category}
+      categories={data.categories}
    />
  
    <Photos photos={data.photos} />
