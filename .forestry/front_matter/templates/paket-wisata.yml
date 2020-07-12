@@ -1,4 +1,26 @@
 ---
 label: Paket wisata
 hide_body: true
-fields: []
+fields:
+- name: name
+  type: text
+  config:
+    required: true
+  label: Nama
+  description: Nama paket wisata
+- name: photos
+  type: image_gallery
+  config: {}
+  label: Foto
+  description: Foto lokasi wisata/kegiatan wisata (harus mewakili paketnya)
+- name: description
+  type: textarea
+  default: ''
+  config:
+    required: true
+    wysiwyg: true
+    schema:
+      format: markdown
+  label: Deskripsi
+  description: Penjelasan detail paket wisata, misal atraksi apa aja, lokasi wisata
+    mana aja, dsb
