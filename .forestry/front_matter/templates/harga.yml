@@ -19,3 +19,9 @@ fields:
     max: 
     step: 
     required: true
+- name: unit
+  type: text
+  config:
+    required: false
+  label: Satuan
+  description: satuan untuk harga (misal per "orang" / per "kg")
