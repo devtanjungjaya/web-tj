@@ -8,11 +8,12 @@ fields:
     required: true
   label: Nama
   description: Nama produk
-- name: seller
-  type: text
-  config:
-    required: true
-  label: Nama penjual
+- name: contact
+  type: include
+  config: {}
+  template: kontak
+  label: Kontak penjual
+  description: Kontak penjual yang bisa dihubungi
 - name: photos
   type: image_gallery
   config: {}
@@ -54,12 +55,6 @@ fields:
     labelField: description
   label: List harga
   description: List semua harga (varian dari produk)
-- name: phoneNumber
-  type: text
-  config:
-    required: true
-  label: No. HP
-  description: No. telepon / HP / WA
 - name: ecommerce
   type: text
   config:
