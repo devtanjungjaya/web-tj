@@ -1,0 +1,23 @@
+<div 
+    class={`flex flex-col ${photoFirst ? 'sm:flex-row' : 'sm:flex-row-reverse sm:space-x-reverse'} justify-center 
+    space-x-0 space-y-12 sm:space-x-12 sm:space-y-0`}
+>
+    <div class="promo-img flex-shrink-0">
+        <div class="relative h-0 w-full" style="padding-bottom: 80%">
+            <img class="absolute w-full h-full object-cover rounded-2xl" src={img} alt={img} />
+        </div>
+    </div>
+    <div class="flex flex-col space-y-2 lg:space-y-8 self-center">
+        <span class="text-primary-7 font-overpass font-bold text-2xl lg:text-3xl">{headline}</span>
+        <p class="text-lg lg:text-xl font-open-sans text-neutral-5 max-w-3xl">
+            {content}
+        </p>
+    </div>
+</div>
+
+<script>
+    export let content;
+    export let headline;
+    export let photoFirst = true;
+    export let img;
+</script>

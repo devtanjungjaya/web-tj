@@ -1,0 +1,1 @@
+<div class="bg-neutral-1 rounded-2xl my-6 w-full" style="height: 1px"></div>
