@@ -35,12 +35,12 @@ fields:
       format: markdown
   label: Deskripsi
   description: Deskripsi produk secara lengkap yang menarik
-- name: category
-  type: select
-  default: Makanan
+- name: categories
+  type: list
   config:
-    required: true
-    options: []
+    use_select: true
+    min: 
+    max: 
     source:
       type: documents
       section: kategori-produk-lokal-e7dd7756-bc74-4bf6-b156-20dd7bdd3303
