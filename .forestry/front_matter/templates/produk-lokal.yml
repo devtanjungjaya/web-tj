@@ -10,9 +10,15 @@ fields:
   label: Nama
   description: Nama produk
 - name: contact
-  type: include
+  type: field_group
   config: {}
-  template: kontak
+  fields:
+  - name: contact
+    type: include
+    config: {}
+    template: kontak
+    label: Kontak
+    description: Narahubung
   label: Kontak penjual
   description: Kontak penjual yang bisa dihubungi
 - name: photos
