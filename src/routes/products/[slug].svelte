@@ -45,9 +45,3 @@
       </div>
    </div>
 </div>
-
-<style type="text/postcss">
-.info-panel {
-   width: 375px;
-}
-</style>
