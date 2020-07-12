@@ -1,6 +1,7 @@
 ---
 label: Produk lokal
-hide_body: false
+hide_body: true
+display_field: name
 fields:
 - name: name
   type: text
@@ -8,11 +9,18 @@ fields:
     required: true
   label: Nama
   description: Nama produk
-- name: seller
-  type: text
-  config:
-    required: true
-  label: Nama penjual
+- name: contact
+  type: field_group
+  config: {}
+  fields:
+  - name: contact
+    type: include
+    config: {}
+    template: kontak
+    label: Kontak
+    description: Narahubung
+  label: Kontak penjual
+  description: Kontak penjual yang bisa dihubungi
 - name: photos
   type: image_gallery
   config: {}
@@ -54,12 +62,6 @@ fields:
     labelField: description
   label: List harga
   description: List semua harga (varian dari produk)
-- name: phoneNumber
-  type: text
-  config:
-    required: true
-  label: No. HP
-  description: No. telepon / HP / WA
 - name: ecommerce
   type: text
   config:

@@ -12,6 +12,11 @@ prices:
 - description: Action Figure Kelapa
   value: 80000
 phoneNumber: '08453534533'
-ecommerce: ''
+ecommerce: https://google.com
+contact:
+  name: Toko Kelapa
+  phoneNumbers:
+  - '08129949492939'
+  email: kelapaku@gmail.com
 
 ---
