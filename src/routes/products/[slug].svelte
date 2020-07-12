@@ -14,22 +14,19 @@
    import Decorator from "../../components/Decorator.svelte";
    import Carousel from '../../components/Carousel.svelte';
    import Contact from "../../components/Contact.svelte";
+   import Header from "../../components/Item/Header.svelte";
 
     export let data;
 </script>
 
 <div class="px-4 sm:px-8 md:px-16 py-6 sm:py-12 flex flex-col">
-   <a rel="prefetch" href="products" class="flex space-x-2 items-center cursor-pointer">
-      <svg class="text-neutral-2 w-6 h-6" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
-         <path d="M15 19l-7-7 7-7"></path>
-      </svg>
-      <span class="font-bold font-overpass text-neutral-2 text-base sm:text-lg md:text-xl pt-1">
-         PRODUK LOKAL
-      </span>
-   </a>
-   <span class="font-bold font-overpass text-primary-7 text-3xl sm:text-4xl md:text-5xl mt-1">{data.name}</span>
-   <span class="font-bold font-overpass text-neutral-3 text-lg sm:text-xl md:text-2xl mb-5 sm:mb-10">{data.category}</span>
-
+   <Header
+      typeURL="products"
+      type="PRODUK LOKAL"
+      title={data.name}
+      category={data.category}
+   />
+ 
    <Carousel perPage={{ 1100: 3, 800: 2 }} dots={false}>
       {#each data.photos as photo, i}
          <div 
