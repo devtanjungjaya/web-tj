@@ -82,3 +82,5 @@ fields:
     label: Kontak
   label: Kontak
   description: Kontak yang bisa dihubungi
+pages:
+- content/tours/paket-jelajah-pantai-tanjungjaya.md
