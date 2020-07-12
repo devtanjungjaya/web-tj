@@ -12,10 +12,10 @@ prices:
   value: 80000
   unit: pax
 facilities:
-- facility: Pemandu wisata
-- facility: Transportasi
-- facility: Fotografer
-- facility: Makan siang
+- Makan siang
+- Fotografer
+- Transportasi
+- Pemandu wisata
 contact:
   name: TJ
   phoneNumbers:
