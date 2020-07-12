@@ -50,3 +50,35 @@ fields:
     labelField: description
   label: List harga
   description: List semua harga
+- name: facilities
+  type: field_group_list
+  fields:
+  - name: facility
+    type: select
+    default: ''
+    config:
+      required: false
+      options: []
+      source:
+        type: documents
+        section: fasilitas-paket-wisata-c60b6901-bea0-4db9-b5b1-107d48ba6299
+        file: data/facility-tour.yml
+        path: facilities
+    label: Fasilitas
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: Fasilitas
+  description: Fasilitas yang ditawarkan
+- name: contact
+  type: field_group
+  config: {}
+  fields:
+  - name: contact
+    type: include
+    config: {}
+    template: kontak
+    label: Kontak
+  label: Kontak
+  description: Kontak yang bisa dihubungi
