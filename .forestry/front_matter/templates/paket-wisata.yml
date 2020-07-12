@@ -68,8 +68,8 @@ fields:
   config:
     min: 
     max: 
-    labelField: 
-  label: Fasilitas
+    labelField: facility
+  label: Fasilitas ditawarkan
   description: Fasilitas yang ditawarkan
 - name: contact
   type: field_group
