@@ -4,7 +4,7 @@
             <input class="hidden" type="checkbox" bind:group={selectedCategories} value={category}/>
             <div 
                 class={`w-6 h-6 flex items-center justify-center p-1 border-neutral-1 rounded-md mr-6 
-                group-hover:border-primary-7 
+                group-hover:border-primary-7
                 ${selectedCategories.includes(category) ? 
                     'border-0 bg-primary-7' : 'border-1 group-hover:border-2'
                 }`}

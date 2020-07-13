@@ -22,6 +22,6 @@
 
 <svelte:body on:click={onClickOutside} />
 
-<div bind:this={child}>
+<div style="width: fit-content" bind:this={child}>
     <slot></slot>
 </div>
