@@ -11,7 +11,7 @@ description: abcdefghijklmnopqrstuvwxyz
 categories:
 - Kerajinan
 prices:
-- description: Harga 1 item
+- description: 'Game vr wibu '
   value: 500000
   unit: item
 ecommerce: tokopedia/wiro-weebgod
