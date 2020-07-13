@@ -85,4 +85,5 @@ fields:
   label: Kontak
   description: Kontak yang bisa dihubungi
 pages:
+- content/tours/jelajah-liwungan.md
 - content/tours/paket-jelajah-pantai-tanjungjaya.md
