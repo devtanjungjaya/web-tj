@@ -3,7 +3,7 @@ import { getDataFromFile } from '../../utilities/markdown';
 
 const contents = JSON.stringify({
 	products: [...products.values()],
-	productCategories: getDataFromFile('data/category-product.yml')
+	productCategories: getDataFromFile('data/category-product.yml').categories
 });
 
 export function get(req, res) {

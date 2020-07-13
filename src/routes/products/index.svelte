@@ -2,7 +2,7 @@
     export function preload({ params, query }) {
        return this.fetch(`products.json`)
        .then(r => r.json())
-       .then(({ products, productCategories: { categories: productCategories } }) => {
+       .then(({ products, productCategories }) => {
           return { products, productCategories };
        });
     }
