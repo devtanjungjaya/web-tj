@@ -36,6 +36,15 @@
       <div class="flex flex-col max-w-4xl">
          <p class="font-open-sans text-neutral-5 text-lg sm:text-xl">{@html data.description}</p>
          <Decorator />
+         {#if data.activity}
+            <div class="flex flex-col font-overpass">
+               <span class="font-bold text-neutral-5 text-2xl sm:text-3xl mb-6 sm:mb-6">Kegiatan</span>
+               <p class="font-open-sans font-normal text-neutral-5 text-lg sm:text-xl">
+                  {@html data.activity}
+               </p>
+            </div>
+            <Decorator />
+         {/if}
          <Facilities facilities={data.facilities} iconMap={data.facilityIconMap} />
          <Decorator />
          <Contact {...data.contact} />

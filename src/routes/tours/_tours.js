@@ -12,7 +12,11 @@ tours = tours.map(tour => ({
         value: formatRupiah(price.value)
     }))
 }))
-tours = tours.map(tour => ({...tour, description: marked(tour.description)}))
+tours = tours.map(tour => ({
+    ...tour, 
+    description: marked(tour.description),
+    activity: tour.activity ? marked(tour.activity) : null
+}))
 export const map = new Map(tours.map(tour => [tour.slug, tour]));
 
 export function getRandom() {
