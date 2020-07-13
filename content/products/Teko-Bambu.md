@@ -12,7 +12,7 @@ categories:
 prices:
 - value: 50000
   unit: pcs
-  description: harga teko bambu
+  description: Teko Bambu
 ecommerce: ''
 
 ---
