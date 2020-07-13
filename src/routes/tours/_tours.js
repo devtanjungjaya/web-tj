@@ -1,17 +1,7 @@
 import getMarkdownInDirectory from '../../utilities/markdown.js';
-import formatRupiah from "../../utilities/currency";
-const path = require('path');
 const marked = require('marked');
-const cwd = process.cwd()
 
-let tours = getMarkdownInDirectory(path.join(cwd, 'content/tours/'));
-tours = tours.map(tour => ({
-    ...tour,
-    prices: tour.prices.map(price => ({
-        ...price, 
-        value: formatRupiah(price.value)
-    }))
-}))
+let tours = getMarkdownInDirectory('content/tours/');
 tours = tours.map(tour => ({
     ...tour, 
     description: marked(tour.description),

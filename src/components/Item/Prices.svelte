@@ -4,7 +4,7 @@
         {#each prices as price}
             <div class="flex flex-col font-overpass font-bold">
             <span class="text-primary-7 font-semibold text-xl sm:text-2xl leading-none">
-                {price.value} {price.unit ? `/ ${price.unit}` : ''}
+                {formatRupiah(price.value)} {price.unit ? `/ ${price.unit}` : ''}
             </span>
             <span class="text-neutral-2 text-base sm:text-lg">
                 {price.description}
@@ -15,5 +15,7 @@
  </div>
 
  <script>
+     import formatRupiah from "../../utilities/currency";
+
      export let prices;
  </script>

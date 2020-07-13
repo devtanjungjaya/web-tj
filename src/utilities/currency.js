@@ -1,5 +1,5 @@
 module.exports = function formatRupiah(angka) {
-    let number_string = (angka.toString()).replace(/[^,\d]/g, "").toString(),
+    let number_string = (angka.toString()).replace(/[^,\d]/g, "").replace(/^0+/g, "").toString(),
     split = number_string.split(","),
     sisa = split[0].length % 3,
     rupiah = split[0].substr(0, sisa),

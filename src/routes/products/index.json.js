@@ -1,6 +1,10 @@
 import products from './_products.js';
+import { getDataFromFile } from '../../utilities/markdown';
 
-const contents = JSON.stringify([...products.values()]);
+const contents = JSON.stringify({
+	products: [...products.values()],
+	productCategories: getDataFromFile('data/category-product.yml')
+});
 
 export function get(req, res) {
 	res.writeHead(200, {

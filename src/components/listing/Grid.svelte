@@ -1,14 +1,28 @@
-<div class="grid gap-2 lg:gap-10 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-5 listing">
-    {#each items as item}
-        <div class="pb-2 md:pb-4 xl:pb-16 container-item">
-            <svelte:component this={itemComponent} {...item} />
-        </div>
-    {/each}
+<div class="flex flex-col px-2 md:px-6 lg:px-16 py-10">
+    <Filter filters={filters} on:filter={event => filterFunctions = event.detail} />
+    <div class="mt-16 grid gap-2 lg:gap-10 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-5 listing">
+        {#each filteredItems as item}
+            <div class="container-item">
+                <svelte:component this={itemComponent} {...item} />
+            </div>
+        {/each}
+    </div>
 </div>
 
 <script>
-    export let items;
+    import Filter from "./Filter.svelte";
+
+    export let filters = [];
+    export let items = [];
     export let itemComponent;
+
+    let filterFunctions = []
+    let filteredItems = [];
+    
+    $: filteredItems = filterFunctions.reduce(
+        (items, f) => f.filter(items), 
+        items
+    );    
 </script>
 
 <style type="text/postcss">
