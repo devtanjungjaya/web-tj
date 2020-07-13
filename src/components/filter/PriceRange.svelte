@@ -2,7 +2,7 @@
     <div class="flex flex-col space-y-1">
         <span class="ml-4 font-overpass font-normal text-neutral-3 text-lg">min harga</span>
         <input
-            class="border-1 focus:border-2 rounded-lg border-neutral-1 focus:border-primary-7 px-4 py-2 
+            class="border-1 rounded-lg border-neutral-1 focus:border-primary-7 px-4 py-2 
             font-overpass font-semibold text-primary-7 outline-none box-border text-xl"
             style="max-width: 12.5rem"
             spellcheck="false"
@@ -18,7 +18,7 @@
     <div class="flex flex-col space-y-1">
         <span class="ml-4 font-overpass font-normal text-neutral-3 text-lg">max harga</span>
         <input
-            class="border-1 focus:border-2 rounded-lg border-neutral-1 focus:border-primary-7 px-4 py-2 
+            class="border-1 rounded-lg border-neutral-1 focus:border-primary-7 px-4 py-2 
             font-overpass font-semibold text-primary-7 outline-none box-border text-xl"
             style="max-width: 12.5rem"
             spellcheck="false"
