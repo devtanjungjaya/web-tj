@@ -24,6 +24,16 @@ fields:
   label: Deskripsi
   description: Penjelasan detail paket wisata, misal atraksi apa aja, lokasi wisata
     mana aja, dsb
+- name: activity
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: markdown
+  label: Aktivitas
+  description: Penjelasan lengkap kegiatan apa saja yang akan dilakukan
 - name: categories
   type: list
   config:
@@ -75,4 +85,5 @@ fields:
   label: Kontak
   description: Kontak yang bisa dihubungi
 pages:
+- content/tours/jelajah-liwungan.md
 - content/tours/paket-jelajah-pantai-tanjungjaya.md

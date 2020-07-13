@@ -23,5 +23,7 @@ contact:
   email: ''
 categories:
 - Alam
+activity: "1\\. Bermain air di pantai Cipanon  \n2\\. Makan siang di pinggir pantai
+  Sukamulya  \n3\\. Menikmati sunset di pantai tanjung lesung"
 
 ---
