@@ -17,6 +17,7 @@
    import Photos from "../../components/Item/Photos.svelte";
    import Prices from "../../components/Item/Prices.svelte";
    import Link from "../../components/Item/Link.svelte";
+   import Facilities from "../../components/Item/Facilities.svelte";
 
    export let data;
 </script>
@@ -31,9 +32,11 @@
  
    <Photos photos={data.photos} />
 
-   <div class="flex flex-col lg:flex-row space-y-6 lg:space-y-0 lg:space-x-32 mt-10 sm:mt-20">
+   <div class="flex flex-col lg:flex-row space-y-6 lg:space-y-0 lg:space-x-10 xl:space-x-32 mt-10 sm:mt-20">
       <div class="flex flex-col max-w-4xl">
          <p class="font-open-sans text-neutral-5 text-lg sm:text-xl">{@html data.description}</p>
+         <Decorator />
+         <Facilities facilities={data.facilities} iconMap={data.facilityIconMap} />
          <Decorator />
          <Contact {...data.contact} />
       </div>

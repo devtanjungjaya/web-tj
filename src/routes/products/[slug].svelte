@@ -31,7 +31,7 @@
  
    <Photos photos={data.photos} />
 
-   <div class="flex flex-col lg:flex-row space-y-6 lg:space-y-0 lg:space-x-32 mt-10 sm:mt-20">
+   <div class="flex flex-col lg:flex-row space-y-6 lg:space-y-0 lg:space-x-10 xl:space-x-32 mt-10 sm:mt-20">
       <div class="flex flex-col max-w-4xl">
          <p class="font-open-sans text-neutral-5 text-lg sm:text-xl">{data.description}</p>
          <Decorator />
