@@ -70,6 +70,7 @@ fields:
   description: 'Tautan toko daring dari produk tersebut <br>(contoh: Tokopedia)'
 pages:
 - content/products/Kerajinan Kulit Felix.md
+- content/products/Teko-Bambu.md
 - content/products/action-figure-kelapa.md
 - content/products/gamevr-wibu.md
 - content/products/toko_wirowibu.md
