@@ -12,7 +12,7 @@
 
 <script>
    import Decorator from "../../components/Decorator.svelte";
-   import Contact from "../../components/Contact.svelte";
+   import Contact from "../../components/Item/Contact.svelte";
    import Header from "../../components/Item/Header.svelte";
    import Photos from "../../components/Item/Photos.svelte";
    import Prices from "../../components/Item/Prices.svelte";
