@@ -13,6 +13,10 @@
     import Grid from "../../components/listing/Grid.svelte";
 
     export let products;
+
+    const filters = {
+        
+    }
 </script>
 
 <Grid

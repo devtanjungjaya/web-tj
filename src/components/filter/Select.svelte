@@ -1,11 +1,11 @@
 <div class="flex flex-col space-y-6">
-    {#each categories as category}
+    {#each values as value}
         <label class="flex items-center group">
-            <input class="hidden" type="checkbox" bind:group={selectedCategories} value={category}/>
+            <input class="hidden" type="checkbox" bind:group={selectedValues} value={value}/>
             <div 
                 class={`w-6 h-6 flex items-center justify-center p-1 border-neutral-1 rounded-md mr-6 
                 group-hover:border-primary-7
-                ${selectedCategories.includes(category) ? 
+                ${selectedValues.includes(value) ? 
                     'border-0 bg-primary-7' : 'border-1 group-hover:border-2'
                 }`}
             >
@@ -13,7 +13,7 @@
                     class="text-white w-full h-full" 
                     fill="currentColor" 
                     viewBox="0 0 20 20"
-                    class:hidden={!selectedCategories.includes(category)}
+                    class:hidden={!selectedValues.includes(value)}
                 >
                     <path 
                         fill-rule="evenodd" 
@@ -24,7 +24,7 @@
                 </svg>
             </div>
             <span class="font-overpass font-semibold text-neutral-5 text-xl">
-                {category}
+                {value}
             </span>
         </label>
     {/each}
@@ -34,22 +34,24 @@
     import { createEventDispatcher } from 'svelte';
     const dispatch = createEventDispatcher();
 
-    export let categories;
+    export let values;
+    export let label;
+    export let itemField;
 
-    let selectedCategories = [];
+    let selectedValues = [];
 
-    $: if(selectedCategories.length) {
+    $: if(selectedValues.length) {
         dispatch('filter', {
-            type: 'category',
+            type: label,
             filter: function(items) {
-                return items.filter(item => {                    
-                    return selectedCategories.every(selected => item.categories.includes(selected));
-                });
+                return items.filter(item =>                     
+                    selectedValues.every(selected => item[itemField].includes(selected))
+                );
             }
         });
     } else {
         dispatch('filter', {
-            type: 'category',
+            type: label,
             filter: function(items) {
                 return items;
             }

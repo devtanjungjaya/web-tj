@@ -16,7 +16,7 @@
                     {categories.join(", ")}
                 </span>
                 <span class="self-end font-overpass font-bold text-neutral-9 text-xs sm:text-sm lg:text-base">
-                    {prices[0].value}
+                    {price}
                 </span>
             </div>
         </div>
@@ -31,9 +31,12 @@
 
 <script>
     import formatRupiah from "../../utilities/currency";
+
     export let photos;
     export let name;
     export let categories;
     export let prices;
     export let slug;
+
+    $: price = formatRupiah(prices[0].value)
 </script>

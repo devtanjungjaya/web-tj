@@ -10,22 +10,10 @@
 </div>
 
 <script>
-    import CategoryFilter from "../filter/Category.svelte";
     import Filter from "./Filter.svelte";
 
-    export let filters = [
-        {
-            label: "Kategori",
-            component: CategoryFilter,
-            props: {
-                categories: ['Makanan', 'Kerajinan']
-            }
-        },
-        {
-            label: "Harga"
-        }
-    ];
-    export let items;
+    export let filters = [];
+    export let items = [];
     export let itemComponent;
 
     let filterFunctions = []

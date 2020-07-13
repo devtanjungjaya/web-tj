@@ -13,7 +13,7 @@
                     {contact.name}
                 </span>
                 <span class="self-end font-overpass font-bold text-neutral-9 text-xs sm:text-sm lg:text-base">
-                    {prices[0].value}
+                    {price}
                 </span>
             </div>
         </div>
@@ -27,9 +27,13 @@
 </style>
 
 <script>
+    import formatRupiah from "../../utilities/currency";
+
     export let photos;
     export let name;
     export let contact;
     export let prices;
     export let slug;
+
+    $: price = formatRupiah(prices[0].value);
 </script>
