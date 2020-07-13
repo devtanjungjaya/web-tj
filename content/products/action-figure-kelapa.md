@@ -9,7 +9,7 @@ description: Action figure berbentuk robot ini memiliki tinggi 24 cm. Dibuat den
 prices:
 - description: Action Figure Kelapa
   value: 80000
-  unit: ''
+  unit: 'pcs'
 ecommerce: https://google.com
 contact:
   name: Toko Kelapa
