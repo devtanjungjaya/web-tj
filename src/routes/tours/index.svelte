@@ -13,6 +13,7 @@
     import Grid from "../../components/listing/Grid.svelte";
     import SelectFilter from "../../components/filter/Select.svelte";
     import PriceFilter from "../../components/filter/PriceRange.svelte";
+    import Navigation from "../../components/listing/Navigation.svelte";
 
     export let tours;
     export let tourCategories;
@@ -52,8 +53,11 @@
 
 </script>
 
-<Grid
-    items={tours}
-    itemComponent={TourItem}
-    filters={filters}
-/>
+<div class="flex flex-col px-2 md:px-6 lg:px-16 py-10 space-y-8">
+    <Navigation current="tours" />
+    <Grid
+        items={tours}
+        itemComponent={TourItem}
+        filters={filters}
+    />
+</div>
