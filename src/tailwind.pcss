@@ -1,37 +1,19 @@
 @tailwind base;
 
-.promo-img {
-    width: 300px;
-    max-width: 100%;
-    height: fit-content;
-    align-self: center;
+.max-line-2 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
 }
 
-.container-item {
-    min-width: 150px;
-    max-width: 250px;
-}
-
-.info-panel {
-   width: 375px;
-}
-
-@screen sm {
-    .promo-img {
-        width: 200px;
-    }
-}
-
-@screen md {
-    .promo-img {
-        width: 300px;
-    }
-}
-
-@screen lg {
-    .promo-img {
-        width: 362px;
-    }
+.max-line-1 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
 }
 
 @tailwind components;

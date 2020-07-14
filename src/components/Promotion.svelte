@@ -21,3 +21,30 @@
     export let photoFirst = true;
     export let img;
 </script>
+
+<style type="text/postcss">
+.promo-img {
+    width: 300px;
+    max-width: 100%;
+    height: fit-content;
+    align-self: center;
+}
+
+@screen sm {
+    .promo-img {
+        width: 200px;
+    }
+}
+
+@screen md {
+    .promo-img {
+        width: 300px;
+    }
+}
+
+@screen lg {
+    .promo-img {
+        width: 362px;
+    }
+}
+</style>
