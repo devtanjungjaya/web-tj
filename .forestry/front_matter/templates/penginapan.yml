@@ -1,4 +1,35 @@
 ---
 label: Penginapan
 hide_body: true
-fields: []
+fields:
+- name: name
+  type: text
+  config:
+    required: true
+  label: Nama
+  description: Nama penginapan
+- name: photos
+  type: image_gallery
+  config: {}
+  label: Foto
+  description: Foto-foto kamar, fasilitas, atau bangunan yang menarik
+- name: gmaps
+  type: text
+  config:
+    required: false
+  label: Link google maps
+  description: Link google maps yang menunjukan lokasi penginapan
+- name: prices
+  type: field_group_list
+  fields:
+  - name: price
+    type: include
+    config: {}
+    template: harga
+    label: Harga
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: List harga
+  description: Harga-harga setiap tipe kamar
