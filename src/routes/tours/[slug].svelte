@@ -49,7 +49,7 @@
          <Decorator />
          <Contact {...data.contact} />
       </div>
-      <div class="flex flex-col info-panel flex-shrink-0 self-start max-w-full space-y-6">
+      <div class="flex flex-col flex-shrink-0 self-start max-w-full space-y-6" style="width: 375px">
          <Prices prices={data.prices} />
       </div>
    </div>
