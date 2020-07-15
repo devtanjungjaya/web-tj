@@ -1,0 +1,7 @@
+---
+label: Kategori paket wisata
+hide_body: true
+fields:
+- type: list
+  name: categories
+  label: categories
