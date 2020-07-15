@@ -1,0 +1,7 @@
+---
+label: Kategori penginapan
+hide_body: true
+fields:
+- type: list
+  name: categories
+  label: categories
