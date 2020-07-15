@@ -4,4 +4,6 @@ hide_body: true
 fields:
 - type: list
   name: categories
-  label: categories
+  label: Kategori produk lokal
+  config:
+    use_select: false
