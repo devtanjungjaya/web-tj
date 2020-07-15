@@ -1,28 +1,27 @@
 ---
 roomFacilities:
-    - Kamar mandi dalam
-    - Shower
-    - Kloset duduk
-    - Wastafel
-    - Air panas
-    - AC
-    - Kipas angin
-    - Sofa
-    - Meja
-    - Lemari
-    - Kursi
-    - TV
-    - Kulkas
-    - Kamar mandi luar
-    - Wifi
-    
+- Kamar mandi dalam
+- Shower
+- Kloset duduk
+- Wastafel
+- Air panas
+- AC
+- Kipas angin
+- Sofa
+- Meja
+- Lemari
+- Kursi
+- TV
+- Kulkas
+- Kamar mandi luar
+- Wifi
 publicFacilities:
-    - Restoran
-    - Area parkir
-    - Sarapan
-    - Minimarket
-    - Wifi
-    - Resepsionis 24 jam
-    - Staf multibahasa
-    - Jasa tur
-    - Kolam renang
+- Restoran
+- Area parkir
+- Sarapan
+- Minimarket
+- Wifi
+- Resepsionis 24 jam
+- Staf multibahasa
+- Jasa tur
+- Kolam renang

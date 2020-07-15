@@ -16,3 +16,5 @@ fields:
   description: Fasilitas-fasilitas publik yang ditemukan di luar kamar
   config:
     use_select: false
+pages:
+- data/facility-room.yml
