@@ -1,0 +1,10 @@
+---
+label: Fasilitas penginapan
+hide_body: true
+fields:
+- type: list
+  name: roomFacilities
+  label: roomFacilities
+- type: list
+  name: publicFacilities
+  label: publicFacilities

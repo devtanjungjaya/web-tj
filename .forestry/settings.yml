@@ -24,7 +24,6 @@ sections:
 - type: document
   path: data/facility-room.yml
   label: Fasilitas penginapan
-  match: "**/*"
 - type: document
   path: data/category-product.yml
   label: Kategori produk lokal
