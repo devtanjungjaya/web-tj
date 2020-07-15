@@ -27,6 +27,10 @@ sections:
 - type: document
   path: data/category-tour.yml
   label: Kategori paket wisata
+- type: document
+  path: data/category-room.yml
+  label: Kategori penginapan
+  match: "**/*"
 upload_dir: static/images
 public_path: https://web-tj.netlify.app/images
 front_matter_path: ''
