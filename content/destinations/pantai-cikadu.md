@@ -27,7 +27,13 @@ prices:
 - description: Tiket masuk (weekend) usia 3-7
   value: 75000
   unit: orang
-hours: []
+hours:
+- description: sabtu - minggu
+  open: 9:00 AM
+  close: 8:00 PM
+- description: senin - jumat
+  open: 10:00 AM
+  close: 5:00 PM
 categories:
 - Alam
 facilities:
