@@ -79,3 +79,13 @@ fields:
     template: koordinat
     label: Koordinat
   label: Koordinat lokasi
+- name: notes
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: markdown
+  label: Catatan
+  description: Catatan untuk pengunjung atau yang lainnya
