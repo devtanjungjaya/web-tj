@@ -23,7 +23,7 @@
                     </path>
                 </svg>
             </div>
-            <span class="font-overpass font-semibold text-neutral-5 text-xl">
+            <span class="font-overpass font-semibold text-neutral-5 text-xl leading-tight">
                 {value}
             </span>
         </label>

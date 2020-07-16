@@ -25,8 +25,8 @@
                 {#if filter.component}
                     <div 
                         class={`absolute rounded-2xl border-neutral-1 border-1 p-6 mt-4 left-0 z-10 bg-white shadow-xl
-                            ${opened === i ? 'block' : 'hidden'}`}
-                        style="min-width: 272px"
+                            ${opened === i ? 'block' : 'hidden'} overflow-hidden`}
+                        style="min-width: 272px; max-height: 345px; overflow-y: auto"
                     >
                         <svelte:component 
                             this={filter.component} 
