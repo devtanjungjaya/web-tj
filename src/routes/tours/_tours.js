@@ -1,12 +1,11 @@
 import getMarkdownInDirectory from '../../utilities/markdown.js';
 const marked = require('marked');
 
+const wysiwyg = ['description', 'activity'];
+
 let tours = getMarkdownInDirectory('content/tours/');
-tours = tours.map(tour => ({
-    ...tour, 
-    description: marked(tour.description),
-    activity: tour.activity ? marked(tour.activity) : null
-}))
+tours = tours.map(tour => 
+    Object.assign(tour, Object.fromEntries(wysiwyg.map(w => tour[w] ? [w, marked(tour[w])] : []))))
 export const map = new Map(tours.map(tour => [tour.slug, tour]));
 
 export function getRandom() {
