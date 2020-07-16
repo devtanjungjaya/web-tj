@@ -12,7 +12,7 @@ fields:
     min: -90
     max: 90
     step: 
-    required: true
+    required: false
 - name: lng
   type: number
   label: Longitude
@@ -23,4 +23,4 @@ fields:
     min: -180
     max: 180
     step: 
-    required: true
+    required: false
