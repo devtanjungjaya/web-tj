@@ -1,6 +1,7 @@
 ---
-label: Kategori destinasi wisata
+label: Destinasi wisata
 hide_body: true
+display_field: name
 fields:
 - name: name
   type: text
@@ -44,7 +45,7 @@ fields:
   config:
     min: 
     max: 
-    labelField: 
+    labelField: description
   label: List harga
   description: List harga-harga (misal tiket masuk, dll)
 - name: hours
@@ -58,5 +59,5 @@ fields:
   config:
     min: 
     max: 
-    labelField: 
+    labelField: description
   label: Jam operasional
