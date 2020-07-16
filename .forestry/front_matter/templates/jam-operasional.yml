@@ -1,0 +1,29 @@
+---
+label: Jam operasional
+hide_body: true
+fields:
+- name: description
+  type: text
+  config:
+    required: true
+  label: Deskripsi
+- name: open
+  type: datetime
+  label: Buka
+  description: Jam buka beroperasi
+  config:
+    required: true
+    date_format: 
+    time_format: h:mm
+    display_utc: true
+    export_format: h:mm A ZZ
+- name: close
+  type: datetime
+  label: Tutup
+  description: Jam tutup beroperasi
+  config:
+    required: true
+    date_format: 
+    time_format: h:mm
+    display_utc: true
+    export_format: h:mm A ZZ

@@ -7,6 +7,11 @@ sections:
 - type: heading
   label: Konten
 - type: directory
+  path: content/products
+  label: Produk lokal
+  create: all
+  match: "**/*.md"
+- type: directory
   path: content/tours
   label: Paket wisata
   create: all
@@ -14,23 +19,32 @@ sections:
   templates:
   - paket-wisata
 - type: directory
-  path: content/products
-  label: Produk lokal
-  create: all
-  match: "**/*.md"
-- type: directory
   path: content/rooms
   label: Penginapan
   create: all
   match: "**/*.md"
   templates:
   - penginapan
+- type: directory
+  path: content/destinations
+  label: Destinasi wisata
+  create: all
+  match: "**/*.md"
+  templates:
+  - destinasi-wisata
+- type: heading
+  label: Fasilitas
 - type: document
   path: data/facility-tour.yml
   label: Fasilitas paket wisata
 - type: document
   path: data/facility-room.yml
   label: Fasilitas penginapan
+- type: document
+  path: data/facility-destination.yml
+  label: Fasilitas destinasi wisata
+- type: heading
+  label: Kategori
 - type: document
   path: data/category-product.yml
   label: Kategori produk lokal
@@ -40,6 +54,9 @@ sections:
 - type: document
   path: data/category-room.yml
   label: Kategori penginapan
+- type: document
+  path: data/category-destination.yml
+  label: Kategori destinasi wisata
 upload_dir: static/images
 public_path: https://web-tj.netlify.app/images
 front_matter_path: ''

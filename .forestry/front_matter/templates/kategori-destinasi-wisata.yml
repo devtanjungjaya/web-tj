@@ -1,0 +1,9 @@
+---
+label: Kategori destinasi wisata
+hide_body: true
+fields:
+- type: list
+  name: categories
+  label: Kategori
+pages:
+- data/category-destination.yml
