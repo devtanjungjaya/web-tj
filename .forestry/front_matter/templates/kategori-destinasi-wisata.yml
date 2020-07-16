@@ -5,3 +5,5 @@ fields:
 - type: list
   name: categories
   label: Kategori
+pages:
+- data/category-destination.yml
