@@ -69,6 +69,16 @@ fields:
       file: data/facility-room.yml
       path: roomFacilities
   label: Fasilitas kamar
+- name: description
+  type: textarea
+  default: ''
+  config:
+    required: true
+    wysiwyg: true
+    schema:
+      format: markdown
+  label: Deskripsi
+  description: Deskripsi mengenai penginapan dan fasilitas-fasilitas yang ditawarkan
 - name: coordinate
   type: field_group
   config: {}
