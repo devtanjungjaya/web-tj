@@ -69,3 +69,13 @@ fields:
       file: data/facility-room.yml
       path: roomFacilities
   label: Fasilitas kamar
+- name: coordinate
+  type: field_group
+  config: {}
+  fields:
+  - name: coordinate
+    type: include
+    config: {}
+    template: koordinat
+    label: Koordinat
+  label: Koordinat lokasi
