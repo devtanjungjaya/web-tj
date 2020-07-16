@@ -1,0 +1,11 @@
+---
+label: Kategori penginapan
+hide_body: true
+fields:
+- type: list
+  name: categories
+  label: Kategori penginapan
+  config:
+    use_select: false
+pages:
+- data/category-room.yml

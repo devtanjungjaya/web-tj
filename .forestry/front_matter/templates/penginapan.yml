@@ -1,0 +1,103 @@
+---
+label: Penginapan
+hide_body: true
+fields:
+- name: name
+  type: text
+  config:
+    required: true
+  label: Nama
+  description: Nama penginapan
+- name: photos
+  type: image_gallery
+  config: {}
+  label: Foto
+  description: Foto-foto kamar, fasilitas, atau bangunan yang menarik
+- name: gmaps
+  type: text
+  config:
+    required: false
+  label: Link google maps
+  description: Link google maps yang menunjukan lokasi penginapan
+- name: prices
+  type: field_group_list
+  fields:
+  - name: price
+    type: include
+    config: {}
+    template: harga
+    label: Harga
+  config:
+    min: 
+    max: 
+    labelField: description
+  label: List harga
+  description: Harga-harga setiap tipe kamar
+- name: category
+  type: select
+  default: []
+  config:
+    required: true
+    options: []
+    source:
+      type: documents
+      section: kategori-penginapan-32d443ca-d6d7-4215-99c2-1cab7aba6fd6
+      file: data/category-room.yml
+      path: categories
+  label: Kategori
+- name: publicFacilities
+  type: list
+  config:
+    use_select: true
+    min: 
+    max: 
+    source:
+      type: documents
+      section: fasilitas-penginapan
+      file: data/facility-room.yml
+      path: publicFacilities
+  label: Fasilitas publik
+- name: roomFacilities
+  type: list
+  config:
+    use_select: true
+    min: 
+    max: 
+    source:
+      type: documents
+      section: fasilitas-penginapan
+      file: data/facility-room.yml
+      path: roomFacilities
+  label: Fasilitas kamar
+- name: description
+  type: textarea
+  default: ''
+  config:
+    required: true
+    wysiwyg: true
+    schema:
+      format: markdown
+  label: Deskripsi
+  description: Deskripsi mengenai penginapan dan fasilitas-fasilitas yang ditawarkan
+- name: coordinate
+  type: field_group
+  config: {}
+  fields:
+  - name: coordinate
+    type: include
+    config: {}
+    template: koordinat
+    label: Koordinat
+  label: Koordinat lokasi
+- name: notes
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: markdown
+  label: Catatan
+  description: Catatan untuk pengunjung atau yang lainnya
+pages:
+- content/rooms/homestay.md
