@@ -1,5 +1,5 @@
 <div class="flex flex-col font-overpass">
-    <span class="font-bold text-neutral-5 text-2xl sm:text-3xl mb-6">Fasilitas</span>
+    <span class="font-bold text-neutral-5 text-2xl sm:text-3xl mb-6">{label}</span>
     {#if facilities.length < 4}
         <div class="flex flex-col space-y-6">
             {#each facilities as facility}
@@ -26,4 +26,6 @@
 
     export let iconMap;
     export let facilities;
+
+    export let label = "Fasilitas";
 </script>
