@@ -32,6 +32,10 @@ sections:
   path: data/facility-room.yml
   label: Fasilitas penginapan
 - type: document
+  path: data/facility-destination.yml
+  label: Fasilitas destinasi wisata
+  match: "**/*"
+- type: document
   path: data/category-product.yml
   label: Kategori produk lokal
 - type: document
@@ -40,6 +44,10 @@ sections:
 - type: document
   path: data/category-room.yml
   label: Kategori penginapan
+- type: document
+  path: data/category-destination.yml
+  label: Kategori destinasi wisata
+  match: "**/*"
 upload_dir: static/images
 public_path: https://web-tj.netlify.app/images
 front_matter_path: ''
