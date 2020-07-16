@@ -30,5 +30,6 @@ description: Homestay Papi Natal merupakan homestay yang terletak di dekat panta
   oleh wisatawan. Terdapat tempat parkir luas untuk para wisatawan memarkirkan kendaraannya.
   Berbagai pilihan kamar tersedia dengan harga yang terjangkau.
 notes: ''
+category: Homestay
 
 ---
