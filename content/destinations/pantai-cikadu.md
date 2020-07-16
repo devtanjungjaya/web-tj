@@ -33,7 +33,7 @@ hours:
   close: 9:00 PM +0700
 - description: senin-jumat
   open: 9:00 AM +0700
-  close: 6:00 PM +0700
+  close: 6:00 PM
 categories:
 - Alam
 facilities:

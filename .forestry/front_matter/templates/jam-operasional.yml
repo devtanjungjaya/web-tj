@@ -16,7 +16,7 @@ fields:
     date_format: 
     time_format: h:mm
     display_utc: false
-    export_format: h:mm A ZZ
+    export_format: h:mm A
 - name: close
   type: datetime
   label: Tutup
@@ -26,4 +26,4 @@ fields:
     date_format: 
     time_format: h:mm
     display_utc: false
-    export_format: h:mm A ZZ
+    export_format: h:mm A
