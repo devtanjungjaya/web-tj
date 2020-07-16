@@ -15,7 +15,7 @@ fields:
     required: true
     date_format: 
     time_format: h:mm
-    display_utc: true
+    display_utc: false
     export_format: h:mm A ZZ
 - name: close
   type: datetime
@@ -25,5 +25,5 @@ fields:
     required: true
     date_format: 
     time_format: h:mm
-    display_utc: true
+    display_utc: false
     export_format: h:mm A ZZ
