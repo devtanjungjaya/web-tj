@@ -1,7 +1,21 @@
 <div class="flex flex-col space-y-6">
     {#each values as value}
         <label class="flex items-center group">
-            <input class="hidden" type="checkbox" bind:group={selectedValues} value={value}/>
+            {#if unique}
+                <input 
+                    class="hidden" 
+                    type="radio" 
+                    bind:group={selectedValues} 
+                    value={value}
+                />
+            {:else}
+                <input 
+                    class="hidden" 
+                    type="checkbox" 
+                    bind:group={selectedValues} 
+                    value={value}
+                />
+            {/if}
             <div 
                 class={`w-6 h-6 flex items-center justify-center p-1 border-neutral-1 rounded-md mr-6 
                 group-hover:border-primary-7
@@ -37,6 +51,7 @@
     export let values;
     export let label;
     export let itemField;
+    export let unique = false;
 
     let selectedValues = [];
 
@@ -45,7 +60,9 @@
             type: label,
             filter: function(items) {
                 return items.filter(item =>                     
-                    selectedValues.every(selected => item[itemField].includes(selected))
+                    unique ?
+                    item[itemField].includes(selectedValues)
+                    : selectedValues.every(selected => item[itemField].includes(selected))
                 );
             }
         });

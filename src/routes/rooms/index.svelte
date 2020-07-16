@@ -29,7 +29,8 @@
             props: {
                 values: roomCategories,
                 label: "Kategori",
-                itemField: "categories"
+                itemField: "categories",
+                unique: true
             }
         },
         {
@@ -63,7 +64,7 @@
 
 </script>
 
-<div class="flex flex-col px-2 md:px-6 lg:px-16 py-10 space-y-8">
+<div class="flex flex-col px-2 md:px-6 lg:px-16 py-10 space-y-8" style="min-height: inherit">
     <Navigation current="rooms" />
     <Grid
         items={rooms}

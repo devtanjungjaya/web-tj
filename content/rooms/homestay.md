@@ -19,8 +19,6 @@ prices:
 - description: Sarapan
   value: 15000
   unit: orang
-categories:
-- Homestay
 publicFacilities:
 - Restoran
 roomFacilities:

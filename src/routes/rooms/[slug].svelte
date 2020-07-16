@@ -29,7 +29,7 @@
       typeURL="rooms"
       type="PENGINAPAN"
       title={data.name}
-      categories={[data.category]}
+      categories={data.categories}
    />
  
    <Photos photos={data.photos} />

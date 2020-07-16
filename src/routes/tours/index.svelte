@@ -53,7 +53,7 @@
 
 </script>
 
-<div class="flex flex-col px-2 md:px-6 lg:px-16 py-10 space-y-8">
+<div class="flex flex-col px-2 md:px-6 lg:px-16 py-10 space-y-8" style="min-height: inherit">
     <Navigation current="tours" />
     <Grid
         items={tours}

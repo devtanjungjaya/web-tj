@@ -1,4 +1,4 @@
-<div class="flex space-x-10 font-overpass font-bold text-xl">
+<div class="flex space-x-10 font-overpass font-bold text-xl overflow-x-auto">
     {#each navigations as navigation}
         <a 
             class={`${current == navigation.url ? 'text-primary-7' : 'text-neutral-2 hover:text-neutral-4'} nav`}

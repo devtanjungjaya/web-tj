@@ -6,6 +6,7 @@ const wysiwyg = ['description', 'notes'];
 let rooms = getMarkdownInDirectory('content/rooms/');
 rooms = rooms.map(room => 
     Object.assign(room, Object.fromEntries(wysiwyg.map(w => room[w] ? [w, marked(room[w])] : []))))
+rooms.map(room => { room.categories = [room.category] })
 export const map = new Map(rooms.map(room => [room.slug, room]));
 
 export function getRandom() {
