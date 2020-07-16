@@ -1,7 +1,6 @@
 ---
 label: Destinasi wisata
 hide_body: true
-display_field: name
 fields:
 - name: name
   type: text
@@ -61,3 +60,27 @@ fields:
     max: 
     labelField: description
   label: Jam operasional
+- name: categories
+  type: list
+  config:
+    use_select: true
+    min: 
+    max: 
+    source:
+      type: documents
+      section: kategori-destinasi-wisata
+      file: data/category-destination.yml
+      path: categories
+  label: Kategori
+- name: facilities
+  type: list
+  config:
+    use_select: true
+    min: 
+    max: 
+    source:
+      type: documents
+      section: fasilitas-destinasi-wisata
+      file: data/facility-destination.yml
+      path: facilities
+  label: Fasilitas
