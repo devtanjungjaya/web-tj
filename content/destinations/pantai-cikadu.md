@@ -29,11 +29,11 @@ prices:
   unit: orang
 hours:
 - description: sabtu-minggu
-  open: 3:00 PM +0700
-  close: 4:00 AM +0700
+  open: 8:00 AM +0700
+  close: 9:00 PM +0700
 - description: senin-jumat
-  open: 4:00 PM +0700
-  close: 1:00 AM +0700
+  open: 9:00 AM +0700
+  close: 6:00 PM +0700
 categories:
 - Alam
 facilities:
