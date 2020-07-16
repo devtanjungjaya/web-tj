@@ -18,6 +18,13 @@ sections:
   label: Produk lokal
   create: all
   match: "**/*.md"
+- type: directory
+  path: content/rooms
+  label: Penginapan
+  create: all
+  match: "**/*.md"
+  templates:
+  - penginapan
 - type: document
   path: data/facility-tour.yml
   label: Fasilitas paket wisata
