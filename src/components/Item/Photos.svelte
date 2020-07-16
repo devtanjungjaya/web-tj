@@ -1,4 +1,4 @@
-<Carousel perPage={{ 1100: 3, 800: 2 }} dots={false}>
+<Carousel perPage={{ 1440: 3, 800: 2 }} dots={false}>
     {#each photos as photo, i}
        <div 
           class="px-1 sm:px-4"

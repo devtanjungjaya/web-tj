@@ -16,6 +16,8 @@
   },
   "dependencies": {
     "compression": "^1.7.1",
+    "date-fns": "^2.14.0",
+    "dompurify": "^2.0.12",
     "gray-matter": "^4.0.2",
     "marked": "^1.1.0",
     "polka": "next",

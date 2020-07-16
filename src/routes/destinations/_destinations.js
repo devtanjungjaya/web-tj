@@ -1,0 +1,27 @@
+import getMarkdownInDirectory from '../../utilities/markdown.js';
+const marked = require('marked');
+
+const wysiwyg = ['description'];
+
+let destinations = getMarkdownInDirectory('content/destinations/');
+destinations = destinations.map(destination => 
+    Object.assign(
+        destination, 
+        Object.fromEntries(wysiwyg.map(w => destination[w] ? [w, marked(destination[w], { breaks: true })] : []))
+    ))
+export const map = new Map(destinations.map(destination => [destination.slug, destination]));
+
+export function getRandom() {
+    return [...map.values()].sort(() => Math.random() - 0.5);;
+}
+
+export const facilityIconMap = {
+    'Rumah makan': 'ic_eat.svg',
+    'Spot foto': 'ic_camera.svg',
+    'Toilet umum': 'ic_toilet.svg',
+    'Musholla': 'ic_mosque.svg',
+    'Tempat parkir': 'ic_park.svg',
+    'Toko oleh-oleh': 'ic_bag.svg'
+}
+
+export default map;
