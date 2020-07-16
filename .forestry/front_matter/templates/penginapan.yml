@@ -30,7 +30,7 @@ fields:
   config:
     min: 
     max: 
-    labelField: 
+    labelField: description
   label: List harga
   description: Harga-harga setiap tipe kamar
 - name: categories
