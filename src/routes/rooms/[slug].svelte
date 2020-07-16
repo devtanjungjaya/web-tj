@@ -20,6 +20,13 @@
    import Link from "../../components/Item/Link.svelte";
    import Facilities from "../../components/Item/Facilities.svelte";
    import Map from "../../components/Item/Map.svelte";
+   import { onMount } from "svelte";
+
+   let DOMPurify = null;
+
+   onMount(async () => {
+      DOMPurify = await import('dompurify');
+   })
 
    export let data;
 </script>
@@ -36,8 +43,12 @@
 
    <div class="flex flex-col lg:flex-row space-y-6 lg:space-y-0 lg:space-x-10 xl:space-x-32 mt-10 sm:mt-20">
       <div class="flex flex-col max-w-4xl">
-         <p class="font-open-sans text-neutral-5 text-lg sm:text-xl">{@html data.description}</p>
-         <Decorator />
+         {#if DOMPurify}
+            <p class="font-open-sans text-neutral-5 text-lg sm:text-xl">
+               {@html DOMPurify.sanitize(data.description)}
+            </p>
+            <Decorator />
+         {/if}
          <Facilities 
             label="Fasilitas kamar" 
             facilities={data.roomFacilities} 
@@ -51,12 +62,12 @@
          />
          <!-- <Decorator /> -->
          <!-- <Contact {...data.contact} /> -->
-         {#if data.notes}
+         {#if data.notes && DOMPurify}
             <Decorator />
             <div class="flex flex-col font-overpass">
                <span class="font-bold text-neutral-5 text-2xl sm:text-3xl mb-6 sm:mb-6">Catatan</span>
                <p class="font-open-sans font-normal text-neutral-5 text-lg sm:text-xl">
-                  {@html data.notes}
+                  {@html DOMPurify.sanitize(data.notes)}
                </p>
             </div>
          {/if}
