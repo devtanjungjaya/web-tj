@@ -43,5 +43,6 @@ facilities:
 - Spot foto
 - Musholla
 - Toilet umum
+gmaps: https://google.com
 
 ---
