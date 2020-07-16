@@ -33,12 +33,12 @@ fields:
     labelField: description
   label: List harga
   description: Harga-harga setiap tipe kamar
-- name: categories
-  type: list
+- name: category
+  type: select
+  default: []
   config:
-    use_select: true
-    min: 
-    max: 
+    required: true
+    options: []
     source:
       type: documents
       section: kategori-penginapan-32d443ca-d6d7-4215-99c2-1cab7aba6fd6
