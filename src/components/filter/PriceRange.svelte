@@ -1,10 +1,9 @@
-<div class="flex space-x-3 items-center">
-    <div class="flex flex-col space-y-1">
+<div class="flex flex-col sm:flex-row sm:space-x-3 items-start sm:items-center">
+    <div class="flex flex-col space-y-1 mb-3 sm:mb-0 w-full sm:max-w-2xs">
         <span class="ml-4 font-overpass font-normal text-neutral-3 text-lg">min harga</span>
         <input
             class="border-1 rounded-lg border-neutral-1 focus:border-primary-7 px-4 py-2 
-            font-overpass font-semibold text-primary-7 outline-none box-border text-xl"
-            style="max-width: 12.5rem"
+            font-overpass font-semibold text-primary-7 outline-none box-border text-xl sm:max-w-2xs"
             spellcheck="false"
             type="text" 
             on:input={event => {
@@ -14,13 +13,12 @@
             value={min} 
         />
     </div>
-    <div class="bg-neutral-1 mb-6 self-end" style="height: 1px; width: 20px"></div>
-    <div class="flex flex-col space-y-1">
+    <div class="bg-neutral-1 mb-6 self-end hidden sm:block" style="height: 1px; width: 20px"></div>
+    <div class="flex flex-col space-y-1 w-full sm:max-w-2xs">
         <span class="ml-4 font-overpass font-normal text-neutral-3 text-lg">max harga</span>
         <input
             class="border-1 rounded-lg border-neutral-1 focus:border-primary-7 px-4 py-2 
-            font-overpass font-semibold text-primary-7 outline-none box-border text-xl"
-            style="max-width: 12.5rem"
+            font-overpass font-semibold text-primary-7 outline-none box-border text-xl sm:max-w-2xs"
             spellcheck="false"
             type="text" 
             on:input={event => {
