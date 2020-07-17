@@ -3,12 +3,10 @@
         {#each filters as filter, i}
             <div class="relative">
                 <div 
-                    class="flex items-center flex-1 px-4 py-2 border-neutral-1 max-w-xs 
-                    cursor-pointer hover:bg-gray-100 overflow-hidden" 
+                    class={`flex items-center flex-1 px-4 py-2 border-neutral-1 max-w-xs 
+                    cursor-pointer hover:bg-gray-100 overflow-hidden
+                    ${i >= filters.length-1 ? "rounded-r-2xl border-l-1" : i > 0 ? "border-l-1" : "rounded-l-2xl"}`}
                     on:click={() => opened = i}
-                    class:border-l-1={i > 0}
-                    class:rounded-l-2xl={i === 0}
-                    class:rounded-r-2xl={i === filters.length-1}
                 >
                     <span 
                         class={`flex-grow font-overpass font-semibold text-lg lg:text-xl mr-6 lg:mr-12
