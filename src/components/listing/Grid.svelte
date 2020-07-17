@@ -3,7 +3,9 @@
         <Navigation {current} />
         <Filter filters={filters} on:filter={event => filterFunctions = event.detail} />
     </div>
-    <div class="mt-8 md:mt-16 grid gap-2 md:gap-10 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 listing">
+    <div 
+        class="mt-8 grid gap-2 md:gap-10 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 
+        xl:grid-cols-5 2xl:grid-cols-6 listing">
         {#each filteredItems as item}
             <div class="flex items-center justify-between w-full h-full">
                 <div style="min-width: 145px; max-width: 250px" class="w-full">
