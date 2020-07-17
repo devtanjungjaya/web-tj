@@ -8,14 +8,17 @@
             <div class="p-2 sm:p-3 flex-grow flex flex-col">
                 <span 
                     class="font-bold font-overpass text-primary-7 leading-none sm:leading-tight 
-                    text-base sm:text-lg lg:text-xl max-line-2"
+                    text-base xs:text-lg max-line-2"
                 >
                     {name}
                 </span>
-                <span class="font-overpass font-normal text-neutral-3 flex-grow text-xs sm:text-sm lg:text-base max-line-1">
+                <span 
+                    class="font-overpass font-normal text-neutral-3 flex-grow 
+                    text-xs xs:text-base max-line-1"
+                >
                     {categories.join(", ")}
                 </span>
-                <span class="self-end font-overpass font-bold text-neutral-9 text-xs sm:text-sm lg:text-base">
+                <span class="self-end font-overpass font-bold text-neutral-9 text-xs xs:text-base">
                     {price}
                 </span>
             </div>

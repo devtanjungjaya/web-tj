@@ -30,6 +30,7 @@
                 values: roomCategories,
                 label: "Kategori",
                 itemField: "categories",
+                type: "rooms",
                 unique: true
             }
         },
@@ -37,6 +38,7 @@
             label: "Harga",
             component: PriceFilter,
             props: {
+                type: "rooms",
                 maxPrice: Math.max(...rooms.map(room => 
                     Math.max(...room.prices.map(price => price.value))
                 ))
@@ -48,6 +50,7 @@
             props: {
                 values: publicFacilities,
                 label: "Fasilitas publik",
+                type: "rooms",
                 itemField: "publicFacilities"
             }
         },
@@ -57,6 +60,7 @@
             props: {
                 values: roomFacilities,
                 label: "Fasilitas kamar",
+                type: "rooms",
                 itemField: "roomFacilities"
             }
         }
@@ -64,11 +68,11 @@
 
 </script>
 
-<div class="flex flex-col px-2 md:px-6 lg:px-16 py-10 space-y-8" style="min-height: inherit">
-    <Navigation current="rooms" />
+<div class="flex flex-col px-2 xs:px-4 md:px-6 lg:px-16 py-6 min-h-screen">
     <Grid
         items={rooms}
         itemComponent={RoomItem}
         filters={filters}
+        current="rooms"
     />
 </div>

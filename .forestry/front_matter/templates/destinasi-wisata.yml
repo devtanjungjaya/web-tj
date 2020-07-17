@@ -1,0 +1,88 @@
+---
+label: Destinasi wisata
+hide_body: true
+fields:
+- name: name
+  type: text
+  config:
+    required: true
+  label: Nama
+  description: Nama destinasi wisata
+- name: photos
+  type: image_gallery
+  config: {}
+  label: Foto
+  description: Foto-foto yang menarik
+- name: description
+  type: textarea
+  default: ''
+  config:
+    required: true
+    wysiwyg: true
+    schema:
+      format: markdown
+  label: Deskripsi
+  description: Deskripsi lengkap mengenai destinasi wisata
+- name: coordinate
+  type: field_group
+  config: {}
+  fields:
+  - name: coordinate
+    type: include
+    config: {}
+    template: koordinat
+    label: Koordinat
+  label: Koordinat lokasi
+- name: prices
+  type: field_group_list
+  fields:
+  - name: price
+    type: include
+    config: {}
+    template: harga
+    label: Harga
+  config:
+    min: 
+    max: 
+    labelField: description
+  label: List harga
+  description: List harga-harga (misal tiket masuk, dll)
+- name: hours
+  type: field_group_list
+  fields:
+  - name: hour
+    type: include
+    config: {}
+    template: jam-operasional
+    label: Jam
+  config:
+    min: 
+    max: 
+    labelField: description
+  label: Jam operasional
+- name: categories
+  type: list
+  config:
+    use_select: true
+    min: 
+    max: 
+    source:
+      type: documents
+      section: kategori-destinasi-wisata
+      file: data/category-destination.yml
+      path: categories
+  label: Kategori
+- name: facilities
+  type: list
+  config:
+    use_select: true
+    min: 
+    max: 
+    source:
+      type: documents
+      section: fasilitas-destinasi-wisata
+      file: data/facility-destination.yml
+      path: facilities
+  label: Fasilitas
+pages:
+- content/destinations/pantai-cikadu.md

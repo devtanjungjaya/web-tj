@@ -1,4 +1,4 @@
-<a rel="prefetch" href={`tours/${slug}`}>
+<a rel="prefetch" href={`destinations/${slug}`}>
     <div class="h-0 relative w-full" style="padding-bottom: 122%">
         <div 
             class="hover:shadow-md flex flex-col rounded-2xl border-1 border-neutral-1 overflow-hidden absolute 
@@ -12,15 +12,12 @@
                 >
                     {name}
                 </span>
-                <span 
-                    class="font-overpass font-normal text-neutral-3 flex-grow 
-                    text-xs xs:text-base max-line-1"
-                >
+                <span class="font-overpass font-normal text-neutral-3 flex-grow text-xs xs:text-base max-line-1">
                     {categories.join(", ")}
                 </span>
-                <span class="self-end font-overpass font-bold text-neutral-9 text-xs xs:text-base">
+                <!-- <span class="self-end font-overpass font-bold text-neutral-9 text-xs sm:text-sm lg:text-base">
                     {price}
-                </span>
+                </span> -->
             </div>
         </div>
     </div>

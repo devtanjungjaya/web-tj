@@ -27,6 +27,7 @@
             props: {
                 values: productCategories,
                 label: "Kategori",
+                type: "products",
                 itemField: "categories"
             }
         },
@@ -34,6 +35,7 @@
             label: "Harga",
             component: PriceFilter,
             props: {
+                type: "products",
                 maxPrice: Math.max(...products.map(product => 
                     Math.max(...product.prices.map(price => price.value))
                 ))
@@ -43,11 +45,11 @@
 
 </script>
 
-<div class="flex flex-col px-2 md:px-6 lg:px-16 py-10 space-y-8" style="min-height: inherit">
-    <Navigation current="products" />
+<div class="flex flex-col px-2 xs:px-4 md:px-6 lg:px-16 py-6 min-h-screen">
     <Grid
         items={products}
         itemComponent={ProductItem}
         filters={filters}
+        current="products"
     />
 </div>
