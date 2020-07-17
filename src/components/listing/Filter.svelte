@@ -1,5 +1,5 @@
 <ClickOutside on:clickoutside={() => opened = null}>
-    <div class="ml-1 md:flex items-center rounded-2xl border-1 border-neutral-1 filter hidden">
+    <div class="md:flex items-center rounded-2xl border-1 border-neutral-1 filter hidden">
         {#each filters as filter, i}
             <div class="relative">
                 <div 
@@ -48,53 +48,52 @@
     >
         Filter
     </span>
-    {#if openFilter && innerWidth <= 768}
+    <div 
+        class={`inset-0 ${openFilter && innerWidth <= 768 ? "flex" : "hidden"} fixed min-w-full min-h-screen 
+        flex-col bg-white z-20`}
+        transition:fly={{duration:250, y: 600}}
+    >
         <div 
-            class="inset-0 fixed min-w-full min-h-screen flex flex-col bg-white z-20" 
-            transition:fly={{duration:250, y: 600}}
+            class="flex items-center w-full border-b-1 border-neutral-1 py-3 px-2 sm:px-5 bg-white z-30"
         >
-            <div 
-                class="flex items-center w-full border-b-1 border-neutral-1 py-3 px-2 sm:px-5 bg-white z-30"
+            <svg 
+                class="text-neutral-5 cursor-pointer w-10 h-10 p-2 rounded-full hover:bg-gray-100" 
+                fill="currentColor" 
+                viewBox="0 0 20 20"
+                on:click={() => openFilter = false}
             >
-                <svg 
-                    class="text-neutral-5 cursor-pointer w-10 h-10 p-2 rounded-full hover:bg-gray-100" 
-                    fill="currentColor" 
-                    viewBox="0 0 20 20"
-                    on:click={() => openFilter = false}
+                <path 
+                    fill-rule="evenodd" 
+                    d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 
+                    4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 
+                    5.707a1 1 0 010-1.414z" 
+                    clip-rule="evenodd"
                 >
-                    <path 
-                        fill-rule="evenodd" 
-                        d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 
-                        4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 
-                        5.707a1 1 0 010-1.414z" 
-                        clip-rule="evenodd"
-                    >
-                    </path>
-                </svg>
-                <span class="font-overpass font-bold text-primary-7 text-2xl sm:text-3xl mx-auto pr-10">
-                    Filter
-                </span>
-            </div>
-            <div class="p-4 sm:p-6 overflow-y-auto">
-                {#each filters as filter, i}
-                    {#if i > 0}
-                        <Decorator />
-                    {/if}
-                    <div class="flex flex-col">
-                        <span class="font-overpass font-bold text-neutral-5 text-xl sm:text-2xl mb-6 sm:mb-6">
-                            {filter.label}
-                        </span>
-                        <svelte:component 
-                            this={filter.component} 
-                            on:filter={updateFilter}
-                            {...filter.props}
-                            grid={true}
-                        />
-                    </div>
-                {/each}
-            </div>
+                </path>
+            </svg>
+            <span class="font-overpass font-bold text-primary-7 text-2xl sm:text-3xl mx-auto pr-10">
+                Filter
+            </span>
         </div>
-    {/if}   
+        <div class="p-4 sm:p-6 overflow-y-auto">
+            {#each filters as filter, i}
+                {#if i > 0}
+                    <Decorator />
+                {/if}
+                <div class="flex flex-col">
+                    <span class="font-overpass font-bold text-neutral-5 text-xl sm:text-2xl mb-6 sm:mb-6">
+                        {filter.label}
+                    </span>
+                    <svelte:component 
+                        this={filter.component} 
+                        on:filter={updateFilter}
+                        {...filter.props}
+                        grid={true}
+                    />
+                </div>
+            {/each}
+        </div>
+    </div>
 </ClickOutside>
 
 <svelte:head>
