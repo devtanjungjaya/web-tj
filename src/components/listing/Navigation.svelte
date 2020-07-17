@@ -34,12 +34,13 @@
         {#if open}
             <div 
                 class={`absolute rounded-2xl border-neutral-1 border-1 p-4 mt-4 left-0 z-10 bg-white shadow-xl
-                ${open ? 'flex flex-col space-y-2' : 'hidden'} overflow-y-auto`}
+                ${open ? 'flex flex-col space-y-2' : 'hidden'} overflow-y-auto min-w-full`}
             >
                 {#each navigations.filter(n => n.url != current) as navigation}
                     <a 
                         rel="prefetch"
-                        class="font-overpass font-semibold text-neutral-7 text-lg mr-6 whitespace-no-wrap hover:text-primary-7" 
+                        class="font-overpass font-semibold text-neutral-7 text-lg mr-6 whitespace-no-wrap 
+                        hover:text-primary-7 w-full" 
                         href={navigation.url}
                     >
                         {navigation.label}

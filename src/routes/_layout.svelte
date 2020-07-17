@@ -5,7 +5,7 @@
 </svelte:head>
 
 <Navbar />
-<div class="py-20 min-h-screen">
+<div class="py-16 min-h-screen">
     <slot></slot>
 </div>
 
