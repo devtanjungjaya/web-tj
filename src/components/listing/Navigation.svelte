@@ -10,8 +10,9 @@
     {/each}
 </div>
 
+<div class="md:hidden">
 <ClickOutside on:clickoutside={() => open = false}>
-    <div class="relative md:hidden">
+    <div class="relative">
         <div 
             class="flex items-center px-4 py-2 border-neutral-1 mr-2
             cursor-pointer hover:bg-gray-100 overflow-hidden border-1 rounded-2xl" 
@@ -48,6 +49,7 @@
         {/if}
     </div>
 </ClickOutside>
+</div>
 
 <script>
     import ClickOutside from "../ClickOutside.svelte";
