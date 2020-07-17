@@ -64,11 +64,11 @@
 
 </script>
 
-<div class="flex flex-col px-2 sm:p-4 md:px-6 lg:px-16 py-6 space-y-8" style="min-height: inherit">
-    <Navigation current="rooms" />
+<div class="flex flex-col px-2 xs:px-4 md:px-6 lg:px-16 py-6 min-h-screen">
     <Grid
         items={rooms}
         itemComponent={RoomItem}
         filters={filters}
+        current="rooms"
     />
 </div>

@@ -37,6 +37,12 @@ module.exports = {
       },
       borderWidth: {
         '1': '1px'
+      },
+      maxWidth: {
+        '2xs': '12.5rem'
+      },
+      screens: {
+        'xs': '400px'
       }
     },
     fontFamily: {

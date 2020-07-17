@@ -41,7 +41,7 @@
         {/each}
     </div>
     <span 
-        class="flex md:hidden items-center px-4 xs:px-5 py-1 sm:py-2 justify-center rounded-2xl border-1 
+        class="flex md:hidden items-center px-4 xs:px-5 py-2 justify-center rounded-2xl border-1 
         border-neutral-1 cursor-pointer hover:bg-gray-100 overflow-hidden font-overpass font-semibold 
         text-neutral-7 text-lg"
         on:click={() => openFilter = true}
