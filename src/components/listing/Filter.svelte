@@ -10,7 +10,9 @@
                     class:rounded-l-2xl={i === 0}
                     class:rounded-r-2xl={i === filters.length-1}
                 >
-                    <span class="flex-grow font-overpass font-semibold text-neutral-7 text-xl mr-12">
+                    <span 
+                        class="flex-grow font-overpass font-semibold text-neutral-7 text-lg lg:text-xl 
+                        mr-6 lg:mr-12">
                         {filter.label}
                     </span>
                     <svg class="text-primary-7 w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
