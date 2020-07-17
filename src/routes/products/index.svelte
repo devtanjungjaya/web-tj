@@ -27,6 +27,7 @@
             props: {
                 values: productCategories,
                 label: "Kategori",
+                type: "products",
                 itemField: "categories"
             }
         },
@@ -34,6 +35,7 @@
             label: "Harga",
             component: PriceFilter,
             props: {
+                type: "products",
                 maxPrice: Math.max(...products.map(product => 
                     Math.max(...product.prices.map(price => price.value))
                 ))

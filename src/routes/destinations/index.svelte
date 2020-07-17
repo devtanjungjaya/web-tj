@@ -28,24 +28,28 @@
             props: {
                 values: destinationCategories,
                 label: "Kategori",
-                itemField: "categories"
+                itemField: "categories",
+                type: "destinations"
             }
         },
         {
             label: "Harga",
             component: PriceFilter,
             props: {
+                type: "destinations",
                 maxPrice: Math.max(...destinations.map(destination => 
                     Math.max(...destination.prices.map(price => price.value))
                 ))
             }
         },
         {
+            type: "destinations",
             label: "Fasilitas",
             component: SelectFilter,
             props: {
                 values: destinationFacilities,
                 label: "Fasilitas",
+                type: "destinations",
                 itemField: "facilities"
             }
         }

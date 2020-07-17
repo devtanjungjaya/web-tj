@@ -1,3 +1,7 @@
+<script context="module">
+    const store = {};
+</script>
+
 <div class="flex flex-col sm:flex-row sm:space-x-3 items-start sm:items-center">
     <div class="flex flex-col space-y-1 mb-3 sm:mb-0 w-full sm:max-w-2xs">
         <span class="ml-4 font-overpass font-normal text-neutral-3 text-lg">min harga</span>
@@ -32,18 +36,24 @@
 
 <script>
     import formatRupiah from "../../utilities/currency";
-    import { createEventDispatcher } from 'svelte';
+    import { createEventDispatcher, onMount } from 'svelte';
     const dispatch = createEventDispatcher();
 
     export let maxPrice;
+    export let type;
 
-    let min = formatRupiah(1);
-    let max = formatRupiah(maxPrice || 1000000);
     let minValue = 1;
-    let maxValue = 1000000;
+    let maxValue = maxPrice || 1000000;
+    let min = (store[type] && store[type].min) || formatRupiah(minValue);
+    let max = (store[type] && store[type].max) || formatRupiah(maxValue);
 
     let edit = null;
 
+    onMount(() => {
+        filter(minValue, maxValue);
+    })
+
+    $: store[type] = { min, max };
     $: {
         minValue = parseInt(min.replace(/[^,\d]/g, ""));
         maxValue = parseInt(max.replace(/[^,\d]/g, ""));
@@ -52,14 +62,16 @@
         edit = null;
     }
 
-    $: if(!isNaN(minValue) && !isNaN(maxValue)) {
+    $: filter(minValue, maxValue)
+
+    function filter(fMin, fMax) {
         dispatch('filter', {
             type: 'price',
-            filter: function(items) {
+            filter: !isNaN(fMin) && !isNaN(fMax) && (fMin > 1 || fMax < maxPrice) ? (items) => {
                 return items.filter(item => 
-                    item.prices.some(price => price.value >= minValue && price.value <= maxValue)
+                    item.prices.some(price => price.value >= fMin && price.value <= fMax)
                 );
-            }
-        })
+            } : null
+        });
     }
 </script>

@@ -28,6 +28,7 @@
             props: {
                 values: tourCategories,
                 label: "Kategori",
+                type: "tours",
                 itemField: "categories"
             }
         },
@@ -35,6 +36,7 @@
             label: "Harga",
             component: PriceFilter,
             props: {
+                type: "tours",
                 maxPrice: Math.max(...tours.map(tour => 
                     Math.max(...tour.prices.map(price => price.value))
                 ))
@@ -46,6 +48,7 @@
             props: {
                 values: tourFacilities,
                 label: "Fasilitas",
+                type: "tours",
                 itemField: "facilities"
             }
         }

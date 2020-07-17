@@ -11,8 +11,9 @@
                     class:rounded-r-2xl={i === filters.length-1}
                 >
                     <span 
-                        class="flex-grow font-overpass font-semibold text-neutral-7 text-lg lg:text-xl 
-                        mr-6 lg:mr-12">
+                        class={`flex-grow font-overpass font-semibold text-lg lg:text-xl mr-6 lg:mr-12
+                        ${filterFunctions.some(f => f.type == filter.label) ? "text-primary-7" : "text-neutral-7"}`}
+                    >
                         {filter.label}
                     </span>
                     <svg class="text-primary-7 w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
@@ -40,14 +41,24 @@
             </div>
         {/each}
     </div>
-    <span 
-        class="flex md:hidden items-center px-4 xs:px-5 py-2 justify-center rounded-2xl border-1 
-        border-neutral-1 cursor-pointer hover:bg-gray-100 overflow-hidden font-overpass font-semibold 
-        text-neutral-7 text-lg"
-        on:click={() => openFilter = true}
+    <div 
+        class="flex md:hidden items-center px-4 xs:px-5 py-2 rounded-2xl border-1 border-neutral-1 cursor-pointer
+        space-x-2"
     >
-        Filter
-    </span>
+        <span 
+            class="font-overpass font-semibold text-neutral-7 text-base xs:text-lg"
+            on:click={() => openFilter = true}
+        >
+            Filter
+        </span>
+        {#if filterFunctions.length}
+            <div class="w-1 h-1 rounded-full bg-neutral-1"></div>
+            <span class="font-overpass font-semibold text-primary-7 text-sm xs:text-base pt-1">
+                {filterFunctions.length}
+            </span>
+        {/if}
+    </div>
+    {#if openFilter && innerWidth <= 768}
     <div 
         class={`inset-0 ${openFilter && innerWidth <= 768 ? "flex" : "hidden"} fixed min-w-full min-h-screen 
         flex-col bg-white z-20`}
@@ -94,6 +105,7 @@
             {/each}
         </div>
     </div>
+    {/if}
 </ClickOutside>
 
 <svelte:head>
@@ -123,10 +135,9 @@
     let innerWidth = 1000;
 
     function updateFilter(event) {
-        filterFunctions = [
-            ...filterFunctions.filter(f => f.type != event.detail.type),
-            event.detail
-        ];
+        filterFunctions = filterFunctions.filter(f => f.type != event.detail.type);
+        if(event.detail.filter) filterFunctions.push(event.detail);
+        
         dispatch('filter', filterFunctions);
     }
 </script>

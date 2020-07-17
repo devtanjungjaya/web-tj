@@ -1,3 +1,7 @@
+<script context="module">
+    const store = {};
+</script>
+
 <div class={values.length < 4 || !grid ? "flex flex-col space-y-6" : "grid gap-6 grid-cols-2"}>
     {#each values as value}
         <label class="flex items-center group">
@@ -7,6 +11,9 @@
                     type="radio" 
                     bind:group={selectedValues} 
                     value={value}
+                    on:click={() => {
+                        if(selectedValues == value) selectedValues = [];
+                    }}
                 />
             {:else}
                 <input 
@@ -45,7 +52,7 @@
 </div>
 
 <script>
-    import { createEventDispatcher } from 'svelte';
+    import { createEventDispatcher, onMount } from 'svelte';
     const dispatch = createEventDispatcher();
 
     export let values;
@@ -53,26 +60,27 @@
     export let itemField;
     export let unique = false;
     export let grid = false;
+    export let type;
 
-    let selectedValues = [];
+    let selectedValues = store[type+label] || [];
+    
+    onMount(() => {
+        filter(selectedValues);
+    })
 
-    $: if(selectedValues.length) {
+    $: store[type+label] = selectedValues;
+    $: filter(selectedValues);
+
+    function filter(selected) {
         dispatch('filter', {
             type: label,
-            filter: function(items) {
+            filter: selected.length ? (items) => {
                 return items.filter(item =>                     
                     unique ?
-                    item[itemField].includes(selectedValues)
-                    : selectedValues.every(selected => item[itemField].includes(selected))
+                    item[itemField].includes(selected)
+                    : selected.every(selected => item[itemField].includes(selected))
                 );
-            }
-        });
-    } else {
-        dispatch('filter', {
-            type: label,
-            filter: function(items) {
-                return items;
-            }
+            } : null
         });
     }
 </script>

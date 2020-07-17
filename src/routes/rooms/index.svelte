@@ -30,6 +30,7 @@
                 values: roomCategories,
                 label: "Kategori",
                 itemField: "categories",
+                type: "rooms",
                 unique: true
             }
         },
@@ -37,6 +38,7 @@
             label: "Harga",
             component: PriceFilter,
             props: {
+                type: "rooms",
                 maxPrice: Math.max(...rooms.map(room => 
                     Math.max(...room.prices.map(price => price.value))
                 ))
@@ -48,6 +50,7 @@
             props: {
                 values: publicFacilities,
                 label: "Fasilitas publik",
+                type: "rooms",
                 itemField: "publicFacilities"
             }
         },
@@ -57,6 +60,7 @@
             props: {
                 values: roomFacilities,
                 label: "Fasilitas kamar",
+                type: "rooms",
                 itemField: "roomFacilities"
             }
         }

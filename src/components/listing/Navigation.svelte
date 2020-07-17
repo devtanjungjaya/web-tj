@@ -19,7 +19,8 @@
             on:click={() => open = true}
         >
             <span 
-                class="flex-grow font-overpass font-semibold text-neutral-7 text-lg lg:text-xl mr-6">
+                class="flex-grow font-overpass font-semibold text-neutral-7 text-base xs:text-lg mr-3 xs:mr-6"
+            >
                 {navigations.filter(n => n.url == current)[0].label}
             </span>
             <svg class="text-primary-7 w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
