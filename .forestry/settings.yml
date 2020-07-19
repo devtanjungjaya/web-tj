@@ -62,6 +62,7 @@ sections:
 - type: document
   path: data/contact.yml
   label: Kontak
+  read_only: false
 upload_dir: static/images
 public_path: https://web-tj.netlify.app/images
 front_matter_path: ''
