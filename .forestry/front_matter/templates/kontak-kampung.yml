@@ -2,8 +2,9 @@
 label: Kontak kampung
 hide_body: true
 fields:
-- name: nama
+- name: name
   type: text
   config:
-    required: false
+    required: true
   label: Nama
+  description: Nama Kampung
