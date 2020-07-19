@@ -8,3 +8,11 @@ fields:
     required: true
   label: Nama
   description: Nama Kampung
+- name: phoneNumbers
+  type: list
+  config:
+    use_select: false
+    min: 
+    max: 
+  label: Nomor telepon
+  description: List nomor telepon / Whatsapp
