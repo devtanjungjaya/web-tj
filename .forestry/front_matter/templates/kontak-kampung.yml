@@ -22,3 +22,9 @@ fields:
     required: false
   label: Email
   description: alamat email yang bisa dihubungi
+- name: alamat
+  type: text
+  config:
+    required: true
+  label: Alamat
+  description: Alamat kampung
