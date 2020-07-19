@@ -5,11 +5,6 @@ admin_path: static/admin
 webhook_url: 
 sections:
 - type: heading
-  label: KONTAK
-- type: document
-  path: data/contact.yml
-  label: Kontak
-- type: heading
   label: Konten
 - type: directory
   path: content/products
@@ -62,6 +57,11 @@ sections:
 - type: document
   path: data/category-destination.yml
   label: Kategori destinasi wisata
+- type: heading
+  label: KONTAK
+- type: document
+  path: data/contact.yml
+  label: Kontak
 upload_dir: static/images
 public_path: https://web-tj.netlify.app/images
 front_matter_path: ''
