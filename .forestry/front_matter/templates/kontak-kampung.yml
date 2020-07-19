@@ -16,3 +16,9 @@ fields:
     max: 
   label: Nomor telepon
   description: List nomor telepon / Whatsapp
+- name: email
+  type: text
+  config:
+    required: false
+  label: Email
+  description: alamat email yang bisa dihubungi
