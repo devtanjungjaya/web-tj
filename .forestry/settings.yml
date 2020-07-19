@@ -60,7 +60,7 @@ sections:
 - type: heading
   label: KONTAK
 - type: document
-  path: data/contact.yml
+  path: data/contact-village.yml
   label: Kontak
 upload_dir: static/images
 public_path: https://web-tj.netlify.app/images
