@@ -1,7 +1,7 @@
 ---
 coordinate:
-  lat: -6.8511
-  lng: 113.1211
+  lat: -6.2312
+  lng: 106.8245
 name: Homestay
 photos:
 - https://web-tj.netlify.app/images/tanjung-compressed.jpg
@@ -19,8 +19,6 @@ prices:
 - description: Sarapan
   value: 15000
   unit: orang
-categories:
-- Homestay
 publicFacilities:
 - Restoran
 roomFacilities:
