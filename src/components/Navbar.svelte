@@ -25,7 +25,7 @@
         </div>
         <a>Transportasi</a>
         <a>Peta</a>
-        <a>Kontak</a>
+        <a href="contact">Kontak</a>
     </div>
     <svg 
         class="text-primary-7 sm:hidden w-6 h-6 rounded-full cursor-pointer"
@@ -97,6 +97,7 @@
         </a>
         <a 
             rel="prefetch"
+            href="contact"
             class="font-overpass font-semibold text-primary-7 text-lg whitespace-no-wrap"
         >
             Kontak
