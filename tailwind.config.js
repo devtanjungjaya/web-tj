@@ -26,6 +26,14 @@ const customColor = {
 module.exports = {
   purge: ["./src/**/*.svelte"],
   theme: {
+    screens: {
+      'xs': '400px',
+      'sm': '640px',
+      'md': '768px',
+      'lg': '1024px',
+      'xl': '1280px',
+      '2xl': '1600px'
+    },
     extend: {
       colors: customColor,
       placeholderColor: customColor,
@@ -40,10 +48,6 @@ module.exports = {
       },
       maxWidth: {
         '2xs': '12.5rem'
-      },
-      screens: {
-        'xs': '400px',
-        '2xl': '1600px'
       }
     },
     fontFamily: {
