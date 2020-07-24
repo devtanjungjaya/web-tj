@@ -68,7 +68,7 @@
 
 </script>
 
-<div class="flex flex-col px-2 xs:px-4 md:px-6 lg:px-16 py-6 min-h-screen">
+<div class="flex flex-col px-2 xs:px-4 md:px-6 lg:px-16 py-6 lg:py-10 min-h-screen">
     <Grid
         items={rooms}
         itemComponent={RoomItem}

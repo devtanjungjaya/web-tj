@@ -1,10 +1,10 @@
 <div class="flex flex-col overflow-x-auto" style="min-height: inherit">
-    <div class="flex md:flex-col md:space-y-8">
+    <div class="flex md:flex-col md:space-y-4 lg:space-y-8">
         <Navigation {current} />
         <Filter filters={filters} on:filter={event => filterFunctions = event.detail} />
     </div>
     <div 
-        class="mt-8 grid gap-2 md:gap-10 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 
+        class="mt-8 lg:mt-12 grid gap-2 md:gap-10 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 
         xl:grid-cols-5 2xl:grid-cols-6 listing">
         {#each filteredItems as item}
             <div class="flex items-center justify-between w-full h-full">

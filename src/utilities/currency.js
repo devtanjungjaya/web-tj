@@ -11,5 +11,5 @@ module.exports = function formatRupiah(angka) {
     }
 
     rupiah = split[1] != undefined ? rupiah + "," + split[1] : rupiah;
-    return rupiah ? "Rp " + rupiah : "";
+    return rupiah ? "Rp " + rupiah : "Rp 0";
 }
