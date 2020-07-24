@@ -23,10 +23,10 @@
                         </path>
                     </svg>
                 </div>
-                {#if filter.component}
+                {#if filter.component && opened === i}
                     <div 
-                        class={`absolute rounded-2xl border-neutral-1 border-1 p-6 mt-4 left-0 z-10 bg-white shadow-xl
-                            ${opened === i ? 'block' : 'hidden'} overflow-hidden`}
+                        class={`absolute rounded-2xl border-neutral-1 border-1 p-6 mt-4 left-0 z-10 bg-white 
+                        shadow-xl overflow-hidden`}
                         style="min-width: 272px; max-height: 345px; overflow-y: auto"
                     >
                         <svelte:component 
@@ -58,9 +58,9 @@
     </div>
     {#if openFilter && innerWidth <= 768}
     <div 
-        class={`inset-0 ${openFilter && innerWidth <= 768 ? "flex" : "hidden"} fixed min-w-full min-h-screen 
+        class={`inset-0 flex fixed min-w-full min-h-screen 
         flex-col bg-white z-20`}
-        transition:fly={{duration:250, y: 600}}
+        transition:fly={{duration:150, y: 600}}
     >
         <div 
             class="flex items-center w-full border-b-1 border-neutral-1 py-3 px-2 sm:px-5 bg-white z-30"
