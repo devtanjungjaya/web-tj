@@ -33,7 +33,7 @@ sections:
   templates:
   - destinasi-wisata
 - type: document
-  path: data/contact-village.yml
+  path: content/contacts/**/*.md
   label: Kontak
 - type: heading
   label: Fasilitas
