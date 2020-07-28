@@ -38,9 +38,3 @@
         items
     );    
 </script>
-
-<style type="text/postcss">
-.listing {
-    justify-items: center;
-}
-</style>
