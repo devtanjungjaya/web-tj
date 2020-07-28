@@ -33,6 +33,12 @@ fields:
     template: koordinat
     label: Koordinat
   label: Koordinat lokasi
+- name: gmaps
+  type: text
+  config:
+    required: false
+  label: Link google maps
+  description: Link google maps yang menunjukan lokasi destinasi wisata
 - name: prices
   type: field_group_list
   fields:
