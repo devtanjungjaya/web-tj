@@ -37,6 +37,8 @@ sections:
   label: Kontak
   create: all
   match: "**/*.md"
+  templates:
+  - kontak-kampung
 - type: heading
   label: Fasilitas
 - type: document
