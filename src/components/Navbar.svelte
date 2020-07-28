@@ -48,8 +48,8 @@
 <div class="inset-0 fixed w-full h-screen bg-neutral-9 opacity-25 z-20" transition:fade={{duration:150}}></div>
 <ClickOutside on:clickoutside={() => open = false} exclude={[menu]}>
     <div 
-        class="top-0 right-0 fixed w-auto h-screen flex flex-col justify-center px-16 text-center bg-white 
-        space-y-8 z-30" 
+        class="top-0 right-0 fixed w-auto h-screen flex flex-col justify-center pl-8 pr-16 text-center bg-white 
+        space-y-8 z-30 items-start" 
         transition:fly={{duration:150, x: 150}}
     >
         <svg 
@@ -67,9 +67,9 @@
             >
             </path>
         </svg>
-        <div class="flex flex-col">
-            <span class="font-bold font-overpass text-neutral-3 text-base mb-2">KATEGORI</span>
-            <div class="flex flex-col space-y-2">
+        <div class="flex flex-col items-start">
+            <span class="font-bold font-overpass text-neutral-3 text-base text-left mb-2">KATEGORI</span>
+            <div class="flex flex-col items-start space-y-2">
                 {#each navigations as navigation}
                     <a 
                         rel="prefetch"
