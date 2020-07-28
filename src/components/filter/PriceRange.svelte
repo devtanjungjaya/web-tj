@@ -40,6 +40,7 @@
 <div 
     class="h-1 w-full bg-neutral-1 mt-8 rounded-lg relative" 
     bind:this={bar}
+    bind:clientWidth={knobWidth}
 >
     <div
         class="h-full bg-primary-6 rounded-lg absolute"
@@ -76,13 +77,15 @@
 
     export let maxPrice = 1000000;
     export let type;
+    export let label;
 
     let minValue = 0;
     let maxValue = maxPrice;
     let min = (store[type] && store[type].min) || formatRupiah(minValue);
     let max = (store[type] && store[type].max) || formatRupiah(maxValue);
 
-    let knob = {min: minValue, max: maxValue};
+    let knob = {min: 0, max: 0};
+    let knobWidth;
     let bar;
     let pressed = {min: false, max: false};
 
@@ -90,7 +93,6 @@
 
     onMount(() => {
         filter(minValue, maxValue);
-        knob.max = bar.getBoundingClientRect().width;
     })
 
     $: store[type] = { min, max };
@@ -125,22 +127,16 @@
                 }
                 break;
         }
-        
-        if(bar && !pressed.min && !pressed.max) {
-            const rect = bar.getBoundingClientRect();
-            knob.min = valueToKnob(minValue, rect.width);
-            knob.max = valueToKnob(maxValue, rect.width);
-        }
 
         if(maxValue >= maxPrice && edit !== 'max-input') max = formatRupiah(maxValue) + "+";
         edit = null;
     }
-
+    $: knob = {min: valueToKnob(minValue, knobWidth), max: valueToKnob(maxValue, knobWidth)}
     $: filter(minValue, maxValue)
 
     function filter(fMin, fMax) {
         dispatch('filter', {
-            type: 'price',
+            type: label,
             filter: !isNaN(fMin) && !isNaN(fMax) && (fMin > 1 || fMax < maxPrice) ? (items) => {
                 return items.filter(item => 
                     item.prices.some(price => price.value >= fMin && price.value <= fMax)
@@ -156,15 +152,15 @@
         const rect = bar.getBoundingClientRect();
         let x = e.clientX || e.touches[0].clientX;
         
-        const step = valueToKnob(interval, rect.width);
-        let roundedKnob = Math.round(knobToValue(pressedKnob, rect.width)/interval)*interval;
+        const step = valueToKnob(interval, knobWidth);
+        let roundedKnob = Math.round(knobToValue(pressedKnob, knobWidth)/interval)*interval;
         
         if(pressed.min && (x - rect.left) >= knob.max - (step * 5)) {
             roundedKnob = maxValue - (interval * 5);
-            x = valueToKnob(roundedKnob, rect.width) + rect.left;
+            x = valueToKnob(roundedKnob, knobWidth) + rect.left;
         }else if(pressed.max && (x - rect.left) <= knob.min + (step * 5)) {
             roundedKnob = minValue + (interval * 5);
-            x = valueToKnob(roundedKnob, rect.width) + rect.left;
+            x = valueToKnob(roundedKnob, knobWidth) + rect.left;
         }
         if(x < rect.left) x = rect.left;
         if(x > rect.right) x = rect.right;
