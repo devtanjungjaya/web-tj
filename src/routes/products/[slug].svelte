@@ -50,9 +50,9 @@
       </div>
       <div class="flex flex-col flex-shrink-0 self-start max-w-full space-y-6" style="width: 375px">
          <Prices prices={data.prices} />
-         {#if data.ecommerce}
+         <!-- {#if data.ecommerce}
             <Link url={data.ecommerce} icon="ic_ecommerce.svg" label="Tautan toko daring" />
-         {/if}
+         {/if} -->
       </div>
    </div>
 </div>
