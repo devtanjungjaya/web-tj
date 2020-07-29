@@ -61,7 +61,9 @@
     border-radius: 3px;
     width: 25%;
     height:100%;
+    max-height: 100%;
 }
+
 </style>
 
 <script>
@@ -75,10 +77,34 @@
     import { Map, Geocoder, Marker, controls } from '@beyonk/svelte-mapbox';
     const { GeolocateControl, NavigationControl, ScalingControl } = controls
 
+var geojson = {
+  type: 'FeatureCollection',
+  features: [{
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-77.032, 38.913]
+    },
+    properties: {
+      title: 'Mapbox',
+      description: 'Washington, D.C.'
+    }
+  },
+  {
+    type: 'Feature',
+    geometry: {
+      type: 'Point',
+      coordinates: [-122.414, 37.776]
+    },
+    properties: {
+      title: 'Mapbox',
+      description: 'San Francisco, California'
+    }
+  }]
+};
     function addFilter(filter,layerID){
         var box = document.createElement('div');
         box.className = 'box flex flex-row p-2';
-        
         var input = document.createElement('input');
         input.type = 'checkbox';
         input.id = layerID;
@@ -127,26 +153,56 @@
         });
     }
     function addPoint(map, url,name, color){
+        // map.addImage(name,"images/"+url+".png")
         map.addSource(name, {
             'type': 'geojson',
             'data': "images/" + url
         });
         map.addLayer({
             'id': name,
-            'type': 'circle',
             'source': name,
+            'type': 'circle',
             'paint': {
                 'circle-radius': 4.5,
                 'circle-color': color
-            }
+            },
+            // 'type': "symbol",
+            // 'layout': {
+            //     "icon-size": 0.25,
+            //     "icon-image" : name
+            // }
         });
+        let x = map.getSource(name);
+        console.log(x);
+
+        // // buat nambah marker
+        // x.features.forEach(function(marker) {
+        // // create a DOM element for the marker
+        //     var el = document.createElement('div');
+        //     el.className = 'marker';
+        //     el.style.backgroundImage = 'images/trans_icon_bandara.png'
+        //     el.style.width = "0.5rem";
+        //     el.style.height = "0.5rem"; 
+        //     el.style.display = "block";
+        //     el.style.borderRadius = "50%";
+        //     el.style.cursor= "pointer";
+        //     el.style.padding= "0";
+        //     el.addEventListener('click', function() {
+        //         window.alert(marker.properties.message);
+        //     });
+            
+        //     // add marker to map
+        //     new mapboxgl.Marker(el)
+        //     .setLngLat(marker.geometry.coordinates)
+        //     .addTo(map);
+        // });
     }
 
     function setupMap(){
         tmp = map.getMap();
-        
+        console.log(geojson)
         // Angkot Mandala
-        addRoute(tmp,"trans_route_angkot_mandala.geojson","Angkot Mandala","black")
+        addRoute(tmp,"trans_route_angkot_mandala.geojson","Angkot Mandala","red")
         // Angkot Rangkasbitung
         addRoute(tmp,"trans_route_angkot_rangkasbitung.geojson","Angkot Rangkasbitung","#123123")
         // Bus AC
@@ -177,6 +233,6 @@
             // console.log(element)
             addFilter(filter,element.id)
         }
-        console.log(filter)
+        // console.log(geojson)
     }
 </script>
