@@ -81,14 +81,6 @@
     <polygon fill="url(#MyGradient)" points="0,0 600,0 600,600" class="bg-primary-7"/>
 </svg>
 
-<script>
-    import Promotion from "../components/Promotion.svelte";
-
-    let width = 300;
-    let height = 300;
-    let screenWidth = 1440;
-</script>
-
 <style type="text/postcss">
 .triangle {
     z-index: -1;
@@ -103,4 +95,14 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
 </style>
+
+
+<script>
+    import Promotion from "../components/Promotion.svelte";
+
+    let width = 300;
+    let height = 300;
+    let screenWidth = 1440;
+</script>

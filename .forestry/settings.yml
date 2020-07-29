@@ -57,6 +57,11 @@ sections:
 - type: document
   path: data/category-destination.yml
   label: Kategori destinasi wisata
+- type: heading
+  label: KONTAK
+- type: document
+  path: data/contact-village.yml
+  label: Kontak
 upload_dir: static/images
 public_path: https://web-tj.netlify.app/images
 front_matter_path: ''

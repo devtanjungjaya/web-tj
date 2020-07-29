@@ -3,6 +3,7 @@
     bg-white font-overpass font-bold text-neutral-3 text-lg lg:text-xl z-20"
 >
     <a rel="prefetch" href="/" class="mr-auto cursor-pointer hover:text-primary-7">Home</a>
+    
     <div class="hidden sm:flex items-center space-x-10 lg:space-x-20">
         <div class="relative group cursor-pointer">
             <span class="group-hover:text-primary-7">Kategori</span>
@@ -23,7 +24,7 @@
                 {/each}
             </div>
         </div>        
-        <a>Transportasi</a>
+        <a href="/transport/map"class="cursor-pointer hover:text-primary-7"> Transportasi</a>
         
         <div class="relative group cursor-pointer">
             <span class="group-hover:text-primary-7">Peta</span>
@@ -156,15 +157,15 @@
     const map_navigations = [
         {
             label: "Mitigasi Bencana",
-            url: "mitigasi-bencana"
+            url: "maps/mitigasi-bencana"
         },
         {
             label:"Fasilitas Kesehatan",
-            url: "fasilitas-kesehatan"
+            url: "maps/fasilitas-kesehatan"
         },
         {
             label:"Jalur Wisata",
-            url: "jalur-wisata"
+            url: "maps/jalur-wisata"
         }
     ]
 </script>
