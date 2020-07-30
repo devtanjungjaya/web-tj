@@ -7,7 +7,7 @@
 			<img 
 				src="ic_left.svg"
 				alt="left-carousel"
-				class="rounded-full bg-white shadow-md cursor-pointer control left p-4" 
+				class="rounded-full bg-white shadow-md cursor-pointer control left p-4 hidden sm:block" 
 				on:click={left} 
 			/>
 		{/if}
@@ -16,7 +16,7 @@
 			<img 
 				src="ic_right.svg" 
 				alt="right-carousel"
-				class="rounded-full bg-white shadow-md cursor-pointer control right p-4" 
+				class="rounded-full bg-white shadow-md cursor-pointer control right p-4 hidden sm:block" 
 				on:click={right} 
 			/>
 		{/if}
