@@ -32,6 +32,13 @@ sections:
   match: "**/*.md"
   templates:
   - destinasi-wisata
+- type: directory
+  path: content/contacts
+  label: Kontak
+  create: all
+  match: "**/*.md"
+  templates:
+  - kontak-kampung
 - type: heading
   label: Fasilitas
 - type: document
