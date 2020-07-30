@@ -21,7 +21,8 @@ export const publicFacilityIconMap = {
 }
 
 export const roomFacilityIconMap = {
-    'Kloset duduk': 'ic_toilet.svg'
+    'Kloset duduk': 'ic_toilet.svg',
+    'Kamar mandi dalam': 'ic_toilet.svg'
 }
 
 export default map;
