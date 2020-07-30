@@ -9,10 +9,18 @@ fields:
   label: Nama
   description: Nama penginapan
 - name: photos
-  type: image_gallery
-  config: {}
-  label: Foto
-  description: Foto-foto kamar, fasilitas, atau bangunan yang menarik
+  type: field_group_list
+  fields:
+  - name: photo
+    type: include
+    config: {}
+    template: foto
+    label: Foto
+  config:
+    min: 1
+    max: 
+    labelField: description
+  label: Foto-foto
 - name: gmaps
   type: text
   config:
