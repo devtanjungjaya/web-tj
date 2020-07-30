@@ -16,7 +16,7 @@ function getMarkdownFromFile(path, filename) {
    const file = fs.readFileSync(path + filename);
    const { data, content } = matter(file);
 
-   const slug = slugify(data.name);
+   const slug = slugify(data.name, filename);
    const html = marked(content);
 
    return {
@@ -34,12 +34,12 @@ export const getDataFromFile = function(filePath) {
    return data;
 }
 
-function slugify(string) {
+function slugify(name, identifier) {
    const a = 'àáâäæãåāăąçćčđďèéêëēėęěğǵḧîïíīįìłḿñńǹňôöòóœøōõőṕŕřßśšşșťțûüùúūǘůűųẃẍÿýžźż·/_,:;';
    const b = 'aaaaaaaaaacccddeeeeeeeegghiiiiiilmnnnnoooooooooprrsssssttuuuuuuuuuwxyyzzz------';
    const p = new RegExp(a.split('').join('|'), 'g');
  
-   return string.toString().toLowerCase()
+   return name.toString().toLowerCase()
       .replace(/\s+/g, '-') // Replace spaces with -
       .replace(p, c => b.charAt(a.indexOf(c))) // Replace special characters
       .replace(/&/g, '-and-') // Replace & with 'and'
@@ -47,6 +47,5 @@ function slugify(string) {
       .replace(/\-\-+/g, '-') // Replace multiple - with single -
       .replace(/^-+/, '') // Trim - from start of text
       .replace(/-+$/, '') // Trim - from end of text
-   //   .concat("-", Math.floor(1000 + Math.random() * 9000));
-      .concat("-", crypto.randomBytes(2).toString('hex'));
+      .concat("-", crypto.createHash('sha256').update(identifier).digest('hex').slice(0, 8));
  }

@@ -12,7 +12,7 @@ destinations = destinations.map(destination =>
 export const map = new Map(destinations.map(destination => [destination.slug, destination]));
 
 export function getRandom() {
-    return [...map.values()].sort(() => Math.random() - 0.5);;
+    return [...map.values()].sort(() => Math.random() - 0.5);
 }
 
 export const facilityIconMap = {

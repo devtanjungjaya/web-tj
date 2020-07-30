@@ -37,6 +37,7 @@
             component: PriceFilter,
             props: {
                 type: "tours",
+                label: "Harga",
                 maxPrice: Math.max(...tours.map(tour => 
                     Math.max(...tour.prices.map(price => price.value))
                 ))

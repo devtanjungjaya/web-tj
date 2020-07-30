@@ -1,8 +1,9 @@
 import { getDataFromFile } from '../../utilities/markdown';
-import tours from './_tours.js';
+import tours, { getRandom } from './_tours.js';
 
 const contents = JSON.stringify({
 	tours: [...tours.values()],
+	randomTours: getRandom().slice(0, 4),
 	tourCategories: getDataFromFile('data/category-tour.yml').categories,
 	tourFacilities: getDataFromFile('data/facility-tour.yml').facilities
 });
