@@ -107,5 +107,3 @@ fields:
       format: markdown
   label: Catatan
   description: Catatan untuk pengunjung atau yang lainnya
-pages:
-- content/rooms/homestay.md
