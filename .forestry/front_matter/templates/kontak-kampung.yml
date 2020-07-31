@@ -28,5 +28,3 @@ fields:
     required: true
   label: Alamat
   description: Alamat kampung
-pages:
-- content/contacts/desa-konoha.md

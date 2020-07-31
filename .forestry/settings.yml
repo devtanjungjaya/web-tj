@@ -35,13 +35,10 @@ sections:
 - type: document
   path: data/promotion.yml
   label: Promosi
-- type: directory
-  path: content/contacts
+- type: document
+  path: data/contact.yml
   label: Kontak
-  create: all
-  match: "**/*.md"
-  templates:
-  - kontak-kampung
+  match: "**/*"
 - type: heading
   label: Fasilitas
 - type: document
