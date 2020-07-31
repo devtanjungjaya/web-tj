@@ -58,6 +58,7 @@
     export let values;
     export let label;
     export let itemField;
+    export let itemFieldFn = (itemField) => itemField;
     export let unique = false;
     export let grid = false;
     export let type;
@@ -77,8 +78,8 @@
             filter: selected.length ? (items) => {
                 return items.filter(item =>                     
                     unique ?
-                    item[itemField].includes(selected)
-                    : selected.every(selected => item[itemField].includes(selected))
+                    itemFieldFn(item[itemField]).includes(selected)
+                    : selected.every(selected => itemFieldFn(item[itemField]).includes(selected))
                 );
             } : null
         });
