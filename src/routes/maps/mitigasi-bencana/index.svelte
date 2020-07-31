@@ -12,7 +12,7 @@
                 bind:this = {map}
                 options = {{center,zoom:12}}
             >
-            
+            <Tsunami />
             </Map>
         </div>
     </div>
@@ -29,17 +29,19 @@
 </style>
 
 <script id="map">
-    let map,tmp;
-    let center = { lat: -6.5116, lng: 105.6530};
     import { Map, Geocoder, Marker, controls } from '@beyonk/svelte-mapbox'
+    import Tsunami from './Tsunami.svelte'
+    import Gempa from './Gempa.svelte'
+    import Banjir from './Banjir.svelte'
+    
     const { GeolocateControl, NavigationControl, ScalingControl } = controls
 
     let accToken = "pk.eyJ1IjoiZmVsaXgyNSIsImEiOiJja2Q0MWZrMmcwMjBkMnpzODFjYW1vbG83In0.IKpXqrohe3JR1bKq_3JSDA"
+    let map;
+    let center = { lat: -6.5116, lng: 105.6530};
     
     function setupMap(){
         tmp = map.getMap();
-
+        
     }
-
-
 </script>
