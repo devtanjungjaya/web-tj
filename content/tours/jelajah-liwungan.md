@@ -17,7 +17,9 @@ facilities:
 - Transportasi
 contact:
   name: Orang
-  phoneNumbers: []
+  phoneNumbers: [
+    '0811274328'
+  ]
   email: ''
 
 ---

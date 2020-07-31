@@ -1,7 +1,7 @@
 <a rel="prefetch" href={`products/${slug}`}>
     <div class="h-0 relative w-full" style="padding-bottom: 125%">
         <div class="hover:shadow-md flex flex-col rounded-2xl border-1 border-neutral-1 overflow-hidden absolute w-full h-full">
-            <img class="product-img h-0 object-cover bg-neutral-1 min-w-0 min-h-0" src={photos[0]} alt={name}/>
+            <img class="product-img h-0 object-cover bg-neutral-1 min-w-0 min-h-0" src={photos[0].photoURI} alt={name}/>
             <div class="p-2 xs:p-3 flex-grow flex flex-col">
                 <span 
                     class="font-bold font-overpass text-primary-7 leading-none xs:leading-tight 

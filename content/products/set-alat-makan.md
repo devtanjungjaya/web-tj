@@ -2,7 +2,9 @@
 name: Set Alat Makan
 contact:
   name: Pak Aceng
-  phoneNumbers: []
+  phoneNumbers: [
+    '08724562332'
+  ]
   email: ''
 photos:
 - photoURI: https://web-tj.netlify.app/images/whatsapp-image-2020-07-21-at-12-12-54.jpeg

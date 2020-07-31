@@ -14,7 +14,6 @@ description: "**Pantai Tanjung Lesung** berada sebelah barat Kabupaten Pandeglan
   Lesung ini memang terdengar sedikit aneh. Namun perlu anda tahu, penamaan pantai
   ini terkait dengan dataran pantainya yang agak menjorok ke laut yang terlihat mirip
   lesung (Alat Penumbuk Padi Tradisional)._"
-gmaps: ''
 prices:
 - description: Tiket masuk (weekend) usia 7+
   value: 100000
