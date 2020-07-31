@@ -70,7 +70,7 @@
             <Decorator />
             <div class="flex flex-col font-overpass">
                <span class="font-bold text-neutral-5 text-2xl sm:text-3xl mb-6 sm:mb-6">Catatan</span>
-               <p class="font-open-sans font-normal text-neutral-5 text-lg sm:text-xl">
+               <p class="font-open-sans font-normal text-neutral-5 text-lg sm:text-xl prose">
                   {@html DOMPurify.sanitize(data.notes)}
                </p>
             </div>

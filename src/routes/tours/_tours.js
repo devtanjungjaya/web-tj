@@ -2,7 +2,7 @@ import getMarkdownInDirectory from '../../utilities/markdown.js';
 import { processPromotions } from '../../utilities/promotion';
 const marked = require('marked');
 
-const wysiwyg = ['description', 'activity'];
+const wysiwyg = ['description', 'activity', 'notes'];
 
 let tours = getMarkdownInDirectory('content/tours/');
 tours = tours.map(tour => 

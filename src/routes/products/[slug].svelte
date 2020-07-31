@@ -51,6 +51,15 @@
             <Decorator />
          {/if}
          <Contact {...data.contact} />
+         {#if data.notes && DOMPurify}
+            <Decorator />
+            <div class="flex flex-col font-overpass">
+               <span class="font-bold text-neutral-5 text-2xl sm:text-3xl mb-6 sm:mb-6">Catatan</span>
+               <p class="font-open-sans font-normal text-neutral-5 text-lg sm:text-xl prose">
+                  {@html DOMPurify.sanitize(data.notes)}
+               </p>
+            </div>
+         {/if}
       </div>
       <div class="flex flex-col flex-shrink-0 self-start max-w-full space-y-6" style="width: 375px">
          <Prices prices={data.prices} />
