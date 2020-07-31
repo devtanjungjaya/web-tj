@@ -9,9 +9,18 @@ fields:
   label: Nama
   description: Nama paket wisata
 - name: photos
-  type: image_gallery
-  config: {}
-  label: Foto
+  type: field_group_list
+  fields:
+  - name: photo
+    type: include
+    config: {}
+    template: foto
+    label: Foto
+  config:
+    min: 
+    max: 
+    labelField: description
+  label: Foto-foto
   description: Foto lokasi wisata/kegiatan wisata (harus mewakili paketnya)
 - name: description
   type: textarea
