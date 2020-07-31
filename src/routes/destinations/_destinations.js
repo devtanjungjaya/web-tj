@@ -1,4 +1,5 @@
 import getMarkdownInDirectory from '../../utilities/markdown.js';
+import { processPromotions } from '../../utilities/promotion';
 const marked = require('marked');
 
 const wysiwyg = ['description'];
@@ -9,6 +10,12 @@ destinations = destinations.map(destination =>
         destination, 
         Object.fromEntries(wysiwyg.map(w => destination[w] ? [w, marked(destination[w], { breaks: true })] : []))
     ))
+    .map(destination => {
+        return {
+            ...destination,
+            promotions: processPromotions(destination.promotions)
+        };
+    });
 export const map = new Map(destinations.map(destination => [destination.slug, destination]));
 
 export function getRandom() {
