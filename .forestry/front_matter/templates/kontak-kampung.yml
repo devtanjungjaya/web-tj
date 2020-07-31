@@ -11,26 +11,22 @@ fields:
       required: false
     label: Nama kampung
     description: 'Masukkan nama kampung (contoh: cipanon)'
-  - name: phone_number
-    type: number
-    label: Nomor telepon
-    default: 0
-    required: true
-    config:
-      min: 
-      max: 
-      step: 
-    description: Nomor telepon kampung
   - name: email
     type: text
     config:
       required: false
     label: Email
     description: Email kampung
+  - name: telephone_numbers
+    type: text
+    config:
+      required: false
+    label: Nomor telepon
+    description: Nomor telepon kampung
   config:
     min: 
     max: 
-    labelField: 
+    labelField: names
   label: Kontak kampung
 pages:
 - data/contact.yml
