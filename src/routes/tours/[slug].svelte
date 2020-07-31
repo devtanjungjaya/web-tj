@@ -18,6 +18,7 @@
    import Prices from "../../components/Item/Prices.svelte";
    import Link from "../../components/Item/Link.svelte";
    import Facilities from "../../components/Item/Facilities.svelte";
+   import Promotions from "../../components/Item/Promotions.svelte";
    import { onMount } from "svelte";
 
    let DOMPurify = null;
@@ -41,8 +42,11 @@
 
    <div class="flex flex-col lg:flex-row space-y-6 lg:space-y-0 lg:space-x-10 xl:space-x-32 mt-10 sm:mt-20">
       <div class="flex flex-col max-w-4xl">
+         {#if data.promotions && data.promotions.length}
+            <Promotions promotions={data.promotions} />
+         {/if}
          {#if DOMPurify}
-            <p class="font-open-sans text-neutral-5 text-lg sm:text-xl">
+            <p class="font-open-sans text-neutral-5 text-lg sm:text-xl prose">
                {@html DOMPurify.sanitize(data.description)}
             </p>
             <Decorator />
