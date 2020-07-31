@@ -111,5 +111,15 @@ fields:
       file: data/promotion.yml
       path: promotions
   label: Promosi
+- name: notes
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: markdown
+  label: Catatan
+  description: Catatan untuk pengunjung atau yang lainnya
 pages:
 - content/destinations/pantai-cikadu.md
