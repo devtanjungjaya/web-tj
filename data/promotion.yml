@@ -1,4 +1,5 @@
 ---
 promotions:
-    - name: CEC-DISC10
-      description: Diskon 10% untuk total pembelian di atas Rp 100.000. Berlaku untuk produk dengan promo yang sama
+- name: CEC-DISC10
+  description: Diskon 10% untuk total pembelian di atas Rp 100.000. Berlaku untuk
+    produk dengan promo yang sama

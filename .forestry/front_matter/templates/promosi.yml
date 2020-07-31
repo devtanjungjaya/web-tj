@@ -26,3 +26,5 @@ fields:
     max: 
     labelField: name
   label: Promosi
+pages:
+- data/promotion.yml
