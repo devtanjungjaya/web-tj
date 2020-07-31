@@ -1,4 +1,5 @@
 import getMarkdownInDirectory from '../../utilities/markdown.js';
+import { processPromotions } from '../../utilities/promotion';
 const marked = require('marked');
 
 const wysiwyg = ['description', 'notes'];
@@ -9,6 +10,12 @@ rooms = rooms.map(room =>
         room, 
         Object.fromEntries(wysiwyg.map(w => room[w] ? [w, marked(room[w], { breaks: true })] : []))
     ))
+    .map(room => {
+        return {
+            ...room,
+            promotions: processPromotions(room.promotions || [])
+        };
+    });
 rooms.map(room => { room.categories = [room.category] })
 export const map = new Map(rooms.map(room => [room.slug, room]));
 
