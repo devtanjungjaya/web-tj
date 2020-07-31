@@ -99,5 +99,3 @@ fields:
       file: data/facility-destination.yml
       path: facilities
   label: Fasilitas
-pages:
-- content/destinations/pantai-cikadu.md
