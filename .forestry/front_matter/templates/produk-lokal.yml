@@ -73,6 +73,3 @@ fields:
   description: List semua harga (varian dari produk)
 pages:
 - content/products/action-figure-kelapa.md
-- content/products/flyingcar-papi.md
-- content/products/gamevr-wibu.md
-- content/products/toko_wirowibu.md
