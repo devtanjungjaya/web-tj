@@ -19,7 +19,7 @@ fields:
   config:
     min: 
     max: 
-    labelField: 
+    labelField: description
   label: Foto-foto
   description: Foto-foto yang menarik
 - name: description
