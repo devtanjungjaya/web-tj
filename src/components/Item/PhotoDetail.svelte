@@ -16,7 +16,7 @@
                 </path>
             </svg>
     </div>
-    <div class="md:px-3 flex-grow flex items-center justify-center">
+    <div class="md:px-3 flex items-center justify-center absolute" style="top: 40%; transform: translateY(-40%)">
         <Carousel 
             perPage="1" 
             dots={false} 
@@ -40,8 +40,8 @@
         </Carousel>
     </div>
     <span 
-        class="py-6 px-2 text-center align-middle font-open-sans font-normal text-neutral-6 
-        text-base sm:text-lg flex-shrink-0"
+        class="py-6 px-2 text-center mt-auto font-open-sans font-normal text-neutral-6 
+        text-base sm:text-lg"
     >
         {photos[currentIndex].description}
     </span>
