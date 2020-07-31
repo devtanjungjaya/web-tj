@@ -3,28 +3,40 @@ label: Promosi
 hide_body: true
 fields:
 - name: promotions
+  type: list
+  config:
+    use_select: false
+    min: 
+    max: 
+  label: List promosi
+- name: descriptions
   type: field_group_list
   fields:
-  - name: name
-    type: text
+  - name: promotion
+    type: select
+    default: []
     config:
-      required: true
-    label: Kode promo
-    description: 'Kode promo (misal: "CEC-10")'
+      required: false
+      options: []
+      source:
+        type: documents
+        section: promosi
+        file: data/promotion.yml
+        path: 
+    label: Kode promosi
   - name: description
     type: textarea
     default: ''
     config:
-      required: true
+      required: false
       wysiwyg: true
       schema:
         format: markdown
     label: Deskripsi
-    description: Deskripsi mekanisme promo
   config:
     min: 
     max: 
-    labelField: name
-  label: Promosi
+    labelField: 
+  label: Deskripsi promosi
 pages:
 - data/promotion.yml
