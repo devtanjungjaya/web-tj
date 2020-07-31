@@ -22,9 +22,18 @@ fields:
   label: Kontak penjual
   description: Kontak penjual yang bisa dihubungi
 - name: photos
-  type: image_gallery
-  config: {}
-  label: Foto produk
+  type: field_group_list
+  fields:
+  - name: photo
+    type: include
+    config: {}
+    template: foto
+    label: Foto
+  config:
+    min: 
+    max: 
+    labelField: description
+  label: Foto-foto
 - name: description
   type: textarea
   default: ''
