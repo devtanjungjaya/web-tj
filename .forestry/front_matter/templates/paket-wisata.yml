@@ -93,5 +93,15 @@ fields:
     label: Kontak
   label: Kontak
   description: Kontak yang bisa dihubungi
+- name: notes
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: markdown
+  label: Catatan
+  description: Catatan untuk pengunjung atau yang lainnya
 pages:
 - content/tours/jelajah-liwungan.md

@@ -71,5 +71,15 @@ fields:
     labelField: description
   label: List harga
   description: List semua harga (varian dari produk)
+- name: notes
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: markdown
+  label: Catatan
+  description: Catatan untuk pembeli atau yang lainnya
 pages:
 - content/products/set-alat-makan.md
