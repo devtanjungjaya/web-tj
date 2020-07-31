@@ -32,5 +32,7 @@ facilities:
 - Spot foto
 - Musholla
 - Toilet umum
+promotions:
+- CEC-DISC10
 
 ---
