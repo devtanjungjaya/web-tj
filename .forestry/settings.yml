@@ -32,6 +32,10 @@ sections:
   match: "**/*.md"
   templates:
   - destinasi-wisata
+- type: document
+  path: data/promotion.yml
+  label: Promosi
+  match: "**/*"
 - type: directory
   path: content/contacts
   label: Kontak
