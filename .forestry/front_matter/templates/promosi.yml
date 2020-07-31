@@ -36,7 +36,7 @@ fields:
   config:
     min: 
     max: 
-    labelField: 
+    labelField: promotion
   label: Deskripsi promosi
 pages:
 - data/promotion.yml
