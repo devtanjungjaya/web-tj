@@ -71,5 +71,3 @@ fields:
     labelField: description
   label: List harga
   description: List semua harga (varian dari produk)
-pages:
-- content/products/action-figure-kelapa.md
