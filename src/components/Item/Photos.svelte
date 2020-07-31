@@ -1,11 +1,12 @@
-<Carousel perPage={{ 1440: 3, 800: 2 }} dots={false}>
+<Carousel perPage={{ 1440: 3, 800: 2 }} dots={false} on:init={() => showPhoto = true}>
    {#each photos as photo, i}
       <div 
          class="px-1 sm:px-4"
          style={`height: ${innerWidth >= 640 ? 360 : 250}px`}
       >
          <img 
-            class="object-cover w-full h-full rounded-2xl" 
+            class="object-cover w-full h-full rounded-2xl"
+            class:invisible={!showPhoto}
             src={photo.photoURI} 
             alt={`foto-item-${i+1}`}
             on:mousedown={handleMouseDown}
@@ -47,6 +48,7 @@
    let startY;
    let initialIndex = null;
    let innerWidth;
+   let showPhoto = false;
 
    function handleMouseDown(event) {
       startX = event.pageX;

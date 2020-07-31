@@ -1,5 +1,5 @@
 <div class="carousel">
-	<div class:invisible={!controller} bind:this={siema}>
+	<div bind:this={siema}>
 		<slot></slot>
 	</div>
 	{#if controls}
@@ -114,7 +114,8 @@
   			draggable,
  			multipleDrag,
   			threshold,
-  			rtl,
+			rtl,
+			onInit: () => { dispatch("init") },  
 			onChange: handleChange
         })
 		

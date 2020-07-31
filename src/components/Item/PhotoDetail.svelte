@@ -16,7 +16,7 @@
                 </path>
             </svg>
     </div>
-    <div class="md:px-3 flex items-center justify-center absolute" style="top: 40%; transform: translateY(-40%)">
+    <div class="md:px-3 w-full flex items-center justify-center absolute" style="top: 40%; transform: translateY(-40%)">
         <Carousel 
             perPage="1" 
             dots={false} 
