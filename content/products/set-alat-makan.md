@@ -2,12 +2,11 @@
 name: Set Alat Makan
 contact:
   name: Pak Aceng
-  phoneNumbers:
-  - '0838-4110-0928'
+  phoneNumbers: []
   email: ''
 photos:
-- https://web-tj.netlify.app/images/whatsapp-image-2020-07-21-at-12-13-33.jpeg
-- https://web-tj.netlify.app/images/whatsapp-image-2020-07-21-at-12-12-54.jpeg
+- photoURI: https://web-tj.netlify.app/images/whatsapp-image-2020-07-21-at-12-12-54.jpeg
+  description: Set alat makan
 description: |-
   Set alat makan yang terdiri dari satu buah sendok, satu buah garpu, dan sepasang sumpit. Set alat makan ini terbuat dari bahan kayu jati berkualitas ekspor. Produk ini dibuat oleh para pengrajin terampil di destinasi wisata Tanjung Lesung.
 
@@ -21,9 +20,8 @@ description: |-
 categories:
 - Kerajinan
 prices:
-- value: 55000
+- description: FREE POUCH
+  value: 55000
   unit: set
-  description: FREE POUCH
-ecommerce: ''
 
 ---

@@ -22,9 +22,18 @@ fields:
   label: Kontak penjual
   description: Kontak penjual yang bisa dihubungi
 - name: photos
-  type: image_gallery
-  config: {}
-  label: Foto produk
+  type: field_group_list
+  fields:
+  - name: photo
+    type: include
+    config: {}
+    template: foto
+    label: Foto
+  config:
+    min: 
+    max: 
+    labelField: description
+  label: Foto-foto
 - name: description
   type: textarea
   default: ''
@@ -63,12 +72,4 @@ fields:
   label: List harga
   description: List semua harga (varian dari produk)
 pages:
-- content/products/Kerajinan Kulit Felix.md
-- content/products/Set Alat Makan.md
-- content/products/Teko-Bambu.md
-- content/products/action-figure-kelapa.md
-- content/products/flyingcar-papi.md
-- content/products/gamevr-wibu.md
-- content/products/gulingwibu-anakpapiwiro.md
-- content/products/indomie-kulit-papi.md
-- content/products/toko_wirowibu.md
+- content/products/set-alat-makan.md
