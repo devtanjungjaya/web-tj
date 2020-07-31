@@ -1,5 +1,5 @@
 <div class="carousel">
-	<div class="slides" bind:this={siema}>
+	<div class:invisible={!controller} bind:this={siema}>
 		<slot></slot>
 	</div>
 	{#if controls}
