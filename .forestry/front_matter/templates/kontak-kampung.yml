@@ -10,7 +10,7 @@ fields:
     config:
       required: false
     label: Nama kampung
-    description: 'masukkan nama kampung (cth: cipanon)'
+    description: 'Nama kampung (cth: cipanon)'
   - name: phone-number
     type: number
     label: Nomor telepon
@@ -21,8 +21,14 @@ fields:
       min: 
       max: 
       step: 
+  - name: email
+    type: text
+    config:
+      required: false
+    label: Email
+    description: Email kampung
   config:
     min: 
     max: 
-    labelField: 
+    labelField: name
   label: Kontak kampung
