@@ -32,5 +32,7 @@ facilities:
 - Musholla
 - Toilet umum
 gmaps: https://google.com
+promotions:
+- CEC-DISC10
 
 ---
