@@ -1,4 +1,28 @@
 ---
 label: Promosi
 hide_body: true
-fields: []
+fields:
+- name: promotions
+  type: field_group_list
+  fields:
+  - name: name
+    type: text
+    config:
+      required: true
+    label: Kode promo
+    description: 'Kode promo (misal: "CEC-10")'
+  - name: description
+    type: textarea
+    default: ''
+    config:
+      required: true
+      wysiwyg: true
+      schema:
+        format: markdown
+    label: Deskripsi
+    description: Deskripsi mekanisme promo
+  config:
+    min: 
+    max: 
+    labelField: name
+  label: Promosi
