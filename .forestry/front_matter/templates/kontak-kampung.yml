@@ -1,4 +1,28 @@
 ---
 label: Kontak Kampung
 hide_body: true
-fields: []
+fields:
+- name: contacts
+  type: field_group_list
+  fields:
+  - name: name
+    type: text
+    config:
+      required: false
+    label: Nama kampung
+    description: 'masukkan nama kampung (cth: cipanon)'
+  - name: phone-number
+    type: number
+    label: Nomor telepon
+    description: Nomor telepon kampung yang dapat dihubungi
+    default: 0
+    required: true
+    config:
+      min: 
+      max: 
+      step: 
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: Kontak kampung
