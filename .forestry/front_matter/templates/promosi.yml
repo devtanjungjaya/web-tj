@@ -22,7 +22,7 @@ fields:
         type: documents
         section: promosi
         file: data/promotion.yml
-        path: 
+        path: promotions
     label: Kode promosi
   - name: description
     type: textarea
