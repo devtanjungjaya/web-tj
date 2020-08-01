@@ -13,7 +13,7 @@
          style={`height: ${innerWidth >= 640 ? 360 : 250}px`}
       >
          <img 
-            class="object-cover w-full h-full rounded-2xl"
+            class="object-cover w-full h-full rounded-2xl bg-neutral-1"
             class:invisible={!showPhoto}
             src={photo.photoURI} 
             alt={`foto-item-${i+1}`}
@@ -71,4 +71,5 @@
          initialIndex = index;
       }
    }
+
 </script>
