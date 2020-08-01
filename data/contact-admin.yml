@@ -3,8 +3,6 @@ admins:
 - Admin Cikadu
 contacts:
 - admin: Admin Cikadu
-  name: ''
   contact:
     phoneNumbers:
     - '08275632761'
-name: []

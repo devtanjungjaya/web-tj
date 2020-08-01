@@ -50,7 +50,7 @@
             </p>
             <Decorator />
          {/if}
-         <Contact {...data.contact} />
+         <Contact {...data.contact} name="Silahkan hubungi admin untuk membeli atau informasi lebih lanjut" />
          {#if data.notes && DOMPurify}
             <Decorator />
             <div class="flex flex-col font-overpass">

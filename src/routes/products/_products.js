@@ -1,5 +1,6 @@
 import getMarkdownInDirectory from '../../utilities/markdown.js';
 import { processPromotions } from '../../utilities/promotion';
+import { adminContactsMap } from '../../utilities/contact';
 const marked = require('marked');
 
 const wysiwyg = ['description', 'notes'];
@@ -11,7 +12,8 @@ products = products.map(product =>
     .map(product => {
         return {
             ...product,
-            promotions: processPromotions(product.promotions || [])
+            promotions: processPromotions(product.promotions || []),
+            contact: adminContactsMap.get(product.contact)
         };
     });
 export const map = new Map(products.map(product => [product.slug, product]));
