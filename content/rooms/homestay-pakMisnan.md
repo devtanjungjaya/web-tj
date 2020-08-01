@@ -32,5 +32,6 @@ roomFacilities:
 description: 2 kamar
 promotions: []
 notes: tempat cuci tangan
+contact: Admin Cikadu
 
 ---
