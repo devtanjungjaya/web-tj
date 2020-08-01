@@ -16,7 +16,10 @@ photos:
 - photoURI: https://web-tj.netlify.app/images/20200727_113525.jpg
   description: Tampak depan
 gmaps: ''
-prices: []
+prices:
+- description: kamar
+  value: 200000
+  unit: malam
 publicFacilities:
 - Ruang keluarga
 - Ruang tamu
