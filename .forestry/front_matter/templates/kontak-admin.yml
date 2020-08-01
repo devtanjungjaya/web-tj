@@ -29,11 +29,13 @@ fields:
     type: field_group
     config: {}
     fields:
-    - name: contact
-      type: include
-      config: {}
-      template: kontak
-      label: Kontak
+    - name: phoneNumbers
+      type: list
+      config:
+        use_select: false
+        min: 
+        max: 
+      label: List nomor telepon
     label: Kontak
   config:
     min: 
