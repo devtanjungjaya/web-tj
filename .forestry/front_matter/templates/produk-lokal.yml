@@ -12,13 +12,6 @@ fields:
 - name: contac
   type: field_group
   config: {}
-  fields:
-  - name: contact
-    type: include
-    config: {}
-    template: kontak
-    label: Kontak
-    description: Narahubung
   label: Kontak penjual
   description: Kontak penjual yang bisa dihubungi
 - name: photos
