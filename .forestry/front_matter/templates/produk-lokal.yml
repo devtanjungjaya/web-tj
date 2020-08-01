@@ -9,7 +9,7 @@ fields:
     required: true
   label: Nama
   description: Nama produk
-- name: contact
+- name: contac
   type: field_group
   config: {}
   fields:
