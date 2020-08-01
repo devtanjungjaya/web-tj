@@ -109,6 +109,18 @@ fields:
       file: data/promotion.yml
       path: promotions
   label: Promosi
+- name: contact
+  type: select
+  default: Admin Cikadu
+  config:
+    required: true
+    options: []
+    source:
+      type: documents
+      section: kontak-admin
+      file: data/contact-admin.yml
+      path: admins
+  label: Kontak admin
 - name: notes
   type: textarea
   default: ''
