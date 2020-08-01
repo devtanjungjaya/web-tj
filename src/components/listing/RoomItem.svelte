@@ -40,7 +40,7 @@
 
 <style type="text/postcss">
 .product-img {
-    flex-basis: 60%;
+    flex-basis: 55%;
 }
 </style>
 

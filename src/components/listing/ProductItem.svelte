@@ -16,7 +16,7 @@
                     class="font-overpass font-normal text-neutral-3 flex-grow 
                     text-sm xs:text-base max-line-1"
                 >
-                    {contact.name}
+                    {categories.join(", ")}
                 </span>
                 <span class="self-end font-overpass font-bold text-neutral-9 text-sm xs:text-base">
                     {price}
@@ -46,7 +46,7 @@
 
     export let photos;
     export let name;
-    export let contact;
+    export let categories;
     export let prices;
     export let slug;
     export let promotions;
