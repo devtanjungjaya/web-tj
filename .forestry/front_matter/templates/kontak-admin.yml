@@ -13,7 +13,7 @@ fields:
 - name: contacts
   type: field_group_list
   fields:
-  - name: name
+  - name: admin
     type: select
     default: []
     config:
@@ -21,10 +21,10 @@ fields:
       options: []
       source:
         type: documents
-        section: 
-        file: 
-        path: 
-    label: Nama
+        section: kontak-admin
+        file: data/contact-admin.yml
+        path: admins
+    label: Admin
   config:
     min: 
     max: 
