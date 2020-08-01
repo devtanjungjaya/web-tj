@@ -36,5 +36,6 @@ roomFacilities:
 description: 6 Kamar. Untuk serumah bisa 25 orang
 promotions: []
 notes: tersedia hand sanitizer, tempat cuci tangan
+contact: Admin Cikadu
 
 ---
