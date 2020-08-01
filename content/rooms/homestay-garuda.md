@@ -28,5 +28,6 @@ roomFacilities:
 description: 5 kamar dengan kapasitas 2 - 5 orang
 promotions: []
 notes: tersedia hand sanitizer, tempat cuci tangan
+contact: Admin Cikadu
 
 ---
