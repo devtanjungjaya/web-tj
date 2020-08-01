@@ -14,7 +14,18 @@ photos:
 - photoURI: https://web-tj.netlify.app/images/20200727_101750.jpg
   description: Tampak depan
 gmaps: ''
-prices: []
+prices:
+- description: Cottage untuk keluarga 4-5 orang (sudah termasuk paket sarapan dan
+    coffee break)
+  value: 500000
+  unit: cottage
+- description: Cottage 800 ribu - 1 juta (sudah termasuk paket sarapan dan coffee
+    break)
+  unit: cottage
+  value: 900000
+- description: Kamar dengan paket sarapan dan coffee break (teh, kopi, air minum)
+  value: 400000
+  unit: kamar
 publicFacilities:
 - Sarapan
 - Area parkir
@@ -26,7 +37,8 @@ roomFacilities:
 - Kloset duduk
 - Shower
 - Kamar mandi dalam
-description: "\\-"
+description: "Ada 6 kamar. Kapasistas 2-5 orang  \nAda juga cottage 3 bangunan. 1
+  cottage berisi 2 kamar. Bisa 7-8 orang"
 promotions: []
 notes: Tersedia hand sanitizer, Tempat cuci tangan
 
