@@ -46,5 +46,6 @@ description: |-
   1 kamar max 3 orang
 notes: tersedia tempat cuci tangan, tersedia hand sanitizer
 promotions: []
+contact: Admin Cikadu
 
 ---
