@@ -17,6 +17,7 @@ prices:
   unit: kamar
   value: 250000
 publicFacilities:
+- Minimarket
 - Wifi
 - Area parkir
 roomFacilities:
