@@ -82,7 +82,7 @@ fields:
       path: facilities
   label: Fasilitas ditawarkan
   description: Fasilitas yang ditawarkan
-- name: contact
+- name: contac
   type: field_group
   config: {}
   fields:
