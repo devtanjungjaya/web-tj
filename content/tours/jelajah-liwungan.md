@@ -15,11 +15,8 @@ prices:
   unit: pax
 facilities:
 - Transportasi
-contact:
-  name: Orang
-  phoneNumbers: [
-    '0811274328'
-  ]
-  email: ''
+contact: Admin Cikadu
+promotions: []
+notes: ''
 
 ---

@@ -82,17 +82,6 @@ fields:
       path: facilities
   label: Fasilitas ditawarkan
   description: Fasilitas yang ditawarkan
-- name: contact
-  type: field_group
-  config: {}
-  fields:
-  - name: contact
-    type: include
-    config: {}
-    template: kontak
-    label: Kontak
-  label: Kontak
-  description: Kontak yang bisa dihubungi
 - name: promotions
   type: list
   config:
@@ -115,5 +104,17 @@ fields:
       format: markdown
   label: Catatan
   description: Catatan untuk pengunjung atau yang lainnya
+- name: contact
+  type: select
+  default: []
+  config:
+    required: true
+    options: []
+    source:
+      type: documents
+      section: kontak-admin
+      file: data/contact-admin.yml
+      path: admins
+  label: Kontak admin
 pages:
 - content/tours/jelajah-liwungan.md
