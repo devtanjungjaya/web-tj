@@ -36,5 +36,6 @@ roomFacilities:
 description: 7 kamar. 3-5 orang
 promotions: []
 notes: tersedia hand sanitizer, tempat cuci tangan
+contact: Admin Cikadu
 
 ---
