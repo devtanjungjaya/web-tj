@@ -25,5 +25,6 @@ roomFacilities:
 description: 1 kamar dengan kapasitas 1-4 orang
 promotions: []
 notes: tempat cuci tangan
+contact: Admin Cikadu
 
 ---
