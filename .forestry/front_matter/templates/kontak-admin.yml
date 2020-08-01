@@ -30,3 +30,5 @@ fields:
     max: 
     labelField: 
   label: Kontak admin
+pages:
+- data/contact-admin.yml

@@ -1,5 +1,7 @@
 ---
-    admins:
-        - Admin Cikadu
-    contacts:
-        - admin: Admin Cikadu
+admins:
+- Admin Cikadu
+contacts:
+- admin: Admin Cikadu
+  name: ''
+name: []
