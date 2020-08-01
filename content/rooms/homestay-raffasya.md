@@ -34,5 +34,6 @@ roomFacilities:
 description: "1 Kamar kapasitas 2 orang\n\nWajib perempuan "
 promotions: []
 notes: tempat cuci tangan
+contact: Admin Cikadu
 
 ---
