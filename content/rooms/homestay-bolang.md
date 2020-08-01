@@ -21,6 +21,8 @@ prices:
   value: 200000
   unit: kamar
 publicFacilities:
+- Dapur
+- Ruang Keluarga
 - Mushola
 - Jasa tur
 - Area parkir
