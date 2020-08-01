@@ -44,7 +44,8 @@ roomFacilities:
 - Kloset duduk
 - Shower
 - Kamar mandi dalam
-description: "\\-"
+description: "Tipe kamar  \nKamar hebel kapasitas 2 orang  \nRumah kirai kapasitas
+  4 orang  \nRoom Bata kapasitas 6 orang  \nRumah kakao kapsitas 16 orang"
 notes: tersedia tempat cuci tangan , tersedia hand sanitizer,tersedia alat pengukur
   suhu tubuh, alat penyemprot disenfektan
 promotions:
