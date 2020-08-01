@@ -26,6 +26,14 @@ const customColor = {
 module.exports = {
   purge: ["./src/**/*.svelte"],
   theme: {
+    screens: {
+      'xs': '400px',
+      'sm': '640px',
+      'md': '768px',
+      'lg': '1024px',
+      'xl': '1280px',
+      '2xl': '1600px'
+    },
     extend: {
       colors: customColor,
       placeholderColor: customColor,
@@ -37,6 +45,9 @@ module.exports = {
       },
       borderWidth: {
         '1': '1px'
+      },
+      maxWidth: {
+        '2xs': '12.5rem'
       }
     },
     fontFamily: {
@@ -46,5 +57,7 @@ module.exports = {
     }
   },
   variants: ['responsive', 'hover', 'focus', 'group-hover', 'even', 'last', 'disabled'],
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography')
+  ]
 }

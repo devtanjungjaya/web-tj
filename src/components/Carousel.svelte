@@ -1,5 +1,5 @@
 <div class="carousel">
-	<div class="slides" bind:this={siema}>
+	<div bind:this={siema}>
 		<slot></slot>
 	</div>
 	{#if controls}
@@ -7,7 +7,7 @@
 			<img 
 				src="ic_left.svg"
 				alt="left-carousel"
-				class="rounded-full bg-white shadow-md cursor-pointer control left p-4" 
+				class="rounded-full bg-white shadow-md cursor-pointer control left p-4 hidden sm:block" 
 				on:click={left} 
 			/>
 		{/if}
@@ -16,7 +16,7 @@
 			<img 
 				src="ic_right.svg" 
 				alt="right-carousel"
-				class="rounded-full bg-white shadow-md cursor-pointer control right p-4" 
+				class="rounded-full bg-white shadow-md cursor-pointer control right p-4 hidden sm:block" 
 				on:click={right} 
 			/>
 		{/if}
@@ -114,7 +114,8 @@
   			draggable,
  			multipleDrag,
   			threshold,
-  			rtl,
+			rtl,
+			onInit: () => { dispatch("init") },  
 			onChange: handleChange
         })
 		

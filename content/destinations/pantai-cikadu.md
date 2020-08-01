@@ -10,11 +10,10 @@ description: "**Pantai Tanjung Lesung** berada sebelah barat Kabupaten Pandeglan
   Provinsi Banten. Pantai ini mempunyai keunikan dan keindahan alam tersendiri. Pasir
   putih di sepanjang pantainya sangat padu-padan dengan air lautnya yang terlihat
   jernih. Mempunyai luas sekitar 1500 Hektar dengan lokasi yang cukup jauh dan tersembunyi
-  membuat pantai ini punya julukan surga yang tersembunyi. \n\n_Nama pantai Tanjung
+  membuat pantai ini punya julukan surga yang tersembunyi.   \n  \n _Nama pantai Tanjung
   Lesung ini memang terdengar sedikit aneh. Namun perlu anda tahu, penamaan pantai
   ini terkait dengan dataran pantainya yang agak menjorok ke laut yang terlihat mirip
   lesung (Alat Penumbuk Padi Tradisional)._"
-gmaps: ''
 prices:
 - description: Tiket masuk (weekend) usia 7+
   value: 100000
@@ -32,6 +31,7 @@ facilities:
 - Spot foto
 - Musholla
 - Toilet umum
+gmaps: https://google.com
 promotions:
 - CEC-DISC10
 contact: Admin Cikadu
