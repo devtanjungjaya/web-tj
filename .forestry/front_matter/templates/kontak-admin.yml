@@ -25,6 +25,16 @@ fields:
         file: data/contact-admin.yml
         path: admins
     label: Admin
+  - name: contact
+    type: field_group
+    config: {}
+    fields:
+    - name: contact
+      type: include
+      config: {}
+      template: kontak
+      label: Kontak
+    label: Kontak
   config:
     min: 
     max: 
