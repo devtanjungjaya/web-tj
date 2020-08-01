@@ -1,15 +1,15 @@
 <ClickOutside on:clickoutside={() => opened = null}>
-    <div class="md:flex items-center rounded-2xl border-1 border-neutral-1 filter hidden">
+    <div class="md:grid md:grid-flow-col items-center rounded-2xl border-1 border-neutral-1 filter hidden">
         {#each filters as filter, i}
-            <div class="relative">
+            <div class="relative h-full">
                 <div 
                     class={`flex items-center flex-1 px-4 py-2 border-neutral-1 max-w-xs 
-                    cursor-pointer hover:bg-gray-100 overflow-hidden
+                    cursor-pointer hover:bg-gray-100 overflow-hidden h-full
                     ${i >= filters.length-1 ? "rounded-r-2xl border-l-1" : i > 0 ? "border-l-1" : "rounded-l-2xl"}`}
                     on:click={() => opened = i}
                 >
                     <span 
-                        class={`flex-grow font-overpass font-semibold text-lg lg:text-xl mr-6 lg:mr-12
+                        class={`flex-grow font-overpass font-semibold text-lg lg:text-xl mr-5 xl:mr-12
                         ${filterFunctions.some(f => f.type == filter.label) ? "text-primary-7" : "text-neutral-7"}`}
                     >
                         {filter.label}
@@ -24,14 +24,16 @@
                     </svg>
                 </div>
                 <div 
-                    class={`absolute rounded-2xl border-neutral-1 border-1 p-6 mt-4 left-0 z-10 bg-white 
-                    shadow-xl overflow-hidden ${filter.component && opened === i ? "block" : "hidden"}`}
+                    class={`absolute rounded-2xl border-neutral-1 border-1 p-6 mt-4 z-10 bg-white 
+                    shadow-xl overflow-hidden ${filter.component && opened === i ? "block" : "hidden"}
+                    ${i >= filters.length-1 ? "right-0" : "left-0"}`}
                     style="min-width: 272px; max-height: 345px; overflow-y: auto"
                 >
                     <svelte:component 
                         this={filter.component} 
                         on:filter={updateFilter}
                         {...filter.props}
+                        visible={filter.component && opened === i && innerWidth > 768}
                     />
                 </div>
             </div>

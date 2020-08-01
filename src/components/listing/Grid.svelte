@@ -16,7 +16,7 @@
     </div>
     {#if !filteredItems.length}
         <span class="w-full py-32 text-center font-overpass font-bold text-neutral-4 text-xl">
-            Barang tidak ditemukan
+            Tidak ditemukan...
         </span>
     {/if}
 </div>

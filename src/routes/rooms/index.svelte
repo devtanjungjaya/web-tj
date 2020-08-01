@@ -2,8 +2,8 @@
     export function preload({ params, query }) {
        return this.fetch(`rooms.json`)
        .then(r => r.json())
-       .then(({ rooms, roomCategories, roomFacilities, publicFacilities }) => {
-          return { rooms, roomCategories, roomFacilities, publicFacilities };
+       .then(({ rooms, roomCategories, roomFacilities, publicFacilities, promotions }) => {
+          return { rooms, roomCategories, roomFacilities, publicFacilities, promotions };
        });
     }
 </script>
@@ -19,6 +19,7 @@
     export let roomCategories;
     export let roomFacilities;
     export let publicFacilities;
+    export let promotions;
 
     let filters = [];
 
@@ -64,7 +65,18 @@
                 type: "rooms",
                 itemField: "roomFacilities"
             }
-        }
+        },
+        ...promotions.length ? [{
+            label: "Promosi",
+            component: SelectFilter,
+            props: {
+                values: promotions,
+                label: "Promosi",
+                type: "rooms",
+                itemField: "promotions",
+                itemFieldFn: (promotions) => promotions.map(p => p.promotion)
+            }
+        }] : []
     ];
 
 </script>

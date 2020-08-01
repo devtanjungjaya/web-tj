@@ -32,13 +32,12 @@ sections:
   match: "**/*.md"
   templates:
   - destinasi-wisata
-- type: directory
-  path: content/contacts
+- type: document
+  path: data/promotion.yml
+  label: Promosi
+- type: document
+  path: data/contact.yml
   label: Kontak
-  create: all
-  match: "**/*.md"
-  templates:
-  - kontak-kampung
 - type: heading
   label: Fasilitas
 - type: document
