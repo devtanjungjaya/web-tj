@@ -3,17 +3,17 @@
 </svelte:head>
 
 <header>
-    <div id="head" class="py-5 px-16">
+    <div id="head" class="py-4 px-16">
         <h1 class="text-3xl md:text-4xl xl:text-5xl text-primary-7 font-bold">Transportasi</h1>
     </div>
     <div id="route" class="flex flex-row px-12 font-bold">
-        <div class="py-5 px-4">
+        <div class="py-4 px-4">
             <a href="/transport/map">
                 <h2 class="text-primary-7">Peta</h2>
             </a>
         </div>
         <br>
-        <div class="py-5 px-4">
+        <div class="py-4 px-4">
             <a href="/transport/route">
                 <h2 class="text-neutral-2">Rute</h2>
             </a>
@@ -22,7 +22,7 @@
 </header>
 
 <section id="map">
-    <div class='mapbox py-5 px-16 flex flex-row'>
+    <div class='mapbox py-4 px-4 sm:px-8 md:px-16 flex flex-row'>
         <div class="map">
             <Map 
             accessToken = {accToken} 
@@ -31,14 +31,21 @@
             options = {{center,zoom:8}}
             on:ready={setupMap}
             >
-                <Marker lat={-6.479478974609833} lng={105.65398972972787} color=#123123 label="TANJUNGJAYA" popupClassName="class-name" />
+                <!-- <Marker lat={-6.479478974609833} lng={105.65398972972787} color=#123123 label="TANJUNGJAYA" popupClassName="class-name" /> -->
                 <NavigationControl />
                 <GeolocateControl options={{ some: 'control-option' }} />
                 <ScalingControl />
             </Map>
             
         </div>
-        <div id="filter-group" class="filter-group flex flex-col" bind:this={filter}></div>
+        <div id="filter-group" class="filter-group flex flex-col bg-neutral-1 relative">
+            <div class="px-4 align-middle text-neutral-5 sm:text-md md:text-lg font-bold relative">
+                <h1 class="relative">Legenda</h1>
+            </div>
+            <div class="filter flex flex-col" bind:this={filter}>
+                
+            </div>
+        </div>
     </div>
 </section>
 
@@ -58,11 +65,17 @@
     border-radius: 1rem;
 }
 .filter-group {
-    border-radius: 3px;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
     width: 25%;
-    height:100%;
     max-height: 100%;
+    padding-top: 1rem;
 }
+.filter {
+    overflow-y: auto;
+    padding-top: 1rem;
+}
+
 
 </style>
 
@@ -76,9 +89,10 @@
     import { Map, Geocoder, Marker, controls } from '@beyonk/svelte-mapbox';
     const { GeolocateControl, NavigationControl, ScalingControl } = controls
 
-    function addFilter(filter,layerID){
+    function addFilter(filter,layerID,color){
         var box = document.createElement('div');
-        box.className = 'box flex flex-row p-2';
+        box.className = 'box flex flex-row py-2 px-4 hover:text-primary-7 hover:bg-neutral-2 align-middle text-neutral-5 text-sm font-bold';
+
         var input = document.createElement('input');
         input.type = 'checkbox';
         input.id = layerID;
@@ -88,22 +102,35 @@
         var label = document.createElement('label');
         label.setAttribute('for', layerID);
         label.textContent = layerID;
-        label.className = "justify-center text-neutral-5 text-sm hover:text-primary-7 font-bold"
 
-        var checkmark = document.createElement('span');
-        checkmark.className = "h-5 w-5 bg-neutral-2 hover:bg-neutral-5"
+        var check = document.createElement('span');
+        // check.textContent = "✔"
+        check.style.marginRight = "5px";
+        check.style.backgroundColor = color;
+        check.className = "h-5 w-5 justify-center"
 
         box.appendChild(input);
-        box.appendChild(checkmark);
+        box.appendChild(check);
         box.appendChild(label);
         filter.appendChild(box);
         // When the checkbox changes, update the visibility of the layer.
+        
         input.addEventListener('change', function(e) {
             tmp.setLayoutProperty(
                 layerID,
                 'visibility',
                 e.target.checked ? 'visible' : 'none'
             );
+            if(input.checked) {
+                // check.innerHTML = "✔"
+                check.style.backgroundColor = color
+                box.style.fontStyle = "normal"
+            }
+            if(!input.checked) {
+                // check.innerHTML = ""
+                check.style.backgroundColor = "white"
+                box.style.fontStyle = "italic"
+            }
         });
     }
     
@@ -126,8 +153,10 @@
                 'line-width': 3
             }
         });
+        addFilter(filter,name,color);
     }
-    function addPoint(map, url, name, size){
+    
+    function addPoint(map, url, name, size, degree){
         let alamatpalsu = url +".png"
         map.loadImage(alamatpalsu,function(error,image){
             if(error) throw error;
@@ -147,72 +176,49 @@
             'layout': {
                 'icon-image': name,
                 'icon-size': size,
-                'icon-rotate': 180,
+                'icon-rotate': degree,
                 'icon-ignore-placement': true,
+                'icon-anchor': "bottom",
+                "icon-optional": true,
             }
         });
-        let x = map.getSource(name);
-        console.log(x);
-
-        // // buat nambah marker
-        // x.features.forEach(function(marker) {
-        // // create a DOM element for the marker
-        //     var el = document.createElement('div');
-        //     el.className = 'marker';
-        //     el.style.backgroundImage = 'images/trans_icon_bandara.png'
-        //     el.style.width = "0.5rem";
-        //     el.style.height = "0.5rem"; 
-        //     el.style.display = "block";
-        //     el.style.borderRadius = "50%";
-        //     el.style.cursor= "pointer";
-        //     el.style.padding= "0";
-        //     el.addEventListener('click', function() {
-        //         window.alert(marker.properties.message);
-        //     });
-            
-        //     // add marker to map
-        //     new mapboxgl.Marker(el)
-        //     .setLngLat(marker.geometry.coordinates)
-        //     .addTo(map);
-        // });
+        addFilter(filter,name,"grey");
     }
 
     function setupMap(){
         tmp = map.getMap();
         // Angkot Mandala
-        addRoute(tmp,"trans_route_angkot_mandala.geojson","Angkot Mandala","red")
+        addRoute(tmp,"trans_route_angkot_mandala.geojson","Angkot Mandala","#106e79")
         // Angkot Rangkasbitung
-        addRoute(tmp,"trans_route_angkot_rangkasbitung.geojson","Angkot Rangkasbitung","#123123")
+        addRoute(tmp,"trans_route_angkot_rangkasbitung.geojson","Angkot Rangkasbitung","#ff5500")
         // Bus AC
-        addRoute(tmp,"trans_route_bus_ac.geojson","Bus AC","#817e7f")
+        addRoute(tmp,"trans_route_bus_ac.geojson","Bus AC","#ff0093")
         // Bus Non AC
-        addRoute(tmp,"trans_route_bus_non_ac.geojson","Bus Non AC","#13e6ec")
+        addRoute(tmp,"trans_route_bus_non_ac.geojson","Bus Non AC","#7e00be")
         // Damri
-        addRoute(tmp,"trans_route_damri.geojson","Damri","#3bd52a")
+        addRoute(tmp,"trans_route_damri.geojson","Damri","#0310fc")
         // Damri AC
-        addRoute(tmp,"trans_route_damri_ac.geojson","Damri AC","#da7c25")
+        addRoute(tmp,"trans_route_damri_ac.geojson","Damri AC","#00b4ff")
         // ELF
-        addRoute(tmp,"trans_route_elf.geojson","ELF","#c936a2")
+        addRoute(tmp,"trans_route_elf.geojson","ELF","#00b74d")
         // KRL
-        addRoute(tmp,"trans_route_krl.geojson","KRL","#000000")
+        addRoute(tmp,"trans_route_krl.geojson","KRL","#02a300")
         // Ojek
-        addRoute(tmp,"trans_route_ojek.geojson","Ojek","#001cff")
+        addRoute(tmp,"trans_route_ojek.geojson","Ojek","#90aa00")
         // Bandara
-        addPoint(tmp,"trans_point_bandara","Bandara",0.04)
+        addPoint(tmp,"trans_point_bandara","Bandara",0.04,180)
         // Poin Penting
-        addPoint(tmp,"trans_point_poin_penting","Poin Penting",0.01)
+        addPoint(tmp,"trans_point_poin_penting","Poin Penting",0.0175,0)
         // Stasiun KRL
-        addPoint(tmp,"trans_point_stasiun_krl","Stasiun KRL",0.04)
+        addPoint(tmp,"trans_point_stasiun_krl","Stasiun KRL",0.04,180)
         // Terminal Bis
-        addPoint(tmp,"trans_point_terminal_bus","Terminal Bus",0.04)
-        layers = tmp.getStyle().layers
-        for (let index = 111; index < layers.length; index++){
-            const element = layers[index];
-            // console.log(element)
-            addFilter(filter,element.id)
-        }
-        var features = tmp.queryRenderedFeatures({layers: ['Terminal Bus']});
-        console.log(features)
+        addPoint(tmp,"trans_point_terminal_bus","Terminal Bus",0.3,0)
+        // layers = tmp.getStyle().layers
+        // for (let index = 111; index < layers.length; index++){
+        //     const element = layers[index];
+        //     // console.log(element)
+        //     addFilter(filter,element.id)
+        // }
         // var uniqueFeatures = getUniqueFeatures(features, "Nama_Term"); 
         // uniqueFeatures.forEach(function(feature) {
         //     var prop = feature.properties;
