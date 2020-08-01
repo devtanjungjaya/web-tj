@@ -2,14 +2,14 @@
 label: Kontak admin
 hide_body: true
 fields:
-- name: name
+- name: admins
   type: list
   config:
     use_select: false
     min: 
     max: 
-  label: Nama
   description: 'Nama admin (misal: "Admin Cikadu")'
+  label: Admin
 - name: contacts
   type: field_group_list
   fields:
