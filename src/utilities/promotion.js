@@ -14,7 +14,7 @@ const promotionsMap = promotionsData
                                     });
                                 }, new Map());
 
-export const promotions = promotionsMap.keys();
+export const promotions = [...promotionsMap.keys()];
 
 export const processPromotions = (promotions) => promotions
                                                     .filter(promotion => promotionsMap.has(promotion))

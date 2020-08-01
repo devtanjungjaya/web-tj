@@ -54,7 +54,7 @@
                 itemField: "facilities"
             }
         },
-        {
+        ...promotions.length ? [{
             label: "Promosi",
             component: SelectFilter,
             props: {
@@ -64,7 +64,7 @@
                 itemField: "promotions",
                 itemFieldFn: (promotions) => promotions.map(p => p.promotion)
             }
-        }
+        }] : []
     ];
 
 </script>

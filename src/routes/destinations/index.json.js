@@ -7,7 +7,7 @@ const contents = JSON.stringify({
 	randomDestinations: getRandom().slice(0, 4),
 	destinationCategories: getDataFromFile('data/category-destination.yml').categories,
 	destinationFacilities: getDataFromFile('data/facility-destination.yml').facilities,
-	promotions: [...promotions]
+	promotions: promotions
 });
 
 export function get(req, res) {

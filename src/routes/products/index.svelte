@@ -2,8 +2,8 @@
     export function preload({ params, query }) {
        return this.fetch(`products.json`)
        .then(r => r.json())
-       .then(({ products, productCategories }) => {
-          return { products, productCategories };
+       .then(({ products, productCategories, promotions }) => {
+          return { products, productCategories, promotions };
        });
     }
 </script>
@@ -17,6 +17,7 @@
 
     export let products = [];
     export let productCategories;
+    export let promotions;
 
     let filters = [];
 
@@ -41,7 +42,18 @@
                     Math.max(...product.prices.map(price => price.value))
                 ))
             }
-        }
+        },
+        ...promotions.length ? [{
+            label: "Promosi",
+            component: SelectFilter,
+            props: {
+                values: promotions,
+                label: "Promosi",
+                type: "products",
+                itemField: "promotions",
+                itemFieldFn: (promotions) => promotions.map(p => p.promotion)
+            }
+        }] : []
     ];
 
 </script>
