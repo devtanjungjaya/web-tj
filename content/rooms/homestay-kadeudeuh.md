@@ -17,6 +17,7 @@ prices:
   value: 150000
   unit: kamar
 publicFacilities:
+- Laundry
 - Ruang keluarga
 - Dapur
 - Area parkir
