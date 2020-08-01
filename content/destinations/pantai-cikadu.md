@@ -34,5 +34,7 @@ facilities:
 - Toilet umum
 promotions:
 - CEC-DISC10
+contact: Admin Cikadu
+notes: ''
 
 ---
