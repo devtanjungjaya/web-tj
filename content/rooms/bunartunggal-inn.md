@@ -48,7 +48,6 @@ description: "Tipe kamar  \nKamar hebel kapasitas 2 orang  \nRumah kirai kapasit
   4 orang  \nRoom Bata kapasitas 6 orang  \nRumah kakao kapsitas 16 orang"
 notes: tersedia tempat cuci tangan , tersedia hand sanitizer,tersedia alat pengukur
   suhu tubuh, alat penyemprot disenfektan
-promotions:
-- CEC-DISC10
+promotions: []
 
 ---
