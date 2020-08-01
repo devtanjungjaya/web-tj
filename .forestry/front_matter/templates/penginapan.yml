@@ -97,6 +97,18 @@ fields:
     template: koordinat
     label: Koordinat
   label: Koordinat lokasi
+- name: promotions
+  type: list
+  config:
+    use_select: true
+    min: 
+    max: 
+    source:
+      type: documents
+      section: promosi
+      file: data/promotion.yml
+      path: promotions
+  label: Promosi
 - name: notes
   type: textarea
   default: ''
