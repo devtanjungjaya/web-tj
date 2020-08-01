@@ -28,7 +28,7 @@ fields:
   config:
     min: 
     max: 
-    labelField: 
+    labelField: admin
   label: Kontak admin
 pages:
 - data/contact-admin.yml
