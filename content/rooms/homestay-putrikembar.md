@@ -9,7 +9,7 @@ photos:
   description: ''
 gmaps: ''
 prices:
-- description: Harga satu kamar
+- description: Harga satu kamar (free extra bed selama masih ada)
   value: 250000
   unit: kamar
 publicFacilities:
@@ -18,8 +18,11 @@ publicFacilities:
 roomFacilities:
 - Kipas angin
 - Lemari
-description: "\\-"
+description: |-
+  1 rumah 2 kamar, kemudian diluar ada 5 kamar juga. 1 kamar boleh 5 orang
+
+  Terdapat jasa bakar ikan
 promotions: []
-notes: Tersedia hand sanitizer, Tempat cuci tangan
+notes: tersedia hand sanitizer, tempat cuci tangan
 
 ---
