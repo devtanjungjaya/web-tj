@@ -9,18 +9,6 @@ fields:
     required: true
   label: Nama
   description: Nama produk
-- name: contact
-  type: field_group
-  config: {}
-  fields:
-  - name: contact
-    type: include
-    config: {}
-    template: kontak
-    label: Kontak
-    description: Narahubung
-  label: Kontak penjual
-  description: Kontak penjual yang bisa dihubungi
 - name: photos
   type: field_group_list
   fields:
@@ -93,5 +81,17 @@ fields:
       format: markdown
   label: Catatan
   description: Catatan untuk pembeli atau yang lainnya
+- name: contact
+  type: select
+  default: []
+  config:
+    required: true
+    options: []
+    source:
+      type: documents
+      section: kontak-admin
+      file: data/contact-admin.yml
+      path: admins
+  label: Kontak admin
 pages:
 - content/products/set-alat-makan.md

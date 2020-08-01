@@ -1,11 +1,6 @@
 ---
 name: Set Alat Makan
-contact:
-  name: Pak Aceng
-  phoneNumbers: [
-    '08724562332'
-  ]
-  email: ''
+contact: Admin Cikadu
 photos:
 - photoURI: https://web-tj.netlify.app/images/whatsapp-image-2020-07-21-at-12-12-54.jpeg
   description: Set alat makan
@@ -25,5 +20,7 @@ prices:
 - description: FREE POUCH
   value: 55000
   unit: set
+promotions: []
+notes: ''
 
 ---
