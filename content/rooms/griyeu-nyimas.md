@@ -44,5 +44,6 @@ description: "Ada 6 kamar. Kapasistas 2-5 orang  \nAda juga cottage 3 bangunan. 
   cottage berisi 2 kamar. Bisa 7-8 orang"
 promotions: []
 notes: tersedia hand sanitizer, tempat cuci tangan
+contact: Admin Cikadu
 
 ---
