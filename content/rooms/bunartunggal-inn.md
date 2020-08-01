@@ -5,6 +5,12 @@ coordinate:
   lng: 105.66955
 name: Bunar Tunggal Inn
 photos:
+- photoURI: https://web-tj.netlify.app/images/photocollage_20200307_231846985.jpg
+  description: ''
+- photoURI: https://web-tj.netlify.app/images/photocollage_20200307_232252381.jpg
+  description: ''
+- photoURI: https://web-tj.netlify.app/images/photocollage_20200307_230635144.jpg
+  description: ''
 - photoURI: https://web-tj.netlify.app/images/photocollage_20200307_230004361.jpg
   description: ''
 gmaps: ''
