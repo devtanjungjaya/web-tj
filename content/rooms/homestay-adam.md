@@ -25,6 +25,7 @@ prices:
   value: 200000
   description: Harga per kamar
 publicFacilities:
+- Ruang tamu
 - Ruang Keluarga
 - Dapur
 - Area parkir
