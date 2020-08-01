@@ -52,21 +52,6 @@
         space-y-8 z-30 items-start" 
         transition:fly={{duration:150, x: 150}}
     >
-        <svg 
-            class="text-neutral-2 cursor-pointer w-6 h-6 rounded-full absolute top-0 right-0 mt-4 mr-4" 
-            fill="currentColor" 
-            viewBox="0 0 20 20"
-            on:click={() => open = false}
-        >
-            <path 
-                fill-rule="evenodd" 
-                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 
-                4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 
-                5.707a1 1 0 010-1.414z" 
-                clip-rule="evenodd"
-            >
-            </path>
-        </svg>
         <div class="flex flex-col items-start">
             <span class="font-bold font-overpass text-neutral-3 text-base text-left mb-2">KATEGORI</span>
             <div class="flex flex-col items-start space-y-2">
@@ -101,6 +86,21 @@
         >
             Kontak
         </a>
+        <svg 
+            class="text-neutral-2 cursor-pointer w-6 h-6 rounded-full absolute top-0 right-0 mr-4" 
+            fill="currentColor" 
+            viewBox="0 0 20 20"
+            on:click={() => open = false}
+        >
+            <path 
+                fill-rule="evenodd" 
+                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 
+                4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 
+                5.707a1 1 0 010-1.414z" 
+                clip-rule="evenodd"
+            >
+            </path>
+        </svg>
     </div>
 </ClickOutside>
 {/if}
