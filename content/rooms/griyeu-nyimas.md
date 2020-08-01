@@ -27,6 +27,9 @@ prices:
   value: 400000
   unit: kamar
 publicFacilities:
+- Mushola
+- Saung
+- Aula
 - Sarapan
 - Area parkir
 roomFacilities:
