@@ -12,6 +12,19 @@ fields:
   description: 'Nama admin (misal: "Admin Cikadu")'
 - name: contacts
   type: field_group_list
+  fields:
+  - name: name
+    type: select
+    default: []
+    config:
+      required: false
+      options: []
+      source:
+        type: documents
+        section: 
+        file: 
+        path: 
+    label: Nama
   config:
     min: 
     max: 
