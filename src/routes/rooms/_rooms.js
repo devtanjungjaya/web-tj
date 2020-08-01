@@ -1,5 +1,6 @@
 import getMarkdownInDirectory from '../../utilities/markdown.js';
 import { processPromotions } from '../../utilities/promotion';
+import { adminContactsMap } from '../../utilities/contact';
 const marked = require('marked');
 
 const wysiwyg = ['description', 'notes'];
@@ -13,7 +14,8 @@ rooms = rooms.map(room =>
     .map(room => {
         return {
             ...room,
-            promotions: processPromotions(room.promotions || [])
+            promotions: processPromotions(room.promotions || []),
+            contact: adminContactsMap.get(room.contact)
         };
     });
 rooms.map(room => { room.categories = [room.category] })

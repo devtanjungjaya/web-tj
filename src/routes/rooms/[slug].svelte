@@ -64,8 +64,8 @@
             facilities={data.publicFacilities} 
             iconMap={data.publicFacilityIconMap} 
          />
-         <!-- <Decorator /> -->
-         <!-- <Contact {...data.contact} /> -->
+         <Decorator />
+         <Contact {...data.contact} name="Silahkan hubungi admin untuk memesan atau informasi lebih lanjut"/>
          {#if data.notes && DOMPurify}
             <Decorator />
             <div class="flex flex-col font-overpass">
