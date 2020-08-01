@@ -1,4 +1,12 @@
-<Carousel perPage={{ 1440: 3, 800: 2 }} dots={false} on:init={() => showPhoto = true}>
+<Carousel 
+   perPage={{
+      1600: photos.length >= 4 ? 4 : 3,
+      1280: photos.length >= 3 ? 3 : 2, 
+      768: photos.length >= 2 ? 2 : 1 
+   }} 
+   dots={false} 
+   on:init={() => showPhoto = true}
+>
    {#each photos as photo, i}
       <div 
          class="px-1 sm:px-4"
