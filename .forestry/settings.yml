@@ -43,7 +43,6 @@ sections:
 - type: document
   path: data/contact-admin.yml
   label: Kontak admin
-  match: "**/*"
 - type: heading
   label: Fasilitas
 - type: document
