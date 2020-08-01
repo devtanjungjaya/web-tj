@@ -26,6 +26,6 @@ roomFacilities:
 - Kamar mandi dalam
 description: 5 kamar dengan kapasitas 2 - 5 orang
 promotions: []
-notes: Tersedia hand sanitizer, Tempat cuci tangan
+notes: tersedia hand sanitizer, tempat cuci tangan
 
 ---
