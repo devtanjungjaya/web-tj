@@ -38,12 +38,26 @@
             </Map>
             
         </div>
-        <div id="filter-group" class="filter-group flex flex-col bg-neutral-1 relative">
-            <div class="px-4 align-middle text-neutral-5 sm:text-md md:text-lg font-bold relative">
+        <div id="filter-group" class="filter-group flex flex-col relative border-1 border-neutral-9">
+            <div class="legend mb-2 px-4 align-middle text-neutral-5 sm:text-md md:text-lg font-bold relative">
                 <h1 class="relative">Legenda</h1>
             </div>
-            <div class="filter flex flex-col" bind:this={filter}>
-                
+            <div class="filter flex flex-col text-primary-6" bind:this={filter}>
+                {#each colors as {color},i }
+                    {#if check[i]}
+                        <label class='box flex flex-row py-2 px-2 hover:text-primary-7 hover:bg-neutral-2 align-middle text-neutral-5 text-sm font-bold'>
+                            <span class="checkbox align-middle h-5 w-4 justify-center bg-neutral-1">'O'</span>
+                            <input type="checkbox" class= "opacity-0" on:change={changeFunc(layers[111+i].id,check[i])} bind:checked={check[i]}>
+                            {layers[111+i].id}
+                        </label>
+                    {:else}
+                        <label class='box flex flex-row py-2 px-2 hover:text-primary-7 hover:bg-neutral-2 align-middle text-neutral-5 text-sm font-bold italic'>
+                            <span class="checkbox align-middle h-5 w-4 justify-center bg-neutral-1"></span>
+                            <input id={layers[111+i].id} type="checkbox" class= "opacity-0"  on:change={changeFunc(layers[111+i].id,check[i])} bind:checked={check[i]}>
+                            {layers[111+i].id}
+                        </label>
+                    {/if}
+                {/each}
             </div>
         </div>
     </div>
@@ -72,11 +86,10 @@
     padding-top: 1rem;
 }
 .filter {
+    height: 90%;
     overflow-y: auto;
     padding-top: 1rem;
 }
-
-
 </style>
 
 <script>
@@ -86,54 +99,19 @@
     let accToken = "pk.eyJ1IjoicHJhd2lyb2h0IiwiYSI6ImNrY240emwwYzA3c3EzNWxtNnphdWw3eXAifQ.2mr_hj5PC5uLIe5MLr2qBw";
     let layers;
     let filter;
+    let colors = [];
+    let check = [];
     import { Map, Geocoder, Marker, controls } from '@beyonk/svelte-mapbox';
     const { GeolocateControl, NavigationControl, ScalingControl } = controls
-
-    function addFilter(filter,layerID,color){
-        var box = document.createElement('div');
-        box.className = 'box flex flex-row py-2 px-4 hover:text-primary-7 hover:bg-neutral-2 align-middle text-neutral-5 text-sm font-bold';
-
-        var input = document.createElement('input');
-        input.type = 'checkbox';
-        input.id = layerID;
-        input.checked = true;
-        input.className = "opacity-0";
-        
-        var label = document.createElement('label');
-        label.setAttribute('for', layerID);
-        label.textContent = layerID;
-
-        var check = document.createElement('span');
-        // check.textContent = "✔"
-        check.style.marginRight = "5px";
-        check.style.backgroundColor = color;
-        check.className = "h-5 w-5 justify-center"
-
-        box.appendChild(input);
-        box.appendChild(check);
-        box.appendChild(label);
-        filter.appendChild(box);
-        // When the checkbox changes, update the visibility of the layer.
-        
-        input.addEventListener('change', function(e) {
-            tmp.setLayoutProperty(
-                layerID,
-                'visibility',
-                e.target.checked ? 'visible' : 'none'
-            );
-            if(input.checked) {
-                // check.innerHTML = "✔"
-                check.style.backgroundColor = color
-                box.style.fontStyle = "normal"
-            }
-            if(!input.checked) {
-                // check.innerHTML = ""
-                check.style.backgroundColor = "white"
-                box.style.fontStyle = "italic"
-            }
-        });
-    }
     
+    function changeFunc(id,checked){
+        tmp.setLayoutProperty(
+            id,
+            'visibility',
+            checked ? 'none' : 'visible'
+        );
+    };
+
     function addRoute(map, url,name,color){
         
         map.addSource(name, {
@@ -153,7 +131,9 @@
                 'line-width': 3
             }
         });
-        addFilter(filter,name,color);
+        colors.push(color)
+        check.push(true)
+        // addFilter(filter,name);
     }
     
     function addPoint(map, url, name, size, degree){
@@ -182,7 +162,9 @@
                 "icon-optional": true,
             }
         });
-        addFilter(filter,name,"grey");
+        colors.push("#0ED7CD")
+        check.push(true)
+        // addFilter(filter,name);
     }
 
     function setupMap(){
@@ -206,14 +188,14 @@
         // Ojek
         addRoute(tmp,"trans_route_ojek.geojson","Ojek","#90aa00")
         // Bandara
-        addPoint(tmp,"trans_point_bandara","Bandara",0.04,180)
+        addPoint(tmp,"trans_point_bandara","Bandara",0.3,0)
         // Poin Penting
-        addPoint(tmp,"trans_point_poin_penting","Poin Penting",0.0175,0)
+        addPoint(tmp,"trans_point_poin_penting","Poin Penting",0.3,0)
         // Stasiun KRL
-        addPoint(tmp,"trans_point_stasiun_krl","Stasiun KRL",0.04,180)
+        addPoint(tmp,"trans_point_stasiun_krl","Stasiun KRL",0.3,0)
         // Terminal Bis
         addPoint(tmp,"trans_point_terminal_bus","Terminal Bus",0.3,0)
-        // layers = tmp.getStyle().layers
+        layers = tmp.getStyle().layers
         // for (let index = 111; index < layers.length; index++){
         //     const element = layers[index];
         //     // console.log(element)
