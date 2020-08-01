@@ -1,5 +1,5 @@
 <div class="p-5 rounded-2xl border-1 border-neutral-1 flex flex-col mb-6 max-w-xl">
-    <span class="font-overpass font-bold text-neutral-3 text-base sm:text-lg mb-2">Promo</span>
+    <span class="font-overpass font-bold text-neutral-3 text-base sm:text-lg mb-2">Promosi</span>
     {#each promotions as promotion}
         <div class="flex flex-col space-y-1">
             <span class="font-overpass font-bold text-primary-7 text-lg sm:text-xl">{promotion.promotion}</span>
