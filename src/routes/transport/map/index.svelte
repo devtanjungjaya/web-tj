@@ -68,40 +68,14 @@
 
 <script>
     let map;
-    let tmp
-    let place = null;
+    let tmp;
 	let center = { lat: -6.29776399217107, lng: 106.21788113715388};
     let accToken = "pk.eyJ1IjoicHJhd2lyb2h0IiwiYSI6ImNrY240emwwYzA3c3EzNWxtNnphdWw3eXAifQ.2mr_hj5PC5uLIe5MLr2qBw";
-    let layers
-    let filter
+    let layers;
+    let filter;
     import { Map, Geocoder, Marker, controls } from '@beyonk/svelte-mapbox';
     const { GeolocateControl, NavigationControl, ScalingControl } = controls
 
-var geojson = {
-  type: 'FeatureCollection',
-  features: [{
-    type: 'Feature',
-    geometry: {
-      type: 'Point',
-      coordinates: [-77.032, 38.913]
-    },
-    properties: {
-      title: 'Mapbox',
-      description: 'Washington, D.C.'
-    }
-  },
-  {
-    type: 'Feature',
-    geometry: {
-      type: 'Point',
-      coordinates: [-122.414, 37.776]
-    },
-    properties: {
-      title: 'Mapbox',
-      description: 'San Francisco, California'
-    }
-  }]
-};
     function addFilter(filter,layerID){
         var box = document.createElement('div');
         box.className = 'box flex flex-row p-2';
@@ -132,8 +106,9 @@ var geojson = {
             );
         });
     }
-
+    
     function addRoute(map, url,name,color){
+        
         map.addSource(name, {
             'type': 'geojson',
             'data': "images/" + url
@@ -152,25 +127,29 @@ var geojson = {
             }
         });
     }
-    function addPoint(map, url,name, color){
-        // map.addImage(name,"images/"+url+".png")
+    function addPoint(map, url, name, size){
+        let alamatpalsu = url +".png"
+        map.loadImage(alamatpalsu,function(error,image){
+            if(error) throw error;
+            map.addImage(name,image)
+        })
         map.addSource(name, {
-            'type': 'geojson',
-            'data': "images/" + url
+            type: 'geojson',
+            data: "images/" + url + ".geojson",
+            cluster: true,
+            clusterMaxZoom: 9, // Max zoom to cluster points on
+            clusterRadius: 25 
         });
         map.addLayer({
             'id': name,
             'source': name,
-            'type': 'circle',
-            'paint': {
-                'circle-radius': 4.5,
-                'circle-color': color
-            },
-            // 'type': "symbol",
-            // 'layout': {
-            //     "icon-size": 0.25,
-            //     "icon-image" : name
-            // }
+            'type': 'symbol',
+            'layout': {
+                'icon-image': name,
+                'icon-size': size,
+                'icon-rotate': 180,
+                'icon-ignore-placement': true,
+            }
         });
         let x = map.getSource(name);
         console.log(x);
@@ -200,7 +179,6 @@ var geojson = {
 
     function setupMap(){
         tmp = map.getMap();
-        console.log(geojson)
         // Angkot Mandala
         addRoute(tmp,"trans_route_angkot_mandala.geojson","Angkot Mandala","red")
         // Angkot Rangkasbitung
@@ -220,19 +198,25 @@ var geojson = {
         // Ojek
         addRoute(tmp,"trans_route_ojek.geojson","Ojek","#001cff")
         // Bandara
-        addPoint(tmp,"trans_point_bandara.geojson","Bandara",'#ff003d')
+        addPoint(tmp,"trans_point_bandara","Bandara",0.04)
         // Poin Penting
-        addPoint(tmp,"trans_point_poin_penting.geojson","Poin Penting",'#1f6d00')
+        addPoint(tmp,"trans_point_poin_penting","Poin Penting",0.01)
         // Stasiun KRL
-        addPoint(tmp,"trans_point_stasiun_krl.geojson","Stasiun KRL",'#00a2ff')
+        addPoint(tmp,"trans_point_stasiun_krl","Stasiun KRL",0.04)
         // Terminal Bis
-        addPoint(tmp,"trans_point_terminal_bis.geojson","Terminal Bis",'#ffe600')
+        addPoint(tmp,"trans_point_terminal_bus","Terminal Bus",0.04)
         layers = tmp.getStyle().layers
         for (let index = 111; index < layers.length; index++){
             const element = layers[index];
             // console.log(element)
             addFilter(filter,element.id)
         }
-        // console.log(geojson)
+        var features = tmp.queryRenderedFeatures({layers: ['Terminal Bus']});
+        console.log(features)
+        // var uniqueFeatures = getUniqueFeatures(features, "Nama_Term"); 
+        // uniqueFeatures.forEach(function(feature) {
+        //     var prop = feature.properties;
+        //     console.log(prop.icon);
+        // })
     }
 </script>
