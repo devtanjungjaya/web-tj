@@ -28,5 +28,6 @@ roomFacilities:
 description: 1 kamar
 promotions: []
 notes: tersedia tempat cuci tangan
+contact: Admin Cikadu
 
 ---
