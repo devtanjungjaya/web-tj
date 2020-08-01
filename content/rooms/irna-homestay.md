@@ -33,5 +33,7 @@ roomFacilities:
 - Kamar mandi dalam
 description: "\\-"
 notes: tersedia tempat cuci tangan,tersedia hand sanitizer,alat penyemprot disenfektan
+promotions:
+- CEC-DISC10
 
 ---
