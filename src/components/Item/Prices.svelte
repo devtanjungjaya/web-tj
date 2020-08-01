@@ -1,4 +1,4 @@
-<div class="flex flex-col border-1 border-neutral-1 rounded-2xl px-6 py-4">
+<div class="flex flex-col border-1 border-neutral-1 rounded-2xl p-5">
     <span class="font-overpass font-bold text-neutral-3 text-lg sm:text-xl">Harga</span>
     <div class="flex flex-col space-y-6 mt-4">
         {#each prices as price}
