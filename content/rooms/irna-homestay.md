@@ -5,6 +5,8 @@ coordinate:
   lng: 105.677142
 name: Irna Homestay
 photos:
+- photoURI: https://web-tj.netlify.app/images/img_20180831_211051_633.jpg
+  description: Tampak depan
 - photoURI: https://web-tj.netlify.app/images/img_20191123_152446.jpg
   description: Area parkir
 - photoURI: https://web-tj.netlify.app/images/img_20191205_090504.jpg
