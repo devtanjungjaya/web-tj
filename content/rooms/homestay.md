@@ -8,7 +8,8 @@ photos:
 - photoURI: https://web-tj.netlify.app/images/landing-1.webp
   description: Lobi homestay
 - photoURI: https://web-tj.netlify.app/images/alam.jpg
-  description: Kamar 1 homestay (Tempat tidur twin size ukuran 145) + WiFi + Extra bed
+  description: Kamar 1 homestay (Tempat tidur twin size ukuran 145) + WiFi + Extra
+    bed
 - photoURI: https://web-tj.netlify.app/images/budaya.webp
   description: Kamar 2 homestay
 gmaps: ''
@@ -31,5 +32,7 @@ description: Homestay Papi Natal merupakan homestay yang terletak di dekat panta
   oleh wisatawan. Terdapat tempat parkir luas untuk para wisatawan memarkirkan kendaraannya.
   Berbagai pilihan kamar tersedia dengan harga yang terjangkau.
 notes: Konfirmasi harga dan spesifikasi kamar dapat menghubungi kontak yang tertera.
+promotions: []
+contact: Admin Cikadu
 
 ---
