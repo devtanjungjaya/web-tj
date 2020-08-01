@@ -43,6 +43,6 @@ roomFacilities:
 description: "Ada 6 kamar. Kapasistas 2-5 orang  \nAda juga cottage 3 bangunan. 1
   cottage berisi 2 kamar. Bisa 7-8 orang"
 promotions: []
-notes: Tersedia hand sanitizer, Tempat cuci tangan
+notes: tersedia hand sanitizer, tempat cuci tangan
 
 ---
