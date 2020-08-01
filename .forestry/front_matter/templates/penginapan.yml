@@ -108,5 +108,6 @@ fields:
   label: Catatan
   description: Catatan untuk pengunjung atau yang lainnya
 pages:
+- content/rooms/bunartunggal-inn.md
 - content/rooms/homestay.md
 - content/rooms/irna-homestay.md
