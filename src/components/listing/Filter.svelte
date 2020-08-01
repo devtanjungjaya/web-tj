@@ -32,6 +32,7 @@
                         this={filter.component} 
                         on:filter={updateFilter}
                         {...filter.props}
+                        visible={filter.component && opened === i && innerWidth > 768}
                     />
                 </div>
             </div>
