@@ -34,5 +34,7 @@ facilities:
 gmaps: https://google.com
 promotions:
 - CEC-DISC10
+contact: Admin Cikadu
+notes: ''
 
 ---

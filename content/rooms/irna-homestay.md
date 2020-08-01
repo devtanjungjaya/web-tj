@@ -31,9 +31,8 @@ roomFacilities:
 - Sofa
 - AC
 - Kamar mandi dalam
-description: "\\-"
+description: Jumlah kamar ada 7 yang masing-masing memiliki kapasitas 2 orang
 notes: tersedia tempat cuci tangan,tersedia hand sanitizer,alat penyemprot disenfektan
-promotions:
-- CEC-DISC10
+promotions: []
 
 ---

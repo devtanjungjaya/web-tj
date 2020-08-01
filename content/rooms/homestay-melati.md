@@ -40,7 +40,11 @@ roomFacilities:
 - Shower
 - Kamar mandi luar
 - Kamar mandi dalam
-description: "\\-"
+description: |-
+  1 rumah 4 kamar
+
+  1 kamar max 3 orang
 notes: tersedia tempat cuci tangan, tersedia hand sanitizer
+promotions: []
 
 ---
