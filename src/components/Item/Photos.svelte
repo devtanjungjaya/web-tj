@@ -1,24 +1,33 @@
-<Carousel 
+<Carousel
+   bind:this={carousel}
    perPage={{
       1600: photos.length >= 4 ? 4 : 3,
       1280: photos.length >= 3 ? 3 : 2, 
       768: photos.length >= 2 ? 2 : 1 
    }} 
    dots={false} 
-   on:init={() => showPhoto = true}
+   on:init={() => {
+      showPhoto = true;
+   }}
+   on:controller={() => {
+      initialize = true;
+      updateImgRatio();
+   }}
 >
    {#each photos as photo, i}
       <div 
          class="px-1 sm:px-4"
-         style={`height: ${innerWidth >= 640 ? 360 : 250}px`}
+         class:invisible={!showPhoto}
+         style={`height: ${imgHeight(innerWidth)}px`}
+         on:mousedown={handleMouseDown}
+         on:mouseup={e => handleMouseUp(e, i)}
       >
-         <img 
-            class="object-cover w-full h-full rounded-2xl bg-neutral-1"
-            class:invisible={!showPhoto}
+         <Image 
+            class="object-cover w-full h-full rounded-2xl"
+            placeholderClass="object-cover w-full h-full rounded-2xl"
+            wrapperClass="skeleton-box rounded-2xl"
+            ratio={imgRatio*100 + "%"}
             src={photo.photoURI} 
-            alt={`foto-item-${i+1}`}
-            on:mousedown={handleMouseDown}
-            on:mouseup={e => handleMouseUp(e, i)}
          />
       </div>
    {/each}
@@ -47,6 +56,7 @@
 <script>
    import Carousel from '../../components/Carousel.svelte';
    import PhotoDetail from "./PhotoDetail.svelte";
+   import Image from "svelte-image";
 
    export let photos;
 
@@ -57,6 +67,35 @@
    let initialIndex = null;
    let innerWidth;
    let showPhoto = false;
+   let carousel;
+   let imgRatio = 100;
+   let initialize = false;
+
+   $: if(initialize && innerWidth) updateImgRatio();
+
+   function updateImgRatio() {
+      console.log("a");
+      if(!carousel && !carousel.width()) return;
+      console.log("b");
+      imgRatio = imgHeight(innerWidth) / ((carousel.width() / itemPerPage()) - padding());
+      console.log(carousel.width(), itemPerPage(), padding(), imgHeight(innerWidth));
+   }
+
+   function itemPerPage() {
+      if(innerWidth >= 1600) return photos.length >= 4 ? 4 : 3;
+      else if(innerWidth >= 1280) return photos.length >= 3 ? 3 : 2
+      else if(innerWidth >= 768) return photos.length >= 2 ? 2 : 1;
+      else return 1;
+   }
+
+   function padding() {
+      if(innerWidth >= 640) return 32;
+      else return 8;
+   }
+
+   function imgHeight(width) {
+      return width >= 640 ? 360 : 250;
+   }
 
    function handleMouseDown(event) {
       startX = event.pageX;

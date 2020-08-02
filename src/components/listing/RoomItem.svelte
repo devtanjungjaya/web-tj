@@ -4,11 +4,11 @@
             class="hover:shadow-md flex flex-col rounded-2xl overflow-hidden absolute 
             w-full h-full"
         >
-            <div class="product-img h-0 min-w-0 min-h-0 bg-gray-200">
+            <div class="product-img h-0 min-w-0 min-h-0">
                 <Image 
                     class="object-cover w-full h-full"
                     placeholderClass="w-full h-full object-cover"
-                    wrapperClass="w-full h-full"
+                    wrapperClass="w-full h-full skeleton-box"
                     ratio="68.75%"
                     src={photos[0].photoURI} 
                     alt=""
