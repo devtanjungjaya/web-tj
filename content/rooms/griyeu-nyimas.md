@@ -5,14 +5,14 @@ coordinate:
   lng: 105.67449
 name: Griyeu Nyimas
 photos:
-- photoURI: https://web-tj.netlify.app/images/20200727_101824.jpg
-  description: Kamar tidur
-- photoURI: https://web-tj.netlify.app/images/20200727_101607.jpg
-  description: Kamar mandi
-- photoURI: https://web-tj.netlify.app/images/20200727_101833.jpg
-  description: Dapur
-- photoURI: https://web-tj.netlify.app/images/20200727_101750.jpg
+- photoURI: https://web-tj.netlify.app/images/rsz_20200727_101750.jpg
   description: Tampak depan
+- photoURI: https://web-tj.netlify.app/images/20200727_101824-1.jpg
+  description: Kamar tidur
+- photoURI: https://web-tj.netlify.app/images/20200727_101607-1.jpg
+  description: Kamar mandi
+- photoURI: https://web-tj.netlify.app/images/20200727_101833-1.jpg
+  description: Dapur
 gmaps: ''
 prices:
 - description: Cottage untuk keluarga 4-5 orang (sudah termasuk paket sarapan dan

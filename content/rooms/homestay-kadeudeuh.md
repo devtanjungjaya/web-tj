@@ -5,11 +5,11 @@ coordinate:
   lng: 105.683697
 name: Homestay Kadeudeuh
 photos:
-- photoURI: https://web-tj.netlify.app/images/20200727_135123.jpg
+- photoURI: https://web-tj.netlify.app/images/20200727_135106.jpg
   description: ''
-- photoURI: https://web-tj.netlify.app/images/20200727_135133.jpg
+- photoURI: https://web-tj.netlify.app/images/20200727_135123-1.jpg
   description: ''
-- photoURI: https://web-tj.netlify.app/images/20200727_135128.jpg
+- photoURI: https://web-tj.netlify.app/images/20200727_135109.jpg
   description: ''
 gmaps: ''
 prices:

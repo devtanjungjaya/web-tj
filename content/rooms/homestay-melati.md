@@ -5,15 +5,15 @@ coordinate:
   lng: 105.66827
 name: Homestay Melati
 photos:
-- photoURI: https://web-tj.netlify.app/images/whatsapp-image-2020-07-26-at-14-40-24-1.jpeg
-  description: Ruang tamu
-- photoURI: https://web-tj.netlify.app/images/whatsapp-image-2020-07-26-at-14-40-23-1.jpeg
-  description: Dapur
-- photoURI: https://web-tj.netlify.app/images/whatsapp-image-2020-07-26-at-14-40-25.jpeg
+- photoURI: https://web-tj.netlify.app/images/rsz_whatsapp_image_2020-07-26_at_144025.jpg
   description: Tampak depan
-- photoURI: https://web-tj.netlify.app/images/whatsapp-image-2020-07-26-at-14-40-19.jpeg
+- photoURI: https://web-tj.netlify.app/images/whatsapp-image-2020-07-26-at-144024-1.jpg
+  description: Ruang tamu
+- photoURI: https://web-tj.netlify.app/images/whatsapp-image-2020-07-26-at-144023-1.jpg
+  description: Dapur
+- photoURI: https://web-tj.netlify.app/images/whatsapp-image-2020-07-26-at-144019.jpg
   description: Kamar mandi
-- photoURI: https://web-tj.netlify.app/images/whatsapp-image-2020-07-26-at-14-40-20.jpeg
+- photoURI: https://web-tj.netlify.app/images/whatsapp-image-2020-07-26-at-144020.jpg
   description: Kamar tidur
 gmaps: ''
 prices:
