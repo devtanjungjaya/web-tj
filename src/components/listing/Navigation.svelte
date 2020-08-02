@@ -43,6 +43,7 @@
                         class="font-overpass font-semibold text-neutral-7 text-lg mr-6 whitespace-no-wrap 
                         hover:text-primary-7 w-full" 
                         href={navigation.url}
+                        on:click={() => open = false}
                     >
                         {navigation.label}
                     </a>
