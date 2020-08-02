@@ -23,7 +23,7 @@
 
 <section id="map">
     <div class='mapbox py-4 px-4 sm:px-8 md:px-16 flex flex-row'>
-        <div class="map">
+        <div class="map border-1 border-neutral-4">
             <Map 
             accessToken = {accToken} 
             bind:this={map} 
@@ -38,21 +38,22 @@
             </Map>
             
         </div>
-        <div id="filter-group" class="filter-group flex flex-col relative border-1 border-neutral-9">
-            <div class="legend mb-2 px-4 align-middle text-neutral-5 sm:text-md md:text-lg font-bold relative">
+        <div id="filter-group" class="filter-group flex flex-col relative border-1 border-neutral-4">
+            <div class="legenda border-1 border-neutral-2 px-2 sm:px-4 align-middle text-neutral-5 sm:text-md md:text-lg font-bold relative">
                 <h1 class="relative">Legenda</h1>
             </div>
             <div class="filter flex flex-col text-primary-6" bind:this={filter}>
                 {#each colors as {color},i }
                     {#if check[i]}
-                        <label class='box flex flex-row py-2 px-2 hover:text-primary-7 hover:bg-neutral-2 align-middle text-neutral-5 text-sm font-bold'>
-                            <span class="checkbox align-middle h-5 w-4 justify-center bg-neutral-1">'O'</span>
+                    
+                        <label class='box flex flex-row py-2 px-2 hover:text-primary-7 hover:bg-neutral-2 align-middle text-neutral-5 text-sm font-bold border-1 border-neutral-1'>
+                            <div class="checkbox align-middle h-5 w-5 justify-center rounded-full" style="--theme-color: {colors[i]}; color: var(--theme-color); background-color: var(--theme-color);">......</div>
                             <input type="checkbox" class= "opacity-0" on:change={changeFunc(layers[111+i].id,check[i])} bind:checked={check[i]}>
                             {layers[111+i].id}
                         </label>
                     {:else}
-                        <label class='box flex flex-row py-2 px-2 hover:text-primary-7 hover:bg-neutral-2 align-middle text-neutral-5 text-sm font-bold italic'>
-                            <span class="checkbox align-middle h-5 w-4 justify-center bg-neutral-1"></span>
+                        <label class='box flex flex-row py-2 px-2 hover:text-primary-7 hover:bg-neutral-2 align-middle text-neutral-5 text-sm font-bold border-1 border-neutral-1 italic'>
+                            <div class="checkbox align-middle h-5 w-5 justify-center bg-neutral-1 text-neutral-1 rounded-full">......</div>
                             <input id={layers[111+i].id} type="checkbox" class= "opacity-0"  on:change={changeFunc(layers[111+i].id,check[i])} bind:checked={check[i]}>
                             {layers[111+i].id}
                         </label>
@@ -76,7 +77,11 @@
 .map{
     width:75%;
     height:100%;
-    border-radius: 1rem;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    border-right-width: 0;
+    z-index: 1;
+    overflow: hidden;
 }
 .filter-group {
     border-top-right-radius: 1rem;
@@ -84,11 +89,27 @@
     width: 25%;
     max-height: 100%;
     padding-top: 1rem;
+    border-left-width: 0;
+    overflow: hidden;
+}
+.legenda {
+    border-top-width: 0;
+    border-left-width: 0;
+    border-right-width: 0;
+    padding-bottom: 1rem;
 }
 .filter {
-    height: 90%;
+    height: 100%;
     overflow-y: auto;
     padding-top: 1rem;
+}
+.box {
+    border-top-width: 0;
+    border-left-width: 0;
+    border-right-width: 0;
+}
+.box:last-child{
+    border-bottom-width: 0;
 }
 </style>
 
@@ -102,6 +123,8 @@
     let colors = [];
     let check = [];
     import { Map, Geocoder, Marker, controls } from '@beyonk/svelte-mapbox';
+    import Mark from "./Mark.svelte"
+import { transition_in } from 'svelte/internal';
     const { GeolocateControl, NavigationControl, ScalingControl } = controls
     
     function changeFunc(id,checked){
@@ -169,6 +192,7 @@
 
     function setupMap(){
         tmp = map.getMap();
+        console.log(tmp)
         // Angkot Mandala
         addRoute(tmp,"trans_route_angkot_mandala.geojson","Angkot Mandala","#106e79")
         // Angkot Rangkasbitung
