@@ -1,4 +1,4 @@
-<a href={`products/${slug}`}>
+<a rel="prefetch" href={`products/${slug}`}>
     <div class="h-0 relative w-full" style="padding-bottom: 125%">
         <div class="hover:shadow-md flex flex-col rounded-2xl overflow-hidden absolute w-full h-full">
             <div class="product-img h-0 min-w-0 min-h-0">
