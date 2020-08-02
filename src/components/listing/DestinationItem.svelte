@@ -4,7 +4,16 @@
             class="hover:shadow-md flex flex-col rounded-2xl overflow-hidden absolute 
             w-full h-full"
         >
-            <img class="product-img h-0 object-cover bg-neutral-1 min-w-0 min-h-0" src={photos[0].photoURI} alt=""/>
+            <div class="product-img h-0 min-w-0 min-h-0 bg-neutral-1">
+                <Image 
+                    class="object-cover w-full h-full"
+                    placeholderClass="w-full h-full object-cover"
+                    wrapperClass="w-full h-full"
+                    ratio="68.75%"
+                    src={photos[0].photoURI} 
+                    alt=""
+                />
+            </div>
             <div 
                 class="p-2 sm:p-3 flex-grow flex flex-col border-1 border-t-0 border-neutral-1 
                 rounded-2xl rounded-t-none"
@@ -37,6 +46,7 @@
 
 <script>
     import formatRupiah from "../../utilities/currency";
+    import Image from "svelte-image";
 
     export let photos;
     export let name;
