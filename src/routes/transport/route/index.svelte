@@ -4,7 +4,7 @@
     </div>
     <div id="route" class="flex flex-row px-12 font-bold">
         <div class="py-5 px-4">
-            <a href="/transport/map">
+            <a href="/transport">
                 <h2 class="text-neutral-2">Peta</h2>
             </a>
         </div>

@@ -4,7 +4,7 @@
 >
     <a rel="prefetch" href="/" class="mr-auto cursor-pointer hover:text-primary-7">Home</a>
     <a>Kategori</a>
-    <a href="/transport/map"class="cursor-pointer hover:text-primary-7"> Transportasi</a>
+    <a href="/transport"class="cursor-pointer hover:text-primary-7"> Transportasi</a>
     <a>Peta</a>
     <a>Kontak</a>
 </div>
