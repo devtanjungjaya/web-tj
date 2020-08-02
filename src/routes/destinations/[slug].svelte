@@ -2,10 +2,14 @@
    export async function preload({ params: { slug }, query }) {
       const res = await this.fetch(`destinations/${slug}.json`);
       const data = await res.json();
-      if (res.status === 200) {
-         return { data };
-      } else {
-         this.error(res.status, data.message);
+      const neighborhood = await this.fetch('https://api.mapbox.com/geocoding/v5/mapbox.places/' + 
+         `${data.coordinate.lng},${data.coordinate.lat}.json?` +
+         'access_token=pk.eyJ1IjoiZGV2dGFuanVuZ2pheWEiLCJhIjoiY2tjbTVpeTJuMmMwdDJ6bnh1cXBrc2N5ZSJ9.ROBeH7kg57aIpTHigEusmg&' +
+         'types=neighborhood'
+      ).then(r => r.json()).then(d => d.features[0]['place_name']);
+      return {
+         data,
+         neighborhood
       }
    }
 </script>
@@ -29,7 +33,25 @@
    })
 
    export let data;
+   export let neighborhood;
+   let title;
+   let description;
+
+   $: title = `${data.name} - Destinasi Wisata ${data.categories.join(", ")} di ${neighborhood}`;
+   $: description = data.description.replace(/(<([^>]+)>)/g, "");
 </script>
+
+<svelte:head>
+   <title>{title}</title>
+   <meta name="description" content={description} />
+   <meta property="og:title" content={title} />
+   <meta property="og:type" content="website" />
+   <meta property="og:description" content={description} />
+   <meta property="og:image" content={data.photos[0].photoURI} />
+   <meta name="twitter:title" content={title}>
+   <meta name="twitter:description" content={description}>
+   <meta name="twitter:image" content={data.photos[0].photoURI}>
+</svelte:head>
 
 <div class="px-4 sm:px-8 md:px-16 py-6 sm:py-12 flex flex-col">
    <Header
@@ -37,6 +59,7 @@
       type="DESTINASI WISATA"
       title={data.name}
       categories={data.categories}
+      {neighborhood}
    />
  
    <Photos photos={data.photos} />
