@@ -2,7 +2,6 @@
     {#each navigations as navigation}
         <a 
             class={`${current == navigation.url ? 'text-primary-7' : 'text-neutral-2 hover:text-neutral-4'} nav`}
-            rel="prefetch" 
             href={navigation.url}
         >
             {navigation.label}
@@ -39,7 +38,6 @@
             >
                 {#each navigations.filter(n => n.url != current) as navigation}
                     <a 
-                        rel="prefetch"
                         class="font-overpass font-semibold text-neutral-7 text-lg mr-6 whitespace-no-wrap 
                         hover:text-primary-7 w-full" 
                         href={navigation.url}

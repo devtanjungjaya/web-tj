@@ -96,13 +96,15 @@
 	let currentIndex = startIndex;
 	
 	let siema
-	let controller
+	let controller;
 	let timer
 	const dispatch = createEventDispatcher()
 	$: pips = controller ? controller.innerElements : []
 	$: currentPerPage = controller ? controller.perPage : perPage
 	$: totalDots = controller ? Math.ceil(controller.innerElements.length / currentPerPage) : []
-	
+
+	$: if(controller) dispatch("controller");
+
 	onMount(async () => {
         const { default: s } = await import('siema');
 		controller = new s({
@@ -143,6 +145,10 @@
 		controller.goTo(index)
 	}
 	
+	export function width() {
+		return controller.selectorWidth;
+	}
+
 	export function pause() {
 		clearInterval(timer);
 	}

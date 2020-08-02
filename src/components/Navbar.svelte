@@ -2,7 +2,7 @@
     class="flex items-center fixed top-0 w-full border-b-1 border-neutral-1 py-5 px-4 md:px-6 lg:px-16 
     bg-white font-overpass font-bold text-neutral-3 text-lg lg:text-xl z-20"
 >
-    <a rel="prefetch" href="/" class="mr-auto cursor-pointer hover:text-primary-7">Home</a>
+    <a href="/" class="mr-auto cursor-pointer hover:text-primary-7">Home</a>
     <div class="hidden sm:flex items-center space-x-10 lg:space-x-20">
         <div class="relative group cursor-pointer">
             <span class="group-hover:text-primary-7">Kategori</span>
@@ -13,7 +13,6 @@
             >
                 {#each navigations as navigation}
                     <a 
-                        rel="prefetch"
                         class="font-overpass font-semibold text-neutral-7 text-lg mr-6 whitespace-no-wrap 
                         hover:text-primary-7 w-full" 
                         href={navigation.url}
@@ -57,7 +56,6 @@
             <div class="flex flex-col items-start space-y-2">
                 {#each navigations as navigation}
                     <a 
-                        rel="prefetch"
                         class="font-overpass font-semibold text-neutral-7 text-lg whitespace-no-wrap 
                         hover:text-neutral-6" 
                         href={navigation.url}

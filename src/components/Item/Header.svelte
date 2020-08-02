@@ -1,4 +1,4 @@
-<a rel="prefetch" href={typeURL} class="flex space-x-2 items-center cursor-pointer">
+<a href={typeURL} class="flex space-x-2 items-center cursor-pointer">
     <svg class="text-neutral-2 w-6 h-6" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
         viewBox="0 0 24 24" stroke="currentColor"
     >
