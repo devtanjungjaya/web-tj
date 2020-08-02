@@ -1,5 +1,5 @@
 <div class="fixed inset-0 bg-white flex flex-col z-20" transition:fly={{duration:150, y: 600}}>
-    <div class="py-3 px-2 w-full">
+    <div class="py-3 px-2 w-full flex justify-end">
         <svg 
                 class="text-neutral-5 cursor-pointer w-10 h-10 p-2 rounded-full hover:bg-gray-100" 
                 fill="currentColor" 

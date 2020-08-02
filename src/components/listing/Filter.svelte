@@ -65,6 +65,9 @@
         <div 
             class="flex items-center w-full border-b-1 border-neutral-1 py-3 px-2 sm:px-5 bg-white z-30"
         >
+            <span class="font-overpass font-bold text-primary-7 text-2xl sm:text-3xl mx-auto pl-10">
+                Filter
+            </span>
             <svg 
                 class="text-neutral-5 cursor-pointer w-10 h-10 p-2 rounded-full hover:bg-gray-100" 
                 fill="currentColor" 
@@ -80,9 +83,6 @@
                 >
                 </path>
             </svg>
-            <span class="font-overpass font-bold text-primary-7 text-2xl sm:text-3xl mx-auto pr-10">
-                Filter
-            </span>
         </div>
         <div class="p-4 sm:p-6 overflow-y-auto">
             {#each filters as filter, i}
