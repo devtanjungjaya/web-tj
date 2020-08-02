@@ -5,7 +5,6 @@
       1280: photos.length >= 3 ? 3 : 2, 
       768: photos.length >= 2 ? 2 : 1 
    }} 
-   dots={false} 
    on:init={() => {
       showPhoto = true;
    }}
@@ -74,11 +73,8 @@
    $: if(initialize && innerWidth) updateImgRatio();
 
    function updateImgRatio() {
-      console.log("a");
       if(!carousel && !carousel.width()) return;
-      console.log("b");
       imgRatio = imgHeight(innerWidth) / ((carousel.width() / itemPerPage()) - padding());
-      console.log(carousel.width(), itemPerPage(), padding(), imgHeight(innerWidth));
    }
 
    function itemPerPage() {

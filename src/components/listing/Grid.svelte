@@ -4,12 +4,12 @@
         <Filter filters={filters} on:filter={event => filterFunctions = event.detail} />
     </div>
     <div 
-        class="mt-8 lg:mt-12 grid gap-2 md:gap-10 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 
+        class="mt-8 lg:mt-12 grid gap-2 xs:gap-4 sm:gap-6 md:gap-10 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 
         xl:grid-cols-5 2xl:grid-cols-6 listing">
         {#each filteredItems as item}
         <IntersectionObserver let:intersecting>
             <div 
-                class="flex items-center justify-between w-full h-full transition duration-150 ease-in-out" 
+                class="flex items-center justify-center w-full h-full transition duration-150 ease-in-out" 
                 class:invisible={!intersecting}
                 class:opacity-0={!intersecting}
             >
