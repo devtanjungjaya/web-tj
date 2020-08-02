@@ -1,6 +1,7 @@
 <div class="hidden md:flex space-x-5 lg:space-x-10 font-overpass font-bold text-lg lg:text-xl overflow-x-auto">
     {#each navigations as navigation}
         <a 
+            rel="prefetch"
             class={`${current == navigation.url ? 'text-primary-7' : 'text-neutral-2 hover:text-neutral-4'} nav`}
             href={navigation.url}
         >
@@ -38,9 +39,11 @@
             >
                 {#each navigations.filter(n => n.url != current) as navigation}
                     <a 
+                        rel="prefetch"
                         class="font-overpass font-semibold text-neutral-7 text-lg mr-6 whitespace-no-wrap 
                         hover:text-primary-7 w-full" 
                         href={navigation.url}
+                        on:click={() => open = false}
                     >
                         {navigation.label}
                     </a>

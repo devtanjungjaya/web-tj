@@ -24,7 +24,12 @@
     {#if dots}
 	<ul>
 		{#each {length: totalDots} as _, i}
-			<li on:click={() => go(i*currentPerPage)} class={isDotActive(currentIndex, i) ? "active" : ""}></li>
+			<li
+				on:click={() => go(i*currentPerPage)} 
+				class={"m-1 rounded-full h-2 w-2 cursor-pointer " + 
+				(isDotActive(currentIndex, i) ? "bg-primary-6" : 
+				"hover:opacity-100 opacity-50 bg-neutral-1")}
+			></li>
 		{/each}
 	</ul>
     {/if}
@@ -63,19 +68,6 @@
 		width: 100%;
 		margin-top: -30px;
 		padding: 0;
-	}
-	ul li {
-		margin: 6px;
-		border-radius: 100%;
-		background-color: rgba(255,255,255,0.5);
-		height: 8px;
-		width: 8px;
-	}
-	ul li:hover {
-		background-color: rgba(255,255,255,0.85);
-	}
-	ul li.active {
-		background-color: rgba(255,255,255,1);
 	}
 </style>
 
