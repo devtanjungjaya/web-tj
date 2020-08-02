@@ -4,7 +4,7 @@
             class="hover:shadow-md flex flex-col rounded-2xl overflow-hidden absolute 
             w-full h-full"
         >
-            <img class="product-img h-0 object-cover bg-neutral-1 min-w-0 min-h-0" src={photos[0].photoURI} alt={name}/>
+            <img class="product-img h-0 object-cover bg-neutral-1 min-w-0 min-h-0" src={photos[0].photoURI} alt=""/>
             <div 
                 class="p-2 sm:p-3 flex-grow flex flex-col border-1 border-t-0 border-neutral-1
                 rounded-2xl rounded-t-none"
@@ -19,7 +19,7 @@
                     class="font-overpass font-normal text-neutral-3 flex-grow 
                     text-sm xs:text-base max-line-1"
                 >
-                    {categories.join(", ")}
+                    {category}
                 </span>
                 <span class="self-end font-overpass font-bold text-neutral-9 text-sm xs:text-base">
                     {price}
@@ -38,18 +38,12 @@
     </div>
 </a>
 
-<style type="text/postcss">
-.product-img {
-    flex-basis: 55%;
-}
-</style>
-
 <script>
     import formatRupiah from "../../utilities/currency";
 
     export let photos;
     export let name;
-    export let categories;
+    export let category;
     export let prices;
     export let slug;
     export let promotions = [];

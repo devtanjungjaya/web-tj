@@ -73,8 +73,11 @@
 
     let knob = {min: 0, max: 0};
     let knobWidth = 0;
+    let knobLeft = 0;
+    let knobRight = 0;
     let bar;
     let pressed = {min: false, max: false};
+    let dispatchTimeout = null;
 
     onMount(() => {
         dispatchFilter($filter[type+label].min, $filter[type+label].max);
@@ -82,10 +85,15 @@
 
     $: roundedMaxPrice = Math.round(maxPrice/interval)*interval;
     $: if(visible && bar) {
-        knobWidth = bar.getBoundingClientRect().width;
+        const rect = bar.getBoundingClientRect(); 
+        knobWidth = rect.width;
+        knobLeft = rect.left;
+        knobRight = rect.right;
     }
     $: updateKnob($filter[type+label], knobWidth)
-    $: dispatchFilter($filter[type+label].min, $filter[type+label].max)
+    $: dispatchTimeout = setTimeout(() => {
+        dispatchFilter($filter[type+label].min, $filter[type+label].max);
+    }, 500);
 
     function dispatchFilter(fMin, fMax) {
         dispatch('filter', {
@@ -100,24 +108,27 @@
 
     function handleKnobMove(e) {
         if(!pressed.min && !pressed.max) return;
+        if(dispatchTimeout) {
+            clearTimeout(dispatchTimeout);
+            dispatchTimeout = null;
+        }
         const pressedKnob = knob[pressed.min ? 'min' : 'max'];
 
-        const rect = bar.getBoundingClientRect();
         let x = e.clientX || e.touches[0].clientX;
         
         const step = valueToKnob(interval, knobWidth);
         
-        if(pressed.min && (x - rect.left) >= knob.max - (step * distanceUnit)) {
+        if(pressed.min && (x - knobLeft) >= knob.max - (step * distanceUnit)) {
             const roundedKnob = $filter[type+label].max - (interval * distanceUnit);
-            x = valueToKnob(roundedKnob, knobWidth) + rect.left;
-        }else if(pressed.max && (x - rect.left) <= knob.min + (step * distanceUnit)) {
+            x = valueToKnob(roundedKnob, knobWidth) + knobLeft;
+        }else if(pressed.max && (x - knobLeft) <= knob.min + (step * distanceUnit)) {
             const roundedKnob = $filter[type+label].min + (interval * distanceUnit);
-            x = valueToKnob(roundedKnob, knobWidth) + rect.left;
+            x = valueToKnob(roundedKnob, knobWidth) + knobLeft;
         }
-        if(x < rect.left) x = rect.left;
-        if(x > rect.right) x = rect.right;
+        if(x < knobLeft) x = knobLeft;
+        if(x > knobRight) x = knobRight;
 
-        const newValue = Math.round(knobToValue(x - rect.left, knobWidth)/interval)*interval;
+        const newValue = Math.round(knobToValue(x - knobLeft, knobWidth)/interval)*interval;
         if(pressed.min) {
             $filter[type+label] = {
                 ...$filter[type+label],

@@ -7,11 +7,17 @@
         class="mt-8 lg:mt-12 grid gap-2 md:gap-10 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 
         xl:grid-cols-5 2xl:grid-cols-6 listing">
         {#each filteredItems as item}
-            <div class="flex items-center justify-between w-full h-full">
+        <IntersectionObserver let:intersecting>
+            <div 
+                class="flex items-center justify-between w-full h-full transition duration-150 ease-in-out" 
+                class:invisible={!intersecting}
+                class:opacity-0={!intersecting}
+            >
                 <div style="min-width: 145px; max-width: 250px" class="w-full">
                     <svelte:component this={itemComponent} {...item} />
                 </div>
             </div>
+        </IntersectionObserver>
         {/each}
     </div>
     {#if !filteredItems.length}
@@ -24,6 +30,8 @@
 <script>
     import Filter from "./Filter.svelte";
     import Navigation from "./Navigation.svelte";
+    import IntersectionObserver from '../IntersectionObserver.svelte';
+    import { fly } from 'svelte/transition';
 
     export let filters = [];
     export let items = [];

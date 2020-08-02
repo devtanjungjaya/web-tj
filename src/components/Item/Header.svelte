@@ -8,10 +8,15 @@
        {type}
     </span>
  </a>
- <span class="font-bold font-overpass text-primary-7 text-3xl sm:text-4xl md:text-5xl mt-1">
+ <h1 class="font-bold font-overpass text-primary-7 text-3xl sm:text-4xl md:text-5xl mt-3 leading-none">
      {title}
-</span>
- <span class="font-bold font-overpass text-neutral-3 text-lg sm:text-xl md:text-2xl mb-5 sm:mb-10">
+</h1>
+{#if neighborhood}
+<h2 class="font-normal font-overpass text-neutral-2 text-base sm:text-lg md:text-xl">
+    {neighborhood}
+</h2>
+{/if}
+ <span class="font-bold font-overpass text-neutral-3 text-base sm:text-lg md:text-xl mt-2 mb-5 sm:mb-10">
      {categories.join(", ")}
 </span>
 
@@ -20,4 +25,5 @@
     export let type;
     export let title;
     export let categories;
+    export let neighborhood;
 </script>
