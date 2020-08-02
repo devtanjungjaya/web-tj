@@ -59,6 +59,8 @@
     export let unique = false;
     export let grid = false;
     export let type;
+
+    let dispatchTimeout = null;
     
     if($filter[type+label] === undefined) $filter[type+label] = [];
 
@@ -66,7 +68,17 @@
         dispatchFilter($filter[type+label]);
     })
 
-    $: dispatchFilter($filter[type+label]);
+    $: delayedDispatch($filter[type+label]);
+
+    function delayedDispatch(data) {
+        if(dispatchTimeout) {
+            clearTimeout(dispatchTimeout);
+            dispatchTimeout = null;
+        }
+        dispatchTimeout = setTimeout(() => {
+            dispatchFilter(data);
+        }, 100);
+    }
 
     function dispatchFilter(selected) {
         dispatch('filter', {
