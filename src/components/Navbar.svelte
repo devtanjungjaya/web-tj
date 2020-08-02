@@ -57,7 +57,6 @@
             <div class="flex flex-col items-start space-y-2">
                 {#each navigations as navigation}
                     <a 
-                        rel="prefetch"
                         class="font-overpass font-semibold text-neutral-7 text-lg whitespace-no-wrap 
                         hover:text-neutral-6" 
                         href={navigation.url}
