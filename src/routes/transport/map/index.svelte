@@ -123,8 +123,6 @@
     let colors = [];
     let check = [];
     import { Map, Geocoder, Marker, controls } from '@beyonk/svelte-mapbox';
-    import Mark from "./Mark.svelte"
-import { transition_in } from 'svelte/internal';
     const { GeolocateControl, NavigationControl, ScalingControl } = controls
     
     function changeFunc(id,checked){
