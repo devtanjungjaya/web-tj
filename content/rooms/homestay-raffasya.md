@@ -5,12 +5,16 @@ coordinate:
   lng: 105.68303
 name: Homestay Raffasya
 photos:
-- photoURI: ''
-  description: ''
-- photoURI: https://web-tj.netlify.app/images/20200727_132338-1.jpg
-  description: Kamar mandi
 - photoURI: https://web-tj.netlify.app/images/rsz_20200727_132733.jpg
   description: Tampak depan
+- photoURI: https://web-tj.netlify.app/images/20200727_132215-1.jpg
+  description: ''
+- photoURI: https://web-tj.netlify.app/images/20200727_132255.jpg
+  description: Kamar tidur
+- photoURI: https://web-tj.netlify.app/images/20200727_132230-1.jpg
+  description: Dapur
+- photoURI: https://web-tj.netlify.app/images/20200727_132338-1.jpg
+  description: Kamar mandi
 gmaps: ''
 prices:
 - description: Sarapan
