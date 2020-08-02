@@ -5,16 +5,16 @@ coordinate:
   lng: 105.677712
 name: Homestay Bolang
 photos:
-- photoURI: https://web-tj.netlify.app/images/20200727_112100.jpg
-  description: ''
-- photoURI: https://web-tj.netlify.app/images/20200727_112000.jpg
-  description: Kamar tidur
-- photoURI: https://web-tj.netlify.app/images/20200727_112524.jpg
-  description: ''
-- photoURI: https://web-tj.netlify.app/images/20200727_112042.jpg
-  description: Kamar mandi
-- photoURI: https://web-tj.netlify.app/images/20200727_112506.jpg
+- photoURI: https://web-tj.netlify.app/images/rsz_20200727_112506.jpg
   description: Tampak depan
+- photoURI: https://web-tj.netlify.app/images/20200727_112100-1.jpg
+  description: ''
+- photoURI: https://web-tj.netlify.app/images/20200727_112000-1.jpg
+  description: Kamar tidur
+- photoURI: https://web-tj.netlify.app/images/20200727_112524-1.jpg
+  description: ''
+- photoURI: https://web-tj.netlify.app/images/20200727_112031.jpg
+  description: Kamar mandi
 gmaps: ''
 prices:
 - description: Harga per kamar dengan teh, kopi dan air minum
