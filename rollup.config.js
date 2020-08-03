@@ -1,3 +1,4 @@
+require('dotenv').config()
 import resolve from '@rollup/plugin-node-resolve';
 import replace from '@rollup/plugin-replace';
 import commonjs from '@rollup/plugin-commonjs';
@@ -27,7 +28,8 @@ export default {
 		plugins: [
 			replace({
 				'process.browser': true,
-				'process.env.NODE_ENV': JSON.stringify(mode)
+				'process.env.NODE_ENV': JSON.stringify(mode),
+				MAPBOX_ACCESS_TOKEN: process.env.MAPBOX_ACCESS_TOKEN
 			}),
 			svelte({
 				dev,
@@ -73,7 +75,8 @@ export default {
 		plugins: [
 			replace({
 				'process.browser': false,
-				'process.env.NODE_ENV': JSON.stringify(mode)
+				'process.env.NODE_ENV': JSON.stringify(mode),
+				MAPBOX_ACCESS_TOKEN: process.env.MAPBOX_ACCESS_TOKEN
 			}),
 			svelte({
 				generate: 'ssr',

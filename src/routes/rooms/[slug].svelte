@@ -1,11 +1,12 @@
 <script context="module">
+   const mapboxAccessToken = "MAPBOX_ACCESS_TOKEN";
+
    export async function preload({ params: { slug }, query }) {
       const res = await this.fetch(`rooms/${slug}.json`);
       const data = await res.json();
       const neighborhood = await this.fetch('https://api.mapbox.com/geocoding/v5/mapbox.places/' + 
          `${data.coordinate.lng},${data.coordinate.lat}.json?` +
-         'access_token=pk.eyJ1IjoiZGV2dGFuanVuZ2pheWEiLCJhIjoiY2tjbTVpeTJuMmMwdDJ6bnh1cXBrc2N5ZSJ9.ROBeH7kg57aIpTHigEusmg&' +
-         'types=neighborhood'
+         `access_token=${mapboxAccessToken}&types=neighborhood`
       ).then(r => r.json()).then(d => d.features[0]['place_name']);
       return {
          data,
