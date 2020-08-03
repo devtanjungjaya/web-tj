@@ -14,6 +14,16 @@
     import SelectFilter from "../../components/filter/Select.svelte";
     import PriceFilter from "../../components/filter/PriceRange.svelte";
     import Navigation from "../../components/listing/Navigation.svelte";
+    import { onMount, tick } from 'svelte';
+    import { stores } from '@sapper/app';
+    import { scrollHistory } from '../../stores';
+    const { page } = stores();
+
+    onMount(async () => {
+        await tick();
+        window.scrollTo(0, $scrollHistory[$page.path] || 0);
+        initialized = true;
+    })
 
     const title = "Cari Destinasi Wisata di Buffer Zone KEK Tanjung Lesung";
     const description = "Cari Destinasi Wisata di Buffer Zone KEK Tanjung Lesung";
@@ -24,7 +34,10 @@
     export let promotions;
 
     let filters = [];
+    let initialized = false;
+    let scrollY;
 
+    $: if(initialized) $scrollHistory = { ...$scrollHistory, [$page.path]: scrollY};
     $: filters = [
         {
             label: "Kategori",
@@ -83,6 +96,8 @@
    <meta name="twitter:description" content={description}>
    <meta name="twitter:image" content="images/landing-1.webp">
 </svelte:head>
+
+<svelte:window bind:scrollY={scrollY} />
 
 <div class="flex flex-col px-2 xs:px-4 md:px-6 lg:px-16 py-6 lg:py-10 min-h-screen">
     <Grid
