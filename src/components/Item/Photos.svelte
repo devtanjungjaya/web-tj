@@ -2,7 +2,7 @@
    bind:this={carousel}
    perPage={{
       1600: photos.length >= 4 ? 4 : 3,
-      1280: photos.length >= 3 ? 3 : 2, 
+      1024: photos.length >= 3 ? 3 : 2, 
       768: photos.length >= 2 ? 2 : 1 
    }} 
    on:init={() => {
@@ -79,7 +79,7 @@
 
    function itemPerPage() {
       if(innerWidth >= 1600) return photos.length >= 4 ? 4 : 3;
-      else if(innerWidth >= 1280) return photos.length >= 3 ? 3 : 2
+      else if(innerWidth >= 1024) return photos.length >= 3 ? 3 : 2
       else if(innerWidth >= 768) return photos.length >= 2 ? 2 : 1;
       else return 1;
    }
