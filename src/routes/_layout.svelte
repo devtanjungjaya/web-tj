@@ -6,10 +6,10 @@
 </svelte:head>
 
 {#if $preloading && $delayedPreloading}
-    <div class="absolute w-full top-0 h-1 z-30 slider" transition:slide>
-        <div class="line bg-primary-7 h-full w-full"></div>
-        <div class="subline inc bg-primary-7 h-full"></div>
-        <div class="subline dec bg-primary-7 h-full"></div>
+    <div class="fixed w-full top-0 h-1 z-30 slider" transition:slide>
+        <div class="line absolute bg-primary-7 h-full w-full"></div>
+        <div class="absolute inc bg-primary-7 h-full"></div>
+        <div class="absolute dec bg-primary-7 h-full"></div>
     </div>
 {/if}
 
@@ -20,18 +20,13 @@
 
 <style>
 .slider{
-    position:absolute;
     overflow-x: hidden;
 }
 
 .line{
-  position:absolute;
   opacity: 0.4;
 }
 
-.subline{
-  position:absolute;
-}
 .inc{
   animation: increase 2s infinite;
 }
@@ -56,6 +51,6 @@
     import { slide } from 'svelte/transition';
     const { preloading } = stores();
     const delayedPreloading = derived(preloading, (currentPreloading, set) => {
-        setTimeout(() => set(currentPreloading), 2);
+        setTimeout(() => set(currentPreloading), 250);
     });
 </script>
