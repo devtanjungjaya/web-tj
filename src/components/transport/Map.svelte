@@ -1,7 +1,6 @@
 <script>
     import { Map, Geocoder, Marker, controls } from '@beyonk/svelte-mapbox';
-    import { setContext } from 'svelte';
-    import Legends from "./Legends.svelte"
+    import Legends from "./Legends.svelte";
     const { GeolocateControl, NavigationControl, ScalingControl } = controls
     const accToken = "pk.eyJ1IjoicHJhd2lyb2h0IiwiYSI6ImNrY240emwwYzA3c3EzNWxtNnphdWw3eXAifQ.2mr_hj5PC5uLIe5MLr2qBw";
     let map;
@@ -10,22 +9,10 @@
     let layers;
     let colors = [];
     let check = [];
-    let type = []
-    let typeURL = []
+    let type = [];
+    let typeURL = [];
     $: innerWidth = 0;
-
-    setContext("",{
-        getMap: () => tmp
-    })
-
-    function changeFunc(id,checked){
-        tmp.setLayoutProperty(
-            id,
-            'visibility',
-            checked ? 'none' : 'visible'
-        );
-    };
-
+    
     function addRoute(map, url,name,color){
         
         map.addSource(name, {
@@ -42,7 +29,7 @@
             },
             'paint': {
                 'line-color': color,
-                'line-width': 3
+                'line-width': 4
             }
         });
         colors.push(color)
@@ -114,6 +101,7 @@
         // Terminal Bis
         addPoint(tmp,"trans_point_terminal_bus","Terminal Bus",0.3,0)
         layers = tmp.getStyle().layers
+        
     }
 </script>
 
@@ -130,7 +118,7 @@
         overflow: hidden;
     }
 </style>
-<div class='h-64 sm:h-96 md:h-128 mapbox py-4 px-4 sm:px-8 md:px-16 flex flex-row'>
+<div class='h-96 md:h-128 mapbox py-4 px-4 sm:px-8 md:px-16 flex flex-row'>
     <div class="map border-1 border-neutral-4">
         <Map 
         accessToken = {accToken} 
@@ -140,13 +128,13 @@
         on:ready={setupMap}
         >
             <!-- <Marker lat={-6.479478974609833} lng={105.65398972972787} color=transparent label="TANJUNGJAYA" popupClassName="class-name" /> -->
+            <GeolocateControl position={"top-right"} options={{ some: 'control-option' }} />
             <NavigationControl />
-            <GeolocateControl options={{ some: 'control-option' }} />
             <ScalingControl />
         </Map>
         
     </div>
-    <Legends layers={layers} colors={colors} check={check} type={type} typeURL={typeURL}/>
+    <Legends map={tmp} layers={layers} colors={colors} check={check} type={type} typeURL={typeURL}/>
 </div>
 
 <svelte:window bind:innerWidth></svelte:window>

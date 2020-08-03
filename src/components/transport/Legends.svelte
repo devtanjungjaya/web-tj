@@ -1,16 +1,12 @@
 <script>
-    import { getContext } from "svelte";
-
+    export let map;
     export let layers = [];
     export let colors = [];
     export let check = [];
     export let typeURL = [];
     export let type = [];
     $: innerWidth = 0;
-
-    const {getMap} = getContext("");
-    const map = getMap();
-
+    
     function changeFunc(id,checked){
         map.setLayoutProperty(
             id,
