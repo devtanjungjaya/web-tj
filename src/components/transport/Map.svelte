@@ -1,5 +1,5 @@
 <script>
-    import { Map, Geocoder, Marker, controls } from '@beyonk/svelte-mapbox';
+    import { Map, controls } from '@beyonk/svelte-mapbox';
     import Legends from "./Legends.svelte";
     const { GeolocateControl, NavigationControl, ScalingControl } = controls
     const accToken = "pk.eyJ1IjoicHJhd2lyb2h0IiwiYSI6ImNrY240emwwYzA3c3EzNWxtNnphdWw3eXAifQ.2mr_hj5PC5uLIe5MLr2qBw";
@@ -29,7 +29,8 @@
             },
             'paint': {
                 'line-color': color,
-                'line-width': 4
+                'line-width': 4,
+                'line-offset': 2
             }
         });
         colors.push(color)
@@ -39,7 +40,7 @@
         // addFilter(filter,name);
     }
     
-    function addPoint(map, url, name, size, degree){
+    function addPoint(mapbox, map, url, name){
         let alamatpalsu = url +".png"
         map.loadImage(alamatpalsu,function(error,image){
             if(error) throw error;
@@ -58,8 +59,7 @@
             'type': 'symbol',
             'layout': {
                 'icon-image': name,
-                'icon-size': size,
-                'icon-rotate': degree,
+                'icon-size': 0.3,
                 'icon-ignore-placement': true,
                 'icon-anchor': "bottom",
                 "icon-optional": true,
@@ -69,40 +69,62 @@
         check.push(true)
         typeURL.push(url)
         type.push("point")
-        // addFilter(filter,name);
+        map.on('click', name, function(e) {
+            var coordinates = e.features[0].geometry.coordinates.slice();
+            var description = e.features[0].properties.description;
+
+            while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+                coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+            }
+
+            var htmltext;
+            if(description)
+                htmltext= '<div class="flex flex-col items-center text-center"> <div class="h-12 w-12 md:h-24 md:w-24"><img src="'+url+'.png" class="w-full h-full" alt=""></div><p class="w-auto px-1 max-w-xs">' + description +'</p></div>';
+            else 
+                htmltext = '<div class="flex flex-col items-center"> <div class="h-12 w-12 md:h-24 md:w-24"><img src="'+url+'.png" class="" alt=""></div><p class="w-auto px-1">' + name +'</p></div>';
+            
+            let popup=new mapbox.Popup({anchor:'top', closeButton:false, maxWidth:"8rem"})
+            .setLngLat(coordinates)
+            .setHTML(htmltext)
+            popup.addTo(tmp);
+        });
     }
 
     function setupMap(){
         tmp = map.getMap();
+        let mapbox = map.getMapbox();
         // Angkot Mandala
-        addRoute(tmp,"trans_route_angkot_mandala.geojson","Angkot Mandala","#d2b87d")
+        addRoute(tmp,"trans_route_angkot_mandala.geojson","Angkot Mandala","#C62828")
         // Angkot Rangkasbitung
-        addRoute(tmp,"trans_route_angkot_rangkasbitung.geojson","Angkot Rangkasbitung","#69b664")
+        addRoute(tmp,"trans_route_angkot_rangkasbitung.geojson","Angkot Rangkasbitung","#FBC02D")
         // Bus AC
-        addRoute(tmp,"trans_route_bus_ac.geojson","Bus AC","#4d9a94")
+        addRoute(tmp,"trans_route_bus_ac.geojson","Bus AC","#26A69A")
         // Bus Non AC
-        addRoute(tmp,"trans_route_bus_non_ac.geojson","Bus Non AC","#b99cf8")
+        addRoute(tmp,"trans_route_bus_non_ac.geojson","Bus Non AC","#B39DDB")
         // Damri
-        addRoute(tmp,"trans_route_damri.geojson","Damri","#003466")
-        // Damri AC
-        addRoute(tmp,"trans_route_damri_ac.geojson","Damri AC","#a6ce90")
+        addRoute(tmp,"trans_route_damri.geojson","Damri Bandara","#0D47A1")
+        // Damri Merak
+        addRoute(tmp,"trans_route_damri_merak.geojson","Damri Merak","#424242")
+        // Damri Serang
+        addRoute(tmp,"trans_route_damri_ac.geojson","Damri Serang","#A5D6A7")
         // ELF
-        addRoute(tmp,"trans_route_elf.geojson","ELF","#ce4c4c")
+        addRoute(tmp,"trans_route_elf.geojson","ELF","#33691E")
         // KRL
-        addRoute(tmp,"trans_route_krl.geojson","KRL","#b9bf51")
+        addRoute(tmp,"trans_route_krl.geojson","KRL","#9E9D24")
         // Ojek
-        addRoute(tmp,"trans_route_ojek.geojson","Ojek","#ff953f")
+        addRoute(tmp,"trans_route_ojek.geojson","Ojek","#E65100")
         // Bandara
-        addPoint(tmp,"trans_point_bandara","Bandara",0.3,0)
+        addPoint(mapbox,tmp,"trans_point_bandara","Bandara")
         // Poin Penting
-        addPoint(tmp,"trans_point_poin_penting","Poin Penting",0.3,0)
+        addPoint(mapbox,tmp,"trans_point_poin_penting","Tujuan Akhir")
         // Stasiun KRL
-        addPoint(tmp,"trans_point_stasiun_krl","Stasiun KRL",0.3,0)
+        addPoint(mapbox,tmp,"trans_point_stasiun_krl","Stasiun KRL")
         // Terminal Bis
-        addPoint(tmp,"trans_point_terminal_bus","Terminal Bus",0.3,0)
+        addPoint(mapbox,tmp,"trans_point_terminal_bus","Terminal Bus")
         layers = tmp.getStyle().layers
         
     }
+    
 </script>
 
 <style type="text/postcss">
@@ -130,11 +152,12 @@
             <!-- <Marker lat={-6.479478974609833} lng={105.65398972972787} color=transparent label="TANJUNGJAYA" popupClassName="class-name" /> -->
             <GeolocateControl position={"top-right"} options={{ some: 'control-option' }} />
             <NavigationControl />
-            <ScalingControl />
+            <ScalingControl position={"top-left"}/>
         </Map>
-        
     </div>
     <Legends map={tmp} layers={layers} colors={colors} check={check} type={type} typeURL={typeURL}/>
 </div>
-
+<div class="header px-4 sm:px-8 md:px-16 text-xs sm:text-sm md:text-base">
+    <h5>Peta ini merupakan rute perjalanan menuju Tanjungjaya dari Jabodetabek, Serang, dan Merak.</h5>
+</div>
 <svelte:window bind:innerWidth></svelte:window>

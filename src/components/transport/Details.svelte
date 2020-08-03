@@ -29,8 +29,9 @@
     addDetails("KRL","Jakarta (St. Tanah Abang - St. Rangkasbitung)","Rp 8.000")
     addDetails("KRL","Depok (St. Depok - St. Tanah Abang - St. Rangkasbitung)","Rp 20.000")
     addDetails("KRL","Bekasi (St. Bekasi - St. Jatinegara - St. Duri - St. Tanah Abang - St. Rangkasbitung)","Rp 17.000")
-    addDetails("Damri","Bandara Soetta - Terminal Kadubanen","Rp 70.000")
-    addDetails("Damri","Terminal Pakupatan - Tanjung Lesung","Rp 50.000")
+    addDetails("Damri","Bandara (Bandara Soetta - Terminal Kadubanen)","Rp 70.000")
+    addDetails("Damri","Serang (Terminal Pakupatan - Tanjung Lesung)","Rp 50.000")
+    addDetails("Damri","Merak (Terminal Merak - Tanjung Lesung)","Rp 50.000")
     addDetails("Bus AC","Terminal Merak - Terminal Pakupatan","Rp 40.000")
     addDetails("Bus Non-AC","Terminal Kalideres - Terminal Labuan","Rp 40.000")
     addDetails("Angkot Rangkasbitung","Stasiun Rangkasbitung - Terminal Mandala","Rp 3.000")
@@ -43,8 +44,10 @@
 </style>
 
 <div class="px-4 sm:px-8 md:px-16 text-xs sm:text-sm md:text-base">
-    <div class="header">
-        <h5>Peta ini merupakan rute perjalanan menuju Tanjungjaya dari Jabodetabek, Serang, dan Merak.</h5>
+    <br>
+    <br>
+    <div class="header font-extrabold font-overpass text-primary-7 text-lg sm:text-2xl">
+        <h5>Biaya Transportasi Tahun 2020</h5>
     </div>
     <br>
     {#each kendaraan as transport}
@@ -54,7 +57,7 @@
                 {#each transport.rutes as rute,i}
                     <li class="flex flex-row font-overpass items-center py-2">
                         <div class="h-3 w-3 mr-2 rounded-full bg-primary-8"></div>
-                        <div class="w-2/3 mr-12"> {rute} </div> 
+                        <div class="w-2/3 mr-10"> {rute} </div> 
                         <div class="w-1/4 font-overpass font-extrabold text-primary-8"> {transport.prices[i]}</div> 
                     </li>
                 {/each}

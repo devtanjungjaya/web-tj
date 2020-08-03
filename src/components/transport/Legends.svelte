@@ -6,7 +6,6 @@
     export let typeURL = [];
     export let type = [];
     $: innerWidth = 0;
-    
     function changeFunc(id,checked){
         map.setLayoutProperty(
             id,
