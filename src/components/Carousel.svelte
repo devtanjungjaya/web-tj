@@ -21,7 +21,7 @@
 			/>
 		{/if}
 	{/if}
-    {#if dots}
+    {#if dots && totalDots > 1}
 	<ul>
 		{#each {length: totalDots} as _, i}
 			<li
