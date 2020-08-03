@@ -15,7 +15,11 @@ rooms = rooms.map(room =>
         return {
             ...room,
             promotions: processPromotions(room.promotions || []),
-            contact: adminContactsMap.get(room.contact)
+            contact: adminContactsMap.get(room.contact),
+            photos: room.photos.map(p => {
+                p.photoURI = p.photoURI.substring(p.photoURI.indexOf('images/'))
+                return p;
+            })
         };
     });
 rooms.map(room => { room.categories = [room.category] })
@@ -35,7 +39,9 @@ export const roomFacilityIconMap = {
     'Shower': 'ic_shower.svg',
     'Wastafel': 'ic_shink.svg',
     'Air panas': 'ic_fire.svg',
-    'AC': 'ic_snowflake.svg'
+    'AC': 'ic_snowflake.svg',
+    'Kipas angin': 'ic_fan.svg',
+    'Sofa': 'ic_sofa.svg'
 }
 
 export default map;
