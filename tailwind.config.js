@@ -26,6 +26,14 @@ const customColor = {
 module.exports = {
   purge: ["./src/**/*.svelte"],
   theme: {
+    screens: {
+      'xs': '400px',
+      'sm': '640px',
+      'md': '768px',
+      'lg': '1024px',
+      'xl': '1280px',
+      '2xl': '1600px'
+    },
     extend: {
       colors: customColor,
       placeholderColor: customColor,
@@ -42,6 +50,9 @@ module.exports = {
         '96': '24rem',
         '128': '32rem',
       },
+      maxWidth: {
+        '2xs': '12.5rem'
+      }
     },
     fontFamily: {
       'overpass': 'Overpass, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',
@@ -50,5 +61,7 @@ module.exports = {
     }
   },
   variants: ['responsive', 'hover', 'focus', 'group-hover', 'even', 'last', 'disabled'],
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography')
+  ]
 }

@@ -9,9 +9,18 @@ fields:
   label: Nama
   description: Nama paket wisata
 - name: photos
-  type: image_gallery
-  config: {}
-  label: Foto
+  type: field_group_list
+  fields:
+  - name: photo
+    type: include
+    config: {}
+    template: foto
+    label: Foto
+  config:
+    min: 
+    max: 
+    labelField: description
+  label: Foto-foto
   description: Foto lokasi wisata/kegiatan wisata (harus mewakili paketnya)
 - name: description
   type: textarea
@@ -73,17 +82,39 @@ fields:
       path: facilities
   label: Fasilitas ditawarkan
   description: Fasilitas yang ditawarkan
+- name: promotions
+  type: list
+  config:
+    use_select: true
+    min: 
+    max: 
+    source:
+      type: documents
+      section: promosi
+      file: data/promotion.yml
+      path: promotions
+  label: Promosi
+- name: notes
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: markdown
+  label: Catatan
+  description: Catatan untuk pengunjung atau yang lainnya
 - name: contact
-  type: field_group
-  config: {}
-  fields:
-  - name: contact
-    type: include
-    config: {}
-    template: kontak
-    label: Kontak
-  label: Kontak
-  description: Kontak yang bisa dihubungi
+  type: select
+  default: []
+  config:
+    required: true
+    options: []
+    source:
+      type: documents
+      section: kontak-admin
+      file: data/contact-admin.yml
+      path: admins
+  label: Kontak admin
 pages:
 - content/tours/jelajah-liwungan.md
-- content/tours/paket-jelajah-pantai-tanjungjaya.md

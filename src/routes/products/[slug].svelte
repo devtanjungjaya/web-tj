@@ -12,71 +12,77 @@
 
 <script>
    import Decorator from "../../components/Decorator.svelte";
-   import Carousel from '../../components/Carousel.svelte';
-   import Contact from "../../components/Contact.svelte";
+   import Contact from "../../components/Item/Contact.svelte";
+   import Header from "../../components/Item/Header.svelte";
+   import Photos from "../../components/Item/Photos.svelte";
+   import Prices from "../../components/Item/Prices.svelte";
+   import Link from "../../components/Item/Link.svelte";
+   import Promotions from "../../components/Item/Promotions.svelte";
+   import { onMount } from "svelte";
 
-    export let data;
+   let DOMPurify = null;
+
+   onMount(async () => {
+      DOMPurify = await import('dompurify');
+   })
+
+   export let data;
+   let title;
+   let description;
+
+   $: title = `${data.name} - ${data.categories.join(", ")} - Produk Lokal Buffer Zone KEK Tanjung Lesung`;
+   $: description = data.description.replace(/(<([^>]+)>)/g, "");
 </script>
 
+<svelte:head>
+   <title>{title}</title>
+   <meta name="description" content={description} />
+   <meta property="og:title" content={title} />
+   <meta property="og:type" content="website" />
+   <meta property="og:description" content={description} />
+   <meta property="og:image" content={data.photos[0].photoURI} />
+   <meta name="twitter:title" content={title}>
+   <meta name="twitter:description" content={description}>
+   <meta name="twitter:image" content={data.photos[0].photoURI}>
+</svelte:head>
+
 <div class="px-4 sm:px-8 md:px-16 py-6 sm:py-12 flex flex-col">
-   <span class="font-bold font-overpass text-neutral-2 text-base sm:text-lg md:text-xl">PRODUK LOKAL</span>
-   <span class="font-bold font-overpass text-primary-7 text-3xl sm:text-4xl md:text-5xl mt-1">{data.name}</span>
-   <span class="font-bold font-overpass text-neutral-3 text-lg sm:text-xl md:text-2xl mb-5 sm:mb-10">{data.category}</span>
+   <Header
+      typeURL="products"
+      type="PRODUK LOKAL"
+      title={data.name}
+      categories={data.categories}
+   />
+ 
+   <Photos photos={data.photos} />
 
-   <Carousel perPage={{ 1100: 3, 800: 2 }} dots={false}>
-      {#each data.photos as photo, i}
-         <div 
-            class="px-1 sm:px-4"
-            style="height: 360px"
-         >
-            <img class="object-cover w-full h-full rounded-2xl" src={photo} alt={`foto-produk-${i}`} />
-         </div>
-      {/each}
-   </Carousel>
-
-   <div class="flex flex-col lg:flex-row space-y-6 lg:space-y-0 lg:space-x-32 mt-10 sm:mt-20">
-      <div class="flex flex-col">
-         <p class="font-open-sans text-neutral-5 text-lg sm:text-xl">{data.description}</p>
-         <Decorator />
-         <Contact {...data.contact} />
-      </div>
-      <div class="flex flex-col info-panel flex-shrink-0 self-start max-w-full space-y-6">
-         <div class="flex flex-col border-1 border-neutral-1 rounded-2xl px-6 py-4">
-            {#if data.prices.length > 1}
-               <span class="font-overpass font-bold text-neutral-3 text-lg sm:text-xl">Harga</span>
-               <div class="flex flex-col space-y-6 mt-4">
-                  {#each data.prices as price}
-                     <div class="flex flex-col font-overpass font-bold">
-                        <span class="text-primary-7 font-semibold text-xl sm:text-2xl leading-none">{price.value}</span>
-                        <span class="text-neutral-2 text-base sm:text-lg">
-                           {price.description}
-                        </span>
-                     </div>
-                  {/each}
-               </div>
-            {:else}
-               <span class="font-overpass font-bold text-neutral-3 text-base sm:text-lg">Harga</span>
-               <span class="font-overpass font-semibold text-primary-7 text-xl sm:text-2xl">{data.prices[0].value}</span>
-            {/if}
-         </div>
-         {#if data.ecommerce}
-            <a 
-               href={data.ecommerce}
-               target="_blank" 
-               rel="noopener noreferrer"
-               class="flex border-1 border-neutral-1 rounded-2xl px-5 sm:px-6 py-3 sm:py-4 cursor-pointer 
-               items-center hover:bg-gray-100"
-            >
-               <img class="w-6 h-6 sm:w-7 sm:h-7" src="ic_ecommerce.svg" alt="ecommerce"/>
-               <span class="ml-3 font-overpass font-bold text-primary-8 text-lg sm:text-xl">Tautan toko daring</span>
-            </a>
+   <div class="flex flex-col lg:flex-row space-y-6 lg:space-y-0 lg:space-x-10 xl:space-x-32 mt-10 sm:mt-20">
+      <div class="flex flex-col flex-grow max-w-4xl">
+         {#if data.promotions && data.promotions.length}
+            <Promotions promotions={data.promotions} />
          {/if}
+         {#if DOMPurify}
+            <p class="font-open-sans text-neutral-5 text-lg sm:text-xl prose">
+               {@html DOMPurify.sanitize(data.description)}
+            </p>
+            <Decorator />
+         {/if}
+         <Contact {...data.contact} name="Silahkan hubungi admin untuk membeli atau informasi lebih lanjut" />
+         {#if data.notes && DOMPurify}
+            <Decorator />
+            <div class="flex flex-col font-overpass">
+               <span class="font-bold text-neutral-5 text-2xl sm:text-3xl mb-6 sm:mb-6">Catatan</span>
+               <p class="font-open-sans font-normal text-neutral-5 text-lg sm:text-xl prose">
+                  {@html DOMPurify.sanitize(data.notes)}
+               </p>
+            </div>
+         {/if}
+      </div>
+      <div class="flex flex-col flex-shrink-0 self-start max-w-full space-y-6" style="width: 375px">
+         <Prices prices={data.prices} />
+         <!-- {#if data.ecommerce}
+            <Link url={data.ecommerce} icon="ic_ecommerce.svg" label="Tautan toko daring" />
+         {/if} -->
       </div>
    </div>
 </div>
-
-<style type="text/postcss">
-.info-panel {
-   width: 375px;
-}
-</style>

@@ -9,22 +9,19 @@ fields:
     required: true
   label: Nama
   description: Nama produk
-- name: contact
-  type: field_group
-  config: {}
+- name: photos
+  type: field_group_list
   fields:
-  - name: contact
+  - name: photo
     type: include
     config: {}
-    template: kontak
-    label: Kontak
-    description: Narahubung
-  label: Kontak penjual
-  description: Kontak penjual yang bisa dihubungi
-- name: photos
-  type: image_gallery
-  config: {}
-  label: Foto produk
+    template: foto
+    label: Foto
+  config:
+    min: 
+    max: 
+    labelField: description
+  label: Foto-foto
 - name: description
   type: textarea
   default: ''
@@ -62,18 +59,39 @@ fields:
     labelField: description
   label: List harga
   description: List semua harga (varian dari produk)
-- name: ecommerce
-  type: text
+- name: promotions
+  type: list
+  config:
+    use_select: true
+    min: 
+    max: 
+    source:
+      type: documents
+      section: promosi
+      file: data/promotion.yml
+      path: promotions
+  label: Promosi
+- name: notes
+  type: textarea
+  default: ''
   config:
     required: false
-  label: Tautan toko daring
-  description: 'Tautan toko daring dari produk tersebut <br>(contoh: Tokopedia)'
+    wysiwyg: true
+    schema:
+      format: markdown
+  label: Catatan
+  description: Catatan untuk pembeli atau yang lainnya
+- name: contact
+  type: select
+  default: []
+  config:
+    required: true
+    options: []
+    source:
+      type: documents
+      section: kontak-admin
+      file: data/contact-admin.yml
+      path: admins
+  label: Kontak admin
 pages:
-- content/products/Kerajinan Kulit Felix.md
-- content/products/Teko-Bambu.md
-- content/products/action-figure-kelapa.md
-- content/products/flyingcar-papi.md
-- content/products/gamevr-wibu.md
-- content/products/gulingwibu-anakpapiwiro.md
-- content/products/indomie-kulit-papi.md
-- content/products/toko_wirowibu.md
+- content/products/set-alat-makan.md

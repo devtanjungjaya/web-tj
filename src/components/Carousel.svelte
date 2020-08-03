@@ -1,5 +1,5 @@
 <div class="carousel">
-	<div class="slides" bind:this={siema}>
+	<div bind:this={siema}>
 		<slot></slot>
 	</div>
 	{#if controls}
@@ -7,7 +7,7 @@
 			<img 
 				src="ic_left.svg"
 				alt="left-carousel"
-				class="rounded-full bg-white shadow-md cursor-pointer control left p-4" 
+				class="rounded-full bg-white shadow-md cursor-pointer control left p-4 hidden sm:block" 
 				on:click={left} 
 			/>
 		{/if}
@@ -16,15 +16,20 @@
 			<img 
 				src="ic_right.svg" 
 				alt="right-carousel"
-				class="rounded-full bg-white shadow-md cursor-pointer control right p-4" 
+				class="rounded-full bg-white shadow-md cursor-pointer control right p-4 hidden sm:block" 
 				on:click={right} 
 			/>
 		{/if}
 	{/if}
-    {#if dots}
+    {#if dots && totalDots > 1}
 	<ul>
 		{#each {length: totalDots} as _, i}
-			<li on:click={() => go(i*currentPerPage)} class={isDotActive(currentIndex, i) ? "active" : ""}></li>
+			<li
+				on:click={() => go(i*currentPerPage)} 
+				class={"m-1 rounded-full h-2 w-2 cursor-pointer " + 
+				(isDotActive(currentIndex, i) ? "bg-primary-6" : 
+				"hover:opacity-100 opacity-50 bg-neutral-1")}
+			></li>
 		{/each}
 	</ul>
     {/if}
@@ -64,19 +69,6 @@
 		margin-top: -30px;
 		padding: 0;
 	}
-	ul li {
-		margin: 6px;
-		border-radius: 100%;
-		background-color: rgba(255,255,255,0.5);
-		height: 8px;
-		width: 8px;
-	}
-	ul li:hover {
-		background-color: rgba(255,255,255,0.85);
-	}
-	ul li.active {
-		background-color: rgba(255,255,255,1);
-	}
 </style>
 
 <script>
@@ -96,13 +88,15 @@
 	let currentIndex = startIndex;
 	
 	let siema
-	let controller
+	let controller;
 	let timer
 	const dispatch = createEventDispatcher()
 	$: pips = controller ? controller.innerElements : []
 	$: currentPerPage = controller ? controller.perPage : perPage
 	$: totalDots = controller ? Math.ceil(controller.innerElements.length / currentPerPage) : []
-	
+
+	$: if(controller) dispatch("controller");
+
 	onMount(async () => {
         const { default: s } = await import('siema');
 		controller = new s({
@@ -114,7 +108,8 @@
   			draggable,
  			multipleDrag,
   			threshold,
-  			rtl,
+			rtl,
+			onInit: () => { dispatch("init") },  
 			onChange: handleChange
         })
 		
@@ -142,6 +137,10 @@
 		controller.goTo(index)
 	}
 	
+	export function width() {
+		return controller.selectorWidth;
+	}
+
 	export function pause() {
 		clearInterval(timer);
 	}

@@ -33,6 +33,17 @@ sections:
   templates:
   - destinasi-wisata
 - type: heading
+  label: Data
+- type: document
+  path: data/promotion.yml
+  label: Promosi
+- type: document
+  path: data/contact.yml
+  label: Kontak
+- type: document
+  path: data/contact-admin.yml
+  label: Kontak admin
+- type: heading
   label: Fasilitas
 - type: document
   path: data/facility-tour.yml
@@ -57,11 +68,6 @@ sections:
 - type: document
   path: data/category-destination.yml
   label: Kategori destinasi wisata
-- type: heading
-  label: KONTAK
-- type: document
-  path: data/contact-village.yml
-  label: Kontak
 upload_dir: static/images
 public_path: https://web-tj.netlify.app/images
 front_matter_path: ''
