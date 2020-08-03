@@ -1,10 +1,11 @@
 <script context="module">
     export function preload({ params, query }) {
+        const sitemap = this.fetch("sitemap.xml");
         return Promise.all([
             this.fetch("destinations.json"),
             this.fetch("tours.json"),
             this.fetch("products.json"),
-            this.fetch("rooms.json"),
+            this.fetch("rooms.json")
         ])
         .then(r => {
             return Promise.all(r.map(x => x.json()));
@@ -14,7 +15,8 @@
                 randomDestinations,
                 randomTours,
                 randomProducts,
-                randomRooms
+                randomRooms,
+                sitemap
             };
         });
     }
