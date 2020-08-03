@@ -22,6 +22,10 @@
     }
 </script>
 
+<svelte:head>
+    <title>Buffer Zone KEK Tanjung Lesung</title>
+</svelte:head>
+
 <div class="flex flex-col-reverse items-center sm:flex-row px-6 sm:px-8 md:px-16 py-6 sm:py-10 md:py-20">
     <div class="flex flex-col flex-shrink mr-auto justify-center items-start font-overpass">
         <h3 class="text-lg md:text-xl lg:text-2xl xl:text-3xl text-primary-6 font-bold">DESA</h3>
