@@ -40,8 +40,8 @@
     let map;
     let center = { lat: -6.5116, lng: 105.6530};
     
-    function setupMap(){
-        tmp = map.getMap();
+    // function setupMap(){
+    //     tmp = map.getMap();
         
-    }
+    // }
 </script>

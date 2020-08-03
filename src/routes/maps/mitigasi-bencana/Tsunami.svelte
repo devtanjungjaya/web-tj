@@ -1,13 +1,16 @@
 <script>
-    import map from './index.svelte'
-    
-    let peta = map.getMap();
+    import { getContext } from 'svelte';
+    import { key } from './mapbox.js';
 
-    peta.addSource('tsunami',{
+    const { getMap } = getContext(key);
+
+    let map = getMap();
+
+    map.addSource('tsunami',{
         'type': 'geojson',
         'data': "images/peta-tsunami.geojson"
     })
-    peta.addLayer({
+    map.addLayer({
         'id': 'tsunami',
         'type': 'heatmap',
         'source': 'tsunami',
