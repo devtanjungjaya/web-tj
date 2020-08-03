@@ -1,5 +1,7 @@
 <script>
     import { Map, Geocoder, Marker, controls } from '@beyonk/svelte-mapbox';
+    import { setContext } from 'svelte';
+    import Legends from "./Legends.svelte"
     const { GeolocateControl, NavigationControl, ScalingControl } = controls
     const accToken = "pk.eyJ1IjoicHJhd2lyb2h0IiwiYSI6ImNrY240emwwYzA3c3EzNWxtNnphdWw3eXAifQ.2mr_hj5PC5uLIe5MLr2qBw";
     let map;
@@ -8,7 +10,13 @@
     let layers;
     let colors = [];
     let check = [];
+    let type = []
+    let typeURL = []
     $: innerWidth = 0;
+
+    setContext("",{
+        getMap: () => tmp
+    })
 
     function changeFunc(id,checked){
         tmp.setLayoutProperty(
@@ -39,6 +47,8 @@
         });
         colors.push(color)
         check.push(true)
+        typeURL.push(url)
+        type.push("route")
         // addFilter(filter,name);
     }
     
@@ -70,29 +80,31 @@
         });
         colors.push("#0ED7CD")
         check.push(true)
+        typeURL.push(url)
+        type.push("point")
         // addFilter(filter,name);
     }
 
     function setupMap(){
         tmp = map.getMap();
         // Angkot Mandala
-        addRoute(tmp,"trans_route_angkot_mandala.geojson","Angkot Mandala","#106e79")
+        addRoute(tmp,"trans_route_angkot_mandala.geojson","Angkot Mandala","#d2b87d")
         // Angkot Rangkasbitung
-        addRoute(tmp,"trans_route_angkot_rangkasbitung.geojson","Angkot Rangkasbitung","#ff5500")
+        addRoute(tmp,"trans_route_angkot_rangkasbitung.geojson","Angkot Rangkasbitung","#69b664")
         // Bus AC
-        addRoute(tmp,"trans_route_bus_ac.geojson","Bus AC","#ff0093")
+        addRoute(tmp,"trans_route_bus_ac.geojson","Bus AC","#4d9a94")
         // Bus Non AC
-        addRoute(tmp,"trans_route_bus_non_ac.geojson","Bus Non AC","#7e00be")
+        addRoute(tmp,"trans_route_bus_non_ac.geojson","Bus Non AC","#b99cf8")
         // Damri
-        addRoute(tmp,"trans_route_damri.geojson","Damri","#0310fc")
+        addRoute(tmp,"trans_route_damri.geojson","Damri","#003466")
         // Damri AC
-        addRoute(tmp,"trans_route_damri_ac.geojson","Damri AC","#00b4ff")
+        addRoute(tmp,"trans_route_damri_ac.geojson","Damri AC","#a6ce90")
         // ELF
-        addRoute(tmp,"trans_route_elf.geojson","ELF","#00b74d")
+        addRoute(tmp,"trans_route_elf.geojson","ELF","#ce4c4c")
         // KRL
-        addRoute(tmp,"trans_route_krl.geojson","KRL","#02a300")
+        addRoute(tmp,"trans_route_krl.geojson","KRL","#b9bf51")
         // Ojek
-        addRoute(tmp,"trans_route_ojek.geojson","Ojek","#90aa00")
+        addRoute(tmp,"trans_route_ojek.geojson","Ojek","#ff953f")
         // Bandara
         addPoint(tmp,"trans_point_bandara","Bandara",0.3,0)
         // Poin Penting
@@ -103,56 +115,22 @@
         addPoint(tmp,"trans_point_terminal_bus","Terminal Bus",0.3,0)
         layers = tmp.getStyle().layers
     }
-
 </script>
 
 <style type="text/postcss">
-.mapbox {
-    height: 24rem;
-    border-radius: 1rem;
-}
-.map{
-    width:75%;
-    height:100%;
-    border-top-left-radius: 1rem;
-    border-bottom-left-radius: 1rem;
-    border-right-width: 0;
-    overflow: hidden;
-}
-.filter-group {
-    border-top-right-radius: 1rem;
-    border-bottom-right-radius: 1rem;
-    width: 25%;
-    max-height: 100%;
-    padding-top: 1rem;
-    border-left-width: 0;
-    overflow: hidden;
-}
-.legenda {
-    border-top-width: 0;
-    border-left-width: 0;
-    border-right-width: 0;
-    padding-bottom: 1rem;
-}
-.filter {
-    height: 100%;
-    overflow-y: auto;
-    padding-top: 1rem;
-    font-size: 0.625rem;
-}
-.box {
-    border-top-width: 0;
-    border-left-width: 0;
-    border-right-width: 0;
-}
-.checkbox {
-    width: 100%;
-    height: 100%;
-    min-width: 100%;
-    min-height: 100%;
-}
+    .mapbox {
+        border-radius: 1rem;
+    }
+    .map{
+        width:75%;
+        height:100%;
+        border-top-left-radius: 1rem;
+        border-bottom-left-radius: 1rem;
+        border-right-width: 0;
+        overflow: hidden;
+    }
 </style>
-<div class='mapbox py-4 px-4 sm:px-8 md:px-16 flex flex-row'>
+<div class='h-64 sm:h-96 md:h-128 mapbox py-4 px-4 sm:px-8 md:px-16 flex flex-row'>
     <div class="map border-1 border-neutral-4">
         <Map 
         accessToken = {accToken} 
@@ -168,47 +146,7 @@
         </Map>
         
     </div>
-    <div id="filter-group" class="filter-group flex flex-col relative border-1 border-neutral-4">
-        <div class="legenda border-1 border-neutral-2 px-2 sm:px-4 align-middle text-primary-7 text-xs sm:text-base md:text-lg font-bold relative">
-            <h1 class="relative">Legenda</h1>
-        </div>
-        <div class="filter flex flex-col text-primary-6 p-0">
-            {#each colors as color,i }
-                {#if check[i]}
-                    {#if innerWidth > 640}
-                        <label class='box flex flex-row py-2 px-2 hover:text-primary-7 hover:bg-neutral-2 text-neutral-5 font-bold border-1 border-neutral-1 items-center last:border-0 sm:text-xs md:text-sm'>
-                            <div class="h-3 w-3">
-                                <div class="relative checkbox align-middle mx-1 rounded-full" style="--theme-color: {color}; background-color: var(--theme-color);"></div>
-                            </div>
-                            <input type="checkbox" class= "opacity-0" on:change={changeFunc(layers[111+i].id,check[i])} bind:checked={check[i]}>
-                            <p class="overflow-hidden">{layers[111+i].id}</p>
-                        </label>
-                    {:else}
-                        <label class='box flex flex-row py-2 px-2 hover:text-primary-7 hover:bg-neutral-2 align-middle text-neutral-5 font-bold border-2 items-center'  style="--theme-color: {color}; border-color: var(--theme-color);">
-                            <p class="overflow-hidden">{layers[111+i].id}</p>
-                            <input type="checkbox" class= "opacity-0" on:change={changeFunc(layers[111+i].id,check[i])} bind:checked={check[i]}>
-                        </label>
-                    {/if}
-                {:else}
-                    {#if innerWidth > 640}
-                        <label class='box flex flex-row py-2 px-2 hover:text-primary-7 hover:bg-neutral-2 text-neutral-5 border-1 border-neutral-1 italic items-center last:border-0 sm:text-xs md:text-sm'>
-                            <div class="h-3 w-3">
-                                <div class="checkbox align-middle h-3 w-3 mx-1 bg-neutral-1 text-neutral-1 rounded-full"></div>
-                            </div>
-                            <input id={layers[111+i].id} type="checkbox" class= "opacity-0"  on:change={changeFunc(layers[111+i].id,check[i])} bind:checked={check[i]}>
-                            <p class="overflow-hidden">{layers[111+i].id}</p>
-                        </label>
-                    {:else}
-                    <label class='box flex flex-row py-2 px-2 hover:text-primary-7 hover:bg-neutral-2 text-neutral-5 border-1 border-neutral-1 italic items-center'>
-                        <p class="w-full overflow-hidden">{layers[111+i].id}</p>
-                        <input id={layers[111+i].id} type="checkbox" class= "opacity-0"  on:change={changeFunc(layers[111+i].id,check[i])} bind:checked={check[i]}>
-                    </label>
-                    {/if}
-                    
-                {/if}
-            {/each}
-        </div>
-    </div>
+    <Legends layers={layers} colors={colors} check={check} type={type} typeURL={typeURL}/>
 </div>
 
 <svelte:window bind:innerWidth></svelte:window>

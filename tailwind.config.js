@@ -37,7 +37,11 @@ module.exports = {
       },
       borderWidth: {
         '1': '1px'
-      }
+      },
+      height:{
+        '96': '24rem',
+        '128': '32rem',
+      },
     },
     fontFamily: {
       'overpass': 'Overpass, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',

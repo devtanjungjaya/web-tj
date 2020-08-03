@@ -1,18 +1,12 @@
 <header>
-    <div id="head" class="py-5 px-16">
-        <h1 class="text-3xl md:text-4xl xl:text-5xl text-primary-7 font-bold">Transportasi</h1>
-    </div>
-    <div id="route" class="flex flex-row px-12 font-bold">
-        <div class="py-5 px-4">
-            <a href="/transport">
-                <h2 class="text-neutral-2">Peta</h2>
-            </a>
-        </div>
-        <br>
-        <div class="py-5 px-4">
-            <a href="/transport/route">
-                <h2 class="text-primary-7">Jalur</h2>
-            </a>
-        </div>
-    </div>
+    <Header url="route"/>
 </header>
+<div class="px-4 sm:px-8 md:px-16">
+    <img src="trans_route_head.jpg" alt="( ͡° ͜ʖ ͡°)" class="w-full h-full">
+    <img src="trans_route_2.jpg" alt="( ͡° ͜ʖ ͡°)" class="w-3/4 h-full">
+</div>
+
+
+<script>
+    import Header from "../../../components/transport/Header.svelte"
+</script>
