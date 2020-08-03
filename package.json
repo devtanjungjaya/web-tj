@@ -7,7 +7,7 @@
     "build": "npm run build:css && sapper build --legacy",
     "watch:css": "postcss src/tailwind.pcss -o static/index.css -w",
     "build:css": "NODE_ENV=production postcss src/tailwind.pcss -o static/index.css",
-    "export": "npm run build:css && sapper export --legacy",
+    "export": "npm run build:css && sapper export --legacy --entry '/ /404'",
     "start": "node __sapper__/build",
     "start:dev": "sapper dev",
     "cy:run": "cypress run",
