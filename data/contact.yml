@@ -1,5 +1,14 @@
 ---
 contacts:
+- names: "----"
+  email: "---@gmail.com"
+  telephone_numbers: "123124342"
+- names: Citereup
+  email: citereup@gmail.com
+  telephone_numbers: "9812389139"
+- names: Cikadu
+  email: cikadu@gmail.com
+  telephone_numbers: '081292389'
 - email: cipanon@gmail.com
   names: Cipanon
   phone_number: 
