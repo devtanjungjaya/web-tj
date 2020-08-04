@@ -2,10 +2,10 @@
 contact: Admin Tanjungjaya
 name: Set Alat Makan
 photos:
-- description: Set alat makan
-  photoURI: https://web-tj.netlify.app/images/set-alat-makan-2-1.jpeg
 - photoURI: https://web-tj.netlify.app/images/set-alat-makan-1-1.jpeg
   description: Set alat makan
+- description: Set alat makan
+  photoURI: https://web-tj.netlify.app/images/set-alat-makan-2-1.jpeg
 - description: Set alat makan + pouch/kantong
   photoURI: https://web-tj.netlify.app/images/set-alat-makan-3-1.jpeg
 description: |-
@@ -25,6 +25,8 @@ prices:
   value: 55000
   unit: set
 promotions:
+- Free Pouch
+- CEC-DISC20
 - CEC-DISC10
 notes: ''
 
