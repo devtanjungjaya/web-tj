@@ -101,7 +101,9 @@
       </div>
       <div class="flex flex-col flex-shrink-0 self-start max-w-full space-y-6" style="width: 375px">
          <Prices prices={data.prices} />
-         <svelte:component this={MapComponent} {...data.coordinate} />
+         {#if data.coordinate}
+            <svelte:component this={MapComponent} {...data.coordinate} />
+         {/if}
          {#if data.gmaps}
             <Link url={data.gmaps} icon="ic_gmaps.png" label="Buka lokasi di Google Maps" />
          {/if}
