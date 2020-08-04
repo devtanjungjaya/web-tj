@@ -18,11 +18,11 @@ description: Jalan masuk menuju Pantai Cibiuk bersebelahan sebelum gerbang masuk
   penginapan yang berhadapan langsung dengan laut.
 gmaps: https://goo.gl/maps/aKWLJvPsSwEdTWTR7
 prices:
-- description: Sabtu-Minggu
-  value: 15000
-  unit: motor
 - description: Senin-Jumat
   value: 10000
+  unit: motor
+- description: Sabtu-Minggu
+  value: 15000
   unit: motor
 hours:
 - description: Buka 24 jam
@@ -31,10 +31,10 @@ hours:
 categories:
 - Alam
 facilities:
-- Tempat bermain anak
-- Gazebo
-- Penginapan
 - Toilet umum
+- Penginapan
+- Gazebo
+- Tempat bermain anak
 promotions: []
 notes: ''
 
