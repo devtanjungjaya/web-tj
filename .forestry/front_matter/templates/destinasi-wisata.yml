@@ -17,7 +17,7 @@ fields:
     template: foto
     label: Foto
   config:
-    min: 
+    min: 1
     max: 
     labelField: description
   label: Foto-foto
