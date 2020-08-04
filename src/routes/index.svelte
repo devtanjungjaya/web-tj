@@ -30,10 +30,13 @@
 
 <div class="flex flex-col-reverse items-center sm:flex-row px-6 sm:px-8 md:px-16 py-6 sm:py-10 md:py-20">
     <div class="flex flex-col flex-shrink mr-auto justify-center items-start font-overpass">
-        <h3 class="text-2xl xs:text-2xl md:text-2xl lg:text-3xl xl:text-4xl text-primary-6 font-bold">
+        <h3 class="text-2xl xs:text-2xl md:text-2xl lg:text-3xl xl:text-4xl text-primary-6 font-bold leading-none">
             Hidden Treasure of
         </h3>
-        <h1 class="text-4xl xs:text-5xl md:text-5xl xl:text-6xl text-primary-7 font-bold whitespace-no-wrap">
+        <h1 
+            class="text-4xl xs:text-5xl md:text-5xl xl:text-6xl text-primary-7 font-bold 
+            whitespace-no-wrap leading-tight"
+        >
             Tanjung Lesung
         </h1>
         <span class="sm:max-w-xs lg:max-w-full text-xl xs:text-2xl md:text-2xl lg:text-3xl xl:text-4xl text-neutral-3">
