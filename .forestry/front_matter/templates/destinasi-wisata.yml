@@ -122,6 +122,7 @@ fields:
   label: Catatan
   description: Catatan untuk pengunjung atau yang lainnya
 pages:
+- content/destinations/curug-cisadang.md
 - content/destinations/pantai-blue-ocean.md
 - content/destinations/pantai-cibiuk.md
 - content/destinations/pantai-cikujang.md
