@@ -44,6 +44,7 @@
                     size="h-full"
                     src={photo.photoURI}
                     alt={photo.description}
+                    contain={true}
                 />
             </div>
             {/each}
