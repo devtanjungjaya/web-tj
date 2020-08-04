@@ -117,4 +117,5 @@ fields:
       path: admins
   label: Kontak admin
 pages:
+- content/tours/eduwisata-bahari.md
 - content/tours/jelajah-liwungan.md
