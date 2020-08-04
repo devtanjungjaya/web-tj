@@ -1,6 +1,7 @@
 <script>
     import { Map, controls } from '@beyonk/svelte-mapbox';
     import Legends from "./Legends.svelte";
+import { element } from 'svelte/internal';
     const { GeolocateControl, NavigationControl, ScalingControl } = controls
     const mapboxAccessToken = "MAPBOX_ACCESS_TOKEN";
     let map;
@@ -11,13 +12,31 @@
     let check = [];
     let type = [];
     let typeURL = [];
+    let transportations = [
+        { url:"trans_route_angkot_mandala", nama:"Angkot Mandala", warna: "#C62828"},
+        { url:"trans_route_angkot_rangkasbitung", nama:"Angkot Rangkasbitung", warna: "#FBC02D" },
+        { url:"trans_route_bus_ac", nama:"Bus AC", warna: "#26A69A" },
+        { url:"trans_route_bus_non_ac", nama:"Bus Non AC", warna: "#B39DDB" },
+        { url:"trans_route_damri", nama:"Damri Bandara", warna: "#0D47A1" },
+        { url:"trans_route_damri_merak", nama:"Damri Merak", warna: "#424242" },
+        { url:"trans_route_damri_ac", nama:"Damri Serang", warna: "#A5D6A7" },
+        { url:"trans_route_elf", nama:"ELF", warna: "#33691E" },
+        { url:"trans_route_krl", nama:"KRL", warna: "#9E9D24" },
+        { url:"trans_route_ojek", nama:"Ojek", warna: "#E65100" },
+    ]
+    let points = [
+        { url:"trans_point_bandara", nama:"Bandara"},
+        { url:"trans_point_poin_penting", nama:"Tujuan Akhir"},
+        { url:"trans_point_stasiun_krl", nama:"Stasiun KRL"},
+        { url:"trans_point_terminal_bus", nama:"Terminal Bus"},
+    ]
     $: innerWidth = 0;
     
     function addRoute(map, url,name,color){
         
         map.addSource(name, {
             'type': 'geojson',
-            'data': "images/" + url
+            'data': "images/" + url + ".geojson"
         });
         map.addLayer({
             'id': name,
@@ -93,36 +112,13 @@
     function setupMap(){
         tmp = map.getMap();
         let mapbox = map.getMapbox();
-        // Angkot Mandala
-        addRoute(tmp,"trans_route_angkot_mandala.geojson","Angkot Mandala","#C62828")
-        // Angkot Rangkasbitung
-        addRoute(tmp,"trans_route_angkot_rangkasbitung.geojson","Angkot Rangkasbitung","#FBC02D")
-        // Bus AC
-        addRoute(tmp,"trans_route_bus_ac.geojson","Bus AC","#26A69A")
-        // Bus Non AC
-        addRoute(tmp,"trans_route_bus_non_ac.geojson","Bus Non AC","#B39DDB")
-        // Damri
-        addRoute(tmp,"trans_route_damri.geojson","Damri Bandara","#0D47A1")
-        // Damri Merak
-        addRoute(tmp,"trans_route_damri_merak.geojson","Damri Merak","#424242")
-        // Damri Serang
-        addRoute(tmp,"trans_route_damri_ac.geojson","Damri Serang","#A5D6A7")
-        // ELF
-        addRoute(tmp,"trans_route_elf.geojson","ELF","#33691E")
-        // KRL
-        addRoute(tmp,"trans_route_krl.geojson","KRL","#9E9D24")
-        // Ojek
-        addRoute(tmp,"trans_route_ojek.geojson","Ojek","#E65100")
-        // Bandara
-        addPoint(mapbox,tmp,"trans_point_bandara","Bandara")
-        // Poin Penting
-        addPoint(mapbox,tmp,"trans_point_poin_penting","Tujuan Akhir")
-        // Stasiun KRL
-        addPoint(mapbox,tmp,"trans_point_stasiun_krl","Stasiun KRL")
-        // Terminal Bis
-        addPoint(mapbox,tmp,"trans_point_terminal_bus","Terminal Bus")
+        transportations.forEach(element => {
+            addRoute(tmp,element.url,element.nama,element.warna)
+        });
+        points.forEach(element =>{
+            addPoint(mapbox,tmp,element.url,element.nama)
+        });
         layers = tmp.getStyle().layers
-        
     }
     
 </script>

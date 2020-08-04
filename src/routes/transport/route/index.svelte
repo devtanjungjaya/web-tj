@@ -4,12 +4,9 @@
 <br>
 <div class="px-4 sm:px-8 md:px-16 flex flex-col">
     <!-- <img src="trans_route_head.jpg" alt="( ͡° ͜ʖ ͡°)" class="w-full h-full"> -->
-    <div class="flex flex-row-reverse">
+    <div class="flex flex-row-reverse mb-8">
         <img src="trans_route_title.jpg" alt="( ͡° ͜ʖ ͡°)" class="w-full sm:w-1/2">
     </div>
-    <br>
-    <br>
-    <br>
     {#if innerWidth >640}
         <div class="flex flex-row w-full items-center">
             <div class="w-2/3 pr-4">
@@ -46,21 +43,10 @@
 
 <script>
     import Header from "../../../components/transport/Header.svelte"
-    import PhotoDetail from "../../../components/transport/PhotoDetail.svelte"
-    let photos
-    let initialIndex = null
     $: innerWidth = 0
     const title = "Menuju Buffer Zone KEK Tanjung Lesung dengan Transportasi Umum"
     const description = "Menuju Buffer Zone KEK Tanjung Lesung dengan Transportasi Umum"
 </script>
-
-{#if initialIndex != null}
-   <PhotoDetail 
-      {photos} 
-      {initialIndex} 
-      on:close={_ => initialIndex = null}
-   />
-{/if}
 
 <svelte:head>
    <title>{title}</title>
