@@ -3,7 +3,7 @@ contact: Admin Tanjungjaya
 name: Set Alat Makan
 photos:
 - photoURI: https://web-tj.netlify.app/images/set-alat-makan-1-1.jpeg
-  description: Set alat makan
+  description: Set Alat Makan
 - description: Set alat makan
   photoURI: https://web-tj.netlify.app/images/set-alat-makan-2-1.jpeg
 - description: Set alat makan + pouch/kantong
