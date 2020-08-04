@@ -94,4 +94,5 @@ fields:
       path: admins
   label: Kontak admin
 pages:
+- content/products/kelompok-saung-centong/set-alat-makan.md
 - content/products/set-alat-makan-1.md
