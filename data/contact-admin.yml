@@ -6,6 +6,10 @@ admins:
 - Admin Tanjungjaya
 - Admin Cikadu
 contacts:
+- admin: Admin Citeureup
+  contact:
+    phoneNumbers:
+    - '0817849463'
 - admin: Admin Tanjungjaya
   contact:
     phoneNumbers:
