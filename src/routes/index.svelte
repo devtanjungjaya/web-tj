@@ -52,7 +52,7 @@
             <img 
                 class="absolute w-full h-full object-cover rounded-2xl shadow-xl" 
                 alt="tanjung-jaya" 
-                src="images/landing-1.webp"
+                src="images/paket-eduwisata-bahari-6.png"
             />
         </div>
     </div>
