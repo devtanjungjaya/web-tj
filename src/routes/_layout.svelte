@@ -12,7 +12,9 @@
     </div>
 {/if}
 
+{#if segment !== '404'}
 <Navbar />
+{/if}
 <div class="py-16 min-h-screen">
     <slot></slot>
 </div>
@@ -52,4 +54,6 @@
     const delayedPreloading = derived(preloading, (currentPreloading, set) => {
         setTimeout(() => set(currentPreloading), 250);
     });
+
+    export let segment;
 </script>
