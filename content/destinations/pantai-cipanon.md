@@ -4,10 +4,10 @@ coordinate:
   lng: 105.682244
 name: Pantai Cipanon
 photos:
-- description: Pantai cipanon
-  photoURI: https://web-tj.netlify.app/images/pantai-cipanon-2.jfif
 - photoURI: https://web-tj.netlify.app/images/pantai-cipanon-1.jfif
   description: Pantai Cipanon
+- description: Pantai cipanon
+  photoURI: https://web-tj.netlify.app/images/pantai-cipanon-2.jfif
 description: Nama pantai diambil dari nama salah satu kampung di Desa Tanjungjaya,
   yaitu Kampung Cipanon. Pantai Cipanon merupakan lokasi wisata pantai paling dekat
   dari Kecamatan Panimbang, sekitar 15 km melalui jalan raya Tanjung Lesung yang sudah
