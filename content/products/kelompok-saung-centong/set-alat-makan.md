@@ -1,5 +1,5 @@
 ---
-contact: Admin Cikadu
+contact: Admin Tanjungjaya
 name: Set Alat Makan
 photos:
 - description: Set alat makan
