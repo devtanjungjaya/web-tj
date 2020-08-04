@@ -109,7 +109,9 @@
          {#if data.gmaps}
             <Link url={data.gmaps} icon="ic_gmaps.png" label="Buka lokasi di Google Maps" />
          {/if}
+         {#if data.contact && data.contact.phoneNumbers && data.contact.phoneNumbers.length}
          <Contact {...data.contact} name="Silahkan hubungi admin untuk pemesanan atau informasi lebih lanjut"/>
+         {/if}
       </div>
    </div>
 </div>

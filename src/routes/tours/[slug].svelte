@@ -94,7 +94,9 @@
       </div>
       <div class="flex flex-col flex-shrink-0 self-start max-w-full space-y-6" style="width: 375px">
          <Prices prices={data.prices} />
+         {#if data.contact && data.contact.phoneNumbers && data.contact.phoneNumbers.length}
          <Contact {...data.contact} name="Silahkan hubungi admin untuk membeli atau informasi lebih lanjut" />
+         {/if}
       </div>
    </div>
 </div>

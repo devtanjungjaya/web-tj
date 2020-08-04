@@ -84,7 +84,9 @@
          <!-- {#if data.ecommerce}
             <Link url={data.ecommerce} icon="ic_ecommerce.svg" label="Tautan toko daring" />
          {/if} -->
+         {#if data.contact && data.contact.phoneNumbers && data.contact.phoneNumbers.length}
          <Contact {...data.contact} name="Silahkan hubungi admin untuk membeli atau informasi lebih lanjut" />
+         {/if}
       </div>
    </div>
 </div>
