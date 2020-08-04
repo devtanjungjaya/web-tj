@@ -2,12 +2,12 @@
 contact: Admin Tanjungjaya
 name: Mangkok Batok Kelapa Motif Bunga Tanjung
 photos:
-- description: Mangkok batok kelapa
-  photoURI: https://web-tj.netlify.app/images/mangkok-batok-kelapa-motif-bunga-tanjung-2.png
-- photoURI: https://web-tj.netlify.app/images/mangkok-batok-kelapa-motif-bunga-tanjung-3.png
-  description: Mangkok batok kelapa
 - photoURI: https://web-tj.netlify.app/images/mangkok-batok-kelapa-motif-bunga-tanjung-1.jpg
   description: Mangkok Batok Kelapa
+- photoURI: https://web-tj.netlify.app/images/mangkok-batok-kelapa-motif-bunga-tanjung-3.png
+  description: Mangkok batok kelapa
+- description: Mangkok batok kelapa
+  photoURI: https://web-tj.netlify.app/images/mangkok-batok-kelapa-motif-bunga-tanjung-2.png
 - photoURI: https://web-tj.netlify.app/images/mangkok-batok-kelapa-motif-bunga-tanjung-4.jpg
   description: Mangkok batok kelapa
 - description: Mangkok batok kelapa
