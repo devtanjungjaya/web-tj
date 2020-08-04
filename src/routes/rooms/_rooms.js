@@ -35,13 +35,20 @@ export const publicFacilityIconMap = {
 
 export const roomFacilityIconMap = {
     'Kloset duduk': 'ic_toilet.svg',
-    'Kamar mandi dalam': 'ic_toilet.svg',
+    'Kamar mandi dalam': 'ic_bathtub.svg',
     'Shower': 'ic_shower.svg',
     'Wastafel': 'ic_shink.svg',
     'Air panas': 'ic_fire.svg',
     'AC': 'ic_snowflake.svg',
     'Kipas angin': 'ic_fan.svg',
-    'Sofa': 'ic_sofa.svg'
+    'Sofa': 'ic_sofa.svg',
+    'Meja': 'ic_table.svg',
+    'Lemari': 'ic_wardrobe.svg',
+    'Kursi': 'ic_chair.svg',
+    'TV': 'ic_tv.svg',
+    'Kulkas': 'ic_fridge.svg',
+    'Kamar mandi luar': 'ic_bathtub.svg',
+    'Wifi': 'ic_wifi.svg'
 }
 
 export default map;
