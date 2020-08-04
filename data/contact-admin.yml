@@ -3,9 +3,10 @@ admins:
 - Admin Tanjungjaya
 - Admin Cikadu
 contacts:
-- admin: ''
+- admin: Admin Tanjungjaya
   contact:
-    phoneNumbers: []
+    phoneNumbers:
+    - '085210468664'
 - admin: Admin Cikadu
   contact:
     phoneNumbers:
