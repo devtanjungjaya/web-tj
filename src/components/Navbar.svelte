@@ -23,7 +23,26 @@
                 {/each}
             </div>
         </div>
-        <a>Transportasi</a>
+        <div class="relative group cursor-pointer">
+            <span class="group-hover:text-primary-7">Transportasi</span>
+            <div class="h-3 w-full absolute hidden group-hover:block"></div>
+            <div 
+                class={`absolute rounded-2xl border-neutral-1 border-1 p-4 mt-3 left-0 z-10 bg-white shadow-xl
+                hidden group-hover:flex flex-col space-y-2 overflow-y-auto`}
+                style="min-width: 125px"
+            >
+                {#each transportations as transportation}
+                    <a  
+                        rel="prefetch"
+                        class="font-overpass font-semibold text-neutral-7 text-lg mr-6 whitespace-no-wrap 
+                        hover:text-primary-7 w-full" 
+                        href={transportation.url}
+                    >
+                        {transportation.label}
+                    </a>
+                {/each}
+            </div>
+        </div>
         <a>Peta</a>
         <a>Kontak</a>
     </div>
@@ -49,7 +68,7 @@
 <ClickOutside on:clickoutside={() => open = false} exclude={[menu]}>
     <div 
         class="top-0 right-0 fixed w-auto h-screen flex flex-col justify-center pl-8 pr-16 text-center bg-white 
-        space-y-8 z-30 items-start" 
+        space-y-8 z-30 items-start overflow-y-auto" 
         transition:fly={{duration:150, x: 150}}
     >
         <div class="flex flex-col items-start">
@@ -68,12 +87,22 @@
                 {/each}
             </div>
         </div>
-        <a 
-            rel="prefetch"
-            class="font-overpass font-semibold text-primary-7 text-lg whitespace-no-wrap"
-        >
-            Transportasi
-        </a>
+        <div class="flex flex-col items-start">
+            <span class="font-bold font-overpass text-neutral-3 text-base text-left mb-2">TRANSPORTASI</span>
+            <div class="flex flex-col items-start space-y-2">
+                {#each transportations as transportation}
+                    <a 
+                        rel="prefetch"
+                        class="font-overpass font-semibold text-neutral-7 text-lg whitespace-no-wrap 
+                        hover:text-neutral-6" 
+                        href={transportation.url}
+                        on:click={() => open = false}
+                    >
+                        {transportation.label}
+                    </a>
+                {/each}
+            </div>
+        </div>
         <a 
             rel="prefetch"
             class="font-overpass font-semibold text-primary-7 text-lg whitespace-no-wrap"
@@ -128,6 +157,16 @@
         {
             label: "Penginapan",
             url: "rooms"
+        }
+    ]
+    const transportations = [
+        {
+            label: "Peta",
+            url: "transport"
+        },
+        {
+            label: "Jalur",
+            url: "transport/route"
         }
     ]
 </script>

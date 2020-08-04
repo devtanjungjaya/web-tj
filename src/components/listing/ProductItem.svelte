@@ -5,7 +5,7 @@
                 <Image 
                     imgClass="object-cover" 
                     src={photos.length ? photos[0].photoURI : ""} 
-                    alt={prices.length ? photos[0].description : ""} 
+                    alt={photos.length ? photos[0].description : ""} 
                 />
             </div>
             <div 
