@@ -3,7 +3,9 @@ coordinate:
   lat: -6.522424
   lng: 105.652944
 name: Curug Cisadang
-photos: []
+photos:
+- photoURI: ''
+  description: ''
 description: Curug Cisadang adalah salah satu air terjun di desa Tanjungjaya dengan
   keindahan yang mempesona. Suasana alam yang masih asri dan sepi pengunjung membuat
   betah berlama-lama menikmati air terjun ini. Airnya sejuk dan sangat menyegarkan.
