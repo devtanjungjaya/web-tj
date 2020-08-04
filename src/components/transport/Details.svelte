@@ -24,20 +24,20 @@
         kendaraan[tmp].prices.push(biaya)
     }
     
-    addDetails("KRL","Bogor (St. Bogor - St. Tanah Abang - St. Rangkasbitung)","Rp 14.000")
-    addDetails("KRL","Tangerang (St. Tangerang - St. Duri - St. Tanah Abang - St. Rangkasbitung)","Rp 15.000")
-    addDetails("KRL","Jakarta (St. Tanah Abang - St. Rangkasbitung)","Rp 8.000")
-    addDetails("KRL","Depok (St. Depok - St. Tanah Abang - St. Rangkasbitung)","Rp 20.000")
-    addDetails("KRL","Bekasi (St. Bekasi - St. Jatinegara - St. Duri - St. Tanah Abang - St. Rangkasbitung)","Rp 17.000")
-    addDetails("Damri","Bandara (Bandara Soetta - Terminal Kadubanen)","Rp 70.000")
-    addDetails("Damri","Serang (Terminal Pakupatan - Tanjung Lesung)","Rp 50.000")
-    addDetails("Damri","Merak (Terminal Merak - Tanjung Lesung)","Rp 50.000")
-    addDetails("Bus AC","Terminal Merak - Terminal Pakupatan","Rp 40.000")
-    addDetails("Bus Non-AC","Terminal Kalideres - Terminal Labuan","Rp 40.000")
-    addDetails("Angkot Rangkasbitung","Stasiun Rangkasbitung - Terminal Mandala","Rp 3.000")
-    addDetails("Angkot Mandala","Terminal Mandala - Terminal Pandeglang","Rp 10.000")
-    addDetails("ELF Minibus Non-AC","Terminal Pakupatan - Perempatan Citeureup","Rp 30.000")
-    addDetails("Ojek","Citeureup - Kampung Wisata Cikadu","Rp 15.000")
+    addDetails("KRL","Bogor (St. Bogor - St. Tanah Abang - St. Rangkasbitung)","14.000")
+    addDetails("KRL","Tangerang (St. Tangerang - St. Duri - St. Tanah Abang - St. Rangkasbitung)","15.000")
+    addDetails("KRL","Jakarta (St. Tanah Abang - St. Rangkasbitung)","8.000")
+    addDetails("KRL","Depok (St. Depok - St. Tanah Abang - St. Rangkasbitung)","20.000")
+    addDetails("KRL","Bekasi (St. Bekasi - St. Jatinegara - St. Duri - St. Tanah Abang - St. Rangkasbitung)","17.000")
+    addDetails("Damri","Bandara (Bandara Soetta - Terminal Kadubanen)","70.000")
+    addDetails("Damri","Serang (Terminal Pakupatan - Tanjung Lesung)","50.000")
+    addDetails("Damri","Merak (Terminal Merak - Tanjung Lesung)","50.000")
+    addDetails("Bus AC","Terminal Merak - Terminal Pakupatan","40.000")
+    addDetails("Bus Non-AC","Terminal Kalideres - Terminal Labuan","40.000")
+    addDetails("Angkot Rangkasbitung","Stasiun Rangkasbitung - Terminal Mandala","3.000")
+    addDetails("Angkot Mandala","Terminal Mandala - Terminal Pandeglang","10.000")
+    addDetails("ELF Minibus Non-AC","Terminal Pakupatan - Perempatan Citeureup","30.000")
+    addDetails("Ojek","Citeureup - Kampung Wisata Cikadu","15.000")
 </script>
 <style>
 
@@ -58,7 +58,7 @@
                     <li class="flex flex-row font-overpass items-center py-2">
                         <div class="h-3 w-3 mr-2 rounded-full bg-primary-8"></div>
                         <div class="w-2/3 mr-10"> {rute} </div> 
-                        <div class="w-1/4 font-overpass font-extrabold text-primary-8"> {transport.prices[i]}</div> 
+                        <div class="w-1/4 font-overpass font-extrabold text-primary-8"> Rp {transport.prices[i]}</div> 
                     </li>
                 {/each}
             </ul>
