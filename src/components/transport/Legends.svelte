@@ -74,7 +74,11 @@
                         <p class="float-right overflow-hidden">{layers[111+i].id}</p>
                     </label>
                 {:else}
-                    <label class='box flex flex-row py-2 px-2 hover:text-primary-7 hover:bg-neutral-2 align-middle text-neutral-5 font-bold border-2 items-center'  style="--theme-color: {color}; border-color: var(--theme-color);">
+                    <label 
+                        class='box flex flex-row py-2 px-2 hover:text-primary-7 hover:bg-neutral-2 align-middle 
+                        text-neutral-5 font-bold border-2 items-center'
+                        style="--theme-color: {color}; border-color: var(--theme-color);"
+                    >
                         <p class="overflow-hidden">{layers[111+i].id}</p>
                         <input type="checkbox" class= "opacity-0" on:change={changeFunc(layers[111+i].id,check[i])} bind:checked={check[i]}>
                     </label>
