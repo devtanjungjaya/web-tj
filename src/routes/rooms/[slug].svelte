@@ -72,8 +72,10 @@
  
    <svelte:component this={PhotosComponent} photos={data.photos} />
 
-   <div class="flex flex-col lg:flex-row space-y-6 lg:space-y-0 lg:space-x-10 xl:space-x-32 mt-10 sm:mt-20">
-      <div class="flex flex-col max-w-4xl">
+   <div 
+      class="flex flex-col lg:flex-row space-y-6 lg:space-y-0 lg:space-x-10 xl:space-x-32 lg:justify-between 
+      mt-10 sm:mt-20 max-w-7xl">
+      <div class="flex flex-col">
          {#if data.promotions && data.promotions.length}
             <Promotions promotions={data.promotions} />
          {/if}

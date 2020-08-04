@@ -51,7 +51,8 @@ module.exports = {
         '128': '32rem',
       },
       maxWidth: {
-        '2xs': '12.5rem'
+        '2xs': '12.5rem',
+        '7xl': '80rem'
       }
     },
     fontFamily: {
