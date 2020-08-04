@@ -18,7 +18,7 @@ fields:
     template: foto
     label: Foto
   config:
-    min: 
+    min: 1
     max: 
     labelField: description
   label: Foto-foto
@@ -54,7 +54,7 @@ fields:
     template: harga
     label: Harga
   config:
-    min: 
+    min: 1
     max: 
     labelField: description
   label: List harga
