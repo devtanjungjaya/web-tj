@@ -13,7 +13,11 @@ destinations = destinations.map(destination =>
     .map(destination => {
         return {
             ...destination,
-            promotions: processPromotions(destination.promotions || [])
+            promotions: processPromotions(destination.promotions || []),
+            photos: destination.photos.map(p => {
+                p.photoURI = p.photoURI.substring(p.photoURI.indexOf('images/'))
+                return p;
+            })
         };
     });
 export const map = new Map(destinations.map(destination => [destination.slug, destination]));

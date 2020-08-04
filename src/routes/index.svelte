@@ -1,10 +1,11 @@
 <script context="module">
     export function preload({ params, query }) {
+        const sitemap = this.fetch("sitemap.xml");
         return Promise.all([
             this.fetch("destinations.json"),
             this.fetch("tours.json"),
             this.fetch("products.json"),
-            this.fetch("rooms.json"),
+            this.fetch("rooms.json")
         ])
         .then(r => {
             return Promise.all(r.map(x => x.json()));
@@ -14,11 +15,16 @@
                 randomDestinations,
                 randomTours,
                 randomProducts,
-                randomRooms
+                randomRooms,
+                sitemap
             };
         });
     }
 </script>
+
+<svelte:head>
+    <title>Buffer Zone KEK Tanjung Lesung</title>
+</svelte:head>
 
 <div class="flex flex-col-reverse items-center sm:flex-row px-6 sm:px-8 md:px-16 py-6 sm:py-10 md:py-20">
     <div class="flex flex-col flex-shrink mr-auto justify-center items-start font-overpass">

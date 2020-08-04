@@ -24,7 +24,7 @@
          <Image 
             class="object-cover w-full h-full rounded-2xl"
             placeholderClass="object-cover w-full h-full rounded-2xl"
-            wrapperClass="skeleton-box rounded-2xl"
+            wrapperClass="skeleton-box rounded-2xl w-full h-full"
             ratio={imgRatio*100 + "%"}
             src={photo.photoURI} 
          />

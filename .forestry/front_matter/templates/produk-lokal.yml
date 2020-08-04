@@ -94,4 +94,7 @@ fields:
       path: admins
   label: Kontak admin
 pages:
-- content/products/set-alat-makan.md
+- content/products/kelompok-saung-centong/centong-nasi-kayu-jati.md
+- content/products/kelompok-saung-centong/set-alat-makan.md
+- content/products/kelompok-saung-centong/spatula-kayu-motif.md
+- content/products/kelompok-saung-centong/spatula-kayu-polos.md
