@@ -2,7 +2,7 @@
     import { Map, controls } from '@beyonk/svelte-mapbox';
     import Legends from "./Legends.svelte";
     const { GeolocateControl, NavigationControl, ScalingControl } = controls
-    const accToken = "pk.eyJ1IjoicHJhd2lyb2h0IiwiYSI6ImNrY240emwwYzA3c3EzNWxtNnphdWw3eXAifQ.2mr_hj5PC5uLIe5MLr2qBw";
+    const mapboxAccessToken = "MAPBOX_ACCESS_TOKEN";
     let map;
     let tmp;
 	export let center = { lat: -6.29776399217107, lng: 106.21788113715388};
@@ -140,10 +140,10 @@
         overflow: hidden;
     }
 </style>
-<div class='h-96 md:h-128 mapbox py-4 px-4 sm:px-8 md:px-16 flex flex-row'>
+<div class='h-64 sm:h-96 md:h-128 mapbox py-4 px-4 sm:px-8 md:px-16 flex flex-row'>
     <div class="map border-1 border-neutral-4">
         <Map 
-        accessToken = {accToken} 
+        accessToken = {mapboxAccessToken} 
         bind:this={map} 
         on:recentre={e => console.log(e.detail.center.lat, e.detail.center.lng) } 
         options = {{center,zoom:8}}
