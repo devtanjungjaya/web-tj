@@ -44,7 +44,7 @@
         </span>
     </div>
     <div 
-        class="items-center max-w-xs sm:max-w-sm w-full flex-grow mb-8 sm:ml-10 md:ml-16 sm:mb-0" 
+        class="items-center max-w-xs xs:max-w-sm xl:max-w-md w-full flex-grow mb-8 sm:ml-10 md:ml-16 sm:mb-0" 
         bind:clientWidth={width} 
         bind:clientHeight={height}
     >
