@@ -14,11 +14,11 @@ description: |-
 categories:
 - Kerajinan
 prices:
-- description: Motif termahal
-  value: 300000
-  unit: pcs
 - description: Motif termurah
   value: 150000
+  unit: pcs
+- description: Motif termahal
+  value: 300000
   unit: pcs
 promotions: []
 notes: ''
