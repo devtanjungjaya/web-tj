@@ -26,17 +26,18 @@ fields:
   type: textarea
   default: ''
   config:
-    required: false
-    wysiwyg: false
+    required: true
+    wysiwyg: true
     schema:
       format: markdown
   label: Deskripsi
-  description: Deskripsi produk secara lengkap yang menarik
+  description: Deskripsi produk secara lengkap dan menarik. Misalnya menjelaskan ukuran,
+    berat, bahan, dsb.
 - name: categories
   type: list
   config:
     use_select: true
-    min: 
+    min: 1
     max: 
     source:
       type: documents
