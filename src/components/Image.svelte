@@ -41,8 +41,7 @@
     ${wrapperClass} ${error ? 'bg-neutral-1' : ''}`}
 >
     <img
-        class={`${error ? 'h-10 w-10' : 'w-full h-full'} ${imgClass}`}
-        class:invisible={!loaded}
+        class={`${error ? 'h-10 w-10' : 'w-full h-full'} ${imgClass} ${loaded ? '' : 'invisible'}`}
         {alt}
         use:lazy={{ src }}
     />
