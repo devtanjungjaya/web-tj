@@ -7,7 +7,8 @@
       const neighborhood = await this.fetch('https://api.mapbox.com/geocoding/v5/mapbox.places/' + 
          `${data.coordinate.lng},${data.coordinate.lat}.json?` +
          `access_token=${mapboxAccessToken}&types=neighborhood`
-      ).then(r => r.json()).then(d => d.features[0]['place_name']);
+      ).then(r => r.json()).then(d => d.features.length ? d.features[0]['place_name'] : 
+         'Buffer Zone KEK Tanjung Lesung');
       return {
          data,
          neighborhood

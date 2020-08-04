@@ -6,8 +6,7 @@
 
 <div class="container-inner mx-auto py-16 text-center">
     <h1
-        class="text-2xl font-display font-bold border-b-4 border-orange-600 inline
-        p-4">
+        class="text-2xl font-overpass font-bold text-neutral-4 inline p-4">
         {status}
     </h1>
     <p>{error.message}</p>
