@@ -41,9 +41,6 @@ sections:
   path: data/promotion.yml
   label: Promosi
 - type: document
-  path: data/contact.yml
-  label: Kontak
-- type: document
   path: data/contact-admin.yml
   label: Kontak admin
 - type: heading
