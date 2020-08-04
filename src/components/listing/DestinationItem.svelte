@@ -4,7 +4,7 @@
             class="hover:shadow-md flex flex-col rounded-2xl overflow-hidden absolute 
             w-full h-full"
         >
-            <div class="product-img h-0 min-w-0 min-h-0">
+            <div class="h-0 min-w-0 min-h-0" style="flex-basis: 70%">
                 <Image 
                     imgClass="object-cover" 
                     src={photos.length ? photos[0].photoURI : ""} 
