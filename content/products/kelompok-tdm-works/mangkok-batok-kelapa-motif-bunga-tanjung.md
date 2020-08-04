@@ -3,7 +3,11 @@ contact: Admin Tanjungjaya
 name: Mangkok Batok Kelapa Motif Bunga Tanjung
 photos:
 - photoURI: https://web-tj.netlify.app/images/mangkok-batok-kelapa-motif-bunga-tanjung-1.jpg
-  description: ''
+  description: Mangkok Batok Kelapa
+- photoURI: https://web-tj.netlify.app/images/mangkok-batok-kelapa-motif-bunga-tanjung-3.png
+  description: Mangkok batok kelapa
+- description: Mangkok batok kelapa
+  photoURI: https://web-tj.netlify.app/images/mangkok-batok-kelapa-motif-bunga-tanjung-2.png
 description: |-
   Mangkok yang terbuat dari bahan batok kelapa berkualitas ekspor. Produk ini dibuat oleh para pengrajin terampil di destinasi wisata Tanjung Lesung.
 
