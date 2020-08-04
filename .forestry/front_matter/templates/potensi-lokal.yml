@@ -1,0 +1,19 @@
+---
+label: Potensi lokal
+hide_body: true
+fields:
+- type: field_group_list
+  name: potencies
+  label: potencies
+  fields:
+  - type: text
+    name: title
+    label: title
+  - type: textarea
+    name: content
+    label: content
+  - type: file
+    name: image
+    label: image
+pages:
+- data/potency.yml

@@ -14,16 +14,19 @@
    import Decorator from "../../components/Decorator.svelte";
    import Contact from "../../components/Item/Contact.svelte";
    import Header from "../../components/Item/Header.svelte";
-   import Photos from "../../components/Item/Photos.svelte";
    import Prices from "../../components/Item/Prices.svelte";
    import Link from "../../components/Item/Link.svelte";
    import Promotions from "../../components/Item/Promotions.svelte";
    import { onMount } from "svelte";
 
    let DOMPurify = null;
+   let PhotosComponent;
 
    onMount(async () => {
       DOMPurify = await import('dompurify');
+
+      const photosModule = await import("../../components/Item/Photos.svelte");
+      PhotosComponent = photosModule.default;
    })
 
    export let data;
@@ -40,10 +43,10 @@
    <meta property="og:title" content={title} />
    <meta property="og:type" content="website" />
    <meta property="og:description" content={description} />
-   <meta property="og:image" content={data.photos[0].photoURI} />
+   <meta property="og:image" content={data.photos.length ? data.photos[0].photoURI : ''} />
    <meta name="twitter:title" content={title}>
    <meta name="twitter:description" content={description}>
-   <meta name="twitter:image" content={data.photos[0].photoURI}>
+   <meta name="twitter:image" content={data.photos.length ? data.photos[0].photoURI : ''}>
 </svelte:head>
 
 <div class="px-4 sm:px-8 md:px-16 py-6 sm:py-12 flex flex-col">
@@ -54,7 +57,7 @@
       categories={data.categories}
    />
  
-   <Photos photos={data.photos} />
+   <svelte:component this={PhotosComponent} photos={data.photos} />
 
    <div class="flex flex-col lg:flex-row space-y-6 lg:space-y-0 lg:space-x-10 xl:space-x-32 mt-10 sm:mt-20">
       <div class="flex flex-col flex-grow max-w-4xl">
@@ -65,9 +68,7 @@
             <p class="font-open-sans text-neutral-5 text-lg sm:text-xl prose">
                {@html DOMPurify.sanitize(data.description)}
             </p>
-            <Decorator />
          {/if}
-         <Contact {...data.contact} name="Silahkan hubungi admin untuk membeli atau informasi lebih lanjut" />
          {#if data.notes && DOMPurify}
             <Decorator />
             <div class="flex flex-col font-overpass">
@@ -83,6 +84,7 @@
          <!-- {#if data.ecommerce}
             <Link url={data.ecommerce} icon="ic_ecommerce.svg" label="Tautan toko daring" />
          {/if} -->
+         <Contact {...data.contact} name="Silahkan hubungi admin untuk membeli atau informasi lebih lanjut" />
       </div>
    </div>
 </div>

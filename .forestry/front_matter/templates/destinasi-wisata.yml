@@ -17,7 +17,7 @@ fields:
     template: foto
     label: Foto
   config:
-    min: 
+    min: 1
     max: 
     labelField: description
   label: Foto-foto
@@ -57,7 +57,7 @@ fields:
     template: harga
     label: Harga
   config:
-    min: 
+    min: 1
     max: 
     labelField: description
   label: List harga
@@ -122,4 +122,9 @@ fields:
   label: Catatan
   description: Catatan untuk pengunjung atau yang lainnya
 pages:
-- content/destinations/pantai-cikadu.md
+- content/destinations/curug-cisadang.md
+- content/destinations/pantai-blue-ocean.md
+- content/destinations/pantai-cibiuk.md
+- content/destinations/pantai-cikujang.md
+- content/destinations/pantai-cipanon.md
+- content/destinations/pantai-cipenyu.md

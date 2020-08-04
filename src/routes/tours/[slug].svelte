@@ -14,7 +14,6 @@
    import Decorator from "../../components/Decorator.svelte";
    import Contact from "../../components/Item/Contact.svelte";
    import Header from "../../components/Item/Header.svelte";
-   import Photos from "../../components/Item/Photos.svelte";
    import Prices from "../../components/Item/Prices.svelte";
    import Link from "../../components/Item/Link.svelte";
    import Facilities from "../../components/Item/Facilities.svelte";
@@ -22,9 +21,13 @@
    import { onMount } from "svelte";
 
    let DOMPurify = null;
+   let PhotosComponent;
 
    onMount(async () => {
       DOMPurify = await import('dompurify');
+
+      const photosModule = await import("../../components/Item/Photos.svelte");
+      PhotosComponent = photosModule.default;
    })
 
    export let data;
@@ -42,10 +45,10 @@
    <meta property="og:title" content={title} />
    <meta property="og:type" content="website" />
    <meta property="og:description" content={description} />
-   <meta property="og:image" content={data.photos[0].photoURI} />
+   <meta property="og:image" content={data.photos.length ? data.photos[0].photoURI : ''} />
    <meta name="twitter:title" content={title}>
    <meta name="twitter:description" content={description}>
-   <meta name="twitter:image" content={data.photos[0].photoURI}>
+   <meta name="twitter:image" content={data.photos.length ? data.photos[0].photoURI : ''}>
 </svelte:head>
 
 <div class="px-4 sm:px-8 md:px-16 py-6 sm:py-12 flex flex-col">
@@ -56,7 +59,7 @@
       categories={data.categories}
    />
  
-   <Photos photos={data.photos} />
+   <svelte:component this={PhotosComponent} photos={data.photos} />
 
    <div class="flex flex-col lg:flex-row space-y-6 lg:space-y-0 lg:space-x-10 xl:space-x-32 mt-10 sm:mt-20">
       <div class="flex flex-col max-w-4xl">
@@ -79,8 +82,6 @@
             <Decorator />
          {/if}
          <Facilities facilities={data.facilities} iconMap={data.facilityIconMap} />
-         <Decorator />
-         <Contact {...data.contact} name="Silahkan hubungi admin untuk membeli atau informasi lebih lanjut" />
          {#if data.notes && DOMPurify}
             <Decorator />
             <div class="flex flex-col font-overpass">
@@ -93,6 +94,7 @@
       </div>
       <div class="flex flex-col flex-shrink-0 self-start max-w-full space-y-6" style="width: 375px">
          <Prices prices={data.prices} />
+         <Contact {...data.contact} name="Silahkan hubungi admin untuk membeli atau informasi lebih lanjut" />
       </div>
    </div>
 </div>

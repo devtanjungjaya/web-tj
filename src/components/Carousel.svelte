@@ -35,6 +35,8 @@
     {/if}
 </div>
 
+<svelte:window bind:innerWidth={innerWidth} />
+
 <style>
 	.carousel {
 		position: relative;
@@ -73,6 +75,7 @@
 
 <script>
 	import { onMount, createEventDispatcher, tick } from 'svelte'
+	const dispatch = createEventDispatcher()
 	
 	export let perPage = 3
 	export let autoplay = 0
@@ -87,14 +90,15 @@
 	export let rtl = false
 	let currentIndex = startIndex;
 	
+	let innerWidth;
 	let siema
 	let controller;
 	let timer
-	const dispatch = createEventDispatcher()
+	
 	$: pips = controller ? controller.innerElements : []
-	$: currentPerPage = controller ? controller.perPage : perPage
-	$: totalDots = controller ? Math.ceil(controller.innerElements.length / currentPerPage) : []
-
+	$: currentPerPage = controller ? itemPerPage(innerWidth) : 0;
+	$: totalDots = controller && currentPerPage ? controller.innerElements.length - (currentPerPage-1) : 0
+	$: if(innerWidth && controller) currentIndex = controller.currentSlide
 	$: if(controller) dispatch("controller");
 
 	onMount(async () => {
@@ -123,7 +127,7 @@
 	})
 	export function isDotActive (currentIndex, dotIndex) {
         if (currentIndex < 0) currentIndex = pips.length + currentIndex;
-        return currentIndex >= dotIndex*currentPerPage && currentIndex < (dotIndex*currentPerPage)+currentPerPage
+        return currentIndex === dotIndex;
     }
 	
 	export function left () {
@@ -156,4 +160,11 @@
 			slideCount: controller.innerElements.length
 		} )
 	}
+	function itemPerPage(screenWidth) {
+		const photos = controller.innerElements.length;
+		if(screenWidth >= 1600) return photos >= 4 ? 4 : 3;
+		else if(screenWidth >= 1024) return photos >= 3 ? 3 : 2
+		else if(screenWidth >= 768) return photos >= 2 ? 2 : 1;
+		else return 1;
+   	}
 </script>

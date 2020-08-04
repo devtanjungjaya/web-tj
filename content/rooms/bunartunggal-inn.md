@@ -1,5 +1,5 @@
 ---
-category: Lainya
+category: Lainnya
 coordinate:
   lat: -6.50556
   lng: 105.66955

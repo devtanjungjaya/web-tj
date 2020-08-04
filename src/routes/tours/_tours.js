@@ -15,7 +15,11 @@ tours = tours.map(tour =>
         return {
             ...tour,
             promotions: processPromotions(tour.promotions || []),
-            contact: adminContactsMap.get(tour.contact)
+            contact: adminContactsMap.get(tour.contact),
+            photos: tour.photos.map(p => {
+                p.photoURI = p.photoURI.substring(p.photoURI.indexOf('images/'))
+                return p;
+            })
         };
     });
 export const map = new Map(tours.map(tour => [tour.slug, tour]));

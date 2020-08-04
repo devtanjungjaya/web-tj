@@ -1,32 +1,25 @@
 <Carousel
-   bind:this={carousel}
    perPage={{
       1600: photos.length >= 4 ? 4 : 3,
       1024: photos.length >= 3 ? 3 : 2, 
       768: photos.length >= 2 ? 2 : 1 
    }} 
-   on:init={() => {
-      showPhoto = true;
-   }}
    on:controller={() => {
-      initialize = true;
-      updateImgRatio();
+      showPhoto = true;
    }}
 >
    {#each photos as photo, i}
       <div 
-         class="px-1 sm:px-4"
-         class:invisible={!showPhoto}
+         class={`px-1 sm:px-4 ${showPhoto ? '' : 'invisible'}`}
          style={`height: ${imgHeight(innerWidth)}px`}
          on:mousedown={handleMouseDown}
          on:mouseup={e => handleMouseUp(e, i)}
       >
          <Image 
-            class="object-cover w-full h-full rounded-2xl"
-            placeholderClass="object-cover w-full h-full rounded-2xl"
-            wrapperClass="skeleton-box rounded-2xl"
-            ratio={imgRatio*100 + "%"}
-            src={photo.photoURI} 
+            imgClass="object-cover rounded-2xl"
+            wrapperClass="rounded-2xl"
+            src={photo.photoURI}
+            alt={photo.description}
          />
       </div>
    {/each}
@@ -55,7 +48,7 @@
 <script>
    import Carousel from '../../components/Carousel.svelte';
    import PhotoDetail from "./PhotoDetail.svelte";
-   import Image from "svelte-image";
+   import Image from '../Image.svelte';
 
    export let photos;
 
@@ -66,28 +59,6 @@
    let initialIndex = null;
    let innerWidth;
    let showPhoto = false;
-   let carousel;
-   let imgRatio = 100;
-   let initialize = false;
-
-   $: if(initialize && innerWidth) updateImgRatio();
-
-   function updateImgRatio() {
-      if(!carousel && !carousel.width()) return;
-      imgRatio = imgHeight(innerWidth) / ((carousel.width() / itemPerPage()) - padding());
-   }
-
-   function itemPerPage() {
-      if(innerWidth >= 1600) return photos.length >= 4 ? 4 : 3;
-      else if(innerWidth >= 1024) return photos.length >= 3 ? 3 : 2
-      else if(innerWidth >= 768) return photos.length >= 2 ? 2 : 1;
-      else return 1;
-   }
-
-   function padding() {
-      if(innerWidth >= 640) return 32;
-      else return 8;
-   }
 
    function imgHeight(width) {
       return width >= 640 ? 360 : 250;
