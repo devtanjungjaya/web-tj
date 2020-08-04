@@ -25,7 +25,6 @@
     <div 
         class="md:px-3 w-full flex items-center justify-center absolute" 
         style="top: 40%; transform: translateY(-40%)"
-        bind:clientWidth={clientWidth}
     >
         <Carousel 
             perPage="1" 
@@ -41,10 +40,10 @@
                 style="height: 60vh"    
             >
                 <Image
-                    class="object-contain w-full h-full"
-                    placeholderClass="object-contain w-full h-full"
+                    imgClass="object-contain"
+                    size="h-full"
                     src={photo.photoURI}
-                    ratio={0.6 * innerHeight / clientWidth * 100 + "%"}
+                    alt={photo.description}
                 />
             </div>
             {/each}
@@ -58,10 +57,9 @@
     </span>
 </div>
 
-<svelte:window bind:innerHeight={innerHeight} />
 
 <script>
-    import Image from "svelte-image";
+    import Image from "../Image.svelte";
     import Carousel from "../Carousel.svelte";
     import { fly } from "svelte/transition";
     import { createEventDispatcher } from "svelte";
@@ -71,6 +69,4 @@
     export let initialIndex = 0;
 
     let currentIndex = initialIndex;
-    let clientWidth = 0;
-    let innerHeight = 0;
 </script>

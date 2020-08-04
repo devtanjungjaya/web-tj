@@ -6,12 +6,9 @@
         >
             <div class="product-img h-0 min-w-0 min-h-0">
                 <Image 
-                    class="object-cover w-full h-full"
-                    placeholderClass="w-full h-full object-cover"
-                    wrapperClass="w-full h-full skeleton-box"
-                    ratio="68.75%"
-                    src={photos[0].photoURI} 
-                    alt=""
+                    imgClass="object-cover" 
+                    src={photos.length ? photos[0].photoURI : ""} 
+                    alt={prices.length ? photos[0].description : ""} 
                 />
             </div>
             <div 
@@ -49,7 +46,7 @@
 
 <script>
     import formatRupiah from "../../utilities/currency";
-    import Image from "svelte-image";
+    import Image from '../Image.svelte';
 
     export let photos;
     export let name;
@@ -58,5 +55,5 @@
     export let slug;
     export let promotions = [];
 
-    $: price = formatRupiah(prices[0].value)
+    $: price = prices.length ? formatRupiah(prices[0].value) : "";
 </script>
