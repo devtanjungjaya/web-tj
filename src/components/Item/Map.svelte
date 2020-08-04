@@ -1,7 +1,7 @@
 <div class="relative h-0 w-full" style="padding-bottom: 70%">
     <div class="rounded-2xl overflow-hidden w-full h-full absolute bg-neutral-1">
         <Map
-            accessToken="pk.eyJ1IjoiZGV2dGFuanVuZ2pheWEiLCJhIjoiY2tjbTVpeTJuMmMwdDJ6bnh1cXBrc2N5ZSJ9.ROBeH7kg57aIpTHigEusmg"
+            accessToken={mapboxAccessToken}
             style="mapbox://styles/devtanjungjaya/ckcoyb0ow01461jo71ghluyok"
             options={{
                 center: [lng, lat],
@@ -18,4 +18,6 @@
 
     export let lat;
     export let lng;
+
+    const mapboxAccessToken = "MAPBOX_ACCESS_TOKEN";
 </script>

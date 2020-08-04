@@ -1,11 +1,20 @@
 <a rel="prefetch" href={`rooms/${slug}`}>
-    <div class="h-0 relative w-full" style="padding-bottom: 122%">
+    <div class="h-0 relative w-full" style="padding-bottom: 125%">
         <div 
-            class="hover:shadow-md flex flex-col rounded-2xl border-1 border-neutral-1 overflow-hidden absolute 
+            class="hover:shadow-md flex flex-col rounded-2xl overflow-hidden absolute 
             w-full h-full"
         >
-            <img class="product-img h-0 object-cover bg-neutral-1 min-w-0 min-h-0" src={photos[0]} alt={name}/>
-            <div class="p-2 sm:p-3 flex-grow flex flex-col">
+            <div class="product-img h-0 min-w-0 min-h-0">
+                <Image 
+                    imgClass="object-cover" 
+                    src={photos.length ? photos[0].photoURI : ""} 
+                    alt={photos.length ? photos[0].description : ""} 
+                />
+            </div>
+            <div 
+                class="p-2 sm:p-3 flex-grow flex flex-col border-1 border-t-0 border-neutral-1
+                rounded-2xl rounded-t-none"
+            >
                 <span 
                     class="font-bold font-overpass text-primary-7 leading-none sm:leading-tight 
                     text-base xs:text-lg max-line-2"
@@ -14,32 +23,37 @@
                 </span>
                 <span 
                     class="font-overpass font-normal text-neutral-3 flex-grow 
-                    text-xs xs:text-base max-line-1"
+                    text-sm xs:text-base max-line-1"
                 >
-                    {categories.join(", ")}
+                    {category}
                 </span>
-                <span class="self-end font-overpass font-bold text-neutral-9 text-xs xs:text-base">
+                <span class="self-end font-overpass font-bold text-neutral-9 text-sm xs:text-base">
                     {price}
                 </span>
             </div>
         </div>
+        {#if promotions.length}
+        <span 
+            class="bg-primary-7 py-2 xs:py-3 px-1 xs:px-2 top-0 absolute font-overpass font-bold text-white 
+            rounded-b-lg text-sm xs:text-base shadow-lg" 
+            style="right: 1.5rem"
+        >
+            Promo
+        </span>
+        {/if}
     </div>
 </a>
 
-<style type="text/postcss">
-.product-img {
-    flex-basis: 60%;
-}
-</style>
-
 <script>
     import formatRupiah from "../../utilities/currency";
+    import Image from '../Image.svelte';
 
     export let photos;
     export let name;
-    export let categories;
+    export let category;
     export let prices;
     export let slug;
+    export let promotions = [];
 
-    $: price = formatRupiah(prices[0].value)
+    $: price = prices.length ? formatRupiah(prices[0].value) : "";
 </script>

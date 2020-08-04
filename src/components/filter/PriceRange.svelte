@@ -1,77 +1,164 @@
-<script context="module">
-    const store = {};
-</script>
-
 <div class="flex flex-col sm:flex-row sm:space-x-3 items-start sm:items-center">
     <div class="flex flex-col space-y-1 mb-3 sm:mb-0 w-full sm:max-w-2xs">
         <span class="ml-4 font-overpass font-normal text-neutral-3 text-lg">min harga</span>
-        <input
+        <span
             class="border-1 rounded-lg border-neutral-1 focus:border-primary-7 px-4 py-2 
-            font-overpass font-semibold text-primary-7 outline-none box-border text-xl sm:max-w-2xs"
-            spellcheck="false"
-            type="text" 
-            on:input={event => {
-                edit = 1;
-                min = formatRupiah(event.target.value);
-            }} 
-            value={min} 
-        />
+            font-overpass font-semibold text-primary-7 outline-none box-border text-xl md:w-48"
+        >
+            {formatRupiah($filter[type+label].min)}
+        </span>
     </div>
     <div class="bg-neutral-1 mb-6 self-end hidden sm:block" style="height: 1px; width: 20px"></div>
     <div class="flex flex-col space-y-1 w-full sm:max-w-2xs">
         <span class="ml-4 font-overpass font-normal text-neutral-3 text-lg">max harga</span>
-        <input
+        <span
             class="border-1 rounded-lg border-neutral-1 focus:border-primary-7 px-4 py-2 
-            font-overpass font-semibold text-primary-7 outline-none box-border text-xl sm:max-w-2xs"
-            spellcheck="false"
-            type="text" 
-            on:input={event => {
-                edit = 2;
-                max = formatRupiah(event.target.value);
-            }} 
-            value={max} 
-        />
+            font-overpass font-semibold text-primary-7 outline-none box-border text-xl md:w-48"
+        >
+            {formatRupiah($filter[type+label].max)}
+        </span>
     </div>
 </div>
+
+<div class="px-3 md:px-1 w-full">
+<div 
+    class="h-1 w-full bg-neutral-1 mt-8 rounded-lg relative" 
+    bind:this={bar}
+>
+    <div
+        class="h-full bg-primary-6 rounded-lg absolute"
+        style={`left: ${knob.min}px; width: ${knob.max-knob.min}px`}
+    />
+    <div 
+        class="rounded-full bg-primary-7 h-6 w-6 absolute cursor-pointer hover:shadow-lg"
+        style={`top: 50%; transform: translateY(-50%); left: calc(${knob['min']}px - 0.625rem)`}
+        on:touchstart|self|preventDefault={_ => pressed['min'] = true}
+        on:mousedown|self|preventDefault={_ => pressed['min'] = true}
+    />
+    <div
+        class="rounded-full bg-primary-7 h-6 w-6 absolute cursor-pointer hover:shadow-lg"
+        style={`top: 50%; transform: translateY(-50%); left: calc(${knob['max']}px - 0.625rem)`}
+        on:touchstart|self|preventDefault={_ => pressed['max'] = true}
+        on:mousedown|self|preventDefault={_ => pressed['max'] = true}
+    />
+</div>
+</div>
+
+<svelte:body
+    on:mouseup={_ => pressed = {min: false, max: false}}
+    on:touchend={_ => pressed = {min: false, max: false}}
+    on:mousemove|stopPropagation={handleKnobMove}
+    on:touchmove|stopPropagation={handleKnobMove}
+/>
 
 <script>
     import formatRupiah from "../../utilities/currency";
     import { createEventDispatcher, onMount } from 'svelte';
+    import { filter } from '../../stores';
     const dispatch = createEventDispatcher();
+    const interval = 10000;
+    const distanceUnit = 1;
+    const distance = interval*distanceUnit;
 
-    export let maxPrice;
+    export let maxPrice = 1000000;
+    let roundedMaxPrice = Math.round(maxPrice/interval)*interval;
     export let type;
+    export let label;
+    export let visible = true;
 
-    let minValue = 1;
-    let maxValue = maxPrice || 1000000;
-    let min = (store[type] && store[type].min) || formatRupiah(minValue);
-    let max = (store[type] && store[type].max) || formatRupiah(maxValue);
-
-    let edit = null;
-
-    onMount(() => {
-        filter(minValue, maxValue);
-    })
-
-    $: store[type] = { min, max };
-    $: {
-        minValue = parseInt(min.replace(/[^,\d]/g, ""));
-        maxValue = parseInt(max.replace(/[^,\d]/g, ""));
-        if(maxValue < minValue && edit === 1) max = min;
-        else if(maxValue < minValue && edit === 2) min = max;
-        edit = null;
+    if($filter[type+label] === undefined) $filter[type+label] = {
+        min: 0,
+        max: roundedMaxPrice
     }
 
-    $: filter(minValue, maxValue)
+    let knob = {min: 0, max: 0};
+    let knobWidth = 0;
+    let knobLeft = 0;
+    let knobRight = 0;
+    let bar;
+    let pressed = {min: false, max: false};
+    let dispatchTimeout = null;
 
-    function filter(fMin, fMax) {
+    onMount(() => {
+        dispatchFilter($filter[type+label].min, $filter[type+label].max);
+    })
+
+    $: roundedMaxPrice = Math.round(maxPrice/interval)*interval;
+    $: if(visible && bar) {
+        const rect = bar.getBoundingClientRect(); 
+        knobWidth = rect.width;
+        knobLeft = rect.left;
+        knobRight = rect.right;
+    }
+    $: updateKnob($filter[type+label], knobWidth)
+    $: dispatchTimeout = setTimeout(() => {
+        dispatchFilter($filter[type+label].min, $filter[type+label].max);
+    }, 500);
+
+    function dispatchFilter(fMin, fMax) {
         dispatch('filter', {
-            type: 'price',
-            filter: !isNaN(fMin) && !isNaN(fMax) && (fMin > 1 || fMax < maxPrice) ? (items) => {
+            type: label,
+            filter: !isNaN(fMin) && !isNaN(fMax) && (fMin > 1 || fMax < roundedMaxPrice) ? (items) => {
                 return items.filter(item => 
                     item.prices.some(price => price.value >= fMin && price.value <= fMax)
                 );
             } : null
         });
+    }
+
+    function handleKnobMove(e) {
+        if(!pressed.min && !pressed.max) return;
+        if(dispatchTimeout) {
+            clearTimeout(dispatchTimeout);
+            dispatchTimeout = null;
+        }
+        const pressedKnob = knob[pressed.min ? 'min' : 'max'];
+
+        let x = e.clientX || e.touches[0].clientX;
+        
+        const step = valueToKnob(interval, knobWidth);
+        
+        if(pressed.min && (x - knobLeft) >= knob.max - (step * distanceUnit)) {
+            const roundedKnob = $filter[type+label].max - (interval * distanceUnit);
+            x = valueToKnob(roundedKnob, knobWidth) + knobLeft;
+        }else if(pressed.max && (x - knobLeft) <= knob.min + (step * distanceUnit)) {
+            const roundedKnob = $filter[type+label].min + (interval * distanceUnit);
+            x = valueToKnob(roundedKnob, knobWidth) + knobLeft;
+        }
+        if(x < knobLeft) x = knobLeft;
+        if(x > knobRight) x = knobRight;
+
+        const newValue = Math.round(knobToValue(x - knobLeft, knobWidth)/interval)*interval;
+        if(pressed.min) {
+            $filter[type+label] = {
+                ...$filter[type+label],
+                min: Math.max(newValue, 0),
+            }
+        } else {
+            $filter[type+label] = {
+                ...$filter[type+label],
+                max: Math.min(newValue, roundedMaxPrice)
+            }
+        }
+    }
+
+    function updateKnob(value, width) {
+        const step = valueToKnob(interval, width);
+        knob = {
+            min: valueToKnob(Math.round(value.min/step)*step, width),
+            max: valueToKnob(Math.round(value.max/step)*step, width)
+        }
+    }
+
+    function valueToKnob(value, width) {
+        return map(value, 0, roundedMaxPrice, 0, width);
+    }
+
+    function knobToValue(knob, width) {
+        return map(knob, 0, width, 0, roundedMaxPrice);
+    }
+
+    function map(input, inputStart, inputEnd, outputStart, outputEnd) {
+        return outputStart + ((outputEnd - outputStart) / (inputEnd - inputStart)) * (input - inputStart);
     }
 </script>

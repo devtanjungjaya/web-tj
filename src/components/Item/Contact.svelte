@@ -1,5 +1,5 @@
-<div class="flex flex-col font-overpass">
-    <span class="font-bold text-neutral-5 text-2xl sm:text-3xl">{name}</span>
+<div class="flex flex-col border-1 border-neutral-1 rounded-2xl p-5 font-overpass">
+    <span class="font-bold text-neutral-5 text-lg sm:text-xl leading-tight max-w-sm">{name}</span>
     <div class="flex flex-col mt-6 space-y-6">
         {#each phoneNumbers as phoneNumber, i}
             <div class="flex items-center space-x-3 sm:space-x-6">

@@ -1,0 +1,42 @@
+---
+label: Promosi
+hide_body: true
+fields:
+- name: promotions
+  type: list
+  config:
+    use_select: false
+    min: 
+    max: 
+  label: List promosi
+- name: descriptions
+  type: field_group_list
+  fields:
+  - name: promotion
+    type: select
+    default: []
+    config:
+      required: false
+      options: []
+      source:
+        type: documents
+        section: promosi
+        file: data/promotion.yml
+        path: promotions
+    label: Kode promosi
+  - name: description
+    type: textarea
+    default: ''
+    config:
+      required: false
+      wysiwyg: true
+      schema:
+        format: markdown
+    label: Deskripsi
+  config:
+    min: 
+    max: 
+    labelField: promotion
+  label: Deskripsi promosi
+pages:
+- data/promotion.yml

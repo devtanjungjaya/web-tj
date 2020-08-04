@@ -1,5 +1,5 @@
 <div class="carousel">
-	<div class="slides" bind:this={siema}>
+	<div bind:this={siema}>
 		<slot></slot>
 	</div>
 	{#if controls}
@@ -7,7 +7,7 @@
 			<img 
 				src="ic_left.svg"
 				alt="left-carousel"
-				class="rounded-full bg-white shadow-md cursor-pointer control left p-4" 
+				class="rounded-full bg-white shadow-md cursor-pointer control left p-4 hidden sm:block" 
 				on:click={left} 
 			/>
 		{/if}
@@ -16,19 +16,26 @@
 			<img 
 				src="ic_right.svg" 
 				alt="right-carousel"
-				class="rounded-full bg-white shadow-md cursor-pointer control right p-4" 
+				class="rounded-full bg-white shadow-md cursor-pointer control right p-4 hidden sm:block" 
 				on:click={right} 
 			/>
 		{/if}
 	{/if}
-    {#if dots}
+    {#if dots && totalDots > 1}
 	<ul>
 		{#each {length: totalDots} as _, i}
-			<li on:click={() => go(i*currentPerPage)} class={isDotActive(currentIndex, i) ? "active" : ""}></li>
+			<li
+				on:click={() => go(i*currentPerPage)} 
+				class={"m-1 rounded-full h-2 w-2 cursor-pointer " + 
+				(isDotActive(currentIndex, i) ? "bg-primary-6" : 
+				"hover:opacity-100 opacity-50 bg-neutral-1")}
+			></li>
 		{/each}
 	</ul>
     {/if}
 </div>
+
+<svelte:window bind:innerWidth={innerWidth} />
 
 <style>
 	.carousel {
@@ -64,23 +71,11 @@
 		margin-top: -30px;
 		padding: 0;
 	}
-	ul li {
-		margin: 6px;
-		border-radius: 100%;
-		background-color: rgba(255,255,255,0.5);
-		height: 8px;
-		width: 8px;
-	}
-	ul li:hover {
-		background-color: rgba(255,255,255,0.85);
-	}
-	ul li.active {
-		background-color: rgba(255,255,255,1);
-	}
 </style>
 
 <script>
 	import { onMount, createEventDispatcher, tick } from 'svelte'
+	const dispatch = createEventDispatcher()
 	
 	export let perPage = 3
 	export let autoplay = 0
@@ -95,14 +90,17 @@
 	export let rtl = false
 	let currentIndex = startIndex;
 	
+	let innerWidth;
 	let siema
-	let controller
+	let controller;
 	let timer
-	const dispatch = createEventDispatcher()
-	$: pips = controller ? controller.innerElements : []
-	$: currentPerPage = controller ? controller.perPage : perPage
-	$: totalDots = controller ? Math.ceil(controller.innerElements.length / currentPerPage) : []
 	
+	$: pips = controller ? controller.innerElements : []
+	$: currentPerPage = controller ? itemPerPage(innerWidth) : 0;
+	$: totalDots = controller && currentPerPage ? controller.innerElements.length - (currentPerPage-1) : 0
+	$: if(innerWidth && controller) currentIndex = controller.currentSlide
+	$: if(controller) dispatch("controller");
+
 	onMount(async () => {
         const { default: s } = await import('siema');
 		controller = new s({
@@ -114,7 +112,8 @@
   			draggable,
  			multipleDrag,
   			threshold,
-  			rtl,
+			rtl,
+			onInit: () => { dispatch("init") },  
 			onChange: handleChange
         })
 		
@@ -128,7 +127,7 @@
 	})
 	export function isDotActive (currentIndex, dotIndex) {
         if (currentIndex < 0) currentIndex = pips.length + currentIndex;
-        return currentIndex >= dotIndex*currentPerPage && currentIndex < (dotIndex*currentPerPage)+currentPerPage
+        return currentIndex === dotIndex;
     }
 	
 	export function left () {
@@ -142,6 +141,10 @@
 		controller.goTo(index)
 	}
 	
+	export function width() {
+		return controller.selectorWidth;
+	}
+
 	export function pause() {
 		clearInterval(timer);
 	}
@@ -157,4 +160,11 @@
 			slideCount: controller.innerElements.length
 		} )
 	}
+	function itemPerPage(screenWidth) {
+		const photos = controller.innerElements.length;
+		if(screenWidth >= 1600) return photos >= 4 ? 4 : 3;
+		else if(screenWidth >= 1024) return photos >= 3 ? 3 : 2
+		else if(screenWidth >= 768) return photos >= 2 ? 2 : 1;
+		else return 1;
+   	}
 </script>

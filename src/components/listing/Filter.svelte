@@ -1,15 +1,15 @@
 <ClickOutside on:clickoutside={() => opened = null}>
-    <div class="md:flex items-center rounded-2xl border-1 border-neutral-1 filter hidden">
+    <div class="md:grid md:grid-flow-col items-center rounded-2xl border-1 border-neutral-1 filter hidden">
         {#each filters as filter, i}
-            <div class="relative">
+            <div class="relative h-full">
                 <div 
                     class={`flex items-center flex-1 px-4 py-2 border-neutral-1 max-w-xs 
-                    cursor-pointer hover:bg-gray-100 overflow-hidden
+                    cursor-pointer hover:bg-gray-100 overflow-hidden h-full
                     ${i >= filters.length-1 ? "rounded-r-2xl border-l-1" : i > 0 ? "border-l-1" : "rounded-l-2xl"}`}
                     on:click={() => opened = i}
                 >
                     <span 
-                        class={`flex-grow font-overpass font-semibold text-lg lg:text-xl mr-6 lg:mr-12
+                        class={`flex-grow font-overpass font-semibold text-lg lg:text-xl mr-5 xl:mr-12
                         ${filterFunctions.some(f => f.type == filter.label) ? "text-primary-7" : "text-neutral-7"}`}
                     >
                         {filter.label}
@@ -23,19 +23,19 @@
                         </path>
                     </svg>
                 </div>
-                {#if filter.component}
-                    <div 
-                        class={`absolute rounded-2xl border-neutral-1 border-1 p-6 mt-4 left-0 z-10 bg-white shadow-xl
-                            ${opened === i ? 'block' : 'hidden'} overflow-hidden`}
-                        style="min-width: 272px; max-height: 345px; overflow-y: auto"
-                    >
-                        <svelte:component 
-                            this={filter.component} 
-                            on:filter={updateFilter}
-                            {...filter.props}
-                        />
-                    </div>
-                {/if}
+                <div 
+                    class={`absolute rounded-2xl border-neutral-1 border-1 p-6 mt-4 z-10 bg-white 
+                    shadow-xl overflow-hidden ${filter.component && opened === i ? "block" : "hidden"}
+                    ${i >= filters.length-1 ? "right-0" : "left-0"}`}
+                    style="min-width: 272px; max-height: 345px; overflow-y: auto"
+                >
+                    <svelte:component 
+                        this={filter.component} 
+                        on:filter={updateFilter}
+                        {...filter.props}
+                        visible={filter.component && opened === i && innerWidth > 768}
+                    />
+                </div>
             </div>
         {/each}
     </div>
@@ -58,13 +58,16 @@
     </div>
     {#if openFilter && innerWidth <= 768}
     <div 
-        class={`inset-0 ${openFilter && innerWidth <= 768 ? "flex" : "hidden"} fixed min-w-full min-h-screen 
+        class={`inset-0 flex fixed min-w-full min-h-screen 
         flex-col bg-white z-20`}
-        transition:fly={{duration:250, y: 600}}
+        transition:fly={{duration:150, y: 600}}
     >
         <div 
             class="flex items-center w-full border-b-1 border-neutral-1 py-3 px-2 sm:px-5 bg-white z-30"
         >
+            <span class="font-overpass font-bold text-primary-7 text-2xl sm:text-3xl mx-auto pl-10">
+                Filter
+            </span>
             <svg 
                 class="text-neutral-5 cursor-pointer w-10 h-10 p-2 rounded-full hover:bg-gray-100" 
                 fill="currentColor" 
@@ -80,9 +83,6 @@
                 >
                 </path>
             </svg>
-            <span class="font-overpass font-bold text-primary-7 text-2xl sm:text-3xl mx-auto pr-10">
-                Filter
-            </span>
         </div>
         <div class="p-4 sm:p-6 overflow-y-auto">
             {#each filters as filter, i}

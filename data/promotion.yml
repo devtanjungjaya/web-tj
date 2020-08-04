@@ -1,0 +1,14 @@
+---
+promotions:
+- Free Pouch
+- CEC-DISC20
+- CEC-DISC10
+descriptions:
+- promotion: Free Pouch
+  description: Gratis pouch/kantong untuk setiap pembelian
+- promotion: CEC-DISC20
+  description: Diskon 20% untuk total pembelian di atas Rp 200.000. Berlaku untuk
+    produk dengan promo yang sama
+- description: Diskon 10% untuk total pembelian di atas Rp 100.000. Berlaku untuk
+    produk dengan promo yang sama
+  promotion: CEC-DISC10

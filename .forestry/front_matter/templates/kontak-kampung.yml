@@ -1,30 +1,38 @@
 ---
-label: Kontak kampung
+label: Kontak Kampung
 hide_body: true
 fields:
-- name: name
-  type: text
+- name: contacts
+  type: field_group_list
+  fields:
+  - name: names
+    type: text
+    config:
+      required: false
+    label: Nama kampung
+    description: 'Masukkan nama kampung (contoh: cipanon)'
+  - name: email
+    type: text
+    config:
+      required: false
+    label: Email
+    description: Email kampung
+  - name: telephone_numbers
+    type: text
+    config:
+      required: false
+    label: Nomor telepon
+    description: Nomor telepon kampung
+  - name: address
+    type: text
+    config:
+      required: false
+    label: Alamat
+    description: Alamat kampung
   config:
-    required: true
-  label: Nama
-  description: Nama Kampung
-- name: phoneNumbers
-  type: list
-  config:
-    use_select: false
     min: 
     max: 
-  label: Nomor telepon
-  description: List nomor telepon / Whatsapp
-- name: email
-  type: text
-  config:
-    required: false
-  label: Email
-  description: alamat email yang bisa dihubungi
-- name: alamat
-  type: text
-  config:
-    required: true
-  label: Alamat
-  description: Alamat kampung
+    labelField: names
+  label: Kontak kampung
+pages:
+- data/contact.yml

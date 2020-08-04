@@ -4,8 +4,8 @@ coordinate:
   lng: 105.6558
 name: Pantai Cikadu
 photos:
-- https://web-tj.netlify.app/images/elizeu-dias-rn6ts8iz4_0-unsplash.jpg
-- https://web-tj.netlify.app/images/tanjung-compressed.jpg
+- photoURI: https://web-tj.netlify.app/images/elizeu-dias-rn6ts8iz4_0-unsplash.jpg
+  description: Pantai
 description: "**Pantai Tanjung Lesung** berada sebelah barat Kabupaten Pandeglang,
   Provinsi Banten. Pantai ini mempunyai keunikan dan keindahan alam tersendiri. Pasir
   putih di sepanjang pantainya sangat padu-padan dengan air lautnya yang terlihat
@@ -15,23 +15,11 @@ description: "**Pantai Tanjung Lesung** berada sebelah barat Kabupaten Pandeglan
   ini terkait dengan dataran pantainya yang agak menjorok ke laut yang terlihat mirip
   lesung (Alat Penumbuk Padi Tradisional)._"
 prices:
-- description: Tiket masuk (weekdays) usia 7+
-  value: 80000
-  unit: orang
 - description: Tiket masuk (weekend) usia 7+
   value: 100000
   unit: orang
-- description: Tiket masuk (weekdays) usia 3-7
-  value: 65000
-  unit: orang
-- description: Tiket masuk (weekend) usia 3-7
-  value: 75000
-  unit: orang
 hours:
-- description: sabtu - minggu
-  open: 9:00 AM
-  close: 8:00 PM
-- description: senin - jumat
+- description: senin-jumat
   open: 10:00 AM
   close: 5:00 PM
 categories:
@@ -44,5 +32,9 @@ facilities:
 - Musholla
 - Toilet umum
 gmaps: https://google.com
+promotions:
+- CEC-DISC10
+contact: Admin Cikadu
+notes: ''
 
 ---

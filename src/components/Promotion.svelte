@@ -4,7 +4,11 @@
 >
     <div class="promo-img flex-shrink-0">
         <div class="relative h-0 w-full" style="padding-bottom: 80%">
-            <img class="absolute w-full h-full object-cover rounded-2xl" src={img} alt={img} />
+            <Image 
+                wrapperClass="absolute rounded-2xl"
+                imgClass="object-cover rounded-2xl"
+                src={img} 
+                alt={img} />
         </div>
     </div>
     <div class="flex flex-col space-y-2 lg:space-y-8 self-center">
@@ -16,6 +20,8 @@
 </div>
 
 <script>
+    import Image from './Image.svelte';
+
     export let content;
     export let headline;
     export let photoFirst = true;

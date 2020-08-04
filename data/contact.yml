@@ -1,0 +1,19 @@
+---
+contacts:
+- names: "----"
+  email: "---@gmail.com"
+  telephone_numbers: "123124342"
+  address: Jalan --- no 12324
+- names: Citereup
+  email: citereup@gmail.com
+  telephone_numbers: "9812389139"
+  address: jalan-jalan
+- names: Cikadu
+  email: cikadu@gmail.com
+  telephone_numbers: '081292389'
+  address: Jalan-jalan
+- email: cipanon@gmail.com
+  names: Cipanon
+  phone_number: 
+  telephone_numbers: '09293423'
+  address: Jalan-jalan

@@ -1,7 +1,7 @@
 <a 
     href={url}
     target="_blank" 
-    rel="noopener noreferrer"
+    rel="external noopener noreferrer"
     class="flex border-1 border-neutral-1 rounded-2xl px-5 sm:px-6 py-3 sm:py-4 cursor-pointer 
     items-center hover:bg-gray-100"
 >

@@ -12,7 +12,7 @@
                 hidden group-hover:flex flex-col space-y-2 overflow-y-auto`}
             >
                 {#each navigations as navigation}
-                    <a 
+                    <a  
                         rel="prefetch"
                         class="font-overpass font-semibold text-neutral-7 text-lg mr-6 whitespace-no-wrap 
                         hover:text-primary-7 w-full" 
@@ -23,7 +23,26 @@
                 {/each}
             </div>
         </div>
-        <a>Transportasi</a>
+        <div class="relative group cursor-pointer">
+            <span class="group-hover:text-primary-7">Transportasi</span>
+            <div class="h-3 w-full absolute hidden group-hover:block"></div>
+            <div 
+                class={`absolute rounded-2xl border-neutral-1 border-1 p-4 mt-3 left-0 z-10 bg-white shadow-xl
+                hidden group-hover:flex flex-col space-y-2 overflow-y-auto`}
+                style="min-width: 125px"
+            >
+                {#each transportations as transportation}
+                    <a  
+                        rel="prefetch"
+                        class="font-overpass font-semibold text-neutral-7 text-lg mr-6 whitespace-no-wrap 
+                        hover:text-primary-7 w-full" 
+                        href={transportation.url}
+                    >
+                        {transportation.label}
+                    </a>
+                {/each}
+            </div>
+        </div>
         <a>Peta</a>
         <a href="contact">Kontak</a>
     </div>
@@ -48,28 +67,13 @@
 <div class="inset-0 fixed w-full h-screen bg-neutral-9 opacity-25 z-20" transition:fade={{duration:150}}></div>
 <ClickOutside on:clickoutside={() => open = false} exclude={[menu]}>
     <div 
-        class="top-0 right-0 fixed w-auto h-screen flex flex-col justify-center px-16 text-center bg-white 
-        space-y-8 z-30" 
+        class="top-0 right-0 fixed w-auto h-screen flex flex-col justify-center pl-8 pr-16 text-center bg-white 
+        space-y-8 z-30 items-start overflow-y-auto" 
         transition:fly={{duration:150, x: 150}}
     >
-        <svg 
-            class="text-neutral-2 cursor-pointer w-6 h-6 rounded-full absolute top-0 right-0 mt-4 mr-4" 
-            fill="currentColor" 
-            viewBox="0 0 20 20"
-            on:click={() => open = false}
-        >
-            <path 
-                fill-rule="evenodd" 
-                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 
-                4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 
-                5.707a1 1 0 010-1.414z" 
-                clip-rule="evenodd"
-            >
-            </path>
-        </svg>
-        <div class="flex flex-col">
-            <span class="font-bold font-overpass text-neutral-3 text-base mb-2">KATEGORI</span>
-            <div class="flex flex-col space-y-2">
+        <div class="flex flex-col items-start">
+            <span class="font-bold font-overpass text-neutral-3 text-base text-left mb-2">KATEGORI</span>
+            <div class="flex flex-col items-start space-y-2">
                 {#each navigations as navigation}
                     <a 
                         rel="prefetch"
@@ -83,12 +87,22 @@
                 {/each}
             </div>
         </div>
-        <a 
-            rel="prefetch"
-            class="font-overpass font-semibold text-primary-7 text-lg whitespace-no-wrap"
-        >
-            Transportasi
-        </a>
+        <div class="flex flex-col items-start">
+            <span class="font-bold font-overpass text-neutral-3 text-base text-left mb-2">TRANSPORTASI</span>
+            <div class="flex flex-col items-start space-y-2">
+                {#each transportations as transportation}
+                    <a 
+                        rel="prefetch"
+                        class="font-overpass font-semibold text-neutral-7 text-lg whitespace-no-wrap 
+                        hover:text-neutral-6" 
+                        href={transportation.url}
+                        on:click={() => open = false}
+                    >
+                        {transportation.label}
+                    </a>
+                {/each}
+            </div>
+        </div>
         <a 
             rel="prefetch"
             class="font-overpass font-semibold text-primary-7 text-lg whitespace-no-wrap"
@@ -102,6 +116,21 @@
         >
             Kontak
         </a>
+        <svg 
+            class="text-neutral-2 cursor-pointer w-6 h-6 rounded-full absolute top-0 right-0 mr-4" 
+            fill="currentColor" 
+            viewBox="0 0 20 20"
+            on:click={() => open = false}
+        >
+            <path 
+                fill-rule="evenodd" 
+                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 
+                4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 
+                5.707a1 1 0 010-1.414z" 
+                clip-rule="evenodd"
+            >
+            </path>
+        </svg>
     </div>
 </ClickOutside>
 {/if}
@@ -129,6 +158,16 @@
         {
             label: "Penginapan",
             url: "rooms"
+        }
+    ]
+    const transportations = [
+        {
+            label: "Peta",
+            url: "transport"
+        },
+        {
+            label: "Jalur",
+            url: "transport/route"
         }
     ]
 </script>

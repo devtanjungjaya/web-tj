@@ -1,3 +1,33 @@
+<script context="module">
+    export function preload({ params, query }) {
+        const sitemap = this.fetch("sitemap.xml");
+        return Promise.all([
+            this.fetch("destinations.json"),
+            this.fetch("tours.json"),
+            this.fetch("products.json"),
+            this.fetch("rooms.json"),
+            this.fetch("potencies.json")
+        ])
+        .then(r => {
+            return Promise.all(r.map(x => x.json()));
+        })
+        .then(([{ randomDestinations }, { randomTours }, { randomProducts }, { randomRooms }, potencies]) => { 
+            return {
+                randomDestinations,
+                randomTours,
+                randomProducts,
+                randomRooms,
+                potencies,
+                sitemap
+            };
+        });
+    }
+</script>
+
+<svelte:head>
+    <title>Buffer Zone KEK Tanjung Lesung</title>
+</svelte:head>
+
 <div class="flex flex-col-reverse items-center sm:flex-row px-6 sm:px-8 md:px-16 py-6 sm:py-10 md:py-20">
     <div class="flex flex-col flex-shrink mr-auto justify-center items-start font-overpass">
         <h3 class="text-lg md:text-xl lg:text-2xl xl:text-3xl text-primary-6 font-bold">DESA</h3>
@@ -16,25 +46,14 @@
 </div>
 
 <div class="flex flex-col px-8 lg:px-20 xl:px-40 my-32 space-y-32 lg:space-y-24">
-    <Promotion 
-        img="images/alam.jpg"
-        headline="KEINDAHAN ALAM TERSEMBUNYI"
-        content="Tanjungjaya memiliki potensi keindahan alam yang menarik untuk dikunjungi. Terdapat berbagai pantai, 
-        air terjun, perkebunan, dan wisata alam lainnya yang siap memanjakan mata."
-    />
-    <Promotion 
-        img="images/kerajinan.webp"
-        headline="PESONA KERAJINAN LOKAL"
-        content="Produk lokal yang dihasilkan kelompok Industri Kecil Menengah (IKM) turut menjadi potensi yang 
-        dimiliki desa Tanjungjaya. Pastikan kamu membawa pulang oleh-oleh produk lokal ketika berkunjung ya!"
-        photoFirst={false}
-    />
-    <Promotion 
-        img="images/budaya.webp"
-        headline="KEUNIKAN BUDAYA"
-        content="Telusuri berbagai budaya warga asli yang unik dan menarik. Jalani keseruan beraktivitas bersama 
-        warga desa Tanjungjaya dengan beragam kebudayaan yang disuguhkan."
-    />
+    {#each potencies as potency, i}
+        <Promotion 
+            img={potency.image.substring(potency.image.indexOf('image/'))}
+            headline={potency.title}
+            content={potency.content}
+            photoFirst={i%2 === 0}
+        />
+    {/each}
 </div>
 
 <div class="flex items-center justify-center relative bg-primary-7 py-24 w-full">
@@ -54,11 +73,31 @@
     </span>
 </div>
 
-<div class="flex flex-col px-8 lg:px-20 xl:px-40 py-24">
-    <div class="flex font-overpass font-bold w-full items-end">
-        <span class="mr-auto text-neutral-5 text-3xl">Produk Lokal</span>
-        <a rel="prefetch" href="products" class="text-lg text-primary-7 hover:underline">LIHAT LAINNYA</a>
-    </div>
+<div class="flex flex-col px-4 md:px-6 lg:px-20 xl:px-40 py-24 space-y-16">
+    <Showcase 
+        items={randomDestinations} 
+        itemComponent={DestinationItem} 
+        title="Destinasi Wisata"
+        url="destinations"
+    />
+    <Showcase 
+        items={randomTours} 
+        itemComponent={TourItem} 
+        title="Paket Wisata"
+        url="tours"
+    />
+    <Showcase 
+        items={randomProducts} 
+        itemComponent={ProductItem} 
+        title="Produk Lokal"
+        url="products"
+    />
+    <Showcase 
+        items={randomRooms} 
+        itemComponent={RoomItem} 
+        title="Penginapan"
+        url="rooms"
+    />
 </div>
 
 <svelte:window bind:innerWidth={screenWidth} />
@@ -83,6 +122,17 @@
 
 <script>
     import Promotion from "../components/Promotion.svelte";
+    import Showcase from "../components/Showcase.svelte";
+    import DestinationItem from "../components/listing/DestinationItem.svelte";
+    import TourItem from "../components/listing/TourItem.svelte";
+    import ProductItem from "../components/listing/ProductItem.svelte";
+    import RoomItem from "../components/listing/RoomItem.svelte";
+
+    export let randomDestinations;
+    export let randomTours;
+    export let randomProducts;
+    export let randomRooms;
+    export let potencies;
 
     let width = 300;
     let height = 300;
@@ -103,4 +153,5 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
 </style>

@@ -1,3 +1,4 @@
+require('dotenv').config()
 import resolve from '@rollup/plugin-node-resolve';
 import replace from '@rollup/plugin-replace';
 import commonjs from '@rollup/plugin-commonjs';
@@ -7,12 +8,18 @@ import { terser } from 'rollup-plugin-terser';
 import config from 'sapper/config/rollup.js';
 import pkg from './package.json';
 import sveltePreprocess from 'svelte-preprocess';
+import image from "svelte-image";
 
 const mode = process.env.NODE_ENV;
 const dev = mode === 'development';
 const legacy = !!process.env.SAPPER_LEGACY_BUILD;
 
 const onwarn = (warning, onwarn) => (warning.code === 'CIRCULAR_DEPENDENCY' && /[/\\]@sapper[/\\]/.test(warning.message)) || onwarn(warning);
+
+const preprocess = [
+	sveltePreprocess({ postcss: true }),
+	image()
+]
 
 export default {
 	client: {
@@ -21,13 +28,14 @@ export default {
 		plugins: [
 			replace({
 				'process.browser': true,
-				'process.env.NODE_ENV': JSON.stringify(mode)
+				'process.env.NODE_ENV': JSON.stringify(mode),
+				MAPBOX_ACCESS_TOKEN: process.env.MAPBOX_ACCESS_TOKEN
 			}),
 			svelte({
 				dev,
 				hydratable: true,
 				emitCss: true,
-				preprocess: sveltePreprocess({ postcss: true })
+				preprocess
 			}),
 			resolve({
 				browser: true,
@@ -67,12 +75,13 @@ export default {
 		plugins: [
 			replace({
 				'process.browser': false,
-				'process.env.NODE_ENV': JSON.stringify(mode)
+				'process.env.NODE_ENV': JSON.stringify(mode),
+				MAPBOX_ACCESS_TOKEN: process.env.MAPBOX_ACCESS_TOKEN
 			}),
 			svelte({
 				generate: 'ssr',
 				dev,
-				preprocess: sveltePreprocess({ postcss: true })
+				preprocess
 			}),
 			resolve({
 				dedupe: ['svelte']
@@ -87,20 +96,20 @@ export default {
 		onwarn,
 	},
 
-	serviceworker: {
-		input: config.serviceworker.input(),
-		output: config.serviceworker.output(),
-		plugins: [
-			resolve(),
-			replace({
-				'process.browser': true,
-				'process.env.NODE_ENV': JSON.stringify(mode)
-			}),
-			commonjs(),
-			!dev && terser()
-		],
+	// serviceworker: {
+	// 	input: config.serviceworker.input(),
+	// 	output: config.serviceworker.output(),
+	// 	plugins: [
+	// 		resolve(),
+	// 		replace({
+	// 			'process.browser': true,
+	// 			'process.env.NODE_ENV': JSON.stringify(mode)
+	// 		}),
+	// 		commonjs(),
+	// 		!dev && terser()
+	// 	],
 
-		preserveEntrySignatures: false,
-		onwarn,
-	}
+	// 	preserveEntrySignatures: false,
+	// 	onwarn,
+	// }
 };

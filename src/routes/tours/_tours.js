@@ -1,7 +1,9 @@
 import getMarkdownInDirectory from '../../utilities/markdown.js';
+import { processPromotions } from '../../utilities/promotion';
+import { adminContactsMap } from '../../utilities/contact';
 const marked = require('marked');
 
-const wysiwyg = ['description', 'activity'];
+const wysiwyg = ['description', 'activity', 'notes'];
 
 let tours = getMarkdownInDirectory('content/tours/');
 tours = tours.map(tour => 
@@ -9,6 +11,17 @@ tours = tours.map(tour =>
         tour, 
         Object.fromEntries(wysiwyg.map(w => tour[w] ? [w, marked(tour[w], { breaks: true })] : []))
     ))
+    .map(tour => {
+        return {
+            ...tour,
+            promotions: processPromotions(tour.promotions || []),
+            contact: adminContactsMap.get(tour.contact),
+            photos: tour.photos.map(p => {
+                p.photoURI = p.photoURI.substring(p.photoURI.indexOf('images/'))
+                return p;
+            })
+        };
+    });
 export const map = new Map(tours.map(tour => [tour.slug, tour]));
 
 export function getRandom() {

@@ -4,7 +4,7 @@
         <div class="flex flex-col space-y-6">
             {#each facilities as facility}
                 <FacilityItem
-                    icon={iconMap[facility]}
+                    icon={iconMap[facility] || 'ic_sparkles.svg'}
                     label={facility}
                 />
             {/each}
@@ -13,7 +13,7 @@
         <div class="grid gap-6 grid-cols-2">
             {#each facilities as facility}
                 <FacilityItem
-                    icon={iconMap[facility]}
+                    icon={iconMap[facility] || 'ic_sparkles.svg'}
                     label={facility}
                 />
             {/each}
