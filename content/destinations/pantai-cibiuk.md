@@ -31,6 +31,9 @@ hours:
 categories:
 - Alam
 facilities:
+- Tempat bermain anak
+- Gazebo
+- Penginapan
 - Toilet umum
 promotions: []
 notes: ''
