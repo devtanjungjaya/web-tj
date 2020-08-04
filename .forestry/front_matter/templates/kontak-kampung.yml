@@ -34,5 +34,3 @@ fields:
     max: 
     labelField: names
   label: Kontak kampung
-pages:
-- data/contact.yml
