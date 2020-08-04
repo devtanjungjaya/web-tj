@@ -1,7 +1,7 @@
 ---
 coordinate:
-  lat: -6.5021312
-  lng: 105.6715811
+  lat: -6.50135
+  lng: 105.673281
 name: Pantai Cibiuk
 photos:
 - description: Pantai Cibiuk
