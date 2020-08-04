@@ -93,12 +93,10 @@
             facilities={data.publicFacilities} 
             iconMap={data.publicFacilityIconMap} 
          />
-         <Decorator />
-         <Contact {...data.contact} name="Silahkan hubungi admin untuk memesan atau informasi lebih lanjut"/>
          {#if data.notes && DOMPurify}
             <Decorator />
             <div class="flex flex-col font-overpass">
-               <span class="font-bold text-neutral-5 text-2xl sm:text-3xl mb-6 sm:mb-6">Catatan</span>
+               <span class="font-bold text-neutral-5 text-2xl sm:text-3xl mb-2 sm:mb-3 leading-none">Catatan</span>
                <p class="font-open-sans font-normal text-neutral-5 text-lg sm:text-xl prose">
                   {@html DOMPurify.sanitize(data.notes)}
                </p>
@@ -111,6 +109,7 @@
          {#if data.gmaps}
             <Link url={data.gmaps} icon="ic_gmaps.png" label="Buka lokasi di Google Maps" />
          {/if}
+         <Contact {...data.contact} name="Silahkan hubungi admin untuk pemesanan atau informasi lebih lanjut"/>
       </div>
    </div>
 </div>

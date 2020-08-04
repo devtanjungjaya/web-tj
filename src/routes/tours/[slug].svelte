@@ -82,8 +82,6 @@
             <Decorator />
          {/if}
          <Facilities facilities={data.facilities} iconMap={data.facilityIconMap} />
-         <Decorator />
-         <Contact {...data.contact} name="Silahkan hubungi admin untuk membeli atau informasi lebih lanjut" />
          {#if data.notes && DOMPurify}
             <Decorator />
             <div class="flex flex-col font-overpass">
@@ -96,6 +94,7 @@
       </div>
       <div class="flex flex-col flex-shrink-0 self-start max-w-full space-y-6" style="width: 375px">
          <Prices prices={data.prices} />
+         <Contact {...data.contact} name="Silahkan hubungi admin untuk membeli atau informasi lebih lanjut" />
       </div>
    </div>
 </div>

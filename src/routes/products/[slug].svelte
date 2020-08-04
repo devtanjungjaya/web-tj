@@ -68,9 +68,7 @@
             <p class="font-open-sans text-neutral-5 text-lg sm:text-xl prose">
                {@html DOMPurify.sanitize(data.description)}
             </p>
-            <Decorator />
          {/if}
-         <Contact {...data.contact} name="Silahkan hubungi admin untuk membeli atau informasi lebih lanjut" />
          {#if data.notes && DOMPurify}
             <Decorator />
             <div class="flex flex-col font-overpass">
@@ -86,6 +84,7 @@
          <!-- {#if data.ecommerce}
             <Link url={data.ecommerce} icon="ic_ecommerce.svg" label="Tautan toko daring" />
          {/if} -->
+         <Contact {...data.contact} name="Silahkan hubungi admin untuk membeli atau informasi lebih lanjut" />
       </div>
    </div>
 </div>

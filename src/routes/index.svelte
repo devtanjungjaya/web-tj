@@ -5,17 +5,19 @@
             this.fetch("destinations.json"),
             this.fetch("tours.json"),
             this.fetch("products.json"),
-            this.fetch("rooms.json")
+            this.fetch("rooms.json"),
+            this.fetch("potencies.json")
         ])
         .then(r => {
             return Promise.all(r.map(x => x.json()));
         })
-        .then(([{ randomDestinations }, { randomTours }, { randomProducts }, { randomRooms }]) => { 
+        .then(([{ randomDestinations }, { randomTours }, { randomProducts }, { randomRooms }, potencies]) => { 
             return {
                 randomDestinations,
                 randomTours,
                 randomProducts,
                 randomRooms,
+                potencies,
                 sitemap
             };
         });
@@ -44,25 +46,14 @@
 </div>
 
 <div class="flex flex-col px-8 lg:px-20 xl:px-40 my-32 space-y-32 lg:space-y-24">
-    <Promotion 
-        img="images/alam.jpg"
-        headline="KEINDAHAN ALAM TERSEMBUNYI"
-        content="Tanjungjaya memiliki potensi keindahan alam yang menarik untuk dikunjungi. Terdapat berbagai pantai, 
-        air terjun, perkebunan, dan wisata alam lainnya yang siap memanjakan mata."
-    />
-    <Promotion 
-        img="images/kerajinan.webp"
-        headline="PESONA KERAJINAN LOKAL"
-        content="Produk lokal yang dihasilkan kelompok Industri Kecil Menengah (IKM) turut menjadi potensi yang 
-        dimiliki desa Tanjungjaya. Pastikan kamu membawa pulang oleh-oleh produk lokal ketika berkunjung ya!"
-        photoFirst={false}
-    />
-    <Promotion 
-        img="images/budaya.webp"
-        headline="KEUNIKAN BUDAYA"
-        content="Telusuri berbagai budaya warga asli yang unik dan menarik. Jalani keseruan beraktivitas bersama 
-        warga desa Tanjungjaya dengan beragam kebudayaan yang disuguhkan."
-    />
+    {#each potencies as potency, i}
+        <Promotion 
+            img={potency.image.substring(potency.image.indexOf('image/'))}
+            headline={potency.title}
+            content={potency.content}
+            photoFirst={i%2 === 0}
+        />
+    {/each}
 </div>
 
 <div class="flex items-center justify-center relative bg-primary-7 py-24 w-full">
@@ -141,6 +132,7 @@
     export let randomTours;
     export let randomProducts;
     export let randomRooms;
+    export let potencies;
 
     let width = 300;
     let height = 300;
