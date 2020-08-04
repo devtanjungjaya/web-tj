@@ -5,7 +5,7 @@ photos:
 - description: Talenan Kayu Jati
   photoURI: https://web-tj.netlify.app/images/talenan-kayu-jati-1.png
 - description: Talenan kayu jati
-  photoURI: ''
+  photoURI: https://web-tj.netlify.app/images/talenan-kayu-jati-2-1.png
 - description: Talenan kayu jati
   photoURI: https://web-tj.netlify.app/images/talenan-kayu-jati-3.png
 - description: Talenan kayu jati
