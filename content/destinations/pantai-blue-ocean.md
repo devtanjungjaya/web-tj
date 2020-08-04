@@ -17,7 +17,7 @@ description: Pantai ini belum banyak dikunjungi oleh wisatawan umum yang ingin p
 gmaps: https://goo.gl/maps/JvQi3YgP89EAzvaw7
 prices:
 - description: HTM Motor
-  value: 10.0
+  value: 10000
   unit: motor
 - description: HTM Mobil
   value: 30000
