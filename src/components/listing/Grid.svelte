@@ -9,7 +9,7 @@
         {#each filteredItems as item}
         <IntersectionObserver let:intersecting>
             <div 
-                class="flex items-center justify-center w-full h-full transition duration-150 ease-in-out" 
+                class="flex items-center justify-center w-full h-full transition duration-300 ease-in-out" 
                 class:invisible={!intersecting}
                 class:opacity-0={!intersecting}
             >

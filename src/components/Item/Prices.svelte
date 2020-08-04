@@ -6,7 +6,7 @@
             <span class="text-primary-7 font-semibold text-xl sm:text-2xl leading-none">
                 {formatRupiah(price.value)} {price.unit ? `/ ${price.unit}` : ''}
             </span>
-            <span class="text-neutral-2 text-base sm:text-lg">
+            <span class="text-neutral-2 text-base sm:text-lg leading-none mt-1">
                 {price.description}
             </span>
             </div>
