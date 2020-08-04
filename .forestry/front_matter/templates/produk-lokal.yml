@@ -94,9 +94,11 @@ fields:
       path: admins
   label: Kontak admin
 pages:
+- content/products/kandang-badak-art/cenderamata-miniatur-badak-15cm.md
 - content/products/kandang-badak-art/jam-dinding-kayu-natural.md
 - content/products/kandang-badak-art/jam-dinding-kayu-siluet.md
 - content/products/kandang-badak-art/miniatur-perahu-pinisi-25cm.md
+- content/products/kandang-badak-art/miniatur-perahu-pinisi-40cm.md
 - content/products/kelompok-saung-centong/centong-nasi-kayu-jati.md
 - content/products/kelompok-saung-centong/centong-nasi-kayu-mahoni.md
 - content/products/kelompok-saung-centong/set-alat-makan.md
@@ -106,7 +108,4 @@ pages:
 - content/products/kelompok-saung-centong/talenan-kayu-mahoni.md
 - content/products/kelompok-sumberjaya/piring-kayu-jati-20cm.md
 - content/products/kelompok-sumberjaya/piring-kayu-jati-25cm.md
-- content/products/kelompok-sumberjaya/tes123-1.md
-- content/products/kelompok-sumberjaya/tes123.md
 - content/products/kelompok-tdm-works/mangkok-batok-kelapa-motif-bunga-tanjung.md
-- content/products/kelompok-tdm-works/tes123.md
