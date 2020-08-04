@@ -9,7 +9,7 @@ photos:
 - description: Talenan kayu jati
   photoURI: https://web-tj.netlify.app/images/talenan-kayu-jati-3.png
 - description: Talenan kayu jati
-  photoURI: ''
+  photoURI: https://web-tj.netlify.app/images/talenan-kayu-jati-4.png
 description: "Talenan yang terbuat dari bahan kayu jati berkualitas ekspor. Produk
   ini dibuat oleh para pengrajin terampil di destinasi wisata Tanjung Lesung.\n\nUkuran:
   40 x 20 x 3 cm\n\nProduk ini sangat aman untuk dipakai sebagai alat perlengkapan
