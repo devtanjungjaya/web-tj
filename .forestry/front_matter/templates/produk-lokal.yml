@@ -94,6 +94,7 @@ fields:
       path: admins
   label: Kontak admin
 pages:
+- content/products/kandang-badak-art/jam-dinding-kayu-siluet.md
 - content/products/kelompok-saung-centong/centong-nasi-kayu-jati.md
 - content/products/kelompok-saung-centong/centong-nasi-kayu-mahoni.md
 - content/products/kelompok-saung-centong/set-alat-makan.md
