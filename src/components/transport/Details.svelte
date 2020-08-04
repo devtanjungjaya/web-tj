@@ -46,19 +46,28 @@
 <div class="px-4 sm:px-8 md:px-16 text-xs sm:text-sm md:text-base">
     <br>
     <br>
-    <div class="header font-extrabold font-overpass text-primary-7 text-lg sm:text-2xl">
+    <div class="header font-bold font-overpass text-neutral-4 text-xl sm:text-2xl md:text-3xl">
         <h5>Biaya Transportasi Tahun 2020</h5>
     </div>
     <br>
     {#each kendaraan as transport}
         <div class="Kendaraan">
-            <h4 class="font-extrabold font-overpass text-primary-7">{transport.name} :</h4>
+            <h4 class="font-extrabold font-overpass text-neutral-6 text-base sm:text-lg md:text-xl">
+                {transport.name}:
+            </h4>
             <ul>
                 {#each transport.rutes as rute,i}
                     <li class="flex flex-row font-overpass items-center py-2">
-                        <div class="h-3 w-3 mr-2 rounded-full bg-primary-8"></div>
-                        <div class="w-2/3 mr-10"> {rute} </div> 
-                        <div class="w-1/4 font-overpass font-extrabold text-primary-8"> Rp {transport.prices[i]}</div> 
+                        <div class="h-3 w-3 flex-shrink-0 mr-2 rounded-full bg-primary-7"></div>
+                        <div class="w-2/3 mr-10 text-sm sm:text-base md:text-lg leading-snug text-neutral-5">
+                            {rute}
+                        </div> 
+                        <div 
+                            class="w-1/4 font-overpass font-extrabold text-primary-7 text-right 
+                            text-sm sm:text-base md:text-lg"
+                        >
+                            Rp {transport.prices[i]}
+                        </div> 
                     </li>
                 {/each}
             </ul>

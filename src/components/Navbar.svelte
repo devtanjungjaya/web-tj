@@ -29,6 +29,7 @@
             <div 
                 class={`absolute rounded-2xl border-neutral-1 border-1 p-4 mt-3 left-0 z-10 bg-white shadow-xl
                 hidden group-hover:flex flex-col space-y-2 overflow-y-auto`}
+                style="min-width: 125px"
             >
                 {#each transportations as transportation}
                     <a  

@@ -137,7 +137,7 @@ import { element } from 'svelte/internal';
     }
 </style>
 <div class='h-64 sm:h-96 md:h-128 mapbox py-4 px-4 sm:px-8 md:px-16 flex flex-row'>
-    <div class="map border-1 border-neutral-4">
+    <div class="map border-1 border-neutral-1">
         <Map 
         accessToken = {mapboxAccessToken} 
         bind:this={map} 
@@ -148,12 +148,11 @@ import { element } from 'svelte/internal';
             <!-- <Marker lat={-6.479478974609833} lng={105.65398972972787} color=transparent label="TANJUNGJAYA" popupClassName="class-name" /> -->
             <GeolocateControl position={"top-right"} options={{ some: 'control-option' }} />
             <NavigationControl />
-            <ScalingControl position={"top-left"}/>
         </Map>
     </div>
     <Legends map={tmp} layers={layers} colors={colors} check={check} type={type} typeURL={typeURL}/>
 </div>
-<div class="header px-4 sm:px-8 md:px-16 text-xs sm:text-sm md:text-base">
+<div class="header px-4 sm:px-8 md:px-16 text-md sm:text-lg md:text-xl text-neutral-5">
     <h5>Peta ini merupakan rute perjalanan menuju Tanjungjaya dari Jabodetabek, Serang, dan Merak.</h5>
 </div>
 <svelte:window bind:innerWidth></svelte:window>
