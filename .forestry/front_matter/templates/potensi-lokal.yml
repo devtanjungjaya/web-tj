@@ -4,14 +4,23 @@ hide_body: true
 fields:
 - type: field_group_list
   name: potencies
-  label: potencies
+  label: Potensi lokal
   fields:
   - type: text
     name: title
-    label: title
+    label: Judul
+    config:
+      required: true
   - type: textarea
     name: content
-    label: content
-  - type: text
-    name: img
-    label: img
+    label: Konten
+    config:
+      required: true
+  - name: image
+    type: file
+    config:
+      maxSize: 64
+    label: Gambar
+  config:
+    labelField: title
+    min: 1
