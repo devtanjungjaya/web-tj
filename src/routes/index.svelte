@@ -49,8 +49,9 @@
         bind:clientHeight={height}
     >
         <div class="w-full h-0 relative" style="padding-bottom: 83.33%">
-            <img 
-                class="absolute w-full h-full object-cover rounded-2xl shadow-xl" 
+            <Image 
+                wrapperClass="absolute rounded-2xl shadow-xl"
+                imgClass="object-cover rounded-2xl" 
                 alt="tanjung-jaya" 
                 src="images/paket-eduwisata-bahari-6.png"
             />
@@ -142,6 +143,7 @@
     import TourItem from "../components/listing/TourItem.svelte";
     import ProductItem from "../components/listing/ProductItem.svelte";
     import RoomItem from "../components/listing/RoomItem.svelte";
+    import Image from '../components/Image.svelte';
 
     export let randomDestinations;
     export let randomTours;
@@ -156,7 +158,7 @@
 
 <style type="text/postcss">
 .triangle {
-    z-index: -1;
+    z-index: -5;
 }
 
 .kemenparekraf {
