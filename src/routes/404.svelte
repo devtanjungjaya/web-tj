@@ -4,7 +4,7 @@
         Halaman tidak ditemukan
     </span>
     <a 
-        rel="prefetch" 
+        rel="external" 
         href="/" 
         class="font-overpass font-normal text-base text-primary-7 hover:text-primary-8 mt-3"
     >

@@ -1,9 +1,13 @@
 ---
+contact: Admin Tanjungjaya
 name: Set Alat Makan
-contact: Admin Cikadu
 photos:
-- photoURI: https://web-tj.netlify.app/images/whatsapp-image-2020-07-21-at-12-12-54.jpeg
-  description: Set alat makan
+- photoURI: https://web-tj.netlify.app/images/set-alat-makan-1-1.jpeg
+  description: Set Alat Makan
+- description: Set alat makan
+  photoURI: https://web-tj.netlify.app/images/set-alat-makan-2-1.jpeg
+- description: Set alat makan + pouch/kantong
+  photoURI: https://web-tj.netlify.app/images/set-alat-makan-3-1.jpeg
 description: |-
   Set alat makan yang terdiri dari satu buah sendok, satu buah garpu, dan sepasang sumpit. Set alat makan ini terbuat dari bahan kayu jati berkualitas ekspor. Produk ini dibuat oleh para pengrajin terampil di destinasi wisata Tanjung Lesung.
 
@@ -20,7 +24,10 @@ prices:
 - description: FREE POUCH
   value: 55000
   unit: set
-promotions: []
+promotions:
+- Free Pouch
+- CEC-DISC20
+- CEC-DISC10
 notes: ''
 
 ---

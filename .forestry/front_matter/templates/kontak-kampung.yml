@@ -23,6 +23,12 @@ fields:
       required: false
     label: Nomor telepon
     description: Nomor telepon kampung
+  - name: address
+    type: text
+    config:
+      required: false
+    label: Alamat
+    description: Alamat kampung
   config:
     min: 
     max: 
