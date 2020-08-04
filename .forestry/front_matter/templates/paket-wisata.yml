@@ -31,13 +31,13 @@ fields:
     schema:
       format: markdown
   label: Deskripsi
-  description: Penjelasan detail paket wisata, misal atraksi apa aja, lokasi wisata
-    mana aja, dsb
+  description: Penjelasan paket wisata dengan kalimat-kalimat yang menarik minat wisatawan.
+    Misal menjelaskan atraksi apa saja, lokasi wisata mana saja, dsb
 - name: activity
   type: textarea
   default: ''
   config:
-    required: false
+    required: true
     wysiwyg: true
     schema:
       format: markdown
@@ -47,7 +47,7 @@ fields:
   type: list
   config:
     use_select: true
-    min: 
+    min: 1
     max: 
     source:
       type: documents
