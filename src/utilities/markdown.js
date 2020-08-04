@@ -4,16 +4,15 @@ const crypto = require("crypto");
 const cwd = process.cwd()
 const path = require('path');
 const marked = require('marked');
+var glob = require('glob');  
 
 export default function getMarkdownInDirectory(filePath) {
    filePath = path.join(cwd, filePath);
-   return fs.readdirSync(filePath)
-      .filter(filename => /\.md$/.test(filename))
-      .map(filename => getMarkdownFromFile(filePath, filename));
+   return glob.sync(filePath + '**/*.md').map(filename => getMarkdownFromFile(filename));
 }
 
-function getMarkdownFromFile(path, filename) {
-   const file = fs.readFileSync(path + filename);
+function getMarkdownFromFile(filename) {
+   const file = fs.readFileSync(filename);
    const { data, content } = matter(file);
 
    const slug = slugify(data.name, filename);
