@@ -8,9 +8,6 @@ description: |-
   Perahu pinisi merupakan kapal layar tradisional suku bugis yang menjadi kebanggaan bangsa Indonesia. Miniatur perahu pinisi ini dibuat menggunakan bahan dasar kayu yang diukir dan dibentuk dengan detail semirip mungkin dengan perahu aslinya. Sangat menarik dan cocok dipajang di ruangan Anda.
 
   Ukuran: 40cm
-  Berat: 123123
-  Bahan: kayu
-  asd: qwe
 
   Dengan membeli produk ini, Anda telah ikut berkontribusi untuk kesejahteraan kelompok masyarakat di desa kami.
 categories:
