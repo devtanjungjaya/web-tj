@@ -2,10 +2,10 @@
 contact: Admin Tanjungjaya
 name: Centong Nasi Kayu Mahoni
 photos:
-- description: Centong nasi kayu mahoni
-  photoURI: https://web-tj.netlify.app/images/centong-nasi-kayu-mahoni-2.png
 - description: Centong Nasi Kayu Mahoni
   photoURI: https://web-tj.netlify.app/images/centong-nasi-kayu-mahoni-1.png
+- description: Centong nasi kayu mahoni
+  photoURI: https://web-tj.netlify.app/images/centong-nasi-kayu-mahoni-2.png
 description: "Centong nasi yang terbuat dari kayu mahoni berkualitas ekspor. Produk
   ini dibuat oleh para pengrajin terampil di destinasi wisata Tanjung Lesung.\n\nUkuran:
   25 x 7 cm\n\nProduk ini sangat aman untuk digunakan sebagai alat perlengkapan dapur
