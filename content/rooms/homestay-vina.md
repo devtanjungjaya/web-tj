@@ -31,6 +31,6 @@ roomFacilities:
 description: 1 kamar
 promotions: []
 notes: tempat cuci tangan
-contact: Admin Cikadu
+contact: Admin Banyuasih
 
 ---
