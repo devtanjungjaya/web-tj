@@ -19,7 +19,7 @@ fields:
   config:
     min: 1
     max: 
-    labelField: description
+    labelField: ''
   label: Foto-foto
 - name: category
   type: select

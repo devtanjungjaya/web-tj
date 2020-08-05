@@ -19,12 +19,12 @@ photos:
   description: Area parkir
 gmaps: ''
 prices:
-- description: Harga 1 rumah 7 kamar AC
-  value: 1500000
-  unit: rumah
 - value: 250000
   unit: kamar
   description: Harga per kamar
+- description: Harga 1 rumah 7 kamar AC
+  value: 1500000
+  unit: rumah
 publicFacilities:
 - Area parkir
 roomFacilities:
@@ -36,6 +36,6 @@ roomFacilities:
 description: Jumlah kamar ada 7 yang masing-masing memiliki kapasitas 2 orang
 notes: tersedia tempat cuci tangan,tersedia hand sanitizer,alat penyemprot disenfektan
 promotions: []
-contact: Admin Cikadu
+contact: Admin Banyuasih
 
 ---
