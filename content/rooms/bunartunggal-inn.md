@@ -15,17 +15,17 @@ photos:
   description: ''
 gmaps: ''
 prices:
-- description: Rumah Kakao
-  value: 1600000
-  unit: malam
-- description: Room Bata
-  value: 650000
+- description: Kamar Hebel
+  value: 250000
   unit: malam
 - description: Rumah Kirai
   value: 500000
   unit: malam
-- description: Kamar Hebel
-  value: 250000
+- description: Room Bata
+  value: 650000
+  unit: malam
+- description: Rumah Kakao
+  value: 1600000
   unit: malam
 - description: Extra bed
   value: 50000
