@@ -26,7 +26,7 @@ prices:
   value: 1200000
 publicFacilities:
 - Ruang tamu
-- Ruang Keluarga
+- Ruang keluarga
 - Dapur
 - Area parkir
 roomFacilities:

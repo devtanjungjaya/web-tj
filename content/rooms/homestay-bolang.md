@@ -22,7 +22,7 @@ prices:
   unit: kamar
 publicFacilities:
 - Dapur
-- Ruang Keluarga
+- Ruang keluarga
 - Mushola
 - Jasa tur
 - Area parkir
