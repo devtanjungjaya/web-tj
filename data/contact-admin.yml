@@ -4,7 +4,6 @@ admins:
 - Admin Cigeulis
 - Admin Citeureup
 - Admin Tanjungjaya
-- Admin Cikadu
 contacts:
 - admin: Admin Banyuasih
   contact:
@@ -22,7 +21,3 @@ contacts:
   contact:
     phoneNumbers:
     - '085210468664'
-- admin: Admin Cikadu
-  contact:
-    phoneNumbers:
-    - '08275632761'

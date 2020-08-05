@@ -1,5 +1,5 @@
 ---
-category: Lainya
+category: Lainnya
 coordinate:
   lat: -6.510177
   lng: 105.67449
@@ -15,6 +15,9 @@ photos:
   description: Dapur
 gmaps: ''
 prices:
+- description: Kamar dengan paket sarapan dan coffee break (teh, kopi, air minum)
+  value: 400000
+  unit: kamar
 - description: Cottage untuk keluarga 4-5 orang (sudah termasuk paket sarapan dan
     coffee break)
   value: 500000
@@ -23,9 +26,6 @@ prices:
     break)
   unit: cottage
   value: 900000
-- description: Kamar dengan paket sarapan dan coffee break (teh, kopi, air minum)
-  value: 400000
-  unit: kamar
 publicFacilities:
 - Mushola
 - Saung
@@ -44,6 +44,6 @@ description: "Ada 6 kamar. Kapasistas 2-5 orang  \nAda juga cottage 3 bangunan. 
   cottage berisi 2 kamar. Bisa 7-8 orang"
 promotions: []
 notes: tersedia hand sanitizer, tempat cuci tangan
-contact: Admin Cikadu
+contact: Admin Banyuasih
 
 ---

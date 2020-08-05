@@ -30,22 +30,36 @@
 
 <div class="flex flex-col-reverse items-center sm:flex-row px-6 sm:px-8 md:px-16 py-6 sm:py-10 md:py-20">
     <div class="flex flex-col flex-shrink mr-auto justify-center items-start font-overpass">
-        <h3 class="text-lg md:text-xl lg:text-2xl xl:text-3xl text-primary-6 font-bold">DESA</h3>
-        <h1 class="text-4xl md:text-5xl xl:text-6xl text-primary-7 font-bold">Tanjungjaya</h1>
-        <span class="sm:max-w-xs lg:max-w-full text-xl md:text-2xl lg:text-3xl xl:text-4xl text-neutral-3">Hidden Treasure of Banten</span>
+        <h3 class="text-2xl xs:text-2xl md:text-2xl lg:text-3xl xl:text-4xl text-primary-6 font-bold leading-none">
+            Hidden Treasure of
+        </h3>
+        <h1 
+            class="text-4xl xs:text-5xl md:text-5xl xl:text-6xl text-primary-7 font-bold 
+            whitespace-no-wrap leading-tight"
+        >
+            Tanjung Lesung
+        </h1>
+        <span class="sm:max-w-xs lg:max-w-full text-xl xs:text-2xl md:text-2xl lg:text-3xl xl:text-4xl text-neutral-3">
+            Discover marvelous nature and culture
+        </span>
     </div>
-    <div class="items-center w-full landing-1 flex-grow mb-8 sm:ml-10 md:ml-16 sm:mb-0" bind:clientWidth={width} bind:clientHeight={height}>
+    <div 
+        class="items-center max-w-xs xs:max-w-sm xl:max-w-md w-full flex-grow mb-8 sm:ml-10 md:ml-16 sm:mb-0" 
+        bind:clientWidth={width} 
+        bind:clientHeight={height}
+    >
         <div class="w-full h-0 relative" style="padding-bottom: 83.33%">
-            <img 
-                class="absolute w-full h-full object-cover rounded-2xl shadow-xl" 
+            <Image 
+                wrapperClass="absolute rounded-2xl shadow-xl"
+                imgClass="object-cover rounded-2xl" 
                 alt="tanjung-jaya" 
-                src="images/landing-1.webp"
+                src="images/paket-eduwisata-bahari-6.png"
             />
         </div>
     </div>
 </div>
 
-<div class="flex flex-col px-8 lg:px-20 xl:px-40 my-32 space-y-32 lg:space-y-24">
+<div class="flex flex-col px-8 lg:px-20 xl:px-40 my-16 space-y-16 sm:space-y-24">
     {#each potencies as potency, i}
         <Promotion 
             img={potency.image.substring(potency.image.indexOf('image/'))}
@@ -56,19 +70,21 @@
     {/each}
 </div>
 
-<div class="flex items-center justify-center relative bg-primary-7 py-24 w-full">
+<div class="flex items-center justify-center relative bg-primary-7 py-12 sm:py-24 w-full">
     <img 
         src="images/kemenparekraf.webp" 
-        class="kemenparekraf absolute w-48 h-48 z-0" 
+        class="kemenparekraf absolute w-32 h-32 sm:w-48 sm:h-48 z-0" 
         alt="kemenparekraf"
         style="opacity: .1"
     />
     <span 
         class="font-playfair-display font-bold text-primary-2 text-4xl lg:text-5xl 
-        text-center max-w-2xl lg:max-w-3xl z-10 leading-none"
+        text-center max-w-2xl lg:max-w-3xl z-10 leading-none px-4"
     >
-        “ <span class="font-overpass text-white text-3xl lg:text-4xl leading-none">
-            10 Destinasi Pariwisata Prioritas Kementrian Pariwisata RI
+        “ <span 
+            class="font-overpass text-white text-2xl md:text-3xl lg:text-4xl leading-none"
+          >
+            10 Destinasi Pariwisata<br />Prioritas Kementrian Pariwisata RI
         </span> ”
     </span>
 </div>
@@ -127,6 +143,7 @@
     import TourItem from "../components/listing/TourItem.svelte";
     import ProductItem from "../components/listing/ProductItem.svelte";
     import RoomItem from "../components/listing/RoomItem.svelte";
+    import Image from '../components/Image.svelte';
 
     export let randomDestinations;
     export let randomTours;
@@ -141,11 +158,7 @@
 
 <style type="text/postcss">
 .triangle {
-    z-index: -1;
-}
-
-.landing-1 {
-    max-width: 532px;
+    z-index: -5;
 }
 
 .kemenparekraf {

@@ -1,9 +1,12 @@
 ---
 promotions:
+- KBA-Gratis Plakat 1
 - Free Pouch
 - CEC-DISC20
 - CEC-DISC10
 descriptions:
+- promotion: KBA-Gratis Plakat 1
+  description: Gratis plakat untuk pembelian di atas 40pcs
 - promotion: Free Pouch
   description: Gratis pouch/kantong untuk setiap pembelian
 - promotion: CEC-DISC20

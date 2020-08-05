@@ -27,10 +27,9 @@
                 }`}
             >
                 <svg 
-                    class="text-white w-full h-full" 
+                    class={`text-white w-full h-full ${$filter[type+label].includes(value) ? '' : 'hidden'}`} 
                     fill="currentColor" 
                     viewBox="0 0 20 20"
-                    class:hidden={!$filter[type+label].includes(value)}
                 >
                     <path 
                         fill-rule="evenodd" 

@@ -10,8 +10,7 @@
 >
    {#each photos as photo, i}
       <div 
-         class="px-1 sm:px-4"
-         class:invisible={!showPhoto}
+         class={`px-1 sm:px-4 ${showPhoto ? '' : 'invisible'}`}
          style={`height: ${imgHeight(innerWidth)}px`}
          on:mousedown={handleMouseDown}
          on:mouseup={e => handleMouseUp(e, i)}

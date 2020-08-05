@@ -12,9 +12,8 @@ fields:
   - type: textarea
     name: content
     label: content
-  - type: text
-    name: img
-    label: img
   - type: file
     name: image
     label: image
+pages:
+- data/potency.yml

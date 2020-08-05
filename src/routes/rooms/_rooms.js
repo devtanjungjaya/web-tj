@@ -15,7 +15,7 @@ rooms = rooms.map(room =>
         return {
             ...room,
             promotions: processPromotions(room.promotions || []),
-            contact: adminContactsMap.get(room.contact),
+            contact: adminContactsMap.get(room.contact) || { phoneNumbers: [] },
             photos: room.photos.map(p => {
                 p.photoURI = p.photoURI.substring(p.photoURI.indexOf('images/'))
                 return p;

@@ -7,7 +7,8 @@
       const neighborhood = await this.fetch('https://api.mapbox.com/geocoding/v5/mapbox.places/' + 
          `${data.coordinate.lng},${data.coordinate.lat}.json?` +
          `access_token=${mapboxAccessToken}&types=neighborhood`
-      ).then(r => r.json()).then(d => d.features[0]['place_name']);
+      ).then(r => r.json()).then(d => d.features.length ? d.features[0]['place_name'] : 
+         'Buffer Zone KEK Tanjung Lesung');
       return {
          data,
          neighborhood
@@ -71,8 +72,10 @@
  
    <svelte:component this={PhotosComponent} photos={data.photos} />
 
-   <div class="flex flex-col lg:flex-row space-y-6 lg:space-y-0 lg:space-x-10 xl:space-x-32 mt-10 sm:mt-20">
-      <div class="flex flex-col max-w-4xl">
+   <div 
+      class="flex flex-col lg:flex-row space-y-6 lg:space-y-0 lg:space-x-10 xl:space-x-32 lg:justify-between 
+      mt-10 sm:mt-20 max-w-7xl">
+      <div class="flex flex-col">
          {#if data.promotions && data.promotions.length}
             <Promotions promotions={data.promotions} />
          {/if}
@@ -105,11 +108,15 @@
       </div>
       <div class="flex flex-col flex-shrink-0 self-start max-w-full space-y-6" style="width: 375px">
          <Prices prices={data.prices} />
-         <svelte:component this={MapComponent} {...data.coordinate} />
+         {#if data.coordinate}
+            <svelte:component this={MapComponent} {...data.coordinate} />
+         {/if}
          {#if data.gmaps}
             <Link url={data.gmaps} icon="ic_gmaps.png" label="Buka lokasi di Google Maps" />
          {/if}
+         {#if data.contact && data.contact.phoneNumbers && data.contact.phoneNumbers.length}
          <Contact {...data.contact} name="Silahkan hubungi admin untuk pemesanan atau informasi lebih lanjut"/>
+         {/if}
       </div>
    </div>
 </div>

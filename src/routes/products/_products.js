@@ -13,7 +13,7 @@ products = products.map(product =>
         return {
             ...product,
             promotions: processPromotions(product.promotions || []),
-            contact: adminContactsMap.get(product.contact),
+            contact: adminContactsMap.get(product.contact) || { phoneNumbers: [] },
             photos: product.photos.map(p => {
                 p.photoURI = p.photoURI.substring(p.photoURI.indexOf('images/'))
                 return p;

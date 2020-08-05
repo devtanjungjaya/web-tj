@@ -61,8 +61,10 @@
  
    <svelte:component this={PhotosComponent} photos={data.photos} />
 
-   <div class="flex flex-col lg:flex-row space-y-6 lg:space-y-0 lg:space-x-10 xl:space-x-32 mt-10 sm:mt-20">
-      <div class="flex flex-col max-w-4xl">
+   <div 
+      class="flex flex-col lg:flex-row space-y-6 lg:space-y-0 lg:space-x-10 xl:space-x-32 lg:justify-between mt-10 
+      sm:mt-20 max-w-7xl">
+      <div class="flex flex-col">
          {#if data.promotions && data.promotions.length}
             <Promotions promotions={data.promotions} />
          {/if}
@@ -94,7 +96,9 @@
       </div>
       <div class="flex flex-col flex-shrink-0 self-start max-w-full space-y-6" style="width: 375px">
          <Prices prices={data.prices} />
+         {#if data.contact && data.contact.phoneNumbers && data.contact.phoneNumbers.length}
          <Contact {...data.contact} name="Silahkan hubungi admin untuk membeli atau informasi lebih lanjut" />
+         {/if}
       </div>
    </div>
 </div>
