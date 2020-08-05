@@ -24,6 +24,6 @@ description: |-
   Terdapat jasa bakar ikan
 promotions: []
 notes: tersedia hand sanitizer, tempat cuci tangan
-contact: Admin Cikadu
+contact: Admin Banyuasih
 
 ---

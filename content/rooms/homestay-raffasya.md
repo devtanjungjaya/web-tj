@@ -17,12 +17,12 @@ photos:
   description: Kamar mandi
 gmaps: ''
 prices:
-- description: Sarapan
-  value: 25000
-  unit: ''
 - description: Harga per kamar
   value: 100000
   unit: kamar
+- description: Sarapan
+  value: 25000
+  unit: ''
 publicFacilities:
 - Ruang keluarga
 - Dapur
@@ -34,6 +34,6 @@ roomFacilities:
 description: "1 Kamar kapasitas 2 orang\n\nWajib perempuan "
 promotions: []
 notes: tempat cuci tangan
-contact: Admin Cikadu
+contact: Admin Banyuasih
 
 ---

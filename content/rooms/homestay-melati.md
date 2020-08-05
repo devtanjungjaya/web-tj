@@ -11,18 +11,18 @@ photos:
   description: Ruang tamu
 - photoURI: https://web-tj.netlify.app/images/whatsapp-image-2020-07-26-at-144023-1.jpg
   description: Dapur
-- photoURI: https://web-tj.netlify.app/images/whatsapp-image-2020-07-26-at-144019.jpg
-  description: Kamar mandi
 - photoURI: https://web-tj.netlify.app/images/whatsapp-image-2020-07-26-at-144020.jpg
   description: Kamar tidur
+- photoURI: https://web-tj.netlify.app/images/whatsapp-image-2020-07-26-at-144019.jpg
+  description: Kamar mandi
 gmaps: ''
 prices:
-- description: Extra bed
-  unit: bed
-  value: 50000
 - value: 250000
   unit: kamar
   description: Harga 1 kamar
+- description: Extra bed
+  unit: bed
+  value: 50000
 publicFacilities:
 - Jasa tur
 - Wifi
@@ -46,6 +46,6 @@ description: |-
   1 kamar max 3 orang
 notes: tersedia tempat cuci tangan, tersedia hand sanitizer
 promotions: []
-contact: Admin Cikadu
+contact: Admin Banyuasih
 
 ---
