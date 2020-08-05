@@ -84,7 +84,7 @@
         “ <span 
             class="font-overpass text-white text-2xl md:text-3xl lg:text-4xl leading-none"
           >
-            10 Destinasi Pariwisata<br />Prioritas Kementrian Pariwisata RI
+            10 Destinasi Pariwisata<br />Prioritas Kementerian Pariwisata RI
         </span> ”
     </span>
 </div>
