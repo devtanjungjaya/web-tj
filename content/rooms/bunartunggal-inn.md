@@ -15,9 +15,6 @@ photos:
   description: ''
 gmaps: ''
 prices:
-- description: Extra bed
-  value: 50000
-  unit: bed
 - description: Rumah Kakao
   value: 1600000
   unit: malam
@@ -30,6 +27,9 @@ prices:
 - description: Kamar Hebel
   value: 250000
   unit: malam
+- description: Extra bed
+  value: 50000
+  unit: bed
 publicFacilities:
 - Kolam renang
 - Resepsionis 24 jam
@@ -49,6 +49,6 @@ description: "Tipe kamar  \nKamar hebel kapasitas 2 orang  \nRumah kirai kapasit
 notes: tersedia tempat cuci tangan , tersedia hand sanitizer,tersedia alat pengukur
   suhu tubuh, alat penyemprot disenfektan
 promotions: []
-contact: Admin Cikadu
+contact: Admin Banyuasih
 
 ---
