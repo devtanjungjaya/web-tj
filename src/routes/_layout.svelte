@@ -18,6 +18,9 @@
 <div class="py-16 min-h-screen">
     <slot></slot>
 </div>
+{#if segment !== '404'}
+    <Footer />
+{/if}
 
 <style>
 .slider{
@@ -47,6 +50,7 @@
 
 <script>
     import Navbar from "../components/Navbar.svelte";
+    import Footer from '../components/Footer.svelte';
     import { derived } from 'svelte/store';
     import { stores } from '@sapper/app';
     import { slide } from 'svelte/transition';
