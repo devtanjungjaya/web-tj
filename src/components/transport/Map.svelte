@@ -1,7 +1,8 @@
 <script>
     import { Map, controls } from '@beyonk/svelte-mapbox';
     import Legends from "./Legends.svelte";
-import { element } from 'svelte/internal';
+    import MapStyle from "./MapStyle.svelte";
+    import { element } from 'svelte/internal';
     const { GeolocateControl, NavigationControl, ScalingControl } = controls
     const mapboxAccessToken = "MAPBOX_ACCESS_TOKEN";
     let map;
@@ -148,6 +149,7 @@ import { element } from 'svelte/internal';
             <!-- <Marker lat={-6.479478974609833} lng={105.65398972972787} color=transparent label="TANJUNGJAYA" popupClassName="class-name" /> -->
             <GeolocateControl position={"top-right"} options={{ some: 'control-option' }} />
             <NavigationControl />
+            <!-- <MapStyle map={tmp}/> -->
         </Map>
     </div>
     <Legends map={tmp} layers={layers} colors={colors} check={check} type={type} typeURL={typeURL}/>
