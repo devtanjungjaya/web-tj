@@ -1,8 +1,4 @@
 
-<svelte:head>
-    <link href='https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.css' rel='stylesheet' />
-</svelte:head>
-
 <Header url="mitigasi-bencana"/>
 
 <section>
@@ -12,6 +8,7 @@
                 accessToken = {mapboxAccessToken}
                 bind:this = {map}
                 options = {{center,zoom:9}}
+                style="mapbox://styles/mapbox/light-v10"
             >
                 <NavigationControl />
                 <Tsunami tmp={map}/>
@@ -27,9 +24,6 @@
         width: 75%;
         height: 100%;
     }
-    .mapbox{
-        height: 35rem;
-    }
 </style>
 
 <script id="map">
@@ -38,8 +32,24 @@
     import Gempa from '../../../components/maps/Gempa.svelte'
     import Banjir from '../../../components/maps/Banjir.svelte'
     import Header from '../../../components/maps/Header.svelte'
+    
     const { GeolocateControl, NavigationControl, ScalingControl } = controls
     const mapboxAccessToken = "MAPBOX_ACCESS_TOKEN";
     let map;
     let center = { lat: -6.5116, lng: 105.6530};
+
+    const title = "Peta-Peta Khusus Buffer Zone KEK Tanjung Lesung"
+    const description = "Peta-Peta Khusus Buffer Zone KEK Tanjung Lesung"
 </script>
+
+<svelte:head>
+   <title>{title}</title>
+   <meta name="description" content={description} />
+   <meta property="og:title" content={title} />
+   <meta property="og:type" content="website" />
+   <meta property="og:description" content={description} />
+   <meta property="og:image" content="images/landing-1.webp" />
+   <meta name="twitter:title" content={title}>
+   <meta name="twitter:description" content={description}>
+   <meta name="twitter:image" content="images/landing-1.webp">
+</svelte:head>

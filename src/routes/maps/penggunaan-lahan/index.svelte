@@ -28,4 +28,19 @@
     const mapboxAccessToken = "MAPBOX_ACCESS_TOKEN";
     let map;
     let center = { lat: -6.5116, lng: 105.6530};
+
+    const title = "Peta-Peta Khusus Buffer Zone KEK Tanjung Lesung"
+    const description = "Peta-Peta Khusus Buffer Zone KEK Tanjung Lesung"
 </script>
+
+<svelte:head>
+   <title>{title}</title>
+   <meta name="description" content={description} />
+   <meta property="og:title" content={title} />
+   <meta property="og:type" content="website" />
+   <meta property="og:description" content={description} />
+   <meta property="og:image" content="images/landing-1.webp" />
+   <meta name="twitter:title" content={title}>
+   <meta name="twitter:description" content={description}>
+   <meta name="twitter:image" content="images/landing-1.webp">
+</svelte:head>

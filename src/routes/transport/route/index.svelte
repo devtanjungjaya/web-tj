@@ -3,9 +3,8 @@
 </header>
 <br>
 <div class="px-4 sm:px-8 md:px-16 flex flex-col">
-    <!-- <img src="trans_route_head.jpg" alt="( ͡° ͜ʖ ͡°)" class="w-full h-full"> -->
     <div class="flex flex-row-reverse mb-8">
-        <img src="trans_route_title.jpg" alt="( ͡° ͜ʖ ͡°)" class="w-full sm:w-1/2">
+        <img src="trans_route_title.jpg" alt="Peta Transportasi Umum Menuju CEC" class="w-full sm:w-1/2">
     </div>
     {#if innerWidth >640}
         <div class="flex flex-row w-full items-center">
@@ -13,7 +12,7 @@
                 <img src="trans_route_map.jpg" alt="Menuju Bufferzone Tanjung Lesung" class=" w-full">
             </div>
             <div class="w-1/3 pl-4">
-                <img src="trans_route_vertical.jpg" alt="( ͡° ͜ʖ ͡°)" class="w-full">
+                <img src="trans_route_vertical.jpg" alt="Jadwal dan Biaya" class="w-full">
             </div>
         </div>
     {:else if innerWidth > 480}
@@ -23,7 +22,7 @@
             </div>
             <br>
             <div class="w-full pt-4">
-                <img src="trans_route_horizontal.jpg" alt="( ͡° ͜ʖ ͡°)" class="w-full">
+                <img src="trans_route_horizontal.jpg" alt="Jadwal dan Biaya" class="w-full">
             </div>
         </div>
     {:else}
@@ -33,7 +32,7 @@
             </div>
             <br>
             <div class="w-full pt-4">
-                <img src="trans_route_vertical.jpg" alt="( ͡° ͜ʖ ͡°)" class="w-full">
+                <img src="trans_route_vertical.jpg" alt="Jadwal dan Biaya" class="w-full">
             </div>
         </div>
     {/if}
