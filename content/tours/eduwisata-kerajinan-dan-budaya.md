@@ -18,12 +18,12 @@ photos:
   photoURI: https://web-tj.netlify.app/images/eduwisata-kerajinan-dan-budaya-6.JPG
 - photoURI: https://web-tj.netlify.app/images/eduwisata-kerajinan-dan-budaya-7.JPG
   description: Eduwisata kerajinan dan budaya
-description: "Desa-desa di sekitar kawasan Tanjung Lesung memiliki kebudayaan dan
-  kerajinan lokal yang unik dan menarik. Mulai dari batik khas, musik tradisional,
-  tarian tradisional, berbagai kerajinan tangan, dsb. Mari menjelajahi dan mempelajari
-  berbagai kesenian, budaya, dan kerajinan lokal warga desa yang pastinya seru dan
-  menyenangkan. \n\nHarga termasuk: semua atraksi, homestay untuk 1 malam, makan sebanyak
-  4x"
+description: |-
+  Desa-desa di sekitar kawasan Tanjung Lesung memiliki kebudayaan dan kerajinan lokal yang unik dan menarik. Mulai dari batik khas, musik tradisional, tarian tradisional, berbagai kerajinan tangan, dsb. Mari menjelajahi dan mempelajari berbagai kesenian, budaya, dan kerajinan lokal warga desa yang pastinya seru dan menyenangkan.
+
+  Harga termasuk:
+
+  semua atraksi, homestay untuk 1 malam, makan sebanyak 4x
 activity: |-
   1. Welcome dance Mapak Tamu
   2. Pembuatan kerajinan batik
