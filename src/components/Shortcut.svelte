@@ -45,20 +45,20 @@
             url: 'transport'
         },
         {
-            label: 'Destinasi wisata',
-            url: 'destinations'
+            label: "Destinasi Wisata",
+            url: "destinations"
         },
         {
-            label: 'Produk lokal',
-            url: 'products'
+            label: "Paket Wisata",
+            url: "tours"
         },
         {
-            label: 'Penginapan',
-            url: 'rooms'
+            label: "Produk Lokal",
+            url: "products"
         },
         {
-            label: 'Paket wisata',
-            url: 'tours'
+            label: "Penginapan",
+            url: "rooms"
         }
     ]
 </script>
