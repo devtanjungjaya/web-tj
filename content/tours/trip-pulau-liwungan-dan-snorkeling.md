@@ -12,10 +12,10 @@ photos:
   photoURI: https://web-tj.netlify.app/images/trip-pulau-liwungan-dan-snorkeling-4.jpg
 - description: Pulau Liwungan
   photoURI: https://web-tj.netlify.app/images/trip-pulau-liwungan-dan-snorkeling-5.png
-description: Pulau Liwungan merupakan pulau kecil di Bufferzone KEK Tanjung Lesung,
-  tepatnya di desa Citeureup. Keindahan pulau dan bawah lautnya menjadi daya tarik
-  yang selalu dicari oleh para wisatawan. Nikmati petualangan seru menjelajah dan
-  snorkeling di pulau Liwungan bersama pemandu wisata lokal.
+description: |-
+  Pulau Liwungan merupakan pulau kecil di Bufferzone KEK Tanjung Lesung, tepatnya di desa Citeureup. Keindahan pulau dan bawah lautnya menjadi daya tarik yang selalu dicari oleh para wisatawan. Nikmati petualangan seru menjelajah dan snorkeling di pulau Liwungan bersama pemandu wisata lokal.
+
+  Dengan membeli paket wisata ini, Anda telah berkontribusi untuk kesejahteraan warga desa kami.
 activity: |-
   1. Perjalanan ke pulau Liwungan menggunakan kapal
   2. Snorkeling melihat keindahan bawah laut pulau Liwungan
