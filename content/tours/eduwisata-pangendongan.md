@@ -30,8 +30,10 @@ prices:
   value: 250000
   unit: pax
 facilities:
+- Pemandu wisata lokal
 - Transportasi
-- Pemandu wisata
+- Penginapan
+- Makan
 promotions: []
 notes: Diwajibkan melakukan reservasi terlebih dahulu
 
