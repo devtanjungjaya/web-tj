@@ -1,25 +1,18 @@
-<svelte:head>
-    <link href='https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.css' rel='stylesheet' />
-</svelte:head>
-
-<h1>Hello</h1>
 
 <section>
-    <div class="mapbox py-5 px-16 flex flex-row rounded-lg boder-1 border-neutral-1">
-        <div class="map w-3/4 h-96 overflow-hidden rounded-l-lg">
+    <div class="mapbox py-5 px-16 flex flex-row rounded-2xl">
+        <div class="map w-3/4 h-96 overflow-hidden rounded-l-2xl">
             <Map
                 accessToken = {mapboxAccessToken}
                 bind:this = {map}
                 options = {{center,zoom:9}}
             >
             <NavigationControl />
-            <Tsunami tmp={map}/>
-            <Gempa tmp={map}/>
-            <Banjir tmp={map}/>
             </Map>
         </div>
     </div>
 </section>
+
 
 <style type="text/postcss">
     .map{
@@ -33,9 +26,6 @@
 
 <script id="map">
     import { Map, Geocoder, Marker, controls } from '@beyonk/svelte-mapbox'
-    import Tsunami from '../../../components/maps//Tsunami.svelte'
-    import Gempa from '../../../components/maps/Gempa.svelte'
-    import Banjir from '../../../components/maps/Banjir.svelte'
     const { GeolocateControl, NavigationControl, ScalingControl } = controls
     const mapboxAccessToken = "MAPBOX_ACCESS_TOKEN";
     let map;
