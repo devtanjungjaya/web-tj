@@ -2,10 +2,10 @@
 contact: Admin Tanjungjaya
 name: Pembuatan Kuliner Tradisional
 photos:
-- description: Pembuatan kuliner tradisional
-  photoURI: https://web-tj.netlify.app/images/pembuatan-kuliner-tradisional-1.jpg
 - description: Pembuatan kue balok khas Pandeglang
   photoURI: https://web-tj.netlify.app/images/pembuatan-kuliner-tradisional-2.jpeg
+- description: Pembuatan kuliner tradisional
+  photoURI: https://web-tj.netlify.app/images/pembuatan-kuliner-tradisional-1.jpg
 - description: Pembuatan kuliner tradisional
   photoURI: https://web-tj.netlify.app/images/pembuatan-kuliner-tradisional-3.jpeg
 description: |-
