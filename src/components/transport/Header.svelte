@@ -1,8 +1,8 @@
 <script>
     export let url;
     let pages = [
-        {name:"Peta Interaktif", site:"transport"},
-        {name:"Jalur", site:"transport/route"},
+        {name:"Peta Transportasi", site:"transport"},
+        {name:"Jalur Transportasi", site:"transport/route"},
     ]
 </script>
 <div id="head" class="pt-5 px-4 sm:px-8 md:px-16">

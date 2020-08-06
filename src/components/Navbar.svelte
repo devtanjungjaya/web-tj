@@ -189,11 +189,11 @@
     ]
     const transportations = [
         {
-            label: "Peta",
+            label: "Peta Transportasi",
             url: "transport"
         },
         {
-            label: "Jalur",
+            label: "Jalur Transportasi",
             url: "transport/route"
         }
     ]
