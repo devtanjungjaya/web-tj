@@ -7,6 +7,8 @@ photos:
 - photoURI: https://web-tj.netlify.app/images/paket-pangendongan-3.jpg
   description: Pembuatan kue balok
 - description: Babacakan dan Papahare (makan bersama)
+  photoURI: https://web-tj.netlify.app/images/paket-pangendongan-4.jpeg
+- description: Babacakan dan Papahare (makan bersama)
   photoURI: https://web-tj.netlify.app/images/paket-pangendongan-2.jpg
 description: |-
   Jalani aktivitas seru bersama warga untuk merasakan hidup seperti warga lokal desa Tanjungjaya. Anda dapat menyaksikan dan melakukan berbagai budaya khas desa Tanjungjaya. Nikmati juga berbagai sajian kuliner khas Tanjungjaya yang bisa anda buat sendiri bersama para warga.
