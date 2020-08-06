@@ -4,10 +4,10 @@ name: Edukasi Kerajinan Anyaman Bambu
 photos:
 - description: Belajar menganyam bambu bersama warga lokal
   photoURI: https://web-tj.netlify.app/images/edukasi-anyaman-bambu-1.jpg
-description: Bambu merupakan salah satu potensi alam di desa-desa sekitar Tanjung
-  Lesung. Warga desa memanfaatkan bambu salah satunya menjadi anyaman bambu. Anyaman
-  bambu ini dibuat oleh para pengrajin terampil dan kreatif. Mari bersama-sama menikmati
-  aktivitas seru mempelajari salah satu kerajinan lokal ini bersama para warga desa.
+description: |-
+  Bambu merupakan salah satu potensi alam di desa-desa sekitar Tanjung Lesung. Warga desa memanfaatkan bambu salah satunya menjadi anyaman bambu. Anyaman bambu ini dibuat oleh para pengrajin terampil dan kreatif. Mari bersama-sama menikmati aktivitas seru mempelajari salah satu kerajinan lokal ini bersama para warga desa.
+
+  Dengan membeli paket wisata ini, Anda telah berkontribusi untuk kesejahteraan warga desa kami.
 activity: 1. Mempelajari anyaman bambu bersama warga desa
 categories:
 - Budaya
