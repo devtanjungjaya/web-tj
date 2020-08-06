@@ -23,7 +23,7 @@ description: |-
 
   Semua atraksi wisata, pangendongan (homestay) untuk 1 malam, transportasi dari Cikadu Edutourism Centre, makan sebanyak 4x
 
-  Dengan membeli paket wisata ini, Anda telah berkontribusi untuk kesejahteraan warga desa kami.
+  Dengan membeli paket wisata ini, Anda telah berkontribusi untuk kesejahteraan warga desa kami
 activity: |-
   1. Welcome dance Lengser dan Gendang Pencak
   2. Pembuatan kue balok dan kue misro
