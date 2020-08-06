@@ -12,18 +12,19 @@
     let loaded = false;
     let error = false;
     let imgWidth = 0;
+    let imgHeight = 0;
 
     function lazy(node, data) {
 		if (imgCache.has(data.src)) {
             const img = imgCache.get(data.src);
-            if(contain) imgWidth = img.naturalWidth / img.naturalHeight * node.clientHeight;
+            if(contain) updateImgSize(img, node);
             node.setAttribute('src', data.src);
             loaded = true;
 		} else {
 			const img = new Image();
             img.src = data.src;
             img.onload = () => {
-                if(contain) imgWidth = img.naturalWidth / img.naturalHeight * node.clientHeight;
+                if(contain) updateImgSize(img, node);
                 imgCache.set(data.src, img);
                 node.setAttribute('src', data.src);
                 loaded = true;
@@ -38,7 +39,17 @@
 		return {
 			destroy(){}
 		};
-	}
+    }
+    
+    function updateImgSize(img, node) {
+        if(isPortrait(img)) imgWidth = img.naturalWidth / img.naturalHeight * node.clientHeight;
+        else imgHeight = img.naturalHeight / img.naturalWidth * node.clientWidth;
+        console.log(node.clientHeight, node.clientWidth, imgHeight);
+    } 
+
+    function isPortrait(width, height) {
+        return height > width;
+    }
 </script>
 
 <div 
@@ -48,7 +59,7 @@
     <img
         class={`${error ? 'h-10 w-10' : 'w-full h-full bg-gray-100'} ${error ? '' : imgClass}
         ${loaded ? '' : 'invisible'}`}
-        style={contain ? `width: ${imgWidth}px` : ''}
+        style={contain ? `${imgWidth > 0 ? 'width' : 'height'}: ${imgWidth > 0 ? imgWidth : imgHeight}px` : ''}
         {alt}
         use:lazy={{ src }}
     />
