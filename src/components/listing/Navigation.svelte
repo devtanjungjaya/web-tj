@@ -1,4 +1,4 @@
-<div class="hidden md:flex space-x-5 lg:space-x-10 font-overpass font-bold text-lg lg:text-xl overflow-x-auto">
+<div class="hidden md:flex space-x-10 font-overpass font-bold text-lg lg:text-xl overflow-x-auto">
     {#each navigations as navigation}
         <a 
             rel="prefetch"
