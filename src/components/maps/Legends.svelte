@@ -17,18 +17,16 @@
 
 <style type="text/postcss">
     .filter-group {
-        border-top-right-radius: 1rem;
-        border-bottom-right-radius: 1rem;
         width: 25%;
-        max-height: 100%;
-        padding-top: 1rem;
+        height: 100%;
         overflow: hidden;
+        float: right;
+        background-color: white;
     }
     .legenda {
         border-top-width: 0;
         border-left-width: 0;
         border-right-width: 0;
-        padding-bottom: 1rem;
     }
     .filter {
         height: 100%;
@@ -50,8 +48,8 @@
 
 <svelte:window bind:innerWidth></svelte:window>
 
-<div id="filter-group" class="filter-group flex flex-col relative border-1 border-neutral-1">
-    <div class="legenda border-1 border-neutral-2 px-2 sm:px-4 align-middle text-primary-7 text-xs sm:text-base md:text-lg font-bold relative">
+<div id="filter-group" class="filter-group flex flex-col relative border-l-1 border-neutral-1">
+    <div class="legenda border-1 border-neutral-2 py-4 px-2 sm:px-4 align-middle text-primary-7 text-xs sm:text-base md:text-lg font-bold relative">
         <h1 class="relative">Legenda</h1>
     </div>
     <div class="filter flex flex-col text-primary-6 p-0">
