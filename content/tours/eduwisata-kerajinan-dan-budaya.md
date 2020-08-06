@@ -24,6 +24,8 @@ description: |-
   Harga termasuk:
 
   semua atraksi, homestay untuk 1 malam, makan sebanyak 4x
+
+  Dengan membeli paket wisata ini, Anda telah berkontribusi untuk kesejahteraan warga desa kami.
 activity: |-
   1. Welcome dance Mapak Tamu
   2. Pembuatan kerajinan batik
