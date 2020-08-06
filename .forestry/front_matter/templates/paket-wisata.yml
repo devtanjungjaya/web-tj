@@ -117,6 +117,7 @@ fields:
       path: admins
   label: Kontak admin
 pages:
+- content/tours/edukasi-kerajinan-anyaman-bambu.md
 - content/tours/edukasi-pencak-silat.md
 - content/tours/eduwisata-bahari.md
 - content/tours/eduwisata-kerajinan-dan-budaya.md
