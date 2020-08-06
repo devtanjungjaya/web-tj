@@ -28,7 +28,10 @@
     <title>Buffer Zone KEK Tanjung Lesung</title>
 </svelte:head>
 
-<div class="flex flex-col-reverse items-center sm:flex-row px-6 sm:px-8 md:px-16 py-6 sm:py-10 md:py-20">
+<div 
+    class="flex flex-col-reverse items-center sm:flex-row px-6 sm:px-8 md:px-16 pt-6 py-4 sm:py-8 md:py-16
+    mb-8 md:mb-16 lg:mb-20"
+>
     <div class="flex flex-col flex-shrink mr-auto justify-center items-start font-overpass">
         <h3 class="text-2xl xs:text-2xl md:text-2xl lg:text-3xl xl:text-4xl text-primary-6 font-bold leading-none">
             Hidden Treasure of
@@ -59,7 +62,11 @@
     </div>
 </div>
 
-<div class="flex flex-col px-8 lg:px-20 xl:px-40 my-16 space-y-16 sm:space-y-24">
+<div class="px-5 md:px-0">
+    <Shortcut />
+</div>
+
+<div class="flex flex-col px-8 lg:px-20 xl:px-40 my-24 space-y-16 sm:space-y-24">
     {#each potencies as potency, i}
         <Promotion 
             img={potency.image.substring(potency.image.indexOf('image/'))}
@@ -144,6 +151,7 @@
     import ProductItem from "../components/listing/ProductItem.svelte";
     import RoomItem from "../components/listing/RoomItem.svelte";
     import Image from '../components/Image.svelte';
+    import Shortcut from "../components/Shortcut.svelte";
 
     export let randomDestinations;
     export let randomTours;
