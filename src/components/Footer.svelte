@@ -72,11 +72,11 @@
     const mapMenu = [
         {
             label: 'Peta fasilitas\nkesehatan',
-            url: 'destinations'
+            url: 'maps/fasilitas-kesehatan'
         },
         {
-            label: 'Peta homestay',
-            url: 'products'
+            label: 'Peta penginapan',
+            url: 'maps/penginapan'
         },
     ];
 
