@@ -3,13 +3,13 @@ contact: Admin Tanjungjaya
 name: Talenan Kayu Mahoni
 photos:
 - description: Talenan Kayu Mahoni
-  photoURI: https://web-tj.netlify.app/images/talenan-kayu-mahoni-1-1.png
-- photoURI: https://web-tj.netlify.app/images/talenan-kayu-mahoni-2.png
+  photoURI: https://web-tj.netlify.app/images/talenan-kayu-mahoni-5.png
+- photoURI: https://web-tj.netlify.app/images/talenan-kayu-mahoni-6.png
   description: Talenan kayu mahoni
 - description: Talenan kayu mahoni
-  photoURI: https://web-tj.netlify.app/images/talenan-kayu-mahoni-4.png
+  photoURI: https://web-tj.netlify.app/images/talenan-kayu-mahoni-8.png
 - description: Talenan kayu mahoni
-  photoURI: https://web-tj.netlify.app/images/talenan-kayu-mahoni-3-1.png
+  photoURI: https://web-tj.netlify.app/images/talenan-kayu-mahoni-7.png
 description: "Talenan yang terbuat dari bahan kayu mahoni berkualitas ekspor. Produk
   ini dibuat oleh para pengrajin terampil di destinasi wisata Tanjung Lesung.\n\nUkuran:
   40 x 20 x 3 cm\n\nProduk ini sangat aman untuk dipakai sebagai alat perlengkapan
