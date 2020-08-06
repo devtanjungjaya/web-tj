@@ -1,4 +1,4 @@
-<footer class="flex flex-col p-5 py-8 xs:p-8 lg:p-16 bg-primary-7 space-y-16 items-center">
+<footer class="flex flex-col p-5 py-12 xs:p-8 xs:py-12 lg:p-16 bg-primary-7 space-y-16 items-center">
     <div class="flex flex-col xl:flex-row space-y-10 xl:space-x-16 xl:space-y-0 font-overpass w-full">
         <div class="flex flex-col space-y-4 max-w-5xl xl:max-w-xl 2xl:max-w-2xl mr-auto">
             <h1 class="font-bold text-primary-9 text-xl">Tentang kami</h1>
