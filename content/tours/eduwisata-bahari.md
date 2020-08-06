@@ -2,7 +2,7 @@
 contact: Admin Tanjungjaya
 name: Eduwisata Bahari
 photos:
-- photoURI: ''
+- photoURI: https://web-tj.netlify.app/images/paket-eduwisata-bahari-1.jpg
   description: Edukasi transplantasi terumbu karang
 - photoURI: https://web-tj.netlify.app/images/paket-eduwisata-bahari-4.jpeg
   description: Trip ke pulau Liwungan
