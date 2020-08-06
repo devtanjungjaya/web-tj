@@ -20,6 +20,10 @@
     .shortcut::-webkit-scrollbar {    
         display: none;
     }
+    .shortcut {
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
     @media (max-width: 768px) {
         .shortcut::after {
             display: block;
