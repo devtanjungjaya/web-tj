@@ -3,9 +3,9 @@ contact: Admin Tanjungjaya
 name: Spatula Kayu Motif
 photos:
 - description: Spatula Kayu Motif Lubang Panjang
-  photoURI: ''
+  photoURI: https://web-tj.netlify.app/images/spatula-kayu-motif-1.png
 - description: Spatula kayu motif lubang bulat
-  photoURI: ''
+  photoURI: https://web-tj.netlify.app/images/spatula-kayu-motif-2.png
 description: |-
   Spatula yang terbuat dari bahan kayu berkualitas ekspor dengan motif yang cantik. Produk ini dibuat oleh para pengrajin terampil di destinasi wisata Tanjung Lesung.
 
