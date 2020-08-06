@@ -22,6 +22,27 @@
                     </a>
                 {/each}
             </div>
+        </div>        
+        <a href="/transport/map"class="cursor-pointer hover:text-primary-7"> Transportasi</a>
+        
+        <div class="relative group cursor-pointer">
+            <span class="group-hover:text-primary-7">Peta</span>
+            <div class="h-3 w-full absolute hidden group-hover:block"></div>
+            <div 
+                class={`absolute rounded-2xl border-neutral-1 border-1 p-4 mt-3 left-0 z-10 bg-white shadow-xl
+                hidden group-hover:flex flex-col space-y-2 overflow-y-auto`}
+            >
+                {#each map_navigations as navigation}
+                    <a 
+                        rel="prefetch"
+                        class="font-overpass font-semibold text-neutral-7 text-lg mr-6 whitespace-no-wrap 
+                        hover:text-primary-7 w-full" 
+                        href={navigation.url}
+                    >
+                        {navigation.label}
+                    </a>
+                {/each}
+            </div>
         </div>
         <div class="relative group cursor-pointer">
             <span class="group-hover:text-primary-7">Transportasi</span>
