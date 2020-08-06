@@ -1,12 +1,13 @@
+
 <svelte:head>
     <link href='https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.css' rel='stylesheet' />
 </svelte:head>
 
-<h1>Hello</h1>
+<Header url="mitigasi-bencana"/>
 
 <section>
-    <div class="h-64 sm:h-96 md:h-128 mapbox py-4 px-4 sm:px-8 md:px-16 flex flex-row rounded-lg">
-        <div class="map border-1 border-neutral-1 w-3/4 h-96 overflow-hidden rounded-l-lg">
+    <div class="h-64 sm:h-96 md:h-128 mapbox py-4 px-4 sm:px-8 md:px-16 flex flex-row rounded-2xl">
+        <div class="map border-1 border-neutral-1 w-3/4 h-96 overflow-hidden rounded-l-2xl">
             <Map
                 accessToken = {mapboxAccessToken}
                 bind:this = {map}
@@ -36,6 +37,7 @@
     import Tsunami from '../../../components/maps//Tsunami.svelte'
     import Gempa from '../../../components/maps/Gempa.svelte'
     import Banjir from '../../../components/maps/Banjir.svelte'
+    import Header from '../../../components/maps/Header.svelte'
     const { GeolocateControl, NavigationControl, ScalingControl } = controls
     const mapboxAccessToken = "MAPBOX_ACCESS_TOKEN";
     let map;

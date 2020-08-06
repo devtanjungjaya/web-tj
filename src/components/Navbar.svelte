@@ -23,7 +23,6 @@
                 {/each}
             </div>
         </div>        
-        <a href="/transport/map"class="cursor-pointer hover:text-primary-7"> Transportasi</a>
         <div class="relative group cursor-pointer">
             <span class="group-hover:text-primary-7">Transportasi</span>
             <div class="h-3 w-full absolute hidden group-hover:block"></div>
