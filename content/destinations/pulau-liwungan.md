@@ -37,9 +37,9 @@ prices:
   value: 5000
   unit: orang
 hours:
-- description: Belum terdata
-  open: 12:00 AM
-  close: 12:00 AM
+- description: Senin-Minggu
+  open: 7:00 AM
+  close: 5:00 PM
 categories:
 - Alam
 facilities:
