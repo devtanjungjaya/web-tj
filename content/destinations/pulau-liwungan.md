@@ -45,9 +45,11 @@ hours:
 categories:
 - Alam
 facilities:
+- Tempat berkemah
 - Gazebo
 - Toilet umum
-- Tempat berkemah
+- Pos penjaga
+- Toko kecil
 promotions: []
 notes: "Contact person:  \nPak Deden  \n0817-849-463"
 
