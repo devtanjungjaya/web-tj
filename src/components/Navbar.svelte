@@ -200,10 +200,7 @@
         }
     ]
     const map_navigations=[
-        {
-            label: "Mitigasi Bencana",
-            url: "maps/mitigasi-bencana"
-        },
+        
         {
             label: "Fasilitas Kesehatan",
             url: "maps/fasilitas-kesehatan"
@@ -211,14 +208,6 @@
         {
             label: "Penginapan",
             url: "maps/penginapan"
-        },
-        {
-            label: "Penggunaan Lahan",
-            url: "maps/penggunaan-lahan"
-        },
-        {
-            label: "Potensi Kampung",
-            url: "maps/potensi-kampung"
-        },
+        }
     ]
 </script>

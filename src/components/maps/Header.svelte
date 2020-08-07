@@ -1,11 +1,8 @@
 <script>
     export let url;
     let maps = [
-        {name:"Mitigasi Bencana", site:"mitigasi-bencana"},
         {name:"Fasilitas Kesehatan", site:"fasilitas-kesehatan"},
         {name:"Penginapan", site:"penginapan"},
-        {name:"Penggunaan Lahan", site:"penggunaan-lahan"},
-        {name:"Potensi Kampung", site:"potensi-kampung"},
     ]
 </script>
 <div id="head" class="pt-5 px-4 sm:px-8 md:px-16">
