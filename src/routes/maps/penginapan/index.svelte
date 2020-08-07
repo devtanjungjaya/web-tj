@@ -1,4 +1,4 @@
-<Header url="fasilitas-kesehatan"/>
+<Header url="penginapan"/>
 <section>
     <div class="h-64 sm:h-96 md:h-128 mapbox py-4 px-4 sm:px-8 md:px-16 flex flex-row">
         <div class="map border-1 border-neutral-1 w-full overflow-hidden rounded-2xl">
@@ -24,7 +24,7 @@
     import { Map, Geocoder, Marker, controls } from '@beyonk/svelte-mapbox'
     import Header from '../../../components/maps/Header.svelte'
     import Legends from '../../../components/maps/Legends.svelte'
-    import { data } from "../../../components/maps/DataKesehatan.svelte"
+    import { data } from "../../../components/maps/DataPenginapan.svelte"
     const { GeolocateControl, NavigationControl, ScalingControl } = controls
     const mapboxAccessToken = "MAPBOX_ACCESS_TOKEN";
     let map;

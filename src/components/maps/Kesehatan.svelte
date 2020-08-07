@@ -1,14 +1,7 @@
 <script>
     export let tmp;
     let map = tmp.getMap();
-    let data = [
-        {
-            name:"",
-            url:"",
-            color:"",
-        },
-    ]
-
+    import { data } from "./DataKesehatan.svelte"
     data.forEach(element => {
         map.addSource(element.name,{
             type:"geojson",
