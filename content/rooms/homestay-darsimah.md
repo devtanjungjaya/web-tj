@@ -9,11 +9,11 @@ photos:
   description: Tampak depan
 - photoURI: https://web-tj.netlify.app/images/rsz_20200727_133937.jpg
   description: ''
-gmaps: ''
+gmaps: https://goo.gl/maps/wBaEX8YhNWntCubF6
 prices:
-- description: Harga per kamar
+- description: Harga per malam
   value: 250000
-  unit: kamar
+  unit: malam
 publicFacilities:
 - Area parkir
 - Ruang keluarga
@@ -24,7 +24,7 @@ roomFacilities:
 - Lemari
 description: 1 kamar dengan kapasitas 1-4 orang
 promotions: []
-notes: tempat cuci tangan
-contact: Admin Cikadu
+notes: Tersedia tempat cuci tangan
+contact: Admin Tanjungjaya
 
 ---
