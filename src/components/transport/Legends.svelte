@@ -62,7 +62,7 @@
                         class='box flex flex-row py-2 px-2 hover:text-primary-7 hover:bg-gray-100 cursor-pointer text-neutral-5 
                         font-bold border-1 border-neutral-1 items-center last:border-0 sm:text-xs md:text-sm'
                     >
-                        {#if (type[i] == "route")}
+                        {#if (type[i] != "point")}
                             <div class="h-5 w-5">
                                 <div class="relative checkbox align-middle mx-1 rounded-full" style="--theme-color: {color}; background-color: var(--theme-color);"></div>
                             </div>
