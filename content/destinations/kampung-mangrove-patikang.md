@@ -30,7 +30,7 @@ gmaps: https://goo.gl/maps/w57KzxdBEDr44dSn6
 prices:
 - value: 20000
   unit: orang
-  description: HTM + paket wisata (selengkapnya cek menu paket wisata)
+  description: HTM + paket wisata
 hours:
 - description: Belum terdata
   open: 12:00 AM
@@ -43,6 +43,6 @@ facilities:
 - Toilet umum
 - Tempat parkir
 promotions: []
-notes: ''
+notes: Untuk info paket wisata selengkapnya silahkan cek menu Paket Wisata.
 
 ---
