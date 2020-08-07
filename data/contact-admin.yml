@@ -6,6 +6,10 @@ admins:
 - Admin Citeureup
 - Admin Tanjungjaya
 contacts:
+- admin: admin contoh
+  contact:
+    phoneNumbers:
+    - '123123'
 - admin: Admin Banyuasih
   contact:
     phoneNumbers:
