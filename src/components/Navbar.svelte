@@ -62,7 +62,7 @@
                 {/each}
             </div>
         </div>
-        <a href="contact">Kontak</a>
+        <a rel="prefetch" href="contact" class="hover:text-primary-7">Kontak</a>
     </div>
     <svg 
         class="text-primary-7 sm:hidden w-6 h-6 rounded-full cursor-pointer"
@@ -141,6 +141,7 @@
             rel="prefetch"
             href="contact"
             class="font-overpass font-semibold text-primary-7 text-lg whitespace-no-wrap"
+            on:click={() => open = false}
         >
             Kontak
         </a>
