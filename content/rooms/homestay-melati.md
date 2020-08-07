@@ -15,7 +15,7 @@ photos:
   description: Kamar tidur
 - photoURI: https://web-tj.netlify.app/images/whatsapp-image-2020-07-26-at-144019.jpg
   description: Kamar mandi
-gmaps: ''
+gmaps: https://goo.gl/maps/QT1aXvWEDMcy5fDW7
 prices:
 - value: 250000
   unit: kamar
@@ -44,8 +44,8 @@ description: |-
   1 rumah 4 kamar
 
   1 kamar max 3 orang
-notes: tersedia tempat cuci tangan, tersedia hand sanitizer
+notes: Tersedia tempat cuci tangan, tersedia hand sanitizer
 promotions: []
-contact: Admin Banyuasih
+contact: Admin Tanjungjaya
 
 ---
