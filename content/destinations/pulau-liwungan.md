@@ -51,6 +51,7 @@ facilities:
 - Pos penjaga
 - Toko kecil
 promotions: []
-notes: Untuk info paket wisata selengkapnya silahkan cek menu Paket Wisata.
+notes: Untuk info akomodasi dan paket wisata selengkapnya silahkan cek menu Paket
+  Wisata.
 
 ---
