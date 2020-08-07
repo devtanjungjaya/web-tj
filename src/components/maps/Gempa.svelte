@@ -1,27 +1,38 @@
 <script>
     export let tmp;
     let map = tmp.getMap();
-    name = 'gempa';
+    name = 'Titik Gempa Sekitar Tanjungjaya';
 
-    let alamatpalsu = "trans_point_stasiun_krl.png"
-        map.loadImage(alamatpalsu,function(error,image){
-            if(error) throw error;
-            map.addImage(name,image)
-        })
     map.addSource(name,{
         'type': 'geojson',
-        'data': "images/trans_point_stasiun_krl.geojson"
+        'data': "images/peta-titik-gempa.geojson",
+        cluster: true,
+        clusterMaxZoom: 14,
+        clusterRadius: 25 
     })
     map.addLayer({
         'id': name,
         'source': name,
-        'type': 'symbol',
-        'layout': {
-            'icon-image': name,
-            'icon-size': 0.3,
-            'icon-ignore-placement': true,
-            'icon-anchor': "bottom",
-            "icon-optional": true,
+        'type': 'circle',
+        paint: {
+            'circle-color': [
+                'step',
+                ['get', 'point_count'],
+                '#51bbd6',
+                100,
+                '#f1f075',
+                750,
+                '#f28cb1'
+            ],
+            'circle-radius': [
+                'step',
+                ['get', 'point_count'],
+                20,
+                100,
+                30,
+                750,
+                40
+            ]
         }
     })
 </script>
