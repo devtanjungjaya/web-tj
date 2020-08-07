@@ -11,7 +11,7 @@ photos:
   description: ''
 - photoURI: https://web-tj.netlify.app/images/20200727_135109.jpg
   description: ''
-gmaps: ''
+gmaps: https://goo.gl/maps/c8w2UdRq6G5p7NEk8
 prices:
 - description: Harga per kamar termasuk sarapan untuk 2 orang
   value: 150000
@@ -27,7 +27,7 @@ roomFacilities:
 - Kipas angin
 description: 1 kamar
 promotions: []
-notes: tersedia tempat cuci tangan
-contact: Admin Cikadu
+notes: Tersedia tempat cuci tangan
+contact: Admin Tanjungjaya
 
 ---
