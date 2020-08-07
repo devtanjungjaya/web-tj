@@ -16,14 +16,12 @@ photos:
   description: Snorkeling di pulau Liwungan
 - description: Pulau Liwungan
   photoURI: https://web-tj.netlify.app/images/pulau-liwungan-6.jpeg
-description: "Pulau Liwungan adalah salah satu pulau kecil tak berpenghuni seluas
-  25 hektare di selat Sunda dan dekat dengan kawasan Tanjung Lesung.\n\nMeskipun tergolong
-  destinasi wisata yang tergorong baru di Panimbang, wisata di Pulau Liwungan tidak
-  kalah menarik dari destinasi wisata lainnya. Wisatawan dapat melakukan snorkling,
-  diving, berenang, dan bermain pasir. Bahkan, ada beberapa wisatawan yang sengaja
-  datang hanya untuk menikmati makan di tengah pulau bersama keluarga. Di sini juga
-  terdapat wahana _banana boat_ dan tersedia spot-spot untuk memancing. \n\nBagaimana?
-  Seru kan?"
+description: |-
+  Pulau Liwungan adalah sebuah pulau kecil tak berpenghuni seluas 25 hektare di selat Sunda dan dekat dengan kawasan Tanjung Lesung.
+
+  Meskipun tergolong destinasi wisata yang tergorong baru di Panimbang, wisata di Pulau Liwungan tidak kalah menarik dari destinasi wisata lainnya. Wisatawan dapat melakukan snorkling, diving, berenang, dan bermain pasir. Bahkan, ada beberapa wisatawan yang sengaja datang hanya untuk menikmati makan di tengah pulau bersama keluarga. Di sini juga terdapat wahana _banana boat_ dan tersedia spot-spot untuk memancing.
+
+  Bagaimana? Seru kan?
 gmaps: https://goo.gl/maps/q5mzWQ5eXVABGagEA
 prices:
 - description: Tiket masuk pulau Liwungan
