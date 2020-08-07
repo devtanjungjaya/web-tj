@@ -62,7 +62,9 @@
                 {/each}
             </div>
         </div>
-        <a href="contact">Kontak</a>
+        <div class="group">
+            <a class="group-hover:text-primary-7" href="contact">Kontak</a>
+        </div>
     </div>
     <svg 
         class="text-primary-7 sm:hidden w-6 h-6 rounded-full cursor-pointer"
