@@ -51,6 +51,6 @@ facilities:
 - Pos penjaga
 - Toko kecil
 promotions: []
-notes: "Contact person:  \nPak Deden  \n0817-849-463"
+notes: Untuk info paket wisata selengkapnya silahkan cek menu Paket Wisata.
 
 ---
