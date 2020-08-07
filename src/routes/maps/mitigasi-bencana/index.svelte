@@ -12,7 +12,7 @@
     import Header from '../../../components/maps/Header.svelte'
     
     const { GeolocateControl, NavigationControl, ScalingControl } = controls
-    const mapboxAccessToken = "pk.eyJ1IjoiZmVsaXgyNSIsImEiOiJja2Q0MWZrMmcwMjBkMnpzODFjYW1vbG83In0.IKpXqrohe3JR1bKq_3JSDA";
+    const mapboxAccessToken = "MAPBOX_ACCESS_TOKEN";
     let map;
     let center = { lat: -6.493857222350371, lng: 105.7747242749806}; 
     let colors = [
