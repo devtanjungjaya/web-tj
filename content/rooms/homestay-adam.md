@@ -13,7 +13,7 @@ photos:
   description: Kamar tidur
 - photoURI: https://web-tj.netlify.app/images/whatsapp-image-2020-07-26-at-145601.jpg
   description: Dapur
-gmaps: ''
+gmaps: https://goo.gl/maps/waXUPof8aFVdnRiC6
 prices:
 - unit: kamar
   value: 200000
@@ -33,9 +33,9 @@ roomFacilities:
 - TV
 - AC
 - Kamar mandi dalam
-description: 6 Kamar. Untuk serumah bisa 25 orang
+description: 6 Kamar. Untuk 1 rumah kapasitas mencapai 25 orang
 promotions: []
-notes: tersedia hand sanitizer, tempat cuci tangan
-contact: Admin Banyuasih
+notes: Tersedia hand sanitizer, tempat cuci tangan
+contact: Admin Tanjungjaya
 
 ---
