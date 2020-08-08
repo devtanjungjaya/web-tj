@@ -92,11 +92,19 @@
 
 <svelte:window bind:scrollY={scrollY} />
 
-<div class="flex flex-col px-2 xs:px-4 md:px-6 lg:px-16 py-6 lg:py-10 min-h-screen">
+<div class="flex flex-col px-2 xs:px-4 md:px-6 lg:px-16 pt-6 lg:pt-10 min-h-screen">
     <Grid
         items={products}
         itemComponent={ProductItem}
         filters={filters}
         current="produk-lokal"
     />
+    <p class="mt-8 p-5 border-1 border-neutral-1 rounded-2xl font-overpass text-xs sm:text-sm text-neutral-4">
+        Hidden Treasure of Tanjung Lesung merupakan kawasan desa-desa wisata di sekitar KEK Tanjung Lesung. 
+        Dengan kreativitasnya, warga desa di sini memproduksi berbagai kerajinan tangan, batik, kuliner 
+        tradisional, dan produk-produk lokal lainnya. Produk-produk khas yang dibuat oleh warga desa sangatlah 
+        menarik dan tentunya berkualitas. Unsur-unsur budaya turut dimasukkan ke dalam produk hasil karya tangan 
+        terampil warga desa. Dengan membeli produk-produk ini, Anda juga turut berkontribusi untuk kesejahteraan 
+        warga desa. Ayo segera dapatkan produk-produk unik dan menarik khas Hidden Treasure of Tanjung Lesung!
+    </p>
 </div>

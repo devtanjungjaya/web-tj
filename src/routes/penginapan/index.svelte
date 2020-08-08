@@ -115,11 +115,21 @@
 
 <svelte:window bind:scrollY={scrollY} />
 
-<div class="flex flex-col px-2 xs:px-4 md:px-6 lg:px-16 py-6 lg:py-10 min-h-screen">
+<div class="flex flex-col px-2 xs:px-4 md:px-6 lg:px-16 pt-6 lg:pt-10 min-h-screen">
     <Grid
         items={rooms}
         itemComponent={RoomItem}
         filters={filters}
         current="penginapan"
     />
+    <p class="mt-8 p-5 border-1 border-neutral-1 rounded-2xl font-overpass text-xs sm:text-sm text-neutral-4">
+        Kamu ingin berkunjung ke Hidden Treasure of Tanjung Lesung tapi tidak tahu harus menginap dimana? Bosan 
+        dengan penginapan yang begitu-begitu saja? Ingin merasakan sensasi baru menginap di pedesaan?  Ayo jalani 
+        keseruan tinggal bersama warga lokal dengan memesan homestay dan penginapan lainnya di Hidden Treasure of 
+        Tanjung Lesung. Kamu dapat menginap di homestay yang tersedia sembari menjalani berbagai budaya dan 
+        aktivitas bersama para warga desa. Tidak hanya tempat beristirahat, kamu juga akan mendapatkan banyak 
+        pengalaman seru dengan tinggal bersama warga. Sangat menarik bukan? Warga desa juga sudah tidak sabar 
+        untuk menjalani keseruan denganmu. Ayo pesan homestay dan penginapan Hidden Treasure of Tanjung Lesung 
+        sekarang juga!
+    </p>
 </div>

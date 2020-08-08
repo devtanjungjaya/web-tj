@@ -103,11 +103,21 @@
 
 <svelte:window bind:scrollY={scrollY} />
 
-<div class="flex flex-col px-2 xs:px-4 md:px-6 lg:px-16 py-6 lg:py-10 min-h-screen">
+<div class="flex flex-col px-2 xs:px-4 md:px-6 lg:px-16 pt-6 lg:pt-10 min-h-screen">
     <Grid
         items={tours}
         itemComponent={TourItem}
         filters={filters}
         current="paket-wisata"
     />
+    <p class="mt-8 p-5 border-1 border-neutral-1 rounded-2xl font-overpass text-xs sm:text-sm text-neutral-4">
+        Jalani petualangan seru di destinasi wisata pantai, snorkeling, air terjun, budaya lokal, dan wisata 
+        terbaik lainnya yang dekat dari Jakarta dan Jabodetabek dengan memesan paket wisata di Hidden Treasure 
+        of Tanjung Lesung. Beragam kegiatan dan atraksi menarik disuguhkan dalam berbagai paket wisata yang 
+        tersedia di sini. Paket wisata Hidden Treasure of Tanjung Lesung tersedia lengkap dengan tour guide 
+        lokal yang ramah, aktivitas yang seru, fasilitas yang lengkap, serta tentunya wisata yang indah dan 
+        menakjubkan. Berbagai paket wisata ini dapat kamu peroleh dengan harga murah dan terjangkau. Jalani 
+        keseruan berwisata di Hidden Treasure of Tanjung Lesung yang dijamin akan memberimu pengalaman tidak 
+        terlupakan. Ayo segera pesan paket wisata Hidden Treasure of Tanjung Lesung sekarang juga!
+    </p>
 </div>

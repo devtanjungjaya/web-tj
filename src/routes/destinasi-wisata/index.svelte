@@ -103,11 +103,22 @@
 
 <svelte:window bind:scrollY={scrollY} />
 
-<div class="flex flex-col px-2 xs:px-4 md:px-6 lg:px-16 py-6 lg:py-10 min-h-screen">
+<div class="flex flex-col px-2 xs:px-4 md:px-6 lg:px-16 pt-6 lg:pt-10 min-h-screen">
     <Grid
         items={destinations}
         itemComponent={DestinationItem}
         filters={filters}
         current="destinasi-wisata"
     />
+    <p class="mt-8 p-5 border-1 border-neutral-1 rounded-2xl font-overpass text-xs sm:text-sm text-neutral-4">
+        Hidden Treasure of Tanjung Lesung merupakan kawasan desa-desa wisata di sekitar KEK Tanjung Lesung. 
+        Kawasan ini adalah salah satu destinasi wisata terbaik dan terindah yang dekat dari Jakarta dan 
+        Jabodetabek. Hidden Treasure of Tanjung Lesung memiliki potensi wisata alam seperti pantai yang indah, 
+        spot snorkeling, air terjun, hutan mangrove, dsb. Di sini juga terdapat wisata-wisata budaya seperti 
+        sanggar batik, sanggar tari, berbagai kerajinan dan kuliner lokal, dsb. Kamu yang bosan dengan kehidupan 
+        kota Jakarta dan sekitarnya, dan ingin berwisata menjelajahi keindahan alam yang asri serta menikmati 
+        kebudayaan warga desa yang menarik, dapat menjadikan Hidden Treasure of Tanjung Lesung sebagai pilihan 
+        destinasi wisata terbaik untukmu. Penasaran apa saja yang ada di sini? Ayo jelajahi destinasi wisata 
+        Hidden Treasure of Tanjung Lesung sekarang!
+    </p>
 </div>
