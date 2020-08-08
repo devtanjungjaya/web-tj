@@ -7,7 +7,7 @@ sections:
 - type: heading
   label: Konten
 - type: directory
-  path: content/products
+  path: content/produk-lokal
   label: Produk lokal
   create: all
   match: "**/*.md"

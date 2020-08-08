@@ -4,7 +4,7 @@
         const data = await Promise.all([
             this.fetch("destinasi-wisata.json"),
             this.fetch("tours.json"),
-            this.fetch("products.json"),
+            this.fetch("produk-lokal.json"),
             this.fetch("rooms.json"),
             this.fetch("potencies.json")
         ])
@@ -114,7 +114,7 @@
         items={randomProducts} 
         itemComponent={ProductItem} 
         title="Produk Lokal"
-        url="products"
+        url="produk-lokal"
     />
     <Showcase 
         items={randomRooms} 

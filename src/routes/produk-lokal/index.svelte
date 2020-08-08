@@ -1,6 +1,6 @@
 <script context="module">
     export function preload({ params, query }) {
-       return this.fetch(`products.json`)
+       return this.fetch(`produk-lokal.json`)
        .then(r => r.json())
        .then(({ products, productCategories, promotions }) => {
           return { products, productCategories, promotions };
@@ -93,6 +93,6 @@
         items={products}
         itemComponent={ProductItem}
         filters={filters}
-        current="products"
+        current="produk-lokal"
     />
 </div>

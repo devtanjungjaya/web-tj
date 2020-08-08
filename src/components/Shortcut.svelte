@@ -54,7 +54,7 @@
         },
         {
             label: "Produk Lokal",
-            url: "products"
+            url: "produk-lokal"
         },
         {
             label: "Penginapan",
