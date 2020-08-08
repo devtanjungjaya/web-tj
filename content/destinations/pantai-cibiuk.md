@@ -37,5 +37,6 @@ facilities:
 - Tempat bermain anak
 promotions: []
 notes: ''
+contact: Admin Tanjungjaya
 
 ---
