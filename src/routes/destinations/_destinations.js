@@ -39,7 +39,9 @@ export const facilityIconMap = {
     'Tempat bermain anak': 'ic_lego.svg',
     'Gazebo': 'ic_gazebo.svg',
     'Penginapan': 'ic_house.svg',
-    'Tempat berkemah': 'ic_tent.svg'
+    'Tempat berkemah': 'ic_tent.svg',
+    'Pos penjaga': 'ic_hall.svg',
+    'Toko kecil': 'ic_minimarket.svg'
 }
 
 export default map;
