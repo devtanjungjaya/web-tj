@@ -1,6 +1,6 @@
 <script context="module">
     export function preload({ params, query }) {
-       return this.fetch(`destinations.json`)
+       return this.fetch(`destinasi-wisata.json`)
        .then(r => r.json())
        .then(({ destinations, destinationCategories, destinationFacilities, promotions }) => {
           return { destinations, destinationCategories, destinationFacilities, promotions };
@@ -104,6 +104,6 @@
         items={destinations}
         itemComponent={DestinationItem}
         filters={filters}
-        current="destinations"
+        current="destinasi-wisata"
     />
 </div>

@@ -26,7 +26,7 @@ sections:
   templates:
   - penginapan
 - type: directory
-  path: content/destinations
+  path: content/destinasi-wisata
   label: Destinasi wisata
   create: all
   match: "**/*.md"

@@ -2,7 +2,7 @@
     export async function preload({ params, query }) {
         const sitemap = this.fetch("sitemap.xml");
         const data = await Promise.all([
-            this.fetch("destinations.json"),
+            this.fetch("destinasi-wisata.json"),
             this.fetch("tours.json"),
             this.fetch("products.json"),
             this.fetch("rooms.json"),
@@ -102,7 +102,7 @@
         items={randomDestinations} 
         itemComponent={DestinationItem} 
         title="Destinasi Wisata"
-        url="destinations"
+        url="destinasi-wisata"
     />
     <Showcase 
         items={randomTours} 

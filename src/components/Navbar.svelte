@@ -176,7 +176,7 @@
     const navigations = [
         {
             label: "Destinasi Wisata",
-            url: "destinations"
+            url: "destinasi-wisata"
         },
         {
             label: "Paket Wisata",

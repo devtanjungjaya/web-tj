@@ -42,7 +42,7 @@
     const categoryMenu = [
         {
             label: "Destinasi\nWisata",
-            url: "destinations"
+            url: "destinasi-wisata"
         },
         {
             label: "Paket Wisata",
