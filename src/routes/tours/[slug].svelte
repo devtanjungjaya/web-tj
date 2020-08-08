@@ -5,7 +5,7 @@
       if (res.status === 200) {
          return { data };
       } else {
-         this.error(res.status, data.message);
+         this.redirect(404, '404');
       }
    }
 </script>
@@ -35,12 +35,14 @@
    let description;
 
    $: title = `${data.name} - Paket Wisata ${data.categories.join(", ")} di Buffer Zone KEK Tanjung Lesung`;
-   $: description = data.description.replace(/(<([^>]+)>)/g, "") + 
-         data.activity ? ` ${data.activity}` : "" + data.notes? ` ${data.notes}` : "";
+   $: description = `${data.description.replace(/(<([^>]+)>)/g, "").replace(/(\r\n|\n|\r)/gm, "")} ${data.activity ? 
+      `${data.activity.replace(/(<([^>]+)>)/g, "").replace(/(\r\n|\n|\r)/gm, "")} ` : ""}${data.notes ? 
+      data.notes.replace(/(<([^>]+)>)/g, "").replace(/(\r\n|\n|\r)/gm, "") : ""}`;
 </script>
 
 <svelte:head>
    <title>{title}</title>
+   <link rel="canonical" href={"https://bufferzonetanjunglesung.com/tours/" + data.slug} />
    <meta name="description" content={description} />
    <meta property="og:title" content={title} />
    <meta property="og:type" content="website" />

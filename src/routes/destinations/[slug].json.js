@@ -8,7 +8,7 @@ export function get(req, res, next) {
 			'Content-Type': 'application/json'
 		});
 
-		res.end(JSON.stringify({...destinations.get(slug), facilityIconMap}));
+		res.end(JSON.stringify({...destinations.get(slug), facilityIconMap, slug}));
 	} else {
 		res.writeHead(404, {
 			'Content-Type': 'application/json'
