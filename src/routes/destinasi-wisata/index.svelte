@@ -26,7 +26,7 @@
     })
 
     const title = "Cari Destinasi Wisata di Buffer Zone KEK Tanjung Lesung";
-    const description = "Cari Destinasi Wisata di Buffer Zone KEK Tanjung Lesung";
+    const description = "Hidden Treasure of Tanjung Lesung, merupakan tempat wisata yang dekat dengan Jakarta dan Jabodetabek yang berkualitas! Kamu yang bosan dengan kehidupan kota Jakarta dan sekitarnya dan ingin berwisata menjelajahi keindahan alam yang segar dan asri, dapat mengunjungi wisata pantai dan air terjun di Hidden Treasure of Tanjung Lesung. Tidak hanya wisata alam, di Hidden Treasure of Tanjung Lesung juga terdapat wisata budaya seperti sanggar seni dan tari tradisional khas Banten. Penasaran apa saja yang ada di sini? Ayo jelajahi destinasi wisata Hidden Treasure of Tanjung Lesung sekarang!";
 
     export let destinations;
     export let destinationCategories;
