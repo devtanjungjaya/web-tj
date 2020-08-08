@@ -6,8 +6,8 @@
     $: if(error && error.message && error.message.includes("Failed to fetch dynamically imported module")) {
         location.reload(true);
     }
-    $: if(error && error.message && error.message.includes("Unexpected token < in JSON at position 0")) {
-        location.reload(true);
+    $: if(status === 404) {
+        console.log("hai", status, error);
     }
 </script>
 
