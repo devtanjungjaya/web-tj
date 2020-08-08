@@ -6,10 +6,10 @@
                 accessToken = {mapboxAccessToken}
                 bind:this = {map}
                 on:recentre={e => console.log(e.detail.center.lat, e.detail.center.lng) } 
-                options = {{center,zoom:9}}
-                style="http://api.mapbox.com/styles/v1/meutiasan/ckdjx6egi0lwm1in0c79tnc14.html?fresh=true&title=view&access_token=pk.eyJ1IjoibWV1dGlhc2FuIiwiYSI6ImNqdDd4ZnpiaTAydzg0NG85d2RudXEzdjUifQ.tl0bQ7DgfZmTjZ9ENUAVnQ#11.6/-6.5191/105.7428"
+                options = {{center,zoom:11}}
             >
             <NavigationControl position="top-left"/>
+            <Penginapan tmp={map}/>
             <Legends map={map.getMap()} data={data}/>
             </Map>
         </div>
@@ -26,10 +26,11 @@
     import Header from '../../../components/maps/Header.svelte'
     import Legends from '../../../components/maps/Legends.svelte'
     import { data } from "../../../components/maps/DataPenginapan.svelte"
+    import Penginapan from "../../../components/maps/Penginapan.svelte"
     const { GeolocateControl, NavigationControl, ScalingControl } = controls
     const mapboxAccessToken = "MAPBOX_ACCESS_TOKEN";
     let map;
-    let center = { lat: -6.492497591683218, lng: 105.83290112301756};
+    let center = { lat:-6.518604043472081, lng: 105.69310043948212};
     let colors = []
     let check = []
     let type = []

@@ -16,7 +16,7 @@
                 'paint': {
                     'fill-opacity': 0.8,
                     'fill-color': element.color
-                },
+                }
             })    
         }
         else{
