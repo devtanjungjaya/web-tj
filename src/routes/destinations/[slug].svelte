@@ -4,13 +4,18 @@
    export async function preload({ params: { slug }, query }) {
       const res = await this.fetch(`destinations/${slug}.json`);
       const data = await res.json();
-      const neighborhood = await this.fetch('https://api.mapbox.com/geocoding/v5/mapbox.places/' + 
-         `${data.coordinate.lng},${data.coordinate.lat}.json?` +
-         `access_token=${mapboxAccessToken}&types=neighborhood`
-      ).then(r => r.json()).then(d => d.features[0]['place_name']);
-      return {
-         data,
-         neighborhood
+      if(res.status === 200) {
+         const neighborhood = await this.fetch('https://api.mapbox.com/geocoding/v5/mapbox.places/' + 
+            `${data.coordinate.lng},${data.coordinate.lat}.json?` +
+            `access_token=${mapboxAccessToken}&types=neighborhood`
+         ).then(r => r.json()).then(d => d.features.length ? d.features[0]['place_name'] : 
+            'Buffer Zone KEK Tanjung Lesung');
+         return {
+            data,
+            neighborhood
+         }
+      } else {
+         return this.redirect(404, '404');
       }
    }
 </script>
@@ -21,6 +26,7 @@
    import Prices from "../../components/Item/Prices.svelte";
    import Facilities from "../../components/Item/Facilities.svelte";
    import Hours from "../../components/Item/Hours.svelte";
+   import Contact from "../../components/Item/Contact.svelte";
    import Link from "../../components/Item/Link.svelte";
    import Promotions from "../../components/Item/Promotions.svelte";
    import { onMount } from "svelte";
@@ -45,11 +51,12 @@
    let description;
 
    $: title = `${data.name} - Destinasi Wisata ${data.categories.join(", ")} di ${neighborhood}`;
-   $: description = data.description.replace(/(<([^>]+)>)/g, "");
+   $: description = data.description.replace(/(<([^>]+)>)/g, "").replace(/(\r\n|\n|\r)/gm, "");
 </script>
 
 <svelte:head>
    <title>{title}</title>
+   <link rel="canonical" href={"https://bufferzonetanjunglesung.com/destinations/" + data.slug} />
    <meta name="description" content={description} />
    <meta property="og:title" content={title} />
    <meta property="og:type" content="website" />
@@ -71,8 +78,11 @@
  
    <svelte:component this={PhotosComponent} photos={data.photos} />
 
-   <div class="flex flex-col lg:flex-row space-y-6 lg:space-y-0 lg:space-x-10 xl:space-x-32 mt-10 sm:mt-20">
-      <div class="flex flex-col max-w-4xl">
+   <div 
+      class="flex flex-col lg:flex-row space-y-6 lg:space-y-0 lg:space-x-10 xl:space-x-32 lg:justify-between mt-10 
+      sm:mt-20 max-w-7xl"
+   >
+      <div class="flex flex-col">
          {#if data.promotions && data.promotions.length}
             <Promotions promotions={data.promotions} />
          {/if}
@@ -97,9 +107,14 @@
       </div>
       <div class="flex flex-col flex-shrink-0 self-start max-w-full space-y-6" style="width: 375px">
          <Prices prices={data.prices} />
-         <svelte:component this={MapComponent} {...data.coordinate} />
+         {#if data.coordinate}
+            <svelte:component this={MapComponent} {...data.coordinate} />
+         {/if}
          {#if data.gmaps}
             <Link url={data.gmaps} icon="ic_gmaps.png" label="Buka lokasi di Google Maps" />
+         {/if}
+         {#if data.contact && data.contact.phoneNumbers && data.contact.phoneNumbers.length}
+         <Contact {...data.contact} name="Silahkan hubungi admin untuk pemesanan atau informasi lebih lanjut"/>
          {/if}
       </div>
    </div>

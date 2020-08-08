@@ -1,8 +1,8 @@
 {
 	"background_color": "#ffffff",
-	"theme_color": "#333333",
-	"name": "TODO",
-	"short_name": "TODO",
+	"theme_color": "#0BA79F",
+	"name": "Hidden Treasure of Tanjung Lesung",
+	"short_name": "Hidden Treasure of Tanjung Lesung",
 	"display": "minimal-ui",
 	"start_url": "/",
 	"icons": [

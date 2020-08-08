@@ -13,7 +13,7 @@ photos:
   description: Dapur
 - photoURI: https://web-tj.netlify.app/images/20200727_125301-1.jpg
   description: Kamar mandi
-gmaps: ''
+gmaps: https://goo.gl/maps/ShYWCFK6E88KxA2C7
 prices:
 - description: Harga per kamar
   value: 250000
@@ -26,7 +26,7 @@ roomFacilities:
 - Kipas angin
 description: 2 kamar
 promotions: []
-notes: tempat cuci tangan
-contact: Admin Cikadu
+notes: Tersedia tempat cuci tangan
+contact: Admin Tanjungjaya
 
 ---

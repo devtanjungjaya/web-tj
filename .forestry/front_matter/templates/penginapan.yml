@@ -19,14 +19,30 @@ fields:
   config:
     min: 1
     max: 
-    labelField: description
+    labelField: ''
   label: Foto-foto
-- name: gmaps
-  type: text
+- name: category
+  type: select
+  default: []
   config:
-    required: false
-  label: Link google maps
-  description: Link google maps yang menunjukan lokasi penginapan
+    required: true
+    options: []
+    source:
+      type: documents
+      section: kategori-penginapan-32d443ca-d6d7-4215-99c2-1cab7aba6fd6
+      file: data/category-room.yml
+      path: categories
+  label: Kategori
+- name: description
+  type: textarea
+  default: ''
+  config:
+    required: true
+    wysiwyg: true
+    schema:
+      format: markdown
+  label: Deskripsi
+  description: Deskripsi mengenai penginapan dan fasilitas-fasilitas yang ditawarkan
 - name: prices
   type: field_group_list
   fields:
@@ -41,18 +57,6 @@ fields:
     labelField: description
   label: List harga
   description: Harga-harga setiap tipe kamar
-- name: category
-  type: select
-  default: []
-  config:
-    required: true
-    options: []
-    source:
-      type: documents
-      section: kategori-penginapan-32d443ca-d6d7-4215-99c2-1cab7aba6fd6
-      file: data/category-room.yml
-      path: categories
-  label: Kategori
 - name: publicFacilities
   type: list
   config:
@@ -77,16 +81,6 @@ fields:
       file: data/facility-room.yml
       path: roomFacilities
   label: Fasilitas kamar
-- name: description
-  type: textarea
-  default: ''
-  config:
-    required: true
-    wysiwyg: true
-    schema:
-      format: markdown
-  label: Deskripsi
-  description: Deskripsi mengenai penginapan dan fasilitas-fasilitas yang ditawarkan
 - name: coordinate
   type: field_group
   config: {}
@@ -97,6 +91,12 @@ fields:
     template: koordinat
     label: Koordinat
   label: Koordinat lokasi
+- name: gmaps
+  type: text
+  config:
+    required: false
+  label: Link google maps
+  description: Link google maps yang menunjukan lokasi penginapan
 - name: promotions
   type: list
   config:

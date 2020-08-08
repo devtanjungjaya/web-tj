@@ -2,6 +2,8 @@
 contact: Admin Citeureup
 name: Kue Balok Jalupang (Khas Pandeglang)
 photos:
+- description: Kue Balok Jalupang Asin (kiri) dan Manis (kanan)
+  photoURI: https://web-tj.netlify.app/images/kue-balok-jalupang-5.jpeg
 - description: Kue Balok Jalupang Manis (kiri) dan Asin (kanan)
   photoURI: https://web-tj.netlify.app/images/kue-balok-jalupang-1-1.jpeg
 - description: Kue balok jalupang asin

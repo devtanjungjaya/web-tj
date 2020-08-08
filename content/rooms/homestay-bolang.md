@@ -15,14 +15,14 @@ photos:
   description: ''
 - photoURI: https://web-tj.netlify.app/images/20200727_112031.jpg
   description: Kamar mandi
-gmaps: ''
+gmaps: https://goo.gl/maps/TUjtu91ZGfycWW547
 prices:
 - description: Harga per kamar dengan teh, kopi dan air minum
   value: 200000
   unit: kamar
 publicFacilities:
 - Dapur
-- Ruang Keluarga
+- Ruang keluarga
 - Mushola
 - Jasa tur
 - Area parkir
@@ -33,9 +33,9 @@ roomFacilities:
 - Lemari
 - AC
 - Kamar mandi dalam
-description: 7 kamar. 3-5 orang
+description: 7 kamar kapasitas 3-5 orang
 promotions: []
-notes: tersedia hand sanitizer, tempat cuci tangan
-contact: Admin Cikadu
+notes: Tersedia hand sanitizer, tempat cuci tangan
+contact: Admin Tanjungjaya
 
 ---

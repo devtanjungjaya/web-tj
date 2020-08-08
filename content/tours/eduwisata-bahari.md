@@ -2,7 +2,7 @@
 contact: Admin Tanjungjaya
 name: Eduwisata Bahari
 photos:
-- photoURI: https://web-tj.netlify.app/images/paket-eduwisata-bahari-1.png
+- photoURI: https://web-tj.netlify.app/images/paket-eduwisata-bahari-1.jpg
   description: Edukasi transplantasi terumbu karang
 - photoURI: https://web-tj.netlify.app/images/paket-eduwisata-bahari-4.jpeg
   description: Trip ke pulau Liwungan
@@ -17,7 +17,11 @@ photos:
 description: |-
   Kawasan Bufferzone KEK Tanjung Lesung terkenal dengan keindahan pantai dan lautnya. Nikmati serunya snorkeling di pulau Liwungan dengan keindahan bawah lautnya sambil belajar menanam terumbu karang untuk melestarikan alam kita. Jalani juga aktivitas seru lainnya seperti memberi makan burung camar dan menangkap ikan secara tradisional sembari dipandu oleh pemandu wisata lokal.
 
-  Harga termasuk: Homestay AC untuk 1 malam, perahu kapasitas 15 orang, makan sebanyak 4x
+  Harga termasuk:
+
+  Semua atraksi wisata, homestay AC untuk 1 malam, perahu kapasitas 15 orang, makan sebanyak 4x
+
+  Dengan membeli paket wisata ini, Anda telah berkontribusi untuk kesejahteraan warga desa kami.
 activity: |-
   1. Trip ke pulau Liwungan
   2. Snorkeling
@@ -32,8 +36,10 @@ prices:
   value: 330000
   unit: pax
 facilities:
+- Pemandu wisata lokal
 - Transportasi
-- Pemandu wisata
+- Penginapan
+- Makan
 promotions: []
 notes: Diwajibkan melakukan reservasi terlebih dahulu
 

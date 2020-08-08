@@ -24,8 +24,9 @@
     </div>
     <div 
         class="md:px-3 w-full flex items-center justify-center absolute" 
-        style="top: 40%; transform: translateY(-40%)"
+        style="top: 40%; transform: translateY(-40%); height: 60vh"
     >
+        {#if innerHeight > 0}
         <Carousel 
             perPage="1" 
             dots={false} 
@@ -37,17 +38,19 @@
             {#each photos as photo, i}
             <div 
                 class="max-h-full"
-                style="height: 60vh"    
             >
                 <Image
                     imgClass="object-contain"
                     size="h-full"
                     src={photo.photoURI}
                     alt={photo.description}
+                    contain={true}
+                    innerHeight={0.6*innerHeight}
                 />
             </div>
             {/each}
         </Carousel>
+        {/if}
     </div>
     <span 
         class="py-6 px-2 text-center mt-auto font-open-sans font-normal text-neutral-6 
@@ -57,6 +60,7 @@
     </span>
 </div>
 
+<svelte:window bind:innerHeight={innerHeight} />
 
 <script>
     import Image from "../Image.svelte";
@@ -69,4 +73,5 @@
     export let initialIndex = 0;
 
     let currentIndex = initialIndex;
+    let innerHeight = 0;
 </script>

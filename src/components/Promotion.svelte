@@ -1,6 +1,6 @@
 <div 
     class={`flex flex-col ${photoFirst ? 'sm:flex-row' : 'sm:flex-row-reverse sm:space-x-reverse'} justify-center 
-    space-x-0 space-y-12 sm:space-x-12 sm:space-y-0`}
+    space-x-0 space-y-6 sm:space-x-12 sm:space-y-0`}
 >
     <div class="promo-img flex-shrink-0">
         <div class="relative h-0 w-full" style="padding-bottom: 80%">

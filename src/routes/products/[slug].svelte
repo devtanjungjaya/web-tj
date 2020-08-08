@@ -5,7 +5,7 @@
       if (res.status === 200) {
          return { data };
       } else {
-         this.error(res.status, data.message);
+         return this.redirect(404, '404');
       }
    }
 </script>
@@ -34,11 +34,12 @@
    let description;
 
    $: title = `${data.name} - ${data.categories.join(", ")} - Produk Lokal Buffer Zone KEK Tanjung Lesung`;
-   $: description = data.description.replace(/(<([^>]+)>)/g, "");
+   $: description = data.description.replace(/(<([^>]+)>)/g, "").replace(/(\r\n|\n|\r)/gm, "");
 </script>
 
 <svelte:head>
    <title>{title}</title>
+   <link rel="canonical" href={"https://bufferzonetanjunglesung.com/products/" + data.slug} />
    <meta name="description" content={description} />
    <meta property="og:title" content={title} />
    <meta property="og:type" content="website" />
@@ -59,8 +60,11 @@
  
    <svelte:component this={PhotosComponent} photos={data.photos} />
 
-   <div class="flex flex-col lg:flex-row space-y-6 lg:space-y-0 lg:space-x-10 xl:space-x-32 mt-10 sm:mt-20">
-      <div class="flex flex-col flex-grow max-w-4xl">
+   <div 
+      class="flex flex-col lg:flex-row space-y-6 lg:space-y-0 lg:space-x-10 xl:space-x-32 lg:justify-between mt-10 
+      sm:mt-20 max-w-7xl"
+   >
+      <div class="flex flex-col flex-grow">
          {#if data.promotions && data.promotions.length}
             <Promotions promotions={data.promotions} />
          {/if}
@@ -84,7 +88,9 @@
          <!-- {#if data.ecommerce}
             <Link url={data.ecommerce} icon="ic_ecommerce.svg" label="Tautan toko daring" />
          {/if} -->
+         {#if data.contact && data.contact.phoneNumbers && data.contact.phoneNumbers.length}
          <Contact {...data.contact} name="Silahkan hubungi admin untuk membeli atau informasi lebih lanjut" />
+         {/if}
       </div>
    </div>
 </div>

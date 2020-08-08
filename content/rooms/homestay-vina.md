@@ -15,7 +15,7 @@ photos:
   description: Kamar tidur
 - photoURI: https://web-tj.netlify.app/images/20200727_131511.jpg
   description: ''
-gmaps: ''
+gmaps: https://goo.gl/maps/aQjprgQXnDfNUdKr8
 prices:
 - description: kamar
   value: 400000
@@ -30,7 +30,7 @@ roomFacilities:
 - Kipas angin
 description: 1 kamar
 promotions: []
-notes: tempat cuci tangan
-contact: Admin Cikadu
+notes: Tersedia tempat cuci tangan
+contact: Admin Tanjungjaya
 
 ---

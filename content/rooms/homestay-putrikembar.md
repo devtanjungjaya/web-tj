@@ -7,7 +7,7 @@ name: Homestay Putri Kembar
 photos:
 - photoURI: ''
   description: ''
-gmaps: ''
+gmaps: https://goo.gl/maps/1upKzMdEVVLVz3Q57
 prices:
 - description: Harga satu kamar (free extra bed selama masih ada)
   value: 250000
@@ -23,7 +23,7 @@ description: |-
 
   Terdapat jasa bakar ikan
 promotions: []
-notes: tersedia hand sanitizer, tempat cuci tangan
-contact: Admin Cikadu
+notes: Tersedia hand sanitizer, tempat cuci tangan
+contact: Admin Tanjungjaya
 
 ---

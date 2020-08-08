@@ -13,23 +13,23 @@ photos:
   description: ''
 - photoURI: https://web-tj.netlify.app/images/photocollage_20200307_230004361.jpg
   description: ''
-gmaps: ''
+gmaps: https://goo.gl/maps/BpoUDYapdP6NnbgA7
 prices:
-- description: Extra bed
-  value: 50000
-  unit: bed
-- description: Rumah Kakao
-  value: 1600000
-  unit: malam
-- description: Room Bata
-  value: 650000
+- description: Kamar Hebel
+  value: 250000
   unit: malam
 - description: Rumah Kirai
   value: 500000
   unit: malam
-- description: Kamar Hebel
-  value: 250000
+- description: Room Bata
+  value: 650000
   unit: malam
+- description: Rumah Kakao
+  value: 1600000
+  unit: malam
+- description: Extra bed
+  value: 50000
+  unit: bed
 publicFacilities:
 - Kolam renang
 - Resepsionis 24 jam
@@ -44,11 +44,16 @@ roomFacilities:
 - Kloset duduk
 - Shower
 - Kamar mandi dalam
-description: "Tipe kamar  \nKamar hebel kapasitas 2 orang  \nRumah kirai kapasitas
-  4 orang  \nRoom Bata kapasitas 6 orang  \nRumah kakao kapsitas 16 orang"
-notes: tersedia tempat cuci tangan , tersedia hand sanitizer,tersedia alat pengukur
-  suhu tubuh, alat penyemprot disenfektan
+description: |-
+  Tipe kamar:
+
+  1. Kamar Hebel kapasitas 2 orang
+  2. Rumah Kirai kapasitas 4 orang
+  3. Room Bata kapasitas 6 orang
+  4. Rumah Kakao kapsitas 16 orang
+notes: Tersedia tempat cuci tangan, hand sanitizer, alat pengukur suhu tubuh, alat
+  penyemprot disenfektan
 promotions: []
-contact: Admin Cikadu
+contact: Admin Tanjungjaya
 
 ---
