@@ -33,20 +33,24 @@
    let title;
    let description;
    let image;
+   let url;
 
    $: title = `${data.name} - ${data.categories.join(", ")} - Produk Lokal Buffer Zone KEK Tanjung Lesung`;
    $: description = data.description.replace(/(<([^>]+)>)/g, "").replace(/(\r\n|\n|\r)/gm, "");
    $: image = data.photos.length ? 'https://www.bufferzonetanjunglesung.com/' + data.photos[0].photoURI : '';
+   $: url = "https://www.bufferzonetanjunglesung.com/produk-lokal/" + data.slug;
 </script>
 
 <svelte:head>
    <title>{title}</title>
-   <link rel="canonical" href={"https://www.bufferzonetanjunglesung.com/produk-lokal/" + data.slug} />
+   <link rel="canonical" href={url} />
    <meta name="description" content={description} />
    <meta property="og:title" content={title} />
    <meta property="og:type" content="website" />
    <meta property="og:description" content={description} />
    <meta property="og:image" content={image} />
+   <meta property="og:url" content={url} />
+   <meta name="twitter:card" content="summary" />
    <meta name="twitter:title" content={title}>
    <meta name="twitter:description" content={description}>
    <meta name="twitter:image" content={image}>

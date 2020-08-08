@@ -27,6 +27,7 @@
 
     const title = "Cari Produk Lokal di Buffer Zone KEK Tanjung Lesung";
     const description = "Cari Produk Lokal di Buffer Zone KEK Tanjung Lesung";
+    const url = "https://www.bufferzonetanjunglesung.com/produk-lokal/";
 
     export let products = [];
     export let productCategories;
@@ -76,11 +77,14 @@
 
 <svelte:head>
    <title>{title}</title>
+   <link rel="canonical" href={url} />
    <meta name="description" content={description} />
    <meta property="og:title" content={title} />
    <meta property="og:type" content="website" />
    <meta property="og:description" content={description} />
    <meta property="og:image" content="images/landing-1.webp" />
+   <meta property="og:url" content={url} />
+   <meta name="twitter:card" content="summary" />
    <meta name="twitter:title" content={title}>
    <meta name="twitter:description" content={description}>
    <meta name="twitter:image" content="images/landing-1.webp">

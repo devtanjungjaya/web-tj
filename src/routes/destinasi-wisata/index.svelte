@@ -27,6 +27,7 @@
 
     const title = "Cari Destinasi Wisata di Buffer Zone KEK Tanjung Lesung";
     const description = "Hidden Treasure of Tanjung Lesung, merupakan tempat wisata yang dekat dengan Jakarta dan Jabodetabek yang berkualitas! Kamu yang bosan dengan kehidupan kota Jakarta dan sekitarnya dan ingin berwisata menjelajahi keindahan alam yang segar dan asri, dapat mengunjungi wisata pantai dan air terjun di Hidden Treasure of Tanjung Lesung. Tidak hanya wisata alam, di Hidden Treasure of Tanjung Lesung juga terdapat wisata budaya seperti sanggar seni dan tari tradisional khas Banten. Penasaran apa saja yang ada di sini? Ayo jelajahi destinasi wisata Hidden Treasure of Tanjung Lesung sekarang!";
+    const url = "https://www.bufferzonetanjunglesung.com/destinasi-wisata/"
 
     export let destinations;
     export let destinationCategories;
@@ -87,11 +88,14 @@
 
 <svelte:head>
    <title>{title}</title>
+   <link rel="canonical" href={url} />
    <meta name="description" content={description} />
    <meta property="og:title" content={title} />
    <meta property="og:type" content="website" />
    <meta property="og:description" content={description} />
    <meta property="og:image" content="images/landing-1.webp" />
+   <meta property="og:url" content={url} />
+   <meta name="twitter:card" content="summary" />
    <meta name="twitter:title" content={title}>
    <meta name="twitter:description" content={description}>
    <meta name="twitter:image" content="images/landing-1.webp">
