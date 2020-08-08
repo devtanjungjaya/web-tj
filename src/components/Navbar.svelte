@@ -180,7 +180,7 @@
         },
         {
             label: "Paket Wisata",
-            url: "tours"
+            url: "paket-wisata"
         },
         {
             label: "Produk Lokal",

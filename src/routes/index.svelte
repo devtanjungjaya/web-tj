@@ -3,7 +3,7 @@
         const sitemap = this.fetch("sitemap.xml");
         const data = await Promise.all([
             this.fetch("destinasi-wisata.json"),
-            this.fetch("tours.json"),
+            this.fetch("paket-wisata.json"),
             this.fetch("produk-lokal.json"),
             this.fetch("penginapan.json"),
             this.fetch("potencies.json")
@@ -108,7 +108,7 @@
         items={randomTours} 
         itemComponent={TourItem} 
         title="Paket Wisata"
-        url="tours"
+        url="paket-wisata"
     />
     <Showcase 
         items={randomProducts} 

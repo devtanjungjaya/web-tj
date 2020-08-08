@@ -1,6 +1,6 @@
 <script context="module">
    export async function preload({ params: { slug }, query }) {
-      const res = await this.fetch(`tours/${slug}.json`);
+      const res = await this.fetch(`paket-wisata/${slug}.json`);
       const data = await res.json();
       if (res.status === 200) {
          return { data };
@@ -42,7 +42,7 @@
 
 <svelte:head>
    <title>{title}</title>
-   <link rel="canonical" href={"https://bufferzonetanjunglesung.com/tours/" + data.slug} />
+   <link rel="canonical" href={"https://bufferzonetanjunglesung.com/paket-wisata/" + data.slug} />
    <meta name="description" content={description} />
    <meta property="og:title" content={title} />
    <meta property="og:type" content="website" />
@@ -55,7 +55,7 @@
 
 <div class="px-4 sm:px-8 md:px-16 py-6 sm:py-12 flex flex-col">
    <Header
-      typeURL="tours"
+      typeURL="paket-wisata"
       type="PAKET WISATA"
       title={data.name}
       categories={data.categories}
