@@ -18,9 +18,6 @@
             data,
             neighborhood
          }
-      } else {
-         console.log("e");
-         return this.redirect(404, '404');
       }
    }
 </script>
