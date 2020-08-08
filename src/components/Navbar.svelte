@@ -1,8 +1,10 @@
 <div 
-    class="flex items-center fixed top-0 w-full border-b-1 border-neutral-1 py-5 px-4 md:px-6 lg:px-16 
+    class="flex items-center fixed top-0 w-full border-b-1 border-neutral-1 p-4 md:px-6 lg:px-16 
     bg-white font-overpass font-bold text-neutral-3 text-lg lg:text-xl z-20"
 >
-    <a rel="prefetch" href="/" class="mr-auto cursor-pointer hover:text-primary-7">Home</a>
+    <a rel="prefetch" href="/" class="mr-auto cursor-pointer hover:text-primary-7 h-10">
+        <img class="h-full" src="images/logo-warna.webp" alt="logo buffer zone kek tanjung lesung" />
+    </a>
     <div class="hidden sm:flex items-center space-x-10 lg:space-x-20">
         <div class="relative group cursor-pointer">
             <span class="group-hover:text-primary-7">Kategori</span>
