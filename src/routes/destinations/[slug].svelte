@@ -49,9 +49,11 @@
    export let neighborhood;
    let title;
    let description;
+   let image;
 
    $: title = `${data.name} - Destinasi Wisata ${data.categories.join(", ")} di ${neighborhood}`;
    $: description = data.description.replace(/(<([^>]+)>)/g, "").replace(/(\r\n|\n|\r)/gm, "");
+   $: image = data.photos.length ? 'https://bufferzonetanjunglesung.com/' + data.photos[0].photoURI : '';
 </script>
 
 <svelte:head>
@@ -61,10 +63,10 @@
    <meta property="og:title" content={title} />
    <meta property="og:type" content="website" />
    <meta property="og:description" content={description} />
-   <meta property="og:image" content={data.photos.length ? data.photos[0].photoURI : ''} />
+   <meta property="og:image" content={image} />
    <meta name="twitter:title" content={title}>
    <meta name="twitter:description" content={description}>
-   <meta name="twitter:image" content={data.photos.length ? data.photos[0].photoURI : ''}>
+   <meta name="twitter:image" content={image}>
 </svelte:head>
 
 <div class="px-4 sm:px-8 md:px-16 py-6 sm:py-12 flex flex-col">
