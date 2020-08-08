@@ -134,7 +134,6 @@ fields:
   label: Catatan
   description: Catatan untuk pengunjung atau yang lainnya
 pages:
-- content/destinasi-wisata/contoh-1.md
 - content/destinasi-wisata/curug-cisadang.md
 - content/destinasi-wisata/kampung-mangrove-patikang.md
 - content/destinasi-wisata/pantai-blue-ocean.md
