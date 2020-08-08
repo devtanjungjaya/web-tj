@@ -21,6 +21,7 @@
     "gray-matter": "^4.0.2",
     "marked": "^1.1.0",
     "polka": "next",
+    "sapper-google-analytics": "^1.0.2",
     "siema": "^1.5.1",
     "sirv": "^0.4.0"
   },
