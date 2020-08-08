@@ -15,6 +15,3 @@
         Kembali ke halaman utama
     </a>
 </div>
-<script>
-    
-</script>
