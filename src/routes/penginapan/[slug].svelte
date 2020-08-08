@@ -2,9 +2,13 @@
    const mapboxAccessToken = "MAPBOX_ACCESS_TOKEN";
 
    export async function preload({ params: { slug }, query }) {
+      console.log("a");
       const res = await this.fetch(`penginapan/${slug}.json`);
-      const data = await res.json();
+      console.log("b");
       if(res.status === 200) {
+         console.log("c");
+         const data = await res.json();
+         console.log("d");
          const neighborhood = await this.fetch('https://api.mapbox.com/geocoding/v5/mapbox.places/' + 
             `${data.coordinate.lng},${data.coordinate.lat}.json?` +
             `access_token=${mapboxAccessToken}&types=neighborhood`
@@ -15,6 +19,7 @@
             neighborhood
          }
       } else {
+         console.log("e");
          return this.redirect(404, '404');
       }
    }
