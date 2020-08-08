@@ -6,6 +6,9 @@
     $: if(error && error.message && error.message.includes("Failed to fetch dynamically imported module")) {
         location.reload(true);
     }
+    $: if(error && error.message && error.message.includes("Unexpected token < in JSON at position 0")) {
+        location.reload(true);
+    }
 </script>
 
 <div class="container-inner mx-auto py-16 text-center">

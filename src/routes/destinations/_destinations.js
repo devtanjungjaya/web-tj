@@ -1,5 +1,6 @@
 import getMarkdownInDirectory from '../../utilities/markdown.js';
 import { processPromotions } from '../../utilities/promotion';
+import { adminContactsMap } from '../../utilities/contact';
 const marked = require('marked');
 
 const wysiwyg = ['description', 'notes'];
@@ -14,6 +15,7 @@ destinations = destinations.map(destination =>
         return {
             ...destination,
             promotions: processPromotions(destination.promotions || []),
+            contact: adminContactsMap.get(destination.contact) || { phoneNumbers: [] },
             photos: destination.photos.map(p => {
                 p.photoURI = p.photoURI.substring(p.photoURI.indexOf('images/'))
                 return p;
