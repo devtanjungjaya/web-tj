@@ -73,7 +73,6 @@
             <Promotions promotions={data.promotions} />
          {/if}
          {#if DOMPurify}
-            <Decorator />
             <p class="font-open-sans text-neutral-5 text-lg sm:text-xl prose">
                {@html DOMPurify.sanitize(data.description)}
             </p>
