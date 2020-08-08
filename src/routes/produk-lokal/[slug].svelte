@@ -1,11 +1,9 @@
 <script context="module">
    export async function preload({ params: { slug }, query }) {
       const res = await this.fetch(`produk-lokal/${slug}.json`);
-      const data = await res.json();
       if (res.status === 200) {
+         const data = await res.json();
          return { data };
-      } else {
-         return this.redirect(404, '404');
       }
    }
 </script>

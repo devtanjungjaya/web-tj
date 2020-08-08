@@ -3,8 +3,8 @@
 
    export async function preload({ params: { slug }, query }) {
       const res = await this.fetch(`destinasi-wisata/${slug}.json`);
-      const data = await res.json();
       if(res.status === 200) {
+         const data = await res.json();
          const neighborhood = await this.fetch('https://api.mapbox.com/geocoding/v5/mapbox.places/' + 
             `${data.coordinate.lng},${data.coordinate.lat}.json?` +
             `access_token=${mapboxAccessToken}&types=neighborhood`
@@ -14,8 +14,6 @@
             data,
             neighborhood
          }
-      } else {
-         return this.redirect(404, '404');
       }
    }
 </script>

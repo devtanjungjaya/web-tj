@@ -6,9 +6,6 @@
     $: if(error && error.message && error.message.includes("Failed to fetch dynamically imported module")) {
         location.reload(true);
     }
-    $: if(status === 404) {
-        console.log("hai", status, error);
-    }
 </script>
 
 <div class="container-inner mx-auto py-16 text-center">
