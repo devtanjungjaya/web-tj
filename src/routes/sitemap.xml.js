@@ -1,39 +1,39 @@
-import rooms from './rooms/_rooms';
-import products from './products/_products';
-import destinations from './destinations/_destinations';
-import tours from './tours/_tours';
+import rooms from './penginapan/_rooms';
+import products from './produk-lokal/_products';
+import destinations from './destinasi-wisata/_destinations';
+import tours from './paket-wisata/_tours';
 const { SitemapStream, streamToPromise } = require( 'sitemap' )
 const { Readable } = require( 'stream' )
 
 export async function get(req, res, next) {
     const siteUrls = [
         { url: "/", changefreq: "monthly", priority: 0.5 },
-        { url: "/rooms/", changefreq: "weekly", priority: 0.8 },
-        { url: "/products/", changefreq: "weekly", priority: 0.8 },
-        { url: "/destinations/", changefreq: "weekly", priority: 0.8 },
-        { url: "/tours/", changefreq: "weekly", priority: 0.8 }
+        { url: "/penginapan/", changefreq: "weekly", priority: 0.8 },
+        { url: "/produk-lokal/", changefreq: "weekly", priority: 0.8 },
+        { url: "/destinasi-wisata/", changefreq: "weekly", priority: 0.8 },
+        { url: "/paket-wisata/", changefreq: "weekly", priority: 0.8 }
     ];
 
     const roomUrls = [...rooms.keys()].map(slug => ({
-        url: `/rooms/${slug}/`,
+        url: `/penginapan/${slug}/`,
         changefreq: "monthly",
         priority: 1.0
     }));
 
     const productUrls = [...products.keys()].map(slug => ({
-        url: `/products/${slug}/`,
+        url: `/produk-lokal/${slug}/`,
         changefreq: "monthly",
         priority: 1.0
     }));
 
     const destinationUrls = [...destinations.keys()].map(slug => ({
-        url: `/destinations/${slug}/`,
+        url: `/destinasi-wisata/${slug}/`,
         changefreq: "monthly",
         priority: 1.0
     }));
 
     const tourUrls = [...tours.keys()].map(slug => ({
-        url: `/tours/${slug}/`,
+        url: `/paket-wisata/${slug}/`,
         changefreq: "monthly",
         priority: 1.0
     }));

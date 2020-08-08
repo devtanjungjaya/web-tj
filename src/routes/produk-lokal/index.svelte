@@ -1,15 +1,15 @@
 <script context="module">
     export function preload({ params, query }) {
-       return this.fetch(`tours.json`)
+       return this.fetch(`produk-lokal.json`)
        .then(r => r.json())
-       .then(({ tours, tourCategories, tourFacilities, promotions }) => {
-          return { tours, tourCategories, tourFacilities, promotions };
+       .then(({ products, productCategories, promotions }) => {
+          return { products, productCategories, promotions };
        });
     }
 </script>
 
 <script>
-    import TourItem from "../../components/listing/TourItem.svelte";
+    import ProductItem from "../../components/listing/ProductItem.svelte";
     import Grid from "../../components/listing/Grid.svelte";
     import SelectFilter from "../../components/filter/Select.svelte";
     import PriceFilter from "../../components/filter/PriceRange.svelte";
@@ -25,12 +25,11 @@
         initialized = true;
     })
 
-    const title = "Cari Paket Wisata di Buffer Zone KEK Tanjung Lesung";
-    const description = "Cari Paket Wisata di Buffer Zone KEK Tanjung Lesung";
+    const title = "Cari Produk Lokal di Buffer Zone KEK Tanjung Lesung";
+    const description = "Cari Produk Lokal di Buffer Zone KEK Tanjung Lesung";
 
-    export let tours;
-    export let tourCategories;
-    export let tourFacilities;
+    export let products = [];
+    export let productCategories;
     export let promotions;
 
     let filters = [];
@@ -43,9 +42,9 @@
             label: "Kategori",
             component: SelectFilter,
             props: {
-                values: tourCategories,
+                values: productCategories,
                 label: "Kategori",
-                type: "tours",
+                type: "products",
                 itemField: "categories"
             }
         },
@@ -53,21 +52,11 @@
             label: "Harga",
             component: PriceFilter,
             props: {
-                type: "tours",
                 label: "Harga",
-                maxPrice: Math.max(...tours.map(tour => 
-                    Math.max(...tour.prices.map(price => price.value))
+                type: "products",
+                maxPrice: Math.max(...products.map(product => 
+                    Math.max(...product.prices.map(price => price.value))
                 ))
-            }
-        },
-        {
-            label: "Fasilitas",
-            component: SelectFilter,
-            props: {
-                values: tourFacilities,
-                label: "Fasilitas",
-                type: "tours",
-                itemField: "facilities"
             }
         },
         ...promotions.length ? [{
@@ -76,7 +65,7 @@
             props: {
                 values: promotions,
                 label: "Promosi",
-                type: "tours",
+                type: "products",
                 itemField: "promotions",
                 itemFieldFn: (promotions) => promotions.map(p => p.promotion)
             }
@@ -101,9 +90,9 @@
 
 <div class="flex flex-col px-2 xs:px-4 md:px-6 lg:px-16 py-6 lg:py-10 min-h-screen">
     <Grid
-        items={tours}
-        itemComponent={TourItem}
+        items={products}
+        itemComponent={ProductItem}
         filters={filters}
-        current="tours"
+        current="produk-lokal"
     />
 </div>

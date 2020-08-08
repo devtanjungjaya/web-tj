@@ -5,7 +5,7 @@ const marked = require('marked');
 
 const wysiwyg = ['description', 'notes'];
 
-let rooms = getMarkdownInDirectory('content/rooms/');
+let rooms = getMarkdownInDirectory('content/penginapan/');
 rooms = rooms.map(room => 
     Object.assign(
         room, 

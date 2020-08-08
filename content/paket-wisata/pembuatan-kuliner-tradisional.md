@@ -14,8 +14,8 @@ description: |-
   Dengan membeli paket wisata ini, Anda telah berkontribusi untuk kesejahteraan warga desa kami.
 activity: 1. Pembuatan kue tradisional bersama warga desa
 categories:
-- Edukasi
 - Kuliner
+- Edukasi
 prices:
 - description: Pembuatan Kuliner Tradisional
   value: 20000

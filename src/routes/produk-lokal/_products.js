@@ -5,7 +5,7 @@ const marked = require('marked');
 
 const wysiwyg = ['description', 'notes'];
 
-let products = getMarkdownInDirectory('content/products/');
+let products = getMarkdownInDirectory('content/produk-lokal/');
 products = products.map(product => 
         Object.assign(product, Object.fromEntries(wysiwyg.map(w => product[w] ? [w, marked(product[w])] : [])))
     )

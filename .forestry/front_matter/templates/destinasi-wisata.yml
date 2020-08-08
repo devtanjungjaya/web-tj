@@ -134,11 +134,11 @@ fields:
   label: Catatan
   description: Catatan untuk pengunjung atau yang lainnya
 pages:
-- content/destinations/curug-cisadang.md
-- content/destinations/kampung-mangrove-patikang.md
-- content/destinations/pantai-blue-ocean.md
-- content/destinations/pantai-cibiuk.md
-- content/destinations/pantai-cikujang.md
-- content/destinations/pantai-cipanon.md
-- content/destinations/pantai-cipenyu.md
-- content/destinations/pulau-liwungan.md
+- content/destinasi-wisata/curug-cisadang.md
+- content/destinasi-wisata/kampung-mangrove-patikang.md
+- content/destinasi-wisata/pantai-blue-ocean.md
+- content/destinasi-wisata/pantai-cibiuk.md
+- content/destinasi-wisata/pantai-cikujang.md
+- content/destinasi-wisata/pantai-cipanon.md
+- content/destinasi-wisata/pantai-cipenyu.md
+- content/destinasi-wisata/pulau-liwungan.md
