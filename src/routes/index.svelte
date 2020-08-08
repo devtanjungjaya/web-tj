@@ -52,7 +52,7 @@
             Tanjung Lesung
         </h1>
         <span class="sm:max-w-xs lg:max-w-full text-xl xs:text-2xl md:text-2xl lg:text-3xl xl:text-4xl text-neutral-3">
-            Discover marvelous nature and culture
+            Your Next Adventure!
         </span>
     </div>
     <div 
