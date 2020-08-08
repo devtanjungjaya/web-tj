@@ -92,9 +92,11 @@
             <p class="font-open-sans text-neutral-5 text-lg sm:text-xl prose">
                {@html DOMPurify.sanitize(data.description)}
             </p>
-            <Decorator />
          {/if}
-         <Facilities facilities={data.facilities} iconMap={data.facilityIconMap} />
+         {#if data.facilities && data.facilities.length}
+            <Decorator />
+            <Facilities facilities={data.facilities} iconMap={data.facilityIconMap} />
+         {/if}
          <Decorator />
          <Hours hours={data.hours} />
          {#if data.notes && DOMPurify}

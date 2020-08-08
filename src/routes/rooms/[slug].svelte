@@ -91,19 +91,23 @@
             <p class="font-open-sans text-neutral-5 text-lg sm:text-xl prose">
                {@html DOMPurify.sanitize(data.description)}
             </p>
-            <Decorator />
          {/if}
-         <Facilities 
-            label="Fasilitas kamar" 
-            facilities={data.roomFacilities} 
-            iconMap={data.roomFacilityIconMap} 
-         />
-         <Decorator />
-         <Facilities 
-            label="Fasilitas publik" 
-            facilities={data.publicFacilities} 
-            iconMap={data.publicFacilityIconMap} 
-         />
+         {#if data.roomFacilities && data.roomFacilities.length}
+            <Decorator />
+            <Facilities 
+               label="Fasilitas kamar" 
+               facilities={data.roomFacilities} 
+               iconMap={data.roomFacilityIconMap} 
+            />
+         {/if}
+         {#if data.publicFacilities && data.publicFacilities.length}
+            <Decorator />
+            <Facilities 
+               label="Fasilitas publik" 
+               facilities={data.publicFacilities} 
+               iconMap={data.publicFacilityIconMap} 
+            />
+         {/if}
          {#if data.notes && DOMPurify}
             <Decorator />
             <div class="flex flex-col font-overpass">

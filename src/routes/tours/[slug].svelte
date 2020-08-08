@@ -73,21 +73,24 @@
             <Promotions promotions={data.promotions} />
          {/if}
          {#if DOMPurify}
+            <Decorator />
             <p class="font-open-sans text-neutral-5 text-lg sm:text-xl prose">
                {@html DOMPurify.sanitize(data.description)}
             </p>
-            <Decorator />
          {/if}
          {#if data.activity && DOMPurify}
+            <Decorator />
             <div class="flex flex-col font-overpass">
                <span class="font-bold text-neutral-5 text-2xl sm:text-3xl mb-6 sm:mb-6">Kegiatan</span>
                <p class="font-open-sans font-normal text-neutral-5 text-lg sm:text-xl prose">
                   {@html DOMPurify.sanitize(data.activity)}
                </p>
             </div>
-            <Decorator />
          {/if}
-         <Facilities facilities={data.facilities} iconMap={data.facilityIconMap} />
+         {#if data.facilities && data.facilities.length}
+            <Decorator />
+            <Facilities facilities={data.facilities} iconMap={data.facilityIconMap} />
+         {/if}
          {#if data.notes && DOMPurify}
             <Decorator />
             <div class="flex flex-col font-overpass">
