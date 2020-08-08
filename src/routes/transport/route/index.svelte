@@ -3,7 +3,7 @@
 </header>
 <br>
 <div class="px-4 sm:px-8 md:px-16 flex flex-col">
-    <div class="flex flex-row-reverse mb-8">
+    <div class="flex flex-row mb-8">
         <img src="trans_route_title.jpg" alt="Peta Transportasi Umum Menuju CEC" class="w-full sm:w-1/2">
     </div>
     {#if innerWidth >640}

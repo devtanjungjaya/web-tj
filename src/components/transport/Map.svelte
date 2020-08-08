@@ -92,21 +92,28 @@
         map.on('click', name, function(e) {
             var coordinates = e.features[0].geometry.coordinates.slice();
             var description = e.features[0].properties.description;
-
+            map.flyTo({
+                    center: [
+                        coordinates[0],
+                        coordinates[1]
+                    ],
+                    essential:true
+                })
             while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
                 coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
             }
-
             var htmltext;
-            if(description)
-                htmltext= '<div class="flex flex-col items-center text-center"> <div class="h-12 w-12 md:h-24 md:w-24"><img src="'+url+'.png" class="w-full h-full" alt=""></div><p class="w-auto px-1 max-w-xs">' + description +'</p></div>';
-            else 
-                htmltext = '<div class="flex flex-col items-center"> <div class="h-12 w-12 md:h-24 md:w-24"><img src="'+url+'.png" class="" alt=""></div><p class="w-auto px-1">' + name +'</p></div>';
+            htmltext= '<div class="flex flex-col items-center text-center max-h-2xs overflow-y-auto"> '
+                        + '<div class="h-12 w-12 md:h-24 md:w-24">'
+                            + '<img src="'+ url +'.png" class="w-full h-full" alt="">'
+                        + '</div>'
+                        + '<p class="w-auto px-1 text-primary-7 font-bold">' + description +'</p>'
+                    + '</div>';
             
-            let popup=new mapbox.Popup({anchor:'top', closeButton:false, maxWidth:"8rem"})
+            let popup=new mapbox.Popup({anchor:'top', closeButton:false, maxWidth:"12rem"})
             .setLngLat(coordinates)
             .setHTML(htmltext)
-            popup.addTo(tmp);
+            if(description)popup.addTo(tmp);
         });
     }
 
