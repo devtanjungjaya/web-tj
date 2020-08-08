@@ -4,6 +4,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Overpass:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 </svelte:head>
 
+<GoogleAnalytics {stores} id={ga_measurement_id}/>
+
 {#if $preloading && $delayedPreloading}
     <div class="fixed w-full top-0 h-1 z-30 slider" transition:slide>
         <div class="line absolute bg-primary-7 h-full w-full"></div>
@@ -54,10 +56,12 @@
     import { derived } from 'svelte/store';
     import { stores } from '@sapper/app';
     import { slide } from 'svelte/transition';
+    import GoogleAnalytics from "sapper-google-analytics/GoogleAnalytics.svelte";
     const { preloading } = stores();
     const delayedPreloading = derived(preloading, (currentPreloading, set) => {
         setTimeout(() => set(currentPreloading), 250);
     });
+    const ga_measurement_id = "UA-174901191-1";
 
     export let segment;
 </script>

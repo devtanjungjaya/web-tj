@@ -23,5 +23,6 @@ categories:
 facilities: []
 promotions: []
 notes: ''
+contact: Admin Tanjungjaya
 
 ---

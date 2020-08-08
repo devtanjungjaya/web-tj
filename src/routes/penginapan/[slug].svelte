@@ -48,10 +48,12 @@
    export let neighborhood;
    let title;
    let description;
+   let image;
 
    $: title = `${data.name} - ${data.category} - Penginapan di ${neighborhood}`;
    $: description = `${data.description.replace(/(<([^>]+)>)/g, "").replace(/(\r\n|\n|\r)/gm, "")} ${data.notes ? 
       data.notes.replace(/(<([^>]+)>)/g, "").replace(/(\r\n|\n|\r)/gm, "") : ""}`;
+   $: image = data.photos.length ? 'https://bufferzonetanjunglesung.com/' + data.photos[0].photoURI : '';
 </script>
 
 <svelte:head>
@@ -61,10 +63,10 @@
    <meta property="og:title" content={title} />
    <meta property="og:type" content="website" />
    <meta property="og:description" content={description} />
-   <meta property="og:image" content={data.photos.length ? data.photos[0].photoURI : ''} />
+   <meta property="og:image" content={image} />
    <meta name="twitter:title" content={title}>
    <meta name="twitter:description" content={description}>
-   <meta name="twitter:image" content={data.photos.length ? data.photos[0].photoURI : ''}>
+   <meta name="twitter:image" content={image}>
 </svelte:head>
 
 <div class="px-4 sm:px-8 md:px-16 py-6 sm:py-12 flex flex-col">
@@ -89,19 +91,23 @@
             <p class="font-open-sans text-neutral-5 text-lg sm:text-xl prose">
                {@html DOMPurify.sanitize(data.description)}
             </p>
-            <Decorator />
          {/if}
-         <Facilities 
-            label="Fasilitas kamar" 
-            facilities={data.roomFacilities} 
-            iconMap={data.roomFacilityIconMap} 
-         />
-         <Decorator />
-         <Facilities 
-            label="Fasilitas publik" 
-            facilities={data.publicFacilities} 
-            iconMap={data.publicFacilityIconMap} 
-         />
+         {#if data.roomFacilities && data.roomFacilities.length}
+            <Decorator />
+            <Facilities 
+               label="Fasilitas kamar" 
+               facilities={data.roomFacilities} 
+               iconMap={data.roomFacilityIconMap} 
+            />
+         {/if}
+         {#if data.publicFacilities && data.publicFacilities.length}
+            <Decorator />
+            <Facilities 
+               label="Fasilitas publik" 
+               facilities={data.publicFacilities} 
+               iconMap={data.publicFacilityIconMap} 
+            />
+         {/if}
          {#if data.notes && DOMPurify}
             <Decorator />
             <div class="flex flex-col font-overpass">

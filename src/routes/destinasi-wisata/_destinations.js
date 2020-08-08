@@ -1,5 +1,6 @@
 import getMarkdownInDirectory from '../../utilities/markdown.js';
 import { processPromotions } from '../../utilities/promotion';
+import { adminContactsMap } from '../../utilities/contact';
 const marked = require('marked');
 
 const wysiwyg = ['description', 'notes'];
@@ -14,6 +15,7 @@ destinations = destinations.map(destination =>
         return {
             ...destination,
             promotions: processPromotions(destination.promotions || []),
+            contact: adminContactsMap.get(destination.contact) || { phoneNumbers: [] },
             photos: destination.photos.map(p => {
                 p.photoURI = p.photoURI.substring(p.photoURI.indexOf('images/'))
                 return p;
@@ -37,7 +39,9 @@ export const facilityIconMap = {
     'Tempat bermain anak': 'ic_lego.svg',
     'Gazebo': 'ic_gazebo.svg',
     'Penginapan': 'ic_house.svg',
-    'Tempat berkemah': 'ic_tent.svg'
+    'Tempat berkemah': 'ic_tent.svg',
+    'Pos penjaga': 'ic_hall.svg',
+    'Toko kecil': 'ic_minimarket.svg'
 }
 
 export default map;

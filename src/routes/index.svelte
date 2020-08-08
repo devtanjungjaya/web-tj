@@ -25,8 +25,16 @@
 </script>
 
 <svelte:head>
-    <title>Buffer Zone KEK Tanjung Lesung</title>
+    <title>{title}</title>
     <link rel="canonical" href="https://bufferzonetanjunglesung.com/" />
+    <meta name="description" content={description} />
+    <meta property="og:title" content={title} />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={image} />
+    <meta name="twitter:title" content={title}>
+    <meta name="twitter:description" content={description}>
+    <meta name="twitter:image" content={image}>
 </svelte:head>
 
 <div 
@@ -44,7 +52,7 @@
             Tanjung Lesung
         </h1>
         <span class="sm:max-w-xs lg:max-w-full text-xl xs:text-2xl md:text-2xl lg:text-3xl xl:text-4xl text-neutral-3">
-            Discover marvelous nature and culture
+            Your Next Adventure!
         </span>
     </div>
     <div 
@@ -57,7 +65,7 @@
                 wrapperClass="absolute rounded-2xl shadow-xl"
                 imgClass="object-cover rounded-2xl" 
                 alt="tanjung-jaya" 
-                src="images/paket-eduwisata-bahari-6.png"
+                src="images/hero.webp"
             />
         </div>
     </div>
@@ -163,6 +171,10 @@
     let width = 300;
     let height = 300;
     let screenWidth = 1440;
+
+    const title = "Hidden Treasure of Tanjung Lesung";
+    const description = "Hidden Treasure of Tanjung Lesung merupakan kawasan desa-desa wisata di sekitar KEK Tanjung Lesung yang terdiri dari desa Tanjungjaya, Citeureup, Cigeulis, dan Banyuasih. Desa-desa ini memiliki potensi alam dan budaya yang begitu mempesona. Hidden Treasure of Tanjung Lesung dikelola oleh para warga yang tergabung dalam Pokdarwis (Kelompok Sadar Wisata) dari masing-masing desa.";
+    const image = 'https://bufferzonetanjunglesung.com/images/hero.webp';
 </script>
 
 <style type="text/postcss">

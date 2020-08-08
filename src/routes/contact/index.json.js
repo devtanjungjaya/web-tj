@@ -1,7 +1,10 @@
 import { adminContactsMap } from '../../utilities/contact';
 
 const contents = JSON.stringify(
-	[...adminContactsMap.values()])
+	[...adminContactsMap.entries()].map(([admin, contact]) => ({
+		admin,
+		contact
+	})))
 
 export function get(req, res) {
 	res.writeHead(200, {

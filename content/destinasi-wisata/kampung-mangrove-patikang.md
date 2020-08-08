@@ -44,5 +44,6 @@ facilities:
 - Tempat parkir
 promotions: []
 notes: Untuk info paket wisata selengkapnya silahkan cek menu Paket Wisata.
+contact: Admin Citeureup
 
 ---

@@ -35,5 +35,6 @@ facilities:
 - Penginapan
 promotions: []
 notes: ''
+contact: Admin Tanjungjaya
 
 ---

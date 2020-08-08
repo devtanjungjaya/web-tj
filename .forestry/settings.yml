@@ -69,7 +69,7 @@ sections:
   path: data/category-destination.yml
   label: Kategori destinasi wisata
 upload_dir: static/images
-public_path: https://web-tj.netlify.app/images
+public_path: https://bufferzonetanjunglesung.com/images
 front_matter_path: ''
 use_front_matter_path: 
 file_template: ":filename:"
