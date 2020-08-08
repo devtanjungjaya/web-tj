@@ -22,7 +22,6 @@
         <Map 
         accessToken = {mapboxAccessToken} 
         bind:this={map} 
-        on:recentre={e => console.log(e.detail.center.lat, e.detail.center.lng) } 
         options = {{center,zoom:8,attributionControl:false}}
         >
             <!-- <Marker lat={-6.479478974609833} lng={105.65398972972787} color=transparent label="TANJUNGJAYA" popupClassName="class-name" /> -->

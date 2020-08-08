@@ -1,7 +1,6 @@
 <script>
     export let data;
     export let map;
-    console.log()
     $: innerWidth = 0;
     function changeFunc(id,checked){
         map.setLayoutProperty(
