@@ -1,15 +1,15 @@
 <script context="module">
     export function preload({ params, query }) {
-       return this.fetch(`rooms.json`)
+       return this.fetch(`destinasi-wisata.json`)
        .then(r => r.json())
-       .then(({ rooms, roomCategories, roomFacilities, publicFacilities, promotions }) => {
-          return { rooms, roomCategories, roomFacilities, publicFacilities, promotions };
+       .then(({ destinations, destinationCategories, destinationFacilities, promotions }) => {
+          return { destinations, destinationCategories, destinationFacilities, promotions };
        });
     }
 </script>
 
 <script>
-    import RoomItem from "../../components/listing/RoomItem.svelte";
+    import DestinationItem from "../../components/listing/DestinationItem.svelte";
     import Grid from "../../components/listing/Grid.svelte";
     import SelectFilter from "../../components/filter/Select.svelte";
     import PriceFilter from "../../components/filter/PriceRange.svelte";
@@ -25,13 +25,12 @@
         initialized = true;
     })
 
-    const title = "Cari Penginapan di Buffer Zone KEK Tanjung Lesung";
-    const description = "Cari Penginapan di Buffer Zone KEK Tanjung Lesung";
+    const title = "Cari Destinasi Wisata di Buffer Zone KEK Tanjung Lesung";
+    const description = "Cari Destinasi Wisata di Buffer Zone KEK Tanjung Lesung";
 
-    export let rooms;
-    export let roomCategories;
-    export let roomFacilities;
-    export let publicFacilities;
+    export let destinations;
+    export let destinationCategories;
+    export let destinationFacilities;
     export let promotions;
 
     let filters = [];
@@ -44,42 +43,31 @@
             label: "Kategori",
             component: SelectFilter,
             props: {
-                values: roomCategories,
+                values: destinationCategories,
                 label: "Kategori",
                 itemField: "categories",
-                type: "rooms",
-                unique: true
+                type: "destinations"
             }
         },
         {
             label: "Harga",
             component: PriceFilter,
             props: {
-                type: "rooms",
                 label: "Harga",
-                maxPrice: Math.max(...rooms.map(room => 
-                    Math.max(...room.prices.map(price => price.value))
+                type: "destinations",
+                maxPrice: Math.max(...destinations.map(destination => 
+                    Math.max(...destination.prices.map(price => price.value))
                 ))
             }
         },
         {
-            label: "Fasilitas publik",
+            label: "Fasilitas",
             component: SelectFilter,
             props: {
-                values: publicFacilities,
-                label: "Fasilitas publik",
-                type: "rooms",
-                itemField: "publicFacilities"
-            }
-        },
-        {
-            label: "Fasilitas kamar",
-            component: SelectFilter,
-            props: {
-                values: roomFacilities,
-                label: "Fasilitas kamar",
-                type: "rooms",
-                itemField: "roomFacilities"
+                values: destinationFacilities,
+                label: "Fasilitas",
+                type: "destinations",
+                itemField: "facilities"
             }
         },
         ...promotions.length ? [{
@@ -88,7 +76,7 @@
             props: {
                 values: promotions,
                 label: "Promosi",
-                type: "rooms",
+                type: "destinations",
                 itemField: "promotions",
                 itemFieldFn: (promotions) => promotions.map(p => p.promotion)
             }
@@ -113,9 +101,9 @@
 
 <div class="flex flex-col px-2 xs:px-4 md:px-6 lg:px-16 py-6 lg:py-10 min-h-screen">
     <Grid
-        items={rooms}
-        itemComponent={RoomItem}
+        items={destinations}
+        itemComponent={DestinationItem}
         filters={filters}
-        current="rooms"
+        current="destinasi-wisata"
     />
 </div>

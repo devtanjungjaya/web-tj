@@ -2,7 +2,7 @@
    const mapboxAccessToken = "MAPBOX_ACCESS_TOKEN";
 
    export async function preload({ params: { slug }, query }) {
-      const res = await this.fetch(`rooms/${slug}.json`);
+      const res = await this.fetch(`penginapan/${slug}.json`);
       const data = await res.json();
       if(res.status === 200) {
          const neighborhood = await this.fetch('https://api.mapbox.com/geocoding/v5/mapbox.places/' + 
@@ -58,7 +58,7 @@
 
 <svelte:head>
    <title>{title}</title>
-   <link rel="canonical" href={"https://bufferzonetanjunglesung.com/rooms/" + data.slug} />
+   <link rel="canonical" href={"https://bufferzonetanjunglesung.com/penginapan/" + data.slug} />
    <meta name="description" content={description} />
    <meta property="og:title" content={title} />
    <meta property="og:type" content="website" />
@@ -71,7 +71,7 @@
 
 <div class="px-4 sm:px-8 md:px-16 py-6 sm:py-12 flex flex-col">
    <Header
-      typeURL="rooms"
+      typeURL="penginapan"
       type="PENGINAPAN"
       title={data.name}
       categories={[data.category]}

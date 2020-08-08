@@ -5,7 +5,7 @@ const marked = require('marked');
 
 const wysiwyg = ['description', 'activity', 'notes'];
 
-let tours = getMarkdownInDirectory('content/tours/');
+let tours = getMarkdownInDirectory('content/paket-wisata/');
 tours = tours.map(tour => 
     Object.assign(
         tour, 

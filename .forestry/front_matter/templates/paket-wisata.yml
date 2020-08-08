@@ -117,11 +117,11 @@ fields:
       path: admins
   label: Kontak admin
 pages:
-- content/tours/edukasi-anyaman-alang-alang.md
-- content/tours/edukasi-kerajinan-anyaman-bambu.md
-- content/tours/edukasi-pencak-silat.md
-- content/tours/eduwisata-bahari.md
-- content/tours/eduwisata-kerajinan-dan-budaya.md
-- content/tours/eduwisata-pangendongan.md
-- content/tours/pembuatan-kuliner-tradisional.md
-- content/tours/trip-pulau-liwungan-dan-snorkeling.md
+- content/paket-wisata/edukasi-anyaman-alang-alang.md
+- content/paket-wisata/edukasi-kerajinan-anyaman-bambu.md
+- content/paket-wisata/edukasi-pencak-silat.md
+- content/paket-wisata/eduwisata-bahari.md
+- content/paket-wisata/eduwisata-kerajinan-dan-budaya.md
+- content/paket-wisata/eduwisata-pangendongan.md
+- content/paket-wisata/pembuatan-kuliner-tradisional.md
+- content/paket-wisata/trip-pulau-liwungan-dan-snorkeling.md

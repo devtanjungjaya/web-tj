@@ -132,17 +132,17 @@ fields:
   label: Catatan
   description: Catatan untuk pengunjung atau yang lainnya
 pages:
-- content/rooms/bunartunggal-inn.md
-- content/rooms/griyeu-nyimas.md
-- content/rooms/homestay-adam.md
-- content/rooms/homestay-bolang.md
-- content/rooms/homestay-darsimah.md
-- content/rooms/homestay-firda.md
-- content/rooms/homestay-garuda.md
-- content/rooms/homestay-kadeudeuh.md
-- content/rooms/homestay-melati.md
-- content/rooms/homestay-pakMisnan.md
-- content/rooms/homestay-putrikembar.md
-- content/rooms/homestay-raffasya.md
-- content/rooms/homestay-vina.md
-- content/rooms/irna-homestay.md
+- content/penginapan/bunartunggal-inn.md
+- content/penginapan/griyeu-nyimas.md
+- content/penginapan/homestay-adam.md
+- content/penginapan/homestay-bolang.md
+- content/penginapan/homestay-darsimah.md
+- content/penginapan/homestay-firda.md
+- content/penginapan/homestay-garuda.md
+- content/penginapan/homestay-kadeudeuh.md
+- content/penginapan/homestay-melati.md
+- content/penginapan/homestay-pakMisnan.md
+- content/penginapan/homestay-putrikembar.md
+- content/penginapan/homestay-raffasya.md
+- content/penginapan/homestay-vina.md
+- content/penginapan/irna-homestay.md
