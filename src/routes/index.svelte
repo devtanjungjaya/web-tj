@@ -95,16 +95,16 @@
         alt="kemenparekraf"
         style="opacity: .1"
     />
-    <span 
+    <h2 
         class="font-playfair-display font-bold text-primary-2 text-4xl lg:text-5xl 
         text-center max-w-2xl lg:max-w-3xl z-10 leading-none px-4"
     >
-        “ <h2 
+        “ <span 
             class="font-overpass text-white text-2xl md:text-3xl lg:text-4xl leading-none"
           >
             10 Destinasi Pariwisata<br />Prioritas Kementerian Pariwisata RI
-        </h2> ”
-    </span>
+        </span> ”
+    </h2>
 </div>
 
 <div class="flex flex-col px-4 md:px-6 lg:px-20 xl:px-40 py-24 space-y-16">
