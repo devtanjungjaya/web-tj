@@ -24,7 +24,7 @@
     </div>
     <div 
         class="md:px-3 w-full flex items-center justify-center absolute" 
-        style="top: 40%; transform: translateY(-40%); height: 60vh"
+        style="top: 45%; transform: translateY(-45%); height: 60vh"
     >
         {#if innerHeight > 0}
         <Carousel 
