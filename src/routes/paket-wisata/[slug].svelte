@@ -39,12 +39,12 @@
    $: description = `${data.description.replace(/(<([^>]+)>)/g, "").replace(/(\r\n|\n|\r)/gm, "")} ${data.activity ? 
       `${data.activity.replace(/(<([^>]+)>)/g, "").replace(/(\r\n|\n|\r)/gm, "")} ` : ""}${data.notes ? 
       data.notes.replace(/(<([^>]+)>)/g, "").replace(/(\r\n|\n|\r)/gm, "") : ""}`;
-   $: image = data.photos.length ? 'https://bufferzonetanjunglesung.com/' + data.photos[0].photoURI : '';
+   $: image = data.photos.length ? 'https://www.bufferzonetanjunglesung.com/' + data.photos[0].photoURI : '';
 </script>
 
 <svelte:head>
    <title>{title}</title>
-   <link rel="canonical" href={"https://bufferzonetanjunglesung.com/paket-wisata/" + data.slug} />
+   <link rel="canonical" href={"https://www.bufferzonetanjunglesung.com/paket-wisata/" + data.slug} />
    <meta name="description" content={description} />
    <meta property="og:title" content={title} />
    <meta property="og:type" content="website" />

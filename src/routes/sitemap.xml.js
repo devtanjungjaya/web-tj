@@ -41,7 +41,7 @@ export async function get(req, res, next) {
     const urls = [...siteUrls, ...roomUrls, ...productUrls, ...destinationUrls, ...tourUrls];
 
     const stream = new SitemapStream({
-        hostname: "https://bufferzonetanjunglesung.com",
+        hostname: "https://www.bufferzonetanjunglesung.com",
         cacheTime: 600000
     });
 

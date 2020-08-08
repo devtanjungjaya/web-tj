@@ -53,12 +53,12 @@
    $: title = `${data.name} - ${data.category} - Penginapan di ${neighborhood}`;
    $: description = `${data.description.replace(/(<([^>]+)>)/g, "").replace(/(\r\n|\n|\r)/gm, "")} ${data.notes ? 
       data.notes.replace(/(<([^>]+)>)/g, "").replace(/(\r\n|\n|\r)/gm, "") : ""}`;
-   $: image = data.photos.length ? 'https://bufferzonetanjunglesung.com/' + data.photos[0].photoURI : '';
+   $: image = data.photos.length ? 'https://www.bufferzonetanjunglesung.com/' + data.photos[0].photoURI : '';
 </script>
 
 <svelte:head>
    <title>{title}</title>
-   <link rel="canonical" href={"https://bufferzonetanjunglesung.com/penginapan/" + data.slug} />
+   <link rel="canonical" href={"https://www.bufferzonetanjunglesung.com/penginapan/" + data.slug} />
    <meta name="description" content={description} />
    <meta property="og:title" content={title} />
    <meta property="og:type" content="website" />
