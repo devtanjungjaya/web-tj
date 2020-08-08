@@ -9,6 +9,7 @@
                 options = {{center,zoom:9}}
             >
             <NavigationControl position="top-left"/>
+            <Kesehatan tmp={map}/>
             <Legends map={map.getMap()} data={data}/>
             </Map>
         </div>
@@ -25,6 +26,7 @@
     import Header from '../../../components/maps/Header.svelte'
     import Legends from '../../../components/maps/Legends.svelte'
     import { data } from "../../../components/maps/DataKesehatan.svelte"
+    import Kesehatan from "../../../components/maps/Kesehatan.svelte"
     const { GeolocateControl, NavigationControl, ScalingControl } = controls
     const mapboxAccessToken = "MAPBOX_ACCESS_TOKEN";
     let map;

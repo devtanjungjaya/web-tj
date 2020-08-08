@@ -8,5 +8,4 @@
             check: true
         },
     ];
-    console.log(data)
 </script>
