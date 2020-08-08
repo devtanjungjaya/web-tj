@@ -7,9 +7,9 @@
         <a 
             rel="prefetch" 
             href={item.url}
-            class={`px-8 py-3 pt-4 bg-primary-7 rounded-2xl font-overpass font-bold text-white w-full lg:w-auto
-            text-xl xl:text-2xl 2xl:text-3xl leading-tight inline-block items-center hover:bg-primary-8 
-            whitespace-no-wrap ${i === items.length - 1 ? 'last' : ''}`}
+            class={`px-4 md:px-8 py-2 pt-3 md:py-3 md:pt-4 bg-primary-7 rounded-2xl font-overpass font-bold 
+            text-white w-full lg:w-auto text-lg md:text-xl xl:text-2xl 2xl:text-3xl leading-tight inline-block 
+            items-center hover:bg-primary-8 whitespace-no-wrap ${i === items.length - 1 ? 'last' : ''}`}
         >
             {item.label}
         </a>
