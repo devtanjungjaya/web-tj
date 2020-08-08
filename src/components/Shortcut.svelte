@@ -58,7 +58,7 @@
         },
         {
             label: "Penginapan",
-            url: "rooms"
+            url: "penginapan"
         }
     ]
 </script>

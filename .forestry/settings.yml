@@ -19,7 +19,7 @@ sections:
   templates:
   - paket-wisata
 - type: directory
-  path: content/rooms
+  path: content/penginapan
   label: Penginapan
   create: all
   match: "**/*.md"

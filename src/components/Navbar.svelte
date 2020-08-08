@@ -188,7 +188,7 @@
         },
         {
             label: "Penginapan",
-            url: "rooms"
+            url: "penginapan"
         }
     ]
     const transportations = [

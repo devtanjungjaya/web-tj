@@ -1,4 +1,4 @@
-import rooms from './rooms/_rooms';
+import rooms from './penginapan/_rooms';
 import products from './produk-lokal/_products';
 import destinations from './destinasi-wisata/_destinations';
 import tours from './tours/_tours';
@@ -8,14 +8,14 @@ const { Readable } = require( 'stream' )
 export async function get(req, res, next) {
     const siteUrls = [
         { url: "/", changefreq: "monthly", priority: 0.5 },
-        { url: "/rooms/", changefreq: "weekly", priority: 0.8 },
+        { url: "/penginapan/", changefreq: "weekly", priority: 0.8 },
         { url: "/produk-lokal/", changefreq: "weekly", priority: 0.8 },
         { url: "/destinasi-wisata/", changefreq: "weekly", priority: 0.8 },
         { url: "/tours/", changefreq: "weekly", priority: 0.8 }
     ];
 
     const roomUrls = [...rooms.keys()].map(slug => ({
-        url: `/rooms/${slug}/`,
+        url: `/penginapan/${slug}/`,
         changefreq: "monthly",
         priority: 1.0
     }));

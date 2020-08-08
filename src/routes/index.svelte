@@ -5,7 +5,7 @@
             this.fetch("destinasi-wisata.json"),
             this.fetch("tours.json"),
             this.fetch("produk-lokal.json"),
-            this.fetch("rooms.json"),
+            this.fetch("penginapan.json"),
             this.fetch("potencies.json")
         ])
         .then(r => {
@@ -120,7 +120,7 @@
         items={randomRooms} 
         itemComponent={RoomItem} 
         title="Penginapan"
-        url="rooms"
+        url="penginapan"
     />
 </div>
 

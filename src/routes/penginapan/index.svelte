@@ -1,6 +1,6 @@
 <script context="module">
     export function preload({ params, query }) {
-       return this.fetch(`rooms.json`)
+       return this.fetch(`penginapan.json`)
        .then(r => r.json())
        .then(({ rooms, roomCategories, roomFacilities, publicFacilities, promotions }) => {
           return { rooms, roomCategories, roomFacilities, publicFacilities, promotions };
@@ -116,6 +116,6 @@
         items={rooms}
         itemComponent={RoomItem}
         filters={filters}
-        current="rooms"
+        current="penginapan"
     />
 </div>
