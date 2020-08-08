@@ -1,13 +1,16 @@
 <Header url="fasilitas-kesehatan"/>
 <section>
-    <div class="h-64 sm:h-96 md:h-128 mapbox py-4 px-4 sm:px-8 md:px-16 flex flex-row rounded-2xl">
-        <div class="map border-1 border-neutral-1 w-3/4 h-96 overflow-hidden rounded-l-2xl">
+    <div class="h-64 sm:h-96 md:h-128 mapbox py-4 px-4 sm:px-8 md:px-16 flex flex-row">
+        <div class="map border-1 border-neutral-1 w-full overflow-hidden rounded-2xl">
             <Map
                 accessToken = {mapboxAccessToken}
                 bind:this = {map}
-                options = {{center,zoom:9}}
+                on:recentre={e => console.log(e.detail.center.lat, e.detail.center.lng) } 
+                options = {{center,zoom:11}}
             >
-            <NavigationControl />
+            <NavigationControl position="top-left"/>
+            <Kesehatan tmp={map}/>
+            <Legends map={map.getMap()} data={data}/>
             </Map>
         </div>
     </div>
@@ -15,22 +18,26 @@
 
 
 <style type="text/postcss">
-    .map{
-        width: 75%;
-        height: 100%;
-    }
+
 </style>
 
 <script id="map">
     import { Map, Geocoder, Marker, controls } from '@beyonk/svelte-mapbox'
     import Header from '../../../components/maps/Header.svelte'
+    import Legends from '../../../components/maps/Legends.svelte'
+    import { data } from "../../../components/maps/DataKesehatan.svelte"
+    import Kesehatan from "../../../components/maps/Kesehatan.svelte"
     const { GeolocateControl, NavigationControl, ScalingControl } = controls
     const mapboxAccessToken = "MAPBOX_ACCESS_TOKEN";
     let map;
-    let center = { lat: -6.5116, lng: 105.6530};
-
+    let center = { lat: -6.526949622871669, lng: 105.76492321779392}; 
+    let colors = []
+    let check = []
+    let type = []
+    let typeURL = []
     const title = "Peta-Peta Khusus Buffer Zone KEK Tanjung Lesung"
     const description = "Peta-Peta Khusus Buffer Zone KEK Tanjung Lesung"
+    
 </script>
 
 <svelte:head>
