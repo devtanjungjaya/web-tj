@@ -60,7 +60,12 @@
       categories={data.categories}
    />
  
+   <div 
+      class={`${PhotosComponent ? '' : 'skeleton-box'} rounded-2xl w-full h-full`} 
+      style="max-height: 360px; min-height: 250px"
+   >
    <svelte:component this={PhotosComponent} photos={data.photos} />
+   </div>
 
    <div 
       class="flex flex-col lg:flex-row space-y-6 lg:space-y-0 lg:space-x-10 xl:space-x-32 lg:justify-between mt-10 
