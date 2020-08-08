@@ -7,6 +7,7 @@
                 bind:this = {map}
                 on:recentre={e => console.log(e.detail.center.lat, e.detail.center.lng) } 
                 options = {{center,zoom:9}}
+                style="http://api.mapbox.com/styles/v1/meutiasan/ckdjx6egi0lwm1in0c79tnc14.html?fresh=true&title=view&access_token=pk.eyJ1IjoibWV1dGlhc2FuIiwiYSI6ImNqdDd4ZnpiaTAydzg0NG85d2RudXEzdjUifQ.tl0bQ7DgfZmTjZ9ENUAVnQ#11.6/-6.5191/105.7428"
             >
             <NavigationControl position="top-left"/>
             <Legends map={map.getMap()} data={data}/>

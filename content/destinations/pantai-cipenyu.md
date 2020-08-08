@@ -4,7 +4,7 @@ coordinate:
   lng: 105.639612
 name: Pantai Cipenyu
 photos:
-- photoURI: https://web-tj.netlify.app/images/pantai-cipenyu-1.jfif
+- photoURI: https://web-tj.netlify.app/images/pantai-cipenyu-1.jpg
   description: Pantai Cipenyu
 - description: Pantai Cipenyu
   photoURI: https://web-tj.netlify.app/images/pantai-cipenyu-2.jfif

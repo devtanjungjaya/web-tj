@@ -1,4 +1,4 @@
-<div class="flex flex-col overflow-x-auto" style="min-height: inherit">
+<div class="flex flex-col overflow-x-auto pb-2" style="min-height: inherit">
     <div class="flex md:flex-col md:space-y-4 lg:space-y-8">
         <Navigation {current} />
         <Filter filters={filters} on:filter={event => filterFunctions = event.detail} />
@@ -6,7 +6,7 @@
     <div 
         class="mt-8 lg:mt-12 grid gap-2 xs:gap-4 sm:gap-6 md:gap-10 grid-cols-2 md:grid-cols-3 lg:grid-cols-4 
         xl:grid-cols-5 2xl:grid-cols-6 listing">
-        {#each filteredItems as item}
+        {#each filteredItems as item (item.name)}
         <IntersectionObserver let:intersecting>
             <div 
                 class={`flex items-center justify-center w-full h-full transition duration-300 ease-in-out 

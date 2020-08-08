@@ -11,7 +11,8 @@ export function get(req, res, next) {
 		res.end(JSON.stringify({ 
 			...rooms.get(slug),
 			publicFacilityIconMap,
-			roomFacilityIconMap
+			roomFacilityIconMap,
+			slug
 		}));
 	} else {
 		res.writeHead(404, {

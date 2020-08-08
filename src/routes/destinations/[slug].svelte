@@ -4,14 +4,18 @@
    export async function preload({ params: { slug }, query }) {
       const res = await this.fetch(`destinations/${slug}.json`);
       const data = await res.json();
-      const neighborhood = await this.fetch('https://api.mapbox.com/geocoding/v5/mapbox.places/' + 
-         `${data.coordinate.lng},${data.coordinate.lat}.json?` +
-         `access_token=${mapboxAccessToken}&types=neighborhood`
-      ).then(r => r.json()).then(d => d.features.length ? d.features[0]['place_name'] : 
-         'Buffer Zone KEK Tanjung Lesung');
-      return {
-         data,
-         neighborhood
+      if(res.status === 200) {
+         const neighborhood = await this.fetch('https://api.mapbox.com/geocoding/v5/mapbox.places/' + 
+            `${data.coordinate.lng},${data.coordinate.lat}.json?` +
+            `access_token=${mapboxAccessToken}&types=neighborhood`
+         ).then(r => r.json()).then(d => d.features.length ? d.features[0]['place_name'] : 
+            'Buffer Zone KEK Tanjung Lesung');
+         return {
+            data,
+            neighborhood
+         }
+      } else {
+         return this.redirect(404, '404');
       }
    }
 </script>
@@ -22,6 +26,7 @@
    import Prices from "../../components/Item/Prices.svelte";
    import Facilities from "../../components/Item/Facilities.svelte";
    import Hours from "../../components/Item/Hours.svelte";
+   import Contact from "../../components/Item/Contact.svelte";
    import Link from "../../components/Item/Link.svelte";
    import Promotions from "../../components/Item/Promotions.svelte";
    import { onMount } from "svelte";
@@ -46,11 +51,12 @@
    let description;
 
    $: title = `${data.name} - Destinasi Wisata ${data.categories.join(", ")} di ${neighborhood}`;
-   $: description = data.description.replace(/(<([^>]+)>)/g, "");
+   $: description = data.description.replace(/(<([^>]+)>)/g, "").replace(/(\r\n|\n|\r)/gm, "");
 </script>
 
 <svelte:head>
    <title>{title}</title>
+   <link rel="canonical" href={"https://bufferzonetanjunglesung.com/destinations/" + data.slug} />
    <meta name="description" content={description} />
    <meta property="og:title" content={title} />
    <meta property="og:type" content="website" />
@@ -106,6 +112,9 @@
          {/if}
          {#if data.gmaps}
             <Link url={data.gmaps} icon="ic_gmaps.png" label="Buka lokasi di Google Maps" />
+         {/if}
+         {#if data.contact && data.contact.phoneNumbers && data.contact.phoneNumbers.length}
+         <Contact {...data.contact} name="Silahkan hubungi admin untuk pemesanan atau informasi lebih lanjut"/>
          {/if}
       </div>
    </div>

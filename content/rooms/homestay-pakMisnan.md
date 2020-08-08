@@ -5,6 +5,8 @@ coordinate:
   lng: 105.68237
 name: Homestay Pak Misnan
 photos:
+- photoURI: https://web-tj.netlify.app/images/rsz_20200727_113528.jpg
+  description: Tampak depan
 - photoURI: https://web-tj.netlify.app/images/20200727_123602-1.jpg
   description: Ruang keluarga
 - photoURI: https://web-tj.netlify.app/images/20200727_113456.jpg
@@ -13,9 +15,7 @@ photos:
   description: Kamar tidur
 - photoURI: https://web-tj.netlify.app/images/20200727_123747-1.jpg
   description: Kamar mandi
-- photoURI: https://web-tj.netlify.app/images/rsz_20200727_113528.jpg
-  description: Tampak depan
-gmaps: ''
+gmaps: https://goo.gl/maps/UVKxTbuzDxGgkbKf8
 prices:
 - description: kamar
   value: 200000
@@ -31,7 +31,7 @@ roomFacilities:
 - Lemari
 description: 2 kamar
 promotions: []
-notes: tempat cuci tangan
-contact: Admin Cikadu
+notes: Tersedia tempat cuci tangan
+contact: Admin Tanjungjaya
 
 ---

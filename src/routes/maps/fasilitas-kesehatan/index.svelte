@@ -6,9 +6,10 @@
                 accessToken = {mapboxAccessToken}
                 bind:this = {map}
                 on:recentre={e => console.log(e.detail.center.lat, e.detail.center.lng) } 
-                options = {{center,zoom:9}}
+                options = {{center,zoom:11}}
             >
             <NavigationControl position="top-left"/>
+            <Kesehatan tmp={map}/>
             <Legends map={map.getMap()} data={data}/>
             </Map>
         </div>
@@ -25,10 +26,11 @@
     import Header from '../../../components/maps/Header.svelte'
     import Legends from '../../../components/maps/Legends.svelte'
     import { data } from "../../../components/maps/DataKesehatan.svelte"
+    import Kesehatan from "../../../components/maps/Kesehatan.svelte"
     const { GeolocateControl, NavigationControl, ScalingControl } = controls
     const mapboxAccessToken = "MAPBOX_ACCESS_TOKEN";
     let map;
-    let center = { lat: -6.492497591683218, lng: 105.83290112301756};
+    let center = { lat: -6.526949622871669, lng: 105.76492321779392}; 
     let colors = []
     let check = []
     let type = []

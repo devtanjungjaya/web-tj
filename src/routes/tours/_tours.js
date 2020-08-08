@@ -29,10 +29,12 @@ export function getRandom() {
 }
 
 export const facilityIconMap = {
-    'Makan siang': 'ic_eat.svg',
+    'Makan': 'ic_eat.svg',
     'Fotografer': 'ic_camera.svg',
     'Transportasi': 'ic_car.svg',
-    'Pemandu wisata': 'ic_binocular.svg'
+    'Pemandu wisata lokal': 'ic_binocular.svg',
+    'Penginapan': 'ic_house.svg',
+    'Welcome drink': 'ic_drink.svg'
 }
 
 export default map;

@@ -32,7 +32,12 @@ export const facilityIconMap = {
     'Toilet umum': 'ic_toilet.svg',
     'Musholla': 'ic_mosque.svg',
     'Tempat parkir': 'ic_park.svg',
-    'Toko oleh-oleh': 'ic_bag.svg'
+    'Toko oleh-oleh': 'ic_bag.svg',
+    'Kolam renang': 'ic_pool.svg',
+    'Tempat bermain anak': 'ic_lego.svg',
+    'Gazebo': 'ic_gazebo.svg',
+    'Penginapan': 'ic_house.svg',
+    'Tempat berkemah': 'ic_tent.svg'
 }
 
 export default map;

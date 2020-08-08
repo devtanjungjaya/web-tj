@@ -15,7 +15,7 @@ photos:
   description: Dapur
 - photoURI: https://web-tj.netlify.app/images/20200727_132338-1.jpg
   description: Kamar mandi
-gmaps: ''
+gmaps: https://goo.gl/maps/fmYjhu7S8FFikBKF7
 prices:
 - description: Harga per kamar
   value: 100000
@@ -33,7 +33,7 @@ roomFacilities:
 - Kipas angin
 description: "1 Kamar kapasitas 2 orang\n\nWajib perempuan "
 promotions: []
-notes: tempat cuci tangan
-contact: Admin Banyuasih
+notes: Tersedia tempat cuci tangan
+contact: Admin Tanjungjaya
 
 ---

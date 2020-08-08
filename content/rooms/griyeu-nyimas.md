@@ -13,7 +13,7 @@ photos:
   description: Kamar mandi
 - photoURI: https://web-tj.netlify.app/images/20200727_101833-1.jpg
   description: Dapur
-gmaps: ''
+gmaps: https://goo.gl/maps/tzoMwanA8BkiARSt5
 prices:
 - description: Kamar dengan paket sarapan dan coffee break (teh, kopi, air minum)
   value: 400000
@@ -40,10 +40,10 @@ roomFacilities:
 - Kloset duduk
 - Shower
 - Kamar mandi dalam
-description: "Ada 6 kamar. Kapasistas 2-5 orang  \nAda juga cottage 3 bangunan. 1
-  cottage berisi 2 kamar. Bisa 7-8 orang"
+description: "Ada 6 kamar. Kapasistas 2-5 orang  \nAda juga 3 bangunan cottage. 1
+  cottage berisi 2 kamar. Kapasitas 7-8 orang"
 promotions: []
-notes: tersedia hand sanitizer, tempat cuci tangan
-contact: Admin Banyuasih
+notes: Tersedia hand sanitizer, tempat cuci tangan
+contact: Admin Tanjungjaya
 
 ---

@@ -30,7 +30,22 @@ export function getRandom() {
 }
 
 export const publicFacilityIconMap = {
-    'Restoran': 'ic_eat.svg'
+    'Restoran': 'ic_eat.svg',
+    'Laundry': 'ic_laundry.svg',
+    'Ruang tamu': 'ic_livingroom.svg',
+    'Ruang keluarga': 'ic_familyroom.svg',
+    'Dapur': 'ic_kitchen.svg',
+    'Aula': 'ic_hall.svg',
+    'Saung': 'ic_gazebo.svg',
+    'Mushola': 'ic_mosque.svg',
+    'Area parkir': 'ic_park.svg',
+    'Sarapan': 'ic_eat.svg',
+    'Minimarket': 'ic_minimarket.svg',
+    'Wifi': 'ic_wifi.svg',
+    'Resepsionis 24 jam': 'ic_receptionist.svg',
+    'Staf multibahasa': 'ic_language.svg',
+    'Jasa tur': 'ic_tour.svg',
+    'Kolam renang': 'ic_pool.svg'
 }
 
 export const roomFacilityIconMap = {

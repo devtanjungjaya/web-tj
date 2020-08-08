@@ -2,18 +2,18 @@
 contact: Admin Tanjungjaya
 name: Mangkok Batok Kelapa Motif Bunga Tanjung
 photos:
-- photoURI: https://web-tj.netlify.app/images/mangkok-batok-kelapa-motif-bunga-tanjung-1.jpg
+- photoURI: https://web-tj.netlify.app/images/mangkok-batok-kelapa-motif-bunga-tanjung-1.png
   description: Mangkok Batok Kelapa
-- photoURI: https://web-tj.netlify.app/images/mangkok-batok-kelapa-motif-bunga-tanjung-3.png
+- photoURI: https://web-tj.netlify.app/images/mangkok-batok-kelapa-motif-bunga-tanjung-3-1.png
   description: Mangkok batok kelapa
 - description: Mangkok batok kelapa
-  photoURI: https://web-tj.netlify.app/images/mangkok-batok-kelapa-motif-bunga-tanjung-2.png
-- photoURI: https://web-tj.netlify.app/images/mangkok-batok-kelapa-motif-bunga-tanjung-4.jpg
+  photoURI: https://web-tj.netlify.app/images/mangkok-batok-kelapa-motif-bunga-tanjung-2-1.png
+- photoURI: https://web-tj.netlify.app/images/mangkok-batok-kelapa-motif-bunga-tanjung-4.jpeg
   description: Mangkok batok kelapa
 - description: Mangkok batok kelapa
-  photoURI: https://web-tj.netlify.app/images/mangkok-batok-kelapa-motif-bunga-tanjung-5.png
+  photoURI: https://web-tj.netlify.app/images/mangkok-batok-kelapa-motif-bunga-tanjung-5-1.png
 - description: Mangkok batok kelapa
-  photoURI: https://web-tj.netlify.app/images/mangkok-batok-kelapa-motif-bunga-tanjung-6.png
+  photoURI: https://web-tj.netlify.app/images/mangkok-batok-kelapa-motif-bunga-tanjung-6-1.png
 - description: Mangkok batok kelapa
   photoURI: https://web-tj.netlify.app/images/mangkok-batok-kelapa-motif-bunga-tanjung-7.jpeg
 description: |-

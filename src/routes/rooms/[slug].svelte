@@ -4,14 +4,18 @@
    export async function preload({ params: { slug }, query }) {
       const res = await this.fetch(`rooms/${slug}.json`);
       const data = await res.json();
-      const neighborhood = await this.fetch('https://api.mapbox.com/geocoding/v5/mapbox.places/' + 
-         `${data.coordinate.lng},${data.coordinate.lat}.json?` +
-         `access_token=${mapboxAccessToken}&types=neighborhood`
-      ).then(r => r.json()).then(d => d.features.length ? d.features[0]['place_name'] : 
-         'Buffer Zone KEK Tanjung Lesung');
-      return {
-         data,
-         neighborhood
+      if(res.status === 200) {
+         const neighborhood = await this.fetch('https://api.mapbox.com/geocoding/v5/mapbox.places/' + 
+            `${data.coordinate.lng},${data.coordinate.lat}.json?` +
+            `access_token=${mapboxAccessToken}&types=neighborhood`
+         ).then(r => r.json()).then(d => d.features.length ? d.features[0]['place_name'] : 
+            'Buffer Zone KEK Tanjung Lesung');
+         return {
+            data,
+            neighborhood
+         }
+      } else {
+         return this.redirect(404, '404');
       }
    }
 </script>
@@ -46,11 +50,13 @@
    let description;
 
    $: title = `${data.name} - ${data.category} - Penginapan di ${neighborhood}`;
-   $: description = data.description.replace(/(<([^>]+)>)/g, "") + data.notes ? ` ${data.notes}` : "";
+   $: description = `${data.description.replace(/(<([^>]+)>)/g, "").replace(/(\r\n|\n|\r)/gm, "")} ${data.notes ? 
+      data.notes.replace(/(<([^>]+)>)/g, "").replace(/(\r\n|\n|\r)/gm, "") : ""}`;
 </script>
 
 <svelte:head>
    <title>{title}</title>
+   <link rel="canonical" href={"https://bufferzonetanjunglesung.com/rooms/" + data.slug} />
    <meta name="description" content={description} />
    <meta property="og:title" content={title} />
    <meta property="og:type" content="website" />
