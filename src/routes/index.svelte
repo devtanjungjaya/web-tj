@@ -26,6 +26,7 @@
 
 <svelte:head>
     <title>Buffer Zone KEK Tanjung Lesung</title>
+    <link rel="canonical" href="https://bufferzonetanjunglesung.com/" />
 </svelte:head>
 
 <div 
