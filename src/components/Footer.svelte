@@ -1,14 +1,14 @@
 <footer class="flex flex-col p-5 py-12 xs:p-8 xs:py-12 lg:p-16 bg-primary-7 space-y-16 items-center">
     <div class="flex flex-col xl:flex-row space-y-10 xl:space-x-16 xl:space-y-0 font-overpass w-full">
         <div class="flex flex-col space-y-4 max-w-5xl xl:max-w-xl 2xl:max-w-2xl mr-auto">
-            <h1 class="font-bold text-primary-9 text-xl">Tentang kami</h1>
-            <h2 class="font-normal text-white text-lg text-justify">
+            <span class="font-bold text-primary-9 text-xl">Tentang kami</span>
+            <p class="font-normal text-white text-lg text-justify">
                 Hidden Treasure of Tanjung Lesung merupakan kawasan desa-desa wisata di sekitar 
                 KEK Tanjung Lesung yang terdiri dari desa Tanjungjaya, Citeureup, Cigeulis, dan Banyuasih. 
                 Desa-desa ini memiliki potensi alam dan budaya yang begitu mempesona. Hidden Treasure of 
                 Tanjung Lesung dikelola oleh para warga yang tergabung dalam Pokdarwis (Kelompok Sadar Wisata) 
                 dari masing-masing desa.
-            </h2>
+            </p>
         </div>
         <div 
             class="flex flex-col sm:flex-row sm:justify-between space-y-8 sm:space-x-8 sm:space-y-0 

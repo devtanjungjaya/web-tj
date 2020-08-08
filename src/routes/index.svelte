@@ -44,9 +44,9 @@
     mb-8 md:mb-16 lg:mb-20"
 >
     <div class="flex flex-col flex-shrink mr-auto justify-center items-start font-overpass">
-        <h3 class="text-2xl xs:text-2xl md:text-2xl lg:text-3xl xl:text-4xl text-primary-6 font-bold leading-none">
+        <h2 class="text-2xl xs:text-2xl md:text-2xl lg:text-3xl xl:text-4xl text-primary-6 font-bold leading-none">
             Hidden Treasure of
-        </h3>
+        </h2>
         <h1 
             class="text-4xl xs:text-5xl md:text-5xl xl:text-6xl text-primary-7 font-bold 
             whitespace-no-wrap leading-tight"
@@ -99,11 +99,11 @@
         class="font-playfair-display font-bold text-primary-2 text-4xl lg:text-5xl 
         text-center max-w-2xl lg:max-w-3xl z-10 leading-none px-4"
     >
-        “ <span 
+        “ <h2 
             class="font-overpass text-white text-2xl md:text-3xl lg:text-4xl leading-none"
           >
             10 Destinasi Pariwisata<br />Prioritas Kementerian Pariwisata RI
-        </span> ”
+        </h2> ”
     </span>
 </div>
 
