@@ -5,9 +5,10 @@
             <Map
                 accessToken = {mapboxAccessToken}
                 bind:this = {map}
-                options = {{center,zoom:9}}
+                options = {{center,zoom:11}}
             >
             <NavigationControl position="top-left"/>
+            <Penginapan tmp={map}/>
             <Legends map={map.getMap()} data={data}/>
             </Map>
         </div>
@@ -24,10 +25,11 @@
     import Header from '../../../components/maps/Header.svelte'
     import Legends from '../../../components/maps/Legends.svelte'
     import { data } from "../../../components/maps/DataPenginapan.svelte"
+    import Penginapan from "../../../components/maps/Penginapan.svelte"
     const { GeolocateControl, NavigationControl, ScalingControl } = controls
     const mapboxAccessToken = "MAPBOX_ACCESS_TOKEN";
     let map;
-    let center = { lat: -6.492497591683218, lng: 105.83290112301756};
+    let center = { lat:-6.518604043472081, lng: 105.69310043948212};
     let colors = []
     let check = []
     let type = []
