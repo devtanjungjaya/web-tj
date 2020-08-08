@@ -21,6 +21,7 @@
     "gray-matter": "^4.0.2",
     "marked": "^1.1.0",
     "polka": "next",
+    "sapper-google-analytics": "^1.0.2",
     "siema": "^1.5.1",
     "sirv": "^0.4.0"
   },
@@ -49,7 +50,7 @@
     "rollup": "^2.3.4",
     "rollup-plugin-svelte": "^5.2.3",
     "rollup-plugin-terser": "^5.3.0",
-    "sapper": "^0.27.0",
+    "sapper": "^0.28.0",
     "sitemap": "^6.2.0",
     "svelte": "^3.0.0",
     "svelte-preprocess": "^4.0.6",

@@ -1,10 +1,10 @@
-<a rel="prefetch" href={`destinations/${slug}`}>
+<a rel="prefetch" href={`destinasi-wisata/${slug}`}>
     <div class="h-0 relative w-full" style="padding-bottom: 125%">
         <div 
             class="hover:shadow-md flex flex-col rounded-2xl overflow-hidden absolute 
             w-full h-full"
         >
-            <div class="h-0 min-w-0 min-h-0" style="flex-basis: 70%">
+            <div class="h-0 min-w-0 min-h-0" style="flex-basis: 60%">
                 <Image 
                     imgClass="object-cover" 
                     src={photos.length ? photos[0].photoURI : ""} 
@@ -21,7 +21,7 @@
                 >
                     {name}
                 </span>
-                <span class="font-overpass font-normal text-neutral-3 flex-grow text-base xs:text-lg max-line-1">
+                <span class="font-overpass font-normal text-neutral-3 text-base xs:text-lg max-line-1">
                     {categories.join(", ")}
                 </span>
                 <!-- <span class="self-end font-overpass font-bold text-neutral-9 text-xs sm:text-sm lg:text-base">

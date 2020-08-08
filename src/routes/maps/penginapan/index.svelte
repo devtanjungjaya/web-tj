@@ -5,7 +5,6 @@
             <Map
                 accessToken = {mapboxAccessToken}
                 bind:this = {map}
-                on:recentre={e => console.log(e.detail.center.lat, e.detail.center.lng) } 
                 options = {{center,zoom:11}}
             >
             <NavigationControl position="top-left"/>

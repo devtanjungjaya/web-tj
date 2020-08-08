@@ -1,5 +1,5 @@
 <script context="module">
-    export let data = [
+    export const data = [
         {
             name:"Batas desa",
             url:"peta-tanjungjaya",
