@@ -5,7 +5,7 @@
       if (res.status === 200) {
          return { data };
       } else {
-         this.redirect(404, '404');
+         return this.redirect(404, '404');
       }
    }
 </script>
