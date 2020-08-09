@@ -19,7 +19,7 @@ fields:
   config:
     min: 1
     max: 
-    labelField: ''
+    labelField: description
   label: Foto-foto
 - name: description
   type: textarea
