@@ -1,4 +1,4 @@
-import getMarkdownInDirectory from '../../utilities/markdown.js';
+import getMarkdownInDirectory, { shuffleArray } from '../../utilities/markdown.js';
 import { processPromotions } from '../../utilities/promotion';
 import { adminContactsMap } from '../../utilities/contact';
 const marked = require('marked');
@@ -26,7 +26,7 @@ rooms.map(room => { room.categories = [room.category] })
 export const map = new Map(rooms.map(room => [room.slug, room]));
 
 export function getRandom() {
-    return [...map.values()].sort(() => Math.random() - 0.5);;
+    return shuffleArray([...map.values()]);
 }
 
 export const publicFacilityIconMap = {
