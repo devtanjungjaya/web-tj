@@ -1,8 +1,11 @@
 <script>
     export let tmp;
     let map = tmp.getMap();
+    let mapbox = tmp.getMapbox();
     import { dataTransportasi } from "./Data.svelte"
-    dataTransportasi.forEach(element => {
+
+    for (let index = 0; index < dataTransportasi.length; index++) {
+        const element = dataTransportasi[index];
         map.addSource(element.name, {
             'type': 'geojson',
             'data': "images/" + element.url + ".geojson"
@@ -21,5 +24,5 @@
                 'line-offset': 2
             }
         });
-    });
+    }
 </script>

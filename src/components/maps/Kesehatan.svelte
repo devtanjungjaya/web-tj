@@ -66,8 +66,8 @@
                 var htmltext;
                 if(element.name == "Apotek")
                     htmltext= '<div class="flex flex-col items-center text-center">' 
-                            + '<p class="w-auto px-1 max-w-xs text-center text-primary-7 font-bold">'+ nama +'</p>'
-                            +'<p class="w-auto px-1 max-w-xs text-center">'+ alamat +'</p>'
+                            + '<p class="w-auto px-1 text-center text-primary-7 font-bold">'+ nama +'</p>'
+                            +'<p class="w-auto px-1 text-center">'+ alamat +'</p>'
                             +'</div>';
                 else 
                     htmltext = '<div class="flex flex-col items-center max-h-2xs overflow-y-auto">' 
