@@ -1,7 +1,7 @@
 <script context="module">
     export const data = [
         {
-            name:"Batas Desa",
+            name:"Batas Kecamatan Panimbang",
             url:"peta-batas-desa",
             color:"#987456",
             type: "fill",
