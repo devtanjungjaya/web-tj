@@ -12,7 +12,7 @@
         </div>
     </div>
     <div class="flex flex-col space-y-2 lg:space-y-8 self-center">
-        <span class="text-primary-7 font-overpass font-bold text-2xl lg:text-3xl">{headline}</span>
+        <h3 class="text-primary-7 font-overpass font-bold text-2xl lg:text-3xl">{headline}</h3>
         <p class="text-lg lg:text-xl font-open-sans text-neutral-5 max-w-3xl">
             {content}
         </p>

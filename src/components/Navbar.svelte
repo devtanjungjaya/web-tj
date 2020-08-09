@@ -176,19 +176,19 @@
     const navigations = [
         {
             label: "Destinasi Wisata",
-            url: "destinations"
+            url: "destinasi-wisata"
         },
         {
             label: "Paket Wisata",
-            url: "tours"
+            url: "paket-wisata"
         },
         {
             label: "Produk Lokal",
-            url: "products"
+            url: "produk-lokal"
         },
         {
             label: "Penginapan",
-            url: "rooms"
+            url: "penginapan"
         }
     ]
     const transportations = [

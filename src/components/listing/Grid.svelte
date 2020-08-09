@@ -31,6 +31,7 @@
     import Navigation from "./Navigation.svelte";
     import IntersectionObserver from '../IntersectionObserver.svelte';
     import { fly } from 'svelte/transition';
+    import { prioritizePromo, prioritizePhoto } from '../../utilities/sort';
 
     export let filters = [];
     export let items = [];
@@ -43,5 +44,5 @@
     $: filteredItems = filterFunctions.reduce(
         (items, f) => f.filter(items), 
         items
-    );    
+    ).sort(prioritizePromo).sort(prioritizePhoto);    
 </script>

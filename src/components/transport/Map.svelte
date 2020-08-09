@@ -21,7 +21,7 @@
     <div class="map border-1 border-neutral-1 w-full overflow-hidden rounded-2xl">
         <Map 
         accessToken = {mapboxAccessToken} 
-        bind:this={map}
+        bind:this={map} 
         options = {{center,zoom:8,attributionControl:false}}
         >
             <!-- <Marker lat={-6.479478974609833} lng={105.65398972972787} color=transparent label="TANJUNGJAYA" popupClassName="class-name" /> -->

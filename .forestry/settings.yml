@@ -7,26 +7,26 @@ sections:
 - type: heading
   label: Konten
 - type: directory
-  path: content/products
+  path: content/produk-lokal
   label: Produk lokal
   create: all
   match: "**/*.md"
 - type: directory
-  path: content/tours
+  path: content/paket-wisata
   label: Paket wisata
   create: all
   match: "**/*.md"
   templates:
   - paket-wisata
 - type: directory
-  path: content/rooms
+  path: content/penginapan
   label: Penginapan
   create: all
   match: "**/*.md"
   templates:
   - penginapan
 - type: directory
-  path: content/destinations
+  path: content/destinasi-wisata
   label: Destinasi wisata
   create: all
   match: "**/*.md"
@@ -69,7 +69,7 @@ sections:
   path: data/category-destination.yml
   label: Kategori destinasi wisata
 upload_dir: static/images
-public_path: https://web-tj.netlify.app/images
+public_path: https://bufferzonetanjunglesung.com/images
 front_matter_path: ''
 use_front_matter_path: 
 file_template: ":filename:"

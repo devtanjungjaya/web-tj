@@ -1,6 +1,6 @@
 <div class="flex flex-col space-y-4 lg:space-y-8">
     <div class="flex font-overpass font-bold w-full items-center">
-        <span class="mr-auto text-neutral-5 text-xl md:text-2xl lg:text-3xl">{title}</span>
+        <h3 class="mr-auto text-neutral-5 text-xl md:text-2xl lg:text-3xl">{title}</h3>
         <a rel="prefetch" href={url} class="text-sm md:text-base lg:text-lg text-primary-7 hover:underline">
             LIHAT LAINNYA
         </a>
