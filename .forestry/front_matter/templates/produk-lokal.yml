@@ -33,19 +33,6 @@ fields:
   label: Deskripsi
   description: Deskripsi produk secara lengkap dan menarik. Misalnya menjelaskan ukuran,
     berat, bahan, dsb.
-- name: categories
-  type: list
-  config:
-    use_select: true
-    min: 1
-    max: 
-    source:
-      type: documents
-      section: kategori-produk-lokal-e7dd7756-bc74-4bf6-b156-20dd7bdd3303
-      file: data/category-product.yml
-      path: categories
-  label: Kategori
-  description: Kategori produk
 - name: prices
   type: field_group_list
   fields:
@@ -60,6 +47,19 @@ fields:
     labelField: description
   label: List harga
   description: List semua harga (varian dari produk)
+- name: categories
+  type: list
+  config:
+    use_select: true
+    min: 1
+    max: 
+    source:
+      type: documents
+      section: kategori-produk-lokal-e7dd7756-bc74-4bf6-b156-20dd7bdd3303
+      file: data/category-product.yml
+      path: categories
+  label: Kategori
+  description: Kategori produk
 - name: promotions
   type: list
   config:
@@ -72,16 +72,6 @@ fields:
       file: data/promotion.yml
       path: promotions
   label: Promosi
-- name: notes
-  type: textarea
-  default: ''
-  config:
-    required: false
-    wysiwyg: true
-    schema:
-      format: markdown
-  label: Catatan
-  description: Catatan untuk pembeli atau yang lainnya
 - name: contact
   type: select
   default: []
@@ -94,6 +84,16 @@ fields:
       file: data/contact-admin.yml
       path: admins
   label: Kontak admin
+- name: notes
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: markdown
+  label: Catatan
+  description: Catatan untuk pembeli atau yang lainnya
 pages:
 - content/produk-lokal/kandang-badak-art/jam-dinding-kayu-natural.md
 - content/produk-lokal/kandang-badak-art/jam-dinding-kayu-siluet.md
