@@ -11,6 +11,8 @@ sections:
   label: Produk lokal
   create: all
   match: "**/*.md"
+  templates:
+  - produk-lokal
 - type: directory
   path: content/paket-wisata
   label: Paket wisata
