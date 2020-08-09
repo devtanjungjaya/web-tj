@@ -2,7 +2,7 @@
     export let tmp;
     let map = tmp.getMap();
     let mapbox = tmp.getMapbox();
-    import { dataLokasi } from "./Data.svelte"
+    import { dataLokasi, dataBiaya } from "./Data.svelte"
     dataLokasi.forEach(element => {
         let alamatpalsu = element.url +".png"
         map.loadImage(alamatpalsu,function(error,image){
@@ -43,12 +43,8 @@
             }
             var htmltext;
             htmltext= '<div class="flex flex-col items-center text-center max-h-2xs overflow-y-auto"> '
-                        + '<div class="h-12 w-12 md:h-24 md:w-24">'
-                            + '<img src="'+ element.url +'.png" class="w-full h-full" alt="">'
-                        + '</div>'
-                        + '<p class="w-auto px-1 text-primary-7 font-bold">' + description +'</p>'
-                    + '</div>';
-            
+                        + '<p class="w-full py-1 px-1 text-primary-7 font-extrabold text-sm">' + description +'</p>';
+            htmltext = htmltext + '</div>';
             let popup=new mapbox.Popup({anchor:'bottom', closeButton:false, maxWidth:"12rem"})
             .setLngLat(coordinates)
             .setHTML(htmltext)
