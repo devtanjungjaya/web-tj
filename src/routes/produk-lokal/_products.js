@@ -1,4 +1,4 @@
-import getMarkdownInDirectory from '../../utilities/markdown.js';
+import getMarkdownInDirectory, { shuffleArray } from '../../utilities/markdown.js';
 import { processPromotions } from '../../utilities/promotion';
 import { adminContactsMap } from '../../utilities/contact';
 const marked = require('marked');
@@ -23,7 +23,7 @@ products = products.map(product =>
 export const map = new Map(products.map(product => [product.slug, product]));
 
 export function getRandom() {
-    return [...map.values()].sort(() => Math.random() - 0.5);;
+    return shuffleArray([...map.values()]);
 }
 
 export default map;

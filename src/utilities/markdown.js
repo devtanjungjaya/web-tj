@@ -8,7 +8,7 @@ var glob = require('glob');
 
 export default function getMarkdownInDirectory(filePath) {
    filePath = path.join(cwd, filePath);
-   return glob.sync(filePath + '**/*.md').map(filename => getMarkdownFromFile(filename));
+   return shuffleArray(glob.sync(filePath + '**/*.md').map(filename => getMarkdownFromFile(filename)));
 }
 
 function getMarkdownFromFile(filename) {
@@ -48,3 +48,11 @@ function slugify(name, identifier) {
       .replace(/-+$/, '') // Trim - from end of text
       .concat("-", crypto.createHash('sha256').update(identifier).digest('hex').slice(0, 8));
  }
+
+export function shuffleArray(array) {
+   for (let i = array.length - 1; i > 0; i--) {
+       const j = Math.floor(Math.random() * (i + 1));
+       [array[i], array[j]] = [array[j], array[i]];
+   }
+   return array;
+}
