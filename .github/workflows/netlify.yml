@@ -1,5 +1,6 @@
-name: Trigger Netlify Build
+name: Trigger Netlify Build Hook
 on:
+  push:
   schedule:
     - cron: '*/15 * * * *'
 env:
