@@ -1,8 +1,7 @@
 name: Trigger Netlify Build Hook
 on:
-  push:
   schedule:
-    - cron: '*/15 * * * *'
+    - cron: '0 * * * *'
 env:
   NETLIFY_BUILD_HOOK: ${{ secrets.NETLIFY_BUILD_HOOK }}
 jobs:
