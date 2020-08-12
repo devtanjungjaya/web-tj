@@ -1,7 +1,7 @@
 <script context="module">
     export const data = [
         {
-            name:"Batas desa",
+            name:"Batas Desa Tanjungjaya",
             url:"peta-tanjungjaya",
             color:"#987456",
             type: "fill",
