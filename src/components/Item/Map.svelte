@@ -8,7 +8,7 @@
                 zoom: 14
             }}
         >
-            <Marker color="#0BA79F" lng={lng} lat={lat} />
+            <Marker color="#0BA79F" lng={lng} lat={lat} {label} />
         </Map>
     </div>
 </div>
@@ -18,6 +18,7 @@
 
     export let lat;
     export let lng;
+    export let label;
 
     const mapboxAccessToken = "MAPBOX_ACCESS_TOKEN";
 </script>

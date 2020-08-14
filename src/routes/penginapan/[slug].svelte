@@ -26,17 +26,14 @@
    import Link from "../../components/Item/Link.svelte";
    import Facilities from "../../components/Item/Facilities.svelte";
    import Promotions from "../../components/Item/Promotions.svelte";
+   import Map from "../../components/Item/Map.svelte";
    import { onMount } from "svelte";
 
    let DOMPurify = null;
-   let MapComponent;
    let PhotosComponent;
 
    onMount(async () => {
       DOMPurify = await import('dompurify');
-
-      const mapModule = await import("../../components/Item/Map.svelte");
-      MapComponent = mapModule.default;
 
       const photosModule = await import("../../components/Item/Photos.svelte");
       PhotosComponent = photosModule.default;
@@ -128,7 +125,7 @@
       <div class="flex flex-col flex-shrink-0 self-start max-w-full space-y-6" style="width: 375px">
          <Prices prices={data.prices} />
          {#if data.coordinate}
-            <svelte:component this={MapComponent} {...data.coordinate} />
+            <Map {...data.coordinate} label={data.name} />
          {/if}
          {#if data.gmaps}
             <Link url={data.gmaps} icon="ic_gmaps.png" label="Buka lokasi di Google Maps" />
