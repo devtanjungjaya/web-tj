@@ -5,6 +5,8 @@ promotions:
 - CEC-DISC20
 - CEC-DISC10
 descriptions:
+- promotion: KBA-DISC25
+  description: Diskon 25% untuk pembelian di atas 50 pcs
 - promotion: Free Pouch
   description: Gratis pouch/kantong untuk setiap pembelian
 - promotion: CEC-DISC20
