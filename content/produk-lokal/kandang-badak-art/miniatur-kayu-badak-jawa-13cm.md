@@ -15,7 +15,8 @@ prices:
   unit: pcs
 categories:
 - Kerajinan
-promotions: []
+promotions:
+- KBA-DISC15%
 notes: ''
 
 ---
