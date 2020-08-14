@@ -39,6 +39,7 @@ categories:
 facilities:
 - Tempat parkir
 promotions: []
-notes: ''
+notes: Untuk paket wisata di English Club Tanjungjaya silahkan buka halaman kategori
+  Paket Wisata
 
 ---
