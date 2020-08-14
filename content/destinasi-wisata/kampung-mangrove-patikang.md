@@ -20,6 +20,10 @@ photos:
   photoURI: https://web-tj.netlify.app/images/kampung-mangrove-patikang-7.jpg
 - photoURI: https://web-tj.netlify.app/images/kampung-mangrove-patikang-5.jpg
   description: Pengembangan bibit mangrove
+- description: Peta penanaman mangrove di desa Citeureup
+  photoURI: https://bufferzonetanjunglesung.com/images/peta-penanaman-mangrove.JPG
+- description: Poster wisata desa Citeureup
+  photoURI: https://bufferzonetanjunglesung.com/images/peta-wisata-desa-citeureup.jpg
 description: |-
   Berawal dari tujuan menahan banjir saat air laut pasang, Kampung Mangrove Patikang kini menjadi salah satu objek pariwisata yang dibuka oleh Dinas Pariwisata Banten. Selain menjadi pelestarian lingkungan, Kampung Mangrove ini juga menjadi destinasi wisata yang sangat menarik dan turut menunjang perekonomian masyarakat di Buffer Zone KEK Tanjung Lesung.
 
