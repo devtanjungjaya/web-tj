@@ -10,6 +10,12 @@ promotions:
 - CEC-DISC20
 - CEC-DISC10
 descriptions:
+- promotion: KBA-Gratis Plakat 2
+  description: Gratis plakat untuk pembelian di atas 40 pcs
+- promotion: KBA-Plakat dan Disc10%
+  description: Gratis plakat dan diskon 10% untuk pembelian di atas 20 pcs
+- promotion: KBA-Gratis Plakat 1
+  description: Gratis plakat untuk pembelian di atas 10 pcs
 - promotion: KBA-Gratis Ukiran
   description: Gratis ukiran nama pembeli
 - promotion: KBA-DISC15%
