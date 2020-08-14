@@ -16,7 +16,8 @@ prices:
   description: Gantungan Kunci Badak Jawa
 categories:
 - Kerajinan
-promotions: []
+promotions:
+- KBA-DISC25
 notes: ''
 
 ---
