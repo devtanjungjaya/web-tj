@@ -22,6 +22,8 @@ photos:
   photoURI: https://bufferzonetanjunglesung.com/images/pulau-liwungan-8.jpeg
 - description: Pulau Liwungan
   photoURI: https://web-tj.netlify.app/images/pulau-liwungan-6.jpeg
+- description: Poster peta wisata desa Citeureup
+  photoURI: https://bufferzonetanjunglesung.com/images/poste-peta-wisata-citeureup.jpg
 description: |-
   Pulau Liwungan adalah sebuah pulau kecil tak berpenghuni seluas 25 hektare di selat Sunda dan dekat dengan kawasan Tanjung Lesung.
 
