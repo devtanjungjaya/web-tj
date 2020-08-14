@@ -7,6 +7,8 @@ photos:
 - description: Pulau Liwungan
   photoURI: https://web-tj.netlify.app/images/pulau-liwungan-1.jpeg
 - description: Pulau Liwungan
+  photoURI: https://bufferzonetanjunglesung.com/images/pulau-liwungan-7.jpeg
+- description: Pulau Liwungan
   photoURI: https://web-tj.netlify.app/images/pulau-liwungan-2.jpeg
 - description: Dermaga pulau Liwungan
   photoURI: https://web-tj.netlify.app/images/pulau-liwungan-3.jpeg
@@ -14,6 +16,10 @@ photos:
   description: Snorkeling di pulau Liwungan
 - photoURI: https://web-tj.netlify.app/images/pulau-liwungan-5.jpeg
   description: Snorkeling di pulau Liwungan
+- photoURI: https://bufferzonetanjunglesung.com/images/pulau-liwungan-9.jpeg
+  description: Snorkeling
+- description: Wahana Banana Boat
+  photoURI: https://bufferzonetanjunglesung.com/images/pulau-liwungan-8.jpeg
 - description: Pulau Liwungan
   photoURI: https://web-tj.netlify.app/images/pulau-liwungan-6.jpeg
 description: |-
