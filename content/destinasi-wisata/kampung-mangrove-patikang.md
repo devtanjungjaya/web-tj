@@ -28,9 +28,9 @@ description: |-
   Ayo berkunjung dan jalani keseruan di Kampung Mangrove Patikang!
 gmaps: https://goo.gl/maps/w57KzxdBEDr44dSn6
 prices:
-- value: 20000
+- value: 5000
   unit: orang
-  description: HTM + paket wisata
+  description: Harga Tiket Masuk
 hours:
 - description: Senin-Minggu
   open: 7:00 AM
