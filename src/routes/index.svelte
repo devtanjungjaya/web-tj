@@ -175,7 +175,7 @@
     let screenWidth = 1440;
 
     const title = "Hidden Treasure of Tanjung Lesung";
-    const description = "Hidden Treasure of Tanjung Lesung, wisata dekat dari Jakarta dan Jabodetabek yang berkualitas untuk kamu yang ingin menjelajahi keindahan wisata alam seperti wisata pantai!";
+    const description = "Wisata pantai, alam, dan budaya terindah dan berkualitas yang dekat dari Jakarta dan Jabodetabek. Nikmati wisata terbaik di Hidden Treasure of Tanjung Lesung";
     const image = 'https://www.bufferzonetanjunglesung.com/images/hero.webp';
 </script>
 
