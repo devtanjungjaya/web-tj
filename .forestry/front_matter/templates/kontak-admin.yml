@@ -25,22 +25,22 @@ fields:
         file: data/contact-admin.yml
         path: admins
     label: Admin
-  - name: contact
-    type: field_group
-    config: {}
+  - name: contacts
+    type: field_group_list
     fields:
-    - name: phoneNumbers
-      type: list
+    - name: phoneNumber
+      type: text
       config:
-        use_select: false
-        min: 
-        max: 
-      label: List nomor telepon
+        required: true
+      label: Nomor telepon/HP/Whatsapp
     - name: whatsapp
       type: boolean
-      label: Ada whatsapp
-      description: Centang kalau nomor ini bisa dihubungi lewat Whatsapp
-      default: false
+      label: Whatsapp
+      description: Centang jika nomor ini bisa dihubungi lewat whatsapp
+    config:
+      min: 
+      max: 
+      labelField: phoneNumber
     label: Kontak
   config:
     min: 
