@@ -9,15 +9,19 @@ contacts:
   contact:
     phoneNumbers:
     - '6285215632635'
+    whatsapp: false
 - admin: Admin Cigeulis
   contact:
     phoneNumbers:
     - '6285921374035'
+    whatsapp: true
 - admin: Admin Citeureup
   contact:
     phoneNumbers:
     - '62817849463'
+    whatsapp: false
 - admin: Admin Tanjungjaya
   contact:
     phoneNumbers:
     - '6285210468664'
+    whatsapp: false
