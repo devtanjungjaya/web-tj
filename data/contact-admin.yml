@@ -8,7 +8,7 @@ contacts:
 - admin: Admin Banyuasih
   contacts:
   - phoneNumber: "6285215632635"
-    whatsapp: false
+    whatsapp: true
 - admin: Admin Cigeulis
   contacts:
   - phoneNumber: "6285921374035"
@@ -16,7 +16,7 @@ contacts:
 - admin: Admin Citeureup
   contacts:
   - phoneNumber: "62817849463"
-    whatsapp: false
+    whatsapp: true
 - admin: Admin Tanjungjaya
   contacts:
   - phoneNumber: "6285210468664"
