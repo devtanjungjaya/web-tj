@@ -36,6 +36,6 @@
     
 </div>
 <div class="header px-4 sm:px-8 md:px-16 text-md sm:text-lg md:text-xl text-neutral-5">
-    <h5>Peta ini merupakan rute perjalanan menuju Tanjungjaya dari Jabodetabek, Serang, dan Merak.</h5>
+    <h5>Peta ini merupakan rute perjalanan menuju Hidden Treasure of Tanjung Lesung dari Jabodetabek, Serang, dan Merak.</h5>
 </div>
 <svelte:window bind:innerWidth></svelte:window>
