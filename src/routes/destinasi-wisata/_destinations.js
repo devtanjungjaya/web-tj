@@ -15,7 +15,7 @@ destinations = destinations.map(destination =>
         return {
             ...destination,
             promotions: processPromotions(destination.promotions || []),
-            contact: adminContactsMap.get(destination.contact) || { phoneNumbers: [] },
+            contact: adminContactsMap.get(destination.contact) || [],
             photos: destination.photos.map(p => {
                 p.photoURI = p.photoURI.substring(p.photoURI.indexOf('images/'))
                 return p;

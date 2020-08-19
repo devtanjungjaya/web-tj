@@ -23,7 +23,7 @@
 
     <div class="grid lg:grid-cols-2">
         {#each contacts as contact}
-            <Contact name= {contact.admin} phoneNumbers= {contact.contact.phoneNumbers} />
+            <Contact name={contact.admin} contacts={contact.contact} />
         {/each}
     </div>
     
