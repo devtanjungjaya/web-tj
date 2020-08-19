@@ -36,6 +36,11 @@ fields:
         min: 
         max: 
       label: List nomor telepon
+    - name: whatsapp
+      type: boolean
+      label: Ada whatsapp
+      description: Centang kalau nomor ini bisa dihubungi lewat Whatsapp
+      default: false
     label: Kontak
   config:
     min: 
