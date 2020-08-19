@@ -2,19 +2,7 @@
         <span class="font-bold text-neutral-5 text-xl sm:text-3xl md:text-3xl lg:text-3xl border-b-2">{name}</span>
         <div class="flex flex-col mt-6 space-y-6">
             {#each contacts as contact, i}
-                <div class="flex items-start space-x-3 sm:space-x-6 md:space-x-6 lg:space-x-6">
-                    <div class="flex flex-shrink-0 items-center justify-center rounded-full bg-primary-7 p-2 sm:p-3 md:p-3 lg:p-3">
-                        <img class="w-4 h-4 sm:w-6 sm:h-6 md:w-6 md:h-6 lg:w-6 lg:h-6" src="ic_phone.svg" alt="phone" />
-                    </div>
-                    <div class="flex flex-col">
-                        <span class="font-bold text-neutral-3 text-xs sm:text-lg md:text-lg lg:text-base leading-none">
-                            {`No. HP/Whatsapp ${contacts.length > 1 ? i+1 : ''}`}
-                        </span>
-                        <span class="font-semibold text-primary-7 text-xl md:text-2xl xl:text-3xl">
-                            +{contact.phoneNumber}
-                        </span>
-                    </div>
-                </div>
+                <PhoneNumber {...contact } />
             {/each}
             {#if email}
                 <div class="flex items-start space-x-3 sm:space-x-6 md:space-x-6 lg:space-x-6">
@@ -43,6 +31,8 @@
 
 
 <script>
+    import PhoneNumber from "./PhoneNumber.svelte";
+
     export let name;
     export let contacts;
     export let email;

@@ -20,4 +20,4 @@ contacts:
 - admin: Admin Tanjungjaya
   contacts:
   - phoneNumber: "6285210468664"
-    whatsapp: false
+    whatsapp: true
