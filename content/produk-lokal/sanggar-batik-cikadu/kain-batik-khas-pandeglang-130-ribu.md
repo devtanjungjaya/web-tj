@@ -22,7 +22,9 @@ prices:
   unit: potong
 categories:
 - Kerajinan
-promotions: []
+promotions:
+- SBC-DISC10%
+- SBC-DISC5%
 notes: ''
 
 ---
