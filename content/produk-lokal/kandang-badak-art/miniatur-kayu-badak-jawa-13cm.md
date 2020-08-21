@@ -3,7 +3,7 @@ contact: Admin Citeureup
 name: Miniatur Kayu Badak Jawa 13cm
 photos:
 - description: Miniatur Kayu Badak Jawa 13cm
-  photoURI: https://bufferzonetanjunglesung.com/images/miniatur-badak-13cm-1.jpeg
+  photoURI: miniatur-badak-13cm-1_qojh9d.jpg
 description: |-
   Miniatur unik berbentuk badak jawa khas daerah Pandeglang. Terbuat dari bahan kayu yang diukir menjadi bentuk badak, miniatur ini menjadi sangat menarik dan wajib dimiliki. Cocok dipajang di dashboard mobil ataupun di meja dan lemari di rumah Anda.
 

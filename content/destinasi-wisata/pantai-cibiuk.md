@@ -5,9 +5,9 @@ coordinate:
 name: Pantai Cibiuk
 photos:
 - description: Pantai Cibiuk
-  photoURI: https://web-tj.netlify.app/images/pantai-cibiuk-1.jpg
+  photoURI: pantai-cibiuk-1-1_ml5bnf.jpg
 - description: Pantai cibiuk
-  photoURI: https://web-tj.netlify.app/images/pantai-cibiuk-2.jfif
+  photoURI: pantai-cibiuk-2_rky95x.jpg
 description: Jalan masuk menuju Pantai Cibiuk bersebelahan sebelum gerbang masuk kawasan
   Tanjung Lesung. Dari jalan raya Tanjung Lesung perlu masuk melewati jalan tanah
   berbatu sejauh 300 m. Papan penunjuk jalan menuju pantai tidak begitu terlihat jika

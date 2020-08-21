@@ -3,7 +3,7 @@ contact: Admin Citeureup
 name: Jam Dinding Kayu Siluet
 photos:
 - description: Jam Dinding Kayu Siluet
-  photoURI: https://web-tj.netlify.app/images/jam-dinding-kayu-siluet-1.jpeg
+  photoURI: jam-dinding-kayu-siluet-1_ram2gj.jpg
 description: |-
   Jam dinding ini terbuat dari bahan kayu. Terdapat lukisan siluet/bayangan di permukaannya yang pastinya indah dan menambah nilai estetik dari jam dinding ini. Tidak hanya menunjukkan waktu, jam dinding ini juga akan mempercantik ruangan Anda.
 

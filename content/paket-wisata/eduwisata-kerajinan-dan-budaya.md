@@ -3,20 +3,20 @@ contact: Admin Tanjungjaya
 name: Eduwisata Kerajinan dan Budaya
 photos:
 - description: Budaya lokal
-  photoURI: https://web-tj.netlify.app/images/eduwisata-kerajinan-dan-budaya-1.jpeg
+  photoURI: eduwisata-kerajinan-dan-budaya-1_xhg8ey.jpg
 - description: Mempelajari salah satu budaya lokal (musik tradisional)
-  photoURI: https://web-tj.netlify.app/images/eduwisata-kerajinan-dan-budaya-2.jpeg
-- photoURI: https://web-tj.netlify.app/images/eduwisata-kerajinan-dan-budaya-3.jpeg
+  photoURI: eduwisata-kerajinan-dan-budaya-2_k2azvi.jpg
+- photoURI: eduwisata-kerajinan-dan-budaya-3_qiiv1w.jpg
   description: Mempelajari salah satu budaya lokal (musik tradisional)
 - description: Kerajinan warga lokal
-  photoURI: https://web-tj.netlify.app/images/eduwisata-kerajinan-dan-budaya-4.jpeg
+  photoURI: eduwisata-kerajinan-dan-budaya-4_g81yvu.jpg
 - description: Belajar tentang kerajinan warga lokal
-  photoURI: https://web-tj.netlify.app/images/eduwisata-kerajinan-dan-budaya-5.jpeg
+  photoURI: eduwisata-kerajinan-dan-budaya-5_jtck7y.jpg
 - description: Kerajinan warga lokal
   photoURI: eduwisata-kerajinan-dan-budaya-6_owagqt.jpg
 - description: Eduwisata kerajinan dan budaya
   photoURI: eduwisata-kerajinan-dan-budaya-6_owt8ty.jpg
-- photoURI: https://web-tj.netlify.app/images/eduwisata-kerajinan-dan-budaya-7.JPG
+- photoURI: eduwisata-kerajinan-dan-budaya-7_a746kp.jpg
   description: Eduwisata kerajinan dan budaya
 description: |-
   Desa-desa di sekitar kawasan Tanjung Lesung memiliki kebudayaan dan kerajinan lokal yang unik dan menarik. Mulai dari batik khas, musik tradisional, tarian tradisional, berbagai kerajinan tangan, dsb. Mari menjelajahi dan mempelajari berbagai kesenian, budaya, dan kerajinan lokal warga desa yang pastinya seru dan menyenangkan.

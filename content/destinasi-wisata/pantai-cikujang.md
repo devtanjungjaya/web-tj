@@ -5,7 +5,7 @@ coordinate:
 name: Pantai Cikujang
 photos:
 - description: Pantai Cikujang
-  photoURI: https://web-tj.netlify.app/images/pantai-cikujang-1.jfif
+  photoURI: pantai-cikujang-1_pdznns.jpg
 description: Pantai yang masih asri dan sepi pengunjung. Pemandangan yang indah bisa
   dinikmati bersama di sini. Salah satu spot yang cocok untuk menikmati pesona sunset
   di selat Sunda.

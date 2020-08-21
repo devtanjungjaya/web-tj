@@ -5,15 +5,15 @@ coordinate:
   lng: 105.677712
 name: Homestay Bolang
 photos:
-- photoURI: https://web-tj.netlify.app/images/rsz_20200727_112506.jpg
+- photoURI: rsz_20200727_112506_ukrg11.jpg
   description: Tampak depan
-- photoURI: https://web-tj.netlify.app/images/20200727_112100-1.jpg
+- photoURI: 20200727_112100-1_plarhv.jpg
   description: ''
-- photoURI: https://web-tj.netlify.app/images/20200727_112000-1.jpg
+- photoURI: 20200727_112000-1_h09ch7.jpg
   description: Kamar tidur
-- photoURI: https://web-tj.netlify.app/images/20200727_112524-1.jpg
+- photoURI: 20200727_112524-1_uiwzgl.jpg
   description: ''
-- photoURI: https://web-tj.netlify.app/images/20200727_112031.jpg
+- photoURI: 20200727_112031_omaixc.jpg
   description: Kamar mandi
 gmaps: https://goo.gl/maps/TUjtu91ZGfycWW547
 prices:

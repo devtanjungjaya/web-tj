@@ -5,13 +5,13 @@ coordinate:
   lng: 105.67449
 name: Griyeu Nyimas
 photos:
-- photoURI: https://web-tj.netlify.app/images/rsz_20200727_101750.jpg
+- photoURI: rsz_20200727_101750_zchc0y.jpg
   description: Tampak depan
-- photoURI: https://web-tj.netlify.app/images/20200727_101824-1.jpg
+- photoURI: 20200727_101824-1_fgrsh4.jpg
   description: Kamar tidur
-- photoURI: https://web-tj.netlify.app/images/20200727_101607-1.jpg
+- photoURI: 20200727_101607-1_oma5m7.jpg
   description: Kamar mandi
-- photoURI: https://web-tj.netlify.app/images/20200727_101833-1.jpg
+- photoURI: 20200727_101833-1_zjs7aq.jpg
   description: Dapur
 gmaps: https://goo.gl/maps/tzoMwanA8BkiARSt5
 prices:

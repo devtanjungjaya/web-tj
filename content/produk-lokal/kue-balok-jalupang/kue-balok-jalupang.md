@@ -3,15 +3,15 @@ contact: Admin Citeureup
 name: Kue Balok Jalupang (Khas Pandeglang)
 photos:
 - description: Kue Balok Jalupang Asin (kiri) dan Manis (kanan)
-  photoURI: https://web-tj.netlify.app/images/kue-balok-jalupang-5.jpeg
+  photoURI: kue-balok-jalupang-5_z3d7dd.jpg
 - description: Kue Balok Jalupang Manis (kiri) dan Asin (kanan)
-  photoURI: https://web-tj.netlify.app/images/kue-balok-jalupang-1-1.jpeg
+  photoURI: kue-balok-jalupang-1-1_iikcfi.jpg
 - description: Kue balok jalupang asin
-  photoURI: https://web-tj.netlify.app/images/kue-balok-jalupang-2-1.jpeg
+  photoURI: kue-balok-jalupang-2-1_j3fz98.jpg
 - description: Kue balok jalupang asin
-  photoURI: https://web-tj.netlify.app/images/kue-balok-jalupang-3-1.jpeg
+  photoURI: kue-balok-jalupang-3-1_tspcgz.jpg
 - description: Kue balok jalupang
-  photoURI: https://web-tj.netlify.app/images/kue-balok-jalupang-4-1.jpeg
+  photoURI: kue-balok-jalupang-4-1_t8o7nb.jpg
 description: |-
   Kue Balok merupakan kue tradisional khas Pandeglang yang terbuat dari bahan dasar singkong pilihan. Singkong dengan kualitas terbaik dikukus kemudian ditumbuk selagi masih panas. Kue tradisional ini memiliki tekstur yang sangat lembut. Seluruh bahan-bahannya dijamin alami dan berkualitas sehingga memberikan rasa dan kualitas yang tidak perlu diragukan lagi. Terdapat 3 varian rasa yang dapat Anda nikmati:
 

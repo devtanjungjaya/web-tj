@@ -5,25 +5,25 @@ coordinate:
 name: Lembur Mangrove Patikang
 photos:
 - description: Kampung Mangrove Patikang
-  photoURI: https://web-tj.netlify.app/images/kampung-mangrove-patikang-1.jpg
+  photoURI: kampung-mangrove-patikang-1_atnpjc.jpg
 - description: Kampung Mangrove Patikang
-  photoURI: https://web-tj.netlify.app/images/kampung-mangrove-patikang-2.jpg
+  photoURI: kampung-mangrove-patikang-2_vuvlvb.jpg
 - description: Kampung Mangrove Patikang
-  photoURI: https://web-tj.netlify.app/images/kampung-mangrove-patikang-3.jpg
+  photoURI: kampung-mangrove-patikang-3_tke4jk.jpg
 - description: Pengembangan bibit mangrove
-  photoURI: https://web-tj.netlify.app/images/kampung-mangrove-patikang-8.jpg
+  photoURI: kampung-mangrove-patikang-8_asd5el.jpg
 - description: Pengembangan bibit mangrove
-  photoURI: https://web-tj.netlify.app/images/kampung-mangrove-patikang-6.jpg
-- photoURI: https://web-tj.netlify.app/images/kampung-mangrove-patikang-4.jpg
+  photoURI: kampung-mangrove-patikang-6_ixixw8.jpg
+- photoURI: kampung-mangrove-patikang-4_goeugi.jpg
   description: Pengembangan bibit mangrove
 - description: Pengembangan bibit mangrove
-  photoURI: https://web-tj.netlify.app/images/kampung-mangrove-patikang-7.jpg
-- photoURI: https://web-tj.netlify.app/images/kampung-mangrove-patikang-5.jpg
+  photoURI: kampung-mangrove-patikang-7_osylys.jpg
+- photoURI: kampung-mangrove-patikang-5_lmyndt.jpg
   description: Pengembangan bibit mangrove
 - description: Peta penanaman mangrove di desa Citeureup
-  photoURI: https://bufferzonetanjunglesung.com/images/peta-penanaman-mangrove.JPG
+  photoURI: peta-penanaman-mangrove_i3kpzm.jpg
 - description: Poster wisata desa Citeureup
-  photoURI: https://bufferzonetanjunglesung.com/images/peta-wisata-desa-citeureup.jpg
+  photoURI: peta-wisata-desa-citeureup_esazya.jpg
 description: |-
   Berawal dari tujuan menahan banjir saat air laut pasang, Lembur Mangrove Patikang Citeureup kini akan menjadi salah satu objek pariwisata dan center edukasi, Selain menjadi pelestarian lingkungan, Lembur Mangrove ini juga menjadi destinasi wisata yang sangat menarik dan turut menunjang perekonomian masyarakat di Buffer Zone KEK Tanjung Lesung.
 

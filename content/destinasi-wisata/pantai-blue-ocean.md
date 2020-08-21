@@ -5,9 +5,9 @@ coordinate:
 name: Pantai Blue Ocean
 photos:
 - description: Pantai Blue Ocean
-  photoURI: https://web-tj.netlify.app/images/pantai-blue-ocean-1.jpg
+  photoURI: pantai-blue-ocean-1_x6m4dj.jpg
 - description: Pantai blue ocean
-  photoURI: https://web-tj.netlify.app/images/pantai-blue-ocean-2.jpg
+  photoURI: pantai-blue-ocean-2_aglqdm.jpg
 description: Pantai ini belum banyak dikunjungi oleh wisatawan umum yang ingin pergi
   ke pantai, kecuali dari para pengunjung yang memang tujuan awalnya menginap di Villa
   Blue Ocean. Fasilitas yang disediakan untuk pengunjung villa juga dapat dinikmati

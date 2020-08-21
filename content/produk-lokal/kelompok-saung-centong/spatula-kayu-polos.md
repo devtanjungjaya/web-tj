@@ -3,7 +3,7 @@ contact: Admin Tanjungjaya
 name: Spatula Kayu Polos
 photos:
 - description: Spatula Kayu Polos
-  photoURI: https://web-tj.netlify.app/images/spatula-kayu-polos-2.png
+  photoURI: spatula-kayu-polos-2_nmqbtk.png
 description: "Spatula yang terbuat dari bahan kayu berkualitas ekspor. Produk ini
   dibuat oleh para pengrajin terampil di destinasi wisata Tanjung Lesung.\n\nUkuran:
   35 x 7 cm.\n\nProduk ini sangat aman untuk dipakai sebagai alat perlengkapan dapur

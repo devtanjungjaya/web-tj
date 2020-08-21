@@ -2,12 +2,12 @@
 contact: Admin Tanjungjaya
 name: Set Alat Makan
 photos:
-- photoURI: https://web-tj.netlify.app/images/set-alat-makan-1-1.jpeg
+- photoURI: set-alat-makan-1-1_eki1pb.jpg
   description: Set Alat Makan
 - description: Set alat makan
-  photoURI: https://web-tj.netlify.app/images/set-alat-makan-2-1.jpeg
+  photoURI: set-alat-makan-2-1_on3ovh.jpg
 - description: Set alat makan + pouch/kantong
-  photoURI: https://web-tj.netlify.app/images/set-alat-makan-3-1.jpeg
+  photoURI: set-alat-makan-3-1_gikd9d.jpg
 description: |-
   Set alat makan yang terdiri dari satu buah sendok, satu buah garpu, dan sepasang sumpit. Set alat makan ini terbuat dari bahan kayu jati berkualitas ekspor. Produk ini dibuat oleh para pengrajin terampil di destinasi wisata Tanjung Lesung.
 

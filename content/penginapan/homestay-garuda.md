@@ -5,11 +5,11 @@ coordinate:
   lng: 105.677923
 name: Homestay Garuda
 photos:
-- photoURI: https://web-tj.netlify.app/images/20200727_105939-1.jpg
+- photoURI: 20200727_105939-1_ecim4s.jpg
   description: Tampak depan
-- photoURI: https://web-tj.netlify.app/images/20200727_103523-1.jpg
+- photoURI: 20200727_103523-1_aj51vb.jpg
   description: Kamar tidur
-- photoURI: https://web-tj.netlify.app/images/20200727_103502-1.jpg
+- photoURI: 20200727_103502-1_nclz8e.jpg
   description: Kamar mandi
 gmaps: https://goo.gl/maps/u9qVobuLRiVLjkKY8
 prices:

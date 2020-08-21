@@ -2,14 +2,14 @@
 contact: Admin Tanjungjaya
 name: Piring Kayu Jati 20cm
 photos:
-- photoURI: https://web-tj.netlify.app/images/piring-kayu-jati-20cm-5.png
+- photoURI: piring-kayu-jati-20cm-5_b6wi4j.png
   description: Piring Kayu Jati
-- photoURI: https://web-tj.netlify.app/images/piring-kayu-jati-20cm-6.png
+- photoURI: piring-kayu-jati-20cm-6_fufbtg.png
   description: Piring kayu jati
 - description: Piring kayu jati
-  photoURI: https://web-tj.netlify.app/images/piring-kayu-jati-20cm-7.png
+  photoURI: piring-kayu-jati-20cm-7_olwom4.png
 - description: Piring kayu jati
-  photoURI: https://web-tj.netlify.app/images/piring-kayu-jati-20cm-8.png
+  photoURI: piring-kayu-jati-20cm-8_lsruun.png
 description: "Piring yang terbuat dari bahan kayu jati berkualitas ekspor. Produk
   ini dibuat oleh para pengrajin terampil di destinasi wisata Tanjung Lesung.\n\nDiameter:
   20 cm\n\nProduk ini sangat aman untuk dipakai sebagai alat perlengkapan dapur karena

@@ -3,7 +3,7 @@ contact: Admin Citeureup
 name: Gantungan Kunci Badak Jawa
 photos:
 - description: Gantungan kunci badak jawa
-  photoURI: https://bufferzonetanjunglesung.com/images/gantungan-kunci-badak-jawa-1.jpeg
+  photoURI: gantungan-kunci-badak-jawa-1_eotwrg.jpg
 description: |-
   Gantungan kunci unik berbentuk badak jawa khas daerah Pandeglang. Terbuat dari bahan kayu yang diukir menjadi bentuk badak, gantungan kunci ini menjadi sangat menarik dan wajib dimiliki.
 

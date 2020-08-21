@@ -5,13 +5,13 @@ coordinate:
   lng: 105.675718
 name: Homestay Adam
 photos:
-- photoURI: https://web-tj.netlify.app/images/h1-homestay-adam.jpg
+- photoURI: h1-homestay-adam_zqbevu.jpg
   description: Tampak depan
-- photoURI: https://web-tj.netlify.app/images/h2-homestay-adam.jpg
+- photoURI: h2-homestay-adam_uelrc5.jpg
   description: Area parkir
-- photoURI: https://web-tj.netlify.app/images/whatsapp-image-2020-07-26-at-145834.jpg
+- photoURI: whatsapp-image-2020-07-26-at-145834_r2klxy.jpg
   description: Kamar tidur
-- photoURI: https://web-tj.netlify.app/images/whatsapp-image-2020-07-26-at-145601.jpg
+- photoURI: whatsapp-image-2020-07-26-at-145601_tzlg7d.jpg
   description: Dapur
 gmaps: https://goo.gl/maps/waXUPof8aFVdnRiC6
 prices:

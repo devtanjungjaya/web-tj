@@ -5,15 +5,15 @@ coordinate:
   lng: 105.6821744
 name: Homestay Vina
 photos:
-- photoURI: https://web-tj.netlify.app/images/20200727_131459-1.jpg
+- photoURI: 20200727_131459-1_ejxzpr.jpg
   description: Tampak depan
-- photoURI: https://web-tj.netlify.app/images/20200727_131727-1.jpg
+- photoURI: 20200727_131727-1_h68puo.jpg
   description: Ruang keluarga
-- photoURI: https://web-tj.netlify.app/images/20200727_131740-1.jpg
+- photoURI: 20200727_131740-1_pd8kep.jpg
   description: ''
-- photoURI: https://web-tj.netlify.app/images/20200727_131717.jpg
+- photoURI: 20200727_131717_rum08r.jpg
   description: Kamar tidur
-- photoURI: https://web-tj.netlify.app/images/20200727_131511.jpg
+- photoURI: 20200727_131511_ymqdgl.jpg
   description: ''
 gmaps: https://goo.gl/maps/aQjprgQXnDfNUdKr8
 prices:

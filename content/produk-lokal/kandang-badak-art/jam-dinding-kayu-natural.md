@@ -2,7 +2,7 @@
 contact: Admin Citeureup
 name: Jam Dinding Kayu Natural
 photos:
-- photoURI: https://web-tj.netlify.app/images/jam-dinding-kayu-natural-1.jpeg
+- photoURI: jam-dinding-kayu-natural-1_sem6zi.jpg
   description: Jam Dinding Kayu Natural
 description: |-
   Jam dinding ini terbuat dari bahan kayu dengan bentuk kayu yang natural dan estetis. Motif kayu yang unik pada permukaannya tentu menambah keindahan dari jam dinding ini. Tidak hanya menunjukkan waktu, jam dinding ini juga akan mempercantik ruangan Anda.

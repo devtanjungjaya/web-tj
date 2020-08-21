@@ -3,7 +3,7 @@ contact: Admin Citeureup
 name: Cenderamata Miniatur Badak 15cm (Model Tempat Ballpoint + Plakat)
 photos:
 - description: Miniatur kayu badak jawa 15cm
-  photoURI: https://bufferzonetanjunglesung.com/images/miniatur-badak-plakat-15cm-1.jpeg
+  photoURI: miniatur-badak-plakat-15cm-1_axnola.jpg
 description: |-
   Cinderamata unik berbentuk badak jawa khas daerah Pandeglang. Terbuat dari bahan kayu yang diukir menjadi bentuk badak, miniatur ini menjadi sangat menarik dan wajib dimiliki. Tidak hanya sebagai miniatur, cenderamata ini juga berfungsi sebagai tempat ballpoint dan dapat digunakan sebagai plakat. Cocok untuk dipajang dan mempercantik meja di ruangan Anda.
 

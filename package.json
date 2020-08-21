@@ -54,6 +54,7 @@
     "sitemap": "^6.2.0",
     "svelte": "^3.0.0",
     "svelte-preprocess": "^4.0.6",
-    "tailwindcss": "^1.6.0"
+    "tailwindcss": "^1.6.0",
+    "tiny-glob": "^0.2.6"
   }
 }

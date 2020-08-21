@@ -5,15 +5,15 @@ coordinate:
   lng: 105.68237
 name: Homestay Pak Misnan
 photos:
-- photoURI: https://web-tj.netlify.app/images/rsz_20200727_113528.jpg
+- photoURI: rsz_20200727_113528_qxqxpt.jpg
   description: Tampak depan
-- photoURI: https://web-tj.netlify.app/images/20200727_123602-1.jpg
+- photoURI: 20200727_123602-1_qaqypr.jpg
   description: Ruang keluarga
-- photoURI: https://web-tj.netlify.app/images/20200727_113456.jpg
+- photoURI: 20200727_113456_xmvdak.jpg
   description: ''
-- photoURI: https://web-tj.netlify.app/images/20200727_123538-1.jpg
+- photoURI: 20200727_123538-1_afygmm.jpg
   description: Kamar tidur
-- photoURI: https://web-tj.netlify.app/images/20200727_123747-1.jpg
+- photoURI: 20200727_123747-1_h2tcdi.jpg
   description: Kamar mandi
 gmaps: https://goo.gl/maps/UVKxTbuzDxGgkbKf8
 prices:

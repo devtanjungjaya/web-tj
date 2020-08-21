@@ -3,7 +3,7 @@ contact: Admin Tanjungjaya
 name: Edukasi Kerajinan Anyaman Alang-Alang
 photos:
 - description: Pembuatan kerajinan anyaman alang-alang
-  photoURI: https://web-tj.netlify.app/images/edukasi-anyaman-alang-alang-1.JPG
+  photoURI: edukasi-anyaman-alang-alang-1_sru7xm.jpg
 description: |-
   Tanaman alang-alang dimanfaatkan oleh para warga desa sekitar Tanjung Lesung untuk dijadikan kerajinan berupa anyaman. Anyaman alang-alang ini dibuat oleh para pengrajin terampil dan kreatif. Mari bersama-sama menjalani aktivitas seru mempelajari kerajinan lokal anyaman alang-alang.
 

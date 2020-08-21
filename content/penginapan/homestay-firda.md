@@ -5,13 +5,13 @@ coordinate:
   lng: 105.682159
 name: Homestay Firda
 photos:
-- photoURI: https://web-tj.netlify.app/images/20200727_125324-1.jpg
+- photoURI: 20200727_125324-1_zdtnhm.jpg
   description: Kamar tidur
-- photoURI: https://web-tj.netlify.app/images/20200727_125305.jpg
+- photoURI: 20200727_125305_s77hz5.jpg
   description: ''
-- photoURI: https://web-tj.netlify.app/images/20200727_125256-1.jpg
+- photoURI: 20200727_125256-1_i5fvlo.jpg
   description: Dapur
-- photoURI: https://web-tj.netlify.app/images/20200727_125301-1.jpg
+- photoURI: 20200727_125301-1_er2eaw.jpg
   description: Kamar mandi
 gmaps: https://goo.gl/maps/ShYWCFK6E88KxA2C7
 prices:

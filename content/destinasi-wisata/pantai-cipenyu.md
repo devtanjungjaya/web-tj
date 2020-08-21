@@ -4,10 +4,10 @@ coordinate:
   lng: 105.639612
 name: Pantai Cipenyu
 photos:
-- photoURI: https://web-tj.netlify.app/images/pantai-cipenyu-1.jpg
+- photoURI: pantai-cipenyu-1_pllgl1.jpg
   description: Pantai Cipenyu
 - description: Pantai Cipenyu
-  photoURI: https://web-tj.netlify.app/images/pantai-cipenyu-2.jfif
+  photoURI: pantai-cipenyu-2_dsfmxe.jpg
 description: Pantai Cipenyu merupakan salah satu pantai yang terkenal di desa Tanjungjaya
   dengan pemandangan yang sangat indah dan warna biru laut bersih. Pantai ini merupakan
   spot yang cocok untuk melihat sunset atau matahari terbenam dengan suasana langit

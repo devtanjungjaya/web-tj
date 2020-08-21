@@ -3,19 +3,19 @@ contact: Admin Tanjungjaya
 name: Eduwisata Pangendongan "Live Like A Local"
 photos:
 - description: Pembuatan anyaman bambu
-  photoURI: https://web-tj.netlify.app/images/paket-pangendongan-1.jpg
-- photoURI: https://web-tj.netlify.app/images/paket-pangendongan-3.jpg
+  photoURI: paket-pangendongan-1_laj6wl.jpg
+- photoURI: paket-pangendongan-3_bvc5zu.jpg
   description: Pembuatan kue balok
 - description: Pembuatan kue balok
-  photoURI: https://web-tj.netlify.app/images/paket-pangendongan-7.jpeg
-- photoURI: https://web-tj.netlify.app/images/paket-pangendongan-8.jpeg
+  photoURI: paket-pangendongan-7_qeiuup.jpg
+- photoURI: paket-pangendongan-8_w6dgt1.jpg
   description: ''
 - description: Babacakan dan Papahare (makan bersama)
-  photoURI: https://web-tj.netlify.app/images/paket-pangendongan-4.jpeg
+  photoURI: paket-pangendongan-4_h6dmeq.jpg
 - description: Babacakan dan Papahare (makan bersama)
-  photoURI: https://web-tj.netlify.app/images/paket-pangendongan-2.jpg
+  photoURI: paket-pangendongan-2_shbccc.jpg
 - description: Babacakan dan Papahare (makan bersama)
-  photoURI: https://web-tj.netlify.app/images/paket-pangendongan-6.jpeg
+  photoURI: paket-pangendongan-6_soci47.jpg
 description: |-
   Jalani aktivitas seru bersama warga untuk merasakan hidup seperti warga lokal desa Tanjungjaya. Anda dapat menyaksikan dan melakukan berbagai budaya khas desa Tanjungjaya. Nikmati juga berbagai sajian kuliner khas Tanjungjaya yang bisa anda buat sendiri bersama para warga.
 

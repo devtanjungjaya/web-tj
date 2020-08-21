@@ -5,9 +5,9 @@ coordinate:
   lng: 105.683211
 name: Homestay Darsimah
 photos:
-- photoURI: https://web-tj.netlify.app/images/20200727_133758-1.jpg
+- photoURI: 20200727_133758-1_u6jk7l.jpg
   description: Tampak depan
-- photoURI: https://web-tj.netlify.app/images/rsz_20200727_133937.jpg
+- photoURI: rsz_20200727_133937_vxb4hl.jpg
   description: ''
 gmaps: https://goo.gl/maps/wBaEX8YhNWntCubF6
 prices:

@@ -3,13 +3,13 @@ contact: Admin Tanjungjaya
 name: Talenan Kayu Jati
 photos:
 - description: Talenan Kayu Jati
-  photoURI: https://web-tj.netlify.app/images/talenan-kayu-jati-5.png
+  photoURI: talenan-kayu-jati-5_fx3nem.png
 - description: Talenan kayu jati
-  photoURI: https://web-tj.netlify.app/images/talenan-kayu-jati-6.png
+  photoURI: talenan-kayu-jati-6_qidknl.png
 - description: Talenan kayu jati
-  photoURI: https://web-tj.netlify.app/images/talenan-kayu-jati-7.png
+  photoURI: talenan-kayu-jati-7_ycxclz.png
 - description: Talenan kayu jati
-  photoURI: https://web-tj.netlify.app/images/talenan-kayu-jati-8.png
+  photoURI: talenan-kayu-jati-8_gzxnpx.png
 description: "Talenan yang terbuat dari bahan kayu jati berkualitas ekspor. Produk
   ini dibuat oleh para pengrajin terampil di destinasi wisata Tanjung Lesung.\n\nUkuran:
   40 x 20 x 3 cm\n\nProduk ini sangat aman untuk dipakai sebagai alat perlengkapan
