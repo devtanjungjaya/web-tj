@@ -9,6 +9,7 @@
     export let alt;
     export let contain = false;
     export let innerHeight;
+    const cloudinaryURL = 'process.env.CLOUDINARY_URL';
 
     let loaded = false;
     let error = false;
@@ -69,6 +70,6 @@
         ${loaded ? '' : 'invisible'}`}
         style={contain ? imgStyle : ''}
         {alt}
-        use:lazy={{ src }}
+        use:lazy={{src: cloudinaryURL + src}}
     />
 </div>

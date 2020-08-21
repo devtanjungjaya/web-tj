@@ -62,10 +62,9 @@
         bind:clientWidth={width} 
         bind:clientHeight={height}
     >
-        <div class="w-full h-0 relative" style="padding-bottom: 83.33%">
-            <Image 
-                wrapperClass="absolute rounded-2xl shadow-xl"
-                imgClass="object-cover rounded-2xl" 
+        <div class="w-full h-0 relative shadow-xl rounded-2xl" style="padding-bottom: 83.33%">
+            <img 
+                class="absolute object-cover rounded-2xl w-full h-full" 
                 alt="tanjung-jaya" 
                 src="images/hero.webp"
             />

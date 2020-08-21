@@ -27,7 +27,8 @@ export default {
 			replace({
 				'process.browser': true,
 				'process.env.NODE_ENV': JSON.stringify(mode),
-				MAPBOX_ACCESS_TOKEN: process.env.MAPBOX_ACCESS_TOKEN
+				MAPBOX_ACCESS_TOKEN: process.env.MAPBOX_ACCESS_TOKEN,
+				'process.env.CLOUDINARY_URL': process.env.CLOUDINARY_URL
 			}),
 			svelte({
 				dev,
