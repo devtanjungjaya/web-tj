@@ -12,6 +12,10 @@ promotions:
 - CEC-DISC20
 - CEC-DISC10
 descriptions:
+- promotion: SBC-DISC10%
+  description: Diskon 10% untuk pembelian di atas 20 potong
+- promotion: SBC-DISC5%
+  description: Diskon 5% untuk pembelian 10-20 potong
 - promotion: KBA-Gratis Plakat 2
   description: Gratis plakat untuk pembelian di atas 40 pcs
 - promotion: KBA-Plakat dan Disc10%
