@@ -64,7 +64,7 @@
     >
         <div class="w-full h-0 relative shadow-xl rounded-2xl" style="padding-bottom: 83.33%">
             <img 
-                class="absolute object-cover rounded-2xl w-full h-full" 
+                class="absolute object-cover rounded-2xl w-full h-full bg-gray-100" 
                 alt="tanjung-jaya" 
                 src="images/hero.webp"
             />

@@ -7,7 +7,7 @@
             <div class="h-0 min-w-0 min-h-0" style="flex-basis: 60%">
                 <Image 
                     imgClass="object-cover" 
-                    src={photos.length ? photos[0].photoURI : ""} 
+                    src={photos.length ? 'w_250,c_fill/' + photos[0].photoURI : ""} 
                     alt={photos.length ? photos[0].description : ""} 
                 />
             </div>
