@@ -16,7 +16,8 @@ prices:
   unit: pcs
 categories:
 - Kerajinan
-promotions: []
+promotions:
+- KBA-Gratis Plakat 2
 notes: ''
 
 ---
