@@ -1,7 +1,7 @@
 ---
 coordinate:
   lat: -6.533325
-  lng: 105.716365
+  lng: 105.71612
 name: Lembur Mangrove Patikang
 photos:
 - description: Kampung Mangrove Patikang
