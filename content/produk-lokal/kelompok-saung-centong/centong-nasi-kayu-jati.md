@@ -3,9 +3,9 @@ contact: Admin Tanjungjaya
 name: Centong Nasi Kayu Jati
 photos:
 - description: Centong Nasi Kayu Jati
-  photoURI: https://web-tj.netlify.app/images/centong-nasi-kayu-jati-1.jpeg
+  photoURI: centong-nasi-kayu-jati-1_ydk76v.jpg
 - description: Centong nasi kayu jati
-  photoURI: https://web-tj.netlify.app/images/centong-nasi-kayu-jati-1.png
+  photoURI: centong-nasi-kayu-jati-1_qy4wj7.png
 description: "Centong nasi yang terbuat dari kayu jati berkualitas ekspor. Produk
   ini dibuat oleh para pengrajin terampil di destinasi wisata Tanjung Lesung.\n\nUkuran:
   25 x 7 cm\n\nProduk ini sangat aman untuk digunakan sebagai alat perlengkapan dapur

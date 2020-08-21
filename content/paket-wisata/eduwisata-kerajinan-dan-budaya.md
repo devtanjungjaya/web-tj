@@ -13,9 +13,9 @@ photos:
 - description: Belajar tentang kerajinan warga lokal
   photoURI: https://web-tj.netlify.app/images/eduwisata-kerajinan-dan-budaya-5.jpeg
 - description: Kerajinan warga lokal
-  photoURI: https://web-tj.netlify.app/images/eduwisata-kerajinan-dan-budaya-6.jpeg
+  photoURI: eduwisata-kerajinan-dan-budaya-6_owagqt.jpg
 - description: Eduwisata kerajinan dan budaya
-  photoURI: https://web-tj.netlify.app/images/eduwisata-kerajinan-dan-budaya-6.JPG
+  photoURI: eduwisata-kerajinan-dan-budaya-6_owt8ty.jpg
 - photoURI: https://web-tj.netlify.app/images/eduwisata-kerajinan-dan-budaya-7.JPG
   description: Eduwisata kerajinan dan budaya
 description: |-
