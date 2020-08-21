@@ -1,6 +1,6 @@
 ---
 contact: Admin Tanjungjaya
-name: Trip Pulau Liwungan dan Snorkeling (CEC)
+name: Trip Pulau Liwungan dan Snorkeling (Cikadu Edutourism Centre)
 photos:
 - description: Snorkeling
   photoURI: https://web-tj.netlify.app/images/trip-pulau-liwungan-dan-snorkeling-1.jpg
