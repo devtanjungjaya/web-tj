@@ -62,7 +62,7 @@
                             </div>
                         {:else}
                             <div class="h-5 w-5">
-                                <img src="{X.url}.png" alt="ENA-ENA ( ͡° ͜ʖ ͡°)" class="w-full h-full mx-1">
+                                <img src="{X.url}.png" alt={X.url} class="w-full h-full mx-1">
                             </div>
                         {/if}
                         <input type="checkbox" class= "opacity-0" on:change={changeFunc(X.name,X.check)} bind:checked={X.check}>
