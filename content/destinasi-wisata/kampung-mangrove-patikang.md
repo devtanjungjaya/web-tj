@@ -25,9 +25,9 @@ photos:
 - description: Poster wisata desa Citeureup
   photoURI: https://bufferzonetanjunglesung.com/images/peta-wisata-desa-citeureup.jpg
 description: |-
-  Berawal dari tujuan menahan banjir saat air laut pasang, Kampung Mangrove Patikang kini akan menjadi salah satu objek pariwisata dan center edukasi, Selain menjadi pelestarian lingkungan, Kampung Mangrove ini juga menjadi destinasi wisata yang sangat menarik dan turut menunjang perekonomian masyarakat di Buffer Zone KEK Tanjung Lesung.
+  Berawal dari tujuan menahan banjir saat air laut pasang, Lembur Mangrove Patikang Citeureup kini akan menjadi salah satu objek pariwisata dan center edukasi, Selain menjadi pelestarian lingkungan, Lembur Mangrove ini juga menjadi destinasi wisata yang sangat menarik dan turut menunjang perekonomian masyarakat di Buffer Zone KEK Tanjung Lesung.
 
-  Saat berkunjung di Kampung Mangrove Patikang, wisatawan akan disuguhi dengan suasana indah kebun mangrove. Lokasi ini sangat cocok untuk spot foto. Tidak hanya untuk bersenang-senang, wisatawan juga akan mendapatkan edukasi penanaman bakau dari warga lokal.
+  Saat berkunjung di Lembur Mangrove Patikang, wisatawan akan disuguhi dengan suasana indah kebun mangrove. Lokasi ini sangat cocok untuk spot foto. Tidak hanya untuk bersenang-senang, wisatawan juga akan mendapatkan edukasi penanaman bakau,tracking sungai / Cano dan spot pengamatan burung.
 
   Ayo berkunjung dan jalani keseruan di Lembur Mangrove Patikang!
 gmaps: https://goo.gl/maps/w57KzxdBEDr44dSn6
