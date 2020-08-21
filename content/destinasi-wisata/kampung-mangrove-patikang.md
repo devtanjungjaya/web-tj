@@ -2,7 +2,7 @@
 coordinate:
   lat: -6.533325
   lng: 105.716365
-name: Kampung Mangrove Patikang
+name: Lembur Mangrove Patikang
 photos:
 - description: Kampung Mangrove Patikang
   photoURI: https://web-tj.netlify.app/images/kampung-mangrove-patikang-1.jpg
@@ -25,11 +25,11 @@ photos:
 - description: Poster wisata desa Citeureup
   photoURI: https://bufferzonetanjunglesung.com/images/peta-wisata-desa-citeureup.jpg
 description: |-
-  Berawal dari tujuan menahan banjir saat air laut pasang, Kampung Mangrove Patikang kini menjadi salah satu objek pariwisata yang dibuka oleh Dinas Pariwisata Banten. Selain menjadi pelestarian lingkungan, Kampung Mangrove ini juga menjadi destinasi wisata yang sangat menarik dan turut menunjang perekonomian masyarakat di Buffer Zone KEK Tanjung Lesung.
+  Berawal dari tujuan menahan banjir saat air laut pasang, Kampung Mangrove Patikang kini akan menjadi salah satu objek pariwisata dan center edukasi, Selain menjadi pelestarian lingkungan, Kampung Mangrove ini juga menjadi destinasi wisata yang sangat menarik dan turut menunjang perekonomian masyarakat di Buffer Zone KEK Tanjung Lesung.
 
   Saat berkunjung di Kampung Mangrove Patikang, wisatawan akan disuguhi dengan suasana indah kebun mangrove. Lokasi ini sangat cocok untuk spot foto. Tidak hanya untuk bersenang-senang, wisatawan juga akan mendapatkan edukasi penanaman bakau dari warga lokal.
 
-  Ayo berkunjung dan jalani keseruan di Kampung Mangrove Patikang!
+  Ayo berkunjung dan jalani keseruan di Lembur Mangrove Patikang!
 gmaps: https://goo.gl/maps/w57KzxdBEDr44dSn6
 prices:
 - value: 5000
