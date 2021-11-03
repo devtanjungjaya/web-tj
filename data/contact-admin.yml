@@ -1,23 +1,8 @@
 ---
 admins:
-- Admin Banyuasih
-- Admin Cigeulis
-- Admin Citeureup
-- Admin Tanjungjaya
+- Narahubung
 contacts:
-- admin: Admin Banyuasih
+- admin: Narahubung
   contacts:
-  - phoneNumber: "6285215632635"
-    whatsapp: true
-- admin: Admin Cigeulis
-  contacts:
-  - phoneNumber: "6285921374035"
-    whatsapp: true
-- admin: Admin Citeureup
-  contacts:
-  - phoneNumber: "62817849463"
-    whatsapp: true
-- admin: Admin Tanjungjaya
-  contacts:
-  - phoneNumber: "6285210468664"
+  - phoneNumber: "6285770907674"
     whatsapp: true
